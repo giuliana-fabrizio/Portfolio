@@ -119,59 +119,37 @@ footer {
     background: #3498db
 }
 
-#projects {
-    padding: 50px 15px;
-    border-bottom: 1px solid #dcd9d9;
-    text-align: center
-}
-
-#projects h2 {
-    color: #374054;
-    margin-bottom: 50px
-}
-
 .project {
-    position: relative;
-    height: 250px;
-    max-width: 900px;
-    margin: 0 auto 30px auto;
-    overflow: hidden;
     background: #fff;
-    border-radius: 4px
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
+    height: 270px;
+    margin: 0 auto 30px auto;
+    width: 900px;
+    position: relative;
 }
 
 .project-image {
-    float: left
+    padding: 15px;
+    width: 200px;
 }
 
 .project-info {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 300px;
-    padding: 15px
+    margin-left: 250px;
+    padding: 20px;
 }
 
-.project-info h3 {
-    font-size: 1.5em;
+.project-info h5 {
+    font-size: 1.3em;
     font-weight: 300;
     color: #374054;
-    margin: 0 0 15px 0
+    margin-bottom: 15px;
 }
 
 .project-info p {
     color: #74808a;
-    margin: 0 0 15px 0;
     font-size: 0.9em
-}
-
-.no-image .project-info {
-    position: relative;
-    margin: 0;
-    padding: 30px 15px;
-    transform: none
-}
-
-.shadow-large {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15)
 }
