@@ -12,7 +12,7 @@
 
             <ul class="d-flex">
                 <li><router-link to="/">Accueil</router-link></li>
-                <li><router-link to="/about">Projets</router-link></li>
+                <li><router-link to="/all_projects">Projets</router-link></li>
             </ul>
         </nav>
     </div>
