@@ -1,4 +1,20 @@
-/* ***************************************************************** home page ************************************************************* */
+const sae_s1_05_slide_accueil = require("../files/sae_s1_05/slide_accueil.png");
+const sae_s1_04_profil_habitant = require("../files/sae_s1_04/profil_habitant.png");
+const sae_101_102_partie_de_jeu = require("../files/sae_101_102/partie_de_jeu.png");
+const sae_s2_04_visualisation_stock_admin = require("../files/sae_s2_04/visualisation_stock_admin.png");
+const sae_s2_04_visualisation_stock_details = require("../files/sae_s2_04/visualisation_stock_details.png");
+const sae_s3_mcd = require("../files/sae_s3/MCD.png");
+const sae_s4_mcd = require("../files/sae_stage_s4/MCD.png");
+const sae_s4_principe_selection_apres = require("../files/sae_stage_s4/principe_selection_apres.png");
+const archi_sae = require("../files/sae_s5/archi_sae.png");
+// const sae_s6_rapport_general = require("../files/sae_s6/Rapport_General_GODAIL-FABRIZIO.pdf");
+// const sae_s6_rapport_technique = require("../files/sae_s6/Rapport_Technique_GODAIL-FABRIZIO.pdf");
+const competence_1_dashboard = require("../files/competence_1/dashboard.png");
+const competence_1_trello = require("../files/competence_1/trello_sae.png");
+const competence_6_gitlab = require("../files/competence_6/gitlab.png");
+
+
+/* ***************************************************************** home page ***************************************************************** */
 
 const name = "Giuliana GODAIL FABRIZIO";
 const status = "Étudiante en informatique";
@@ -13,7 +29,7 @@ const github = "https://github.com/giuliana-fabrizio";
 const linkedin = "https://www.linkedin.com/in/giuliana-godail-fabrizio-20639525b/";
 
 
-/* ***************************************************************** projects page ************************************************************* */
+/* ***************************************************************** projects page ***************************************************************** */
 
 const technologies = [
     // Frontend Web Development
@@ -71,7 +87,6 @@ const experiences = {
                     sae_s1_05: {
                         title: "SAE S1 05",
                         category: "Universitaire",
-                        type: "project",
                         instructions: {
                             title: "Consignes",
                             text: "Cette SAÉ est la première que nous avons dû réaliser.\nLe but était de faire une présentation en groupe sur une thématique assez surprenante (car n'ayant pas de rapport particulier avec l'informatique). La problématique que mon groupe devait traiter était \"Comment présenteriez-vous votre formation dans votre ancien lycée ?\".\nPlus précisément nous devions décrire le scénario (besoins du client, organisation pour répondre aux attentes du client) à l'aide des questions - réponses échangées avec les professeurs (se mettant à la place du client), ainsi que notre travail de groupe pour réaliser cette SAÉ."
@@ -87,9 +102,12 @@ const experiences = {
                         result: {
                             title: "Résultat de la SAÉ",
                             file: "", // TODO
-                            images: {
-
-                            } // TODO
+                            images: [
+                                {
+                                    path: sae_s1_05_slide_accueil,
+                                    legend: "Légende: première page du slide"
+                                }
+                            ]
                         },
                         personal_enrichment: {
                             title: "Enrichissement personnel",
@@ -108,7 +126,6 @@ const experiences = {
                     sae_s1_06: {
                         title: "SAE S1 06",
                         category: "Universitaire",
-                        type: "project",
                         instructions: {
                             title: "Consignes",
                             text: "Cette SAÉ consistait à créer un site web sur une entreprise informatique française. De plus, nous devions faire un rapport analytique de l'entreprise choisie ainsi qu'un diagramme de Gantt ou un réseau Pert pour planifier les tâches que nous devions réaliser."
@@ -143,7 +160,6 @@ const experiences = {
                     sae_s1_03: {
                         title: "SAE S1 03",
                         category: "Universitaire",
-                        type: "project",
                         instructions: {
                             title: "Consignes",
                             text: "L'objectif de cette SAÉ était d'installer et de configurer une machine virtuelle (V.M) en fonction d'un cahier des charges donné.\nNous devions pour cela rendre 3 livrables :\n\t• un dossier d'étude et de choix des solutions (rapport contenant la demande formulée par le client, description des architectures matérielles proposées, description des architectures logicielles proposées) ;\n\t• un schéma de l'architecture logicielle / notice d'utilisation (rapport contenant les étapes de l'installation de la machine virtuelle + la machine virtuelle complète) ;\n\t• une présentation orale.\nPour ce faire, mon groupe était constitué de 4 personnes."
@@ -177,7 +193,6 @@ const experiences = {
                     sae_s1_04: {
                         title: "SAE S1 04",
                         category: "Universitaire",
-                        type: "project",
                         instructions: {
                             title: "Consignes",
                             text: "Pour cette SAÉ nous devions faire un MCD, un rapport et une application destinée aux habitants d'une petite commune.\nLe MCD (ou Modèle Conceptuel de Données) est une sorte de représentation des données utilisées par le système d'information.\nLe rapport devait justifier nos choix faits lors de la réalisation du MCD.\nParallèlement, le but de l'application était que les habitants de la commune puissent s'en servir pour réserver ou proposer des trajets entre leur mairie et un autre endroit et inversement.\nNotre mission était de faire en sorte de pouvoir ajouter, éditer ou supprimer un trajet, un véhicule, une réservation (sauf éditer), et un habitant, pour lequel nous devions aussi faire un profil."
@@ -189,9 +204,12 @@ const experiences = {
                         implementation: {
                             title: "Mes actions dans le groupe",
                             text: "Je me suis chargée d'une partie du script SQL et de la partie habitant.\nPour cela, j'ai dû faire en sorte de pouvoir ajouter un nouvel habitant, de l'éditer (changer le nom par exemple), de le supprimer, ainsi que de montrer son profil (voir photo ci-dessous).",
-                            images: {
-
-                            } // TODO
+                            images: [
+                                {
+                                    path: sae_s1_04_profil_habitant,
+                                    legend: "Légende: Profil d'un habitant"
+                                }
+                            ]
                         },
                         result: {
                             title: "Résultat de la SAÉ",
@@ -214,7 +232,6 @@ const experiences = {
                     sae_101_102: {
                         title: "SAE 101-102",
                         category: "Universitaire",
-                        type: "project",
                         instructions: {
                             title: "Consignes",
                             text: "La SAÉ 101 consistait à concevoir un mini-jeu en Java.\nLe but était de faire un plateau de jeu triangulaire avec 21 cases au total.\nDans ce jeu, il y a 2 joueurs, chacun disposant de 10 jetons tous numérotés de 1 à 10. (voir image en annexe).\nÀ la fin de la partie, il reste naturellement une case vide, pour gagner il faut que la somme des numéros des jetons positionnés autour de cette case vide soit inférieure à la somme des numéros des jetons de l’adversaire.\nLa SAÉ 102 avait pour but de reprendre le jeu précédemment conçu et de réaliser deux Intelligences Artificielles (I.A) capables de jouer contre un joueur selon la réponse à la question \"Jouer seul ?\" fournie dans le terminal.\nLa stratégie de la première IA devait être moins poussée que celle de la seconde.\nDans un rapport rédigé en anglais, nous devions comparer les deux IA (temps d'exécution pour un tour, nombre de boucles parcourues, ...)."
@@ -229,9 +246,12 @@ const experiences = {
                         },
                         result: {
                             title: "Résultat de la SAÉ",
-                            images: {
-
-                            }, // TODO
+                            images: [
+                                {
+                                    path: sae_101_102_partie_de_jeu,
+                                    legend: "Plateau de jeu"
+                                }
+                            ],
                             text: "Sur cette capture d'écran, on peut voir le résultat d'une partie entre les deux IA.\nCelle qui gagne (la bleue) était celle dont la stratégie était \"plus poussée\" que celle de l'autre IA.\nCi-joint se trouve également le code de ce jeu : https://github.com/giuliana-fabrizio/SAE-Jeu-du-jeton-manquant"
                         },
                         personal_enrichment: {
@@ -251,7 +271,6 @@ const experiences = {
                     sae_s2_04: {
                         title: "SAE S2 04",
                         category: "Universitaire",
-                        type: "project",
                         instructions: {
                             title: "Consignes",
                             text: "Pour cette SAE étaient attendus :\n\t• un rapport contenant un MCD (modèle conceptuel de données), un MRD (modèle relationnel de données) et la justification de nos choix concernant les relations de nos tables SQL ;\n\t• la réalisation d'un site de vente à partir d'un code source avec pour particularités :\n\t\t• une liste de souhait (panier) ;\n\t\t• la possibilité pour un employé de voir et mettre à jour les commandes des clients... ;\n\t\t• la possibilité pour le client de filtrer les articles vendus.\n\t• une présentation orale en anglais pour parler du déroulé du projet, des fonctionnalités disponibles sur le site, de la visualisation des données, et de notre ressenti personnel, professionnel et pédagogique."
@@ -263,16 +282,15 @@ const experiences = {
                         implementation: {
                             title: "Mes actions dans le groupe",
                             text: "Pour ce qui est du site, je devais :\n\t• créer un compte client (inscription) ;\n\t• coté back office ;\n\t\t• modifier l'état d'une commande passée par un client (validées, expédiée, ...) ;\n\t\t• afficher le détail de la commande ;\n\t\t• ajout / édition / suppression d'un meuble et d'un type de meuble.\n\t• coté front office :\n\t\t• visualisation et gestion du panier (ou liste de souhait) ;\n\t\t• validation du panier qui génère une commande ;\n\t\t• filtres des meubles proposés sur le site. Ma partie personnelle portait quant à elle sur la gestion du stock, de manière plus précise :\n\t• l'administrateur (back office) peut visualiser des données concernant le stock (voir images en annexe) ;\n\t• l'administrateur peut voir le détail du stock disponible (couleur et matériel) ;\n\t• l'administrateur peut approvisionner un meuble en fonction de la couleur et du matériel (voir image) ;\n\t• le client (front office) doit pouvoir voir le stock restant pour un meuble donné, dans une couleur donnée, pour un matériel donné ;\n\t• lorsque le client ajoute / supprime un meuble dans son panier, le stock du meuble pour le coloris et le matériel concerné se met à jour.\nConcernant la présentation en anglais, j'ai traduit les éléments du diaporama.\nLe jour de l'oral, j'ai présenté ma partie ainsi que fait une rapide démonstration du site web.",
-                            images: {
-                                image_1: {
-                                    name: "",
-                                    alt: ""
-                                },
-                                image_2: {
-                                    name: "",
-                                    alt: ""
+                            images: [
+                                {
+                                    path: sae_s2_04_visualisation_stock_admin,
+                                    legend: "Légende: visualisation des stocks côté administrateur"
+                                }, {
+                                    path: sae_s2_04_visualisation_stock_details,
+                                    legend: "Légende: visualisation des stocks en détails"
                                 }
-                            } // TODO
+                            ]
                         },
                         result: {
                             title: "Résultat de la SAÉ",
@@ -304,7 +322,6 @@ const experiences = {
                     sae_s3: {
                         title: "SAE S3",
                         category: "Universitaire",
-                        type: "project",
                         instructions: {
                             title: "Consignes",
                             text: "Ce site a été créé par une équipe de cinq développeurs dont je fais moi même partie pour gérer une manifestation imaginaire.\nIl doit offrir aux utilisateurs la possibilité d'accéder aux informations sur la manifestation au travers de la page d'accueil, de consulter le programme des événements prévus et d'accéder à une carte interactive du lieu. Les utilisateurs ont également la possibilité de créer un compte sur le site pour effectuer des réservations.\nÀ la fin de cette SAÉ, nous avons dû effectuer une présentation et une démonstration devant nos professeurs."
@@ -316,12 +333,12 @@ const experiences = {
                         implementation: {
                             title: "Mes actions dans le groupe",
                             text: "1. Site Web\n\nJe me suis chargée de mettre en place l'entièreté de la base de données. Pour cela, j'ai réalisé plusieurs MCD (Modèles Conceptuel de Données) à l'aide de Looping, un logiciel de modélisation conceptuelle de données.\nDe plus, j'ai décidé d'utiliser PostgreSQL comme système de gestion de bases de données en raison de sa flexibilité.\nEn ce qui concerne les requêtes vers la base de données, j'ai réfléchi à la méthode à utiliser : SQL pur ou l'utilisation d'un ORM. J'ai finalement choisi d'opter pour du SQL pur, car cela demande moins de connaissances spécifiques et évite l'ajout de dépendances supplémentaires.\nJe me suis également chargée de faire toutes les requêtes SQL nécessaires à l'application (authentification, suppression, ajout, réservation, …).\nD'autre part, j'ai réalisé quelques pages interactives en VueJS, ainsi que de nombreuses maquettes des pages du site.\n\n2. Soutenance\nConcernant la présentation, je me suis chargée de transmettre l'avis de mon groupe concernant ce projet.",
-                            images: {
-                                image_1: {
-                                    name: "",
-                                    alt: ""
+                            images: [
+                                {
+                                    path: sae_s3_mcd,
+                                    legend: "Légende : MCD de l'application"
                                 }
-                            } // TODO
+                            ]
                         },
                         result: {
                             title: "Résultat de la SAÉ",
@@ -344,7 +361,6 @@ const experiences = {
                     stage_s4: {
                         title: "SAÉ S4.Stage",
                         category: "Professionnel",
-                        type: "project",
                         instructions: {
                             title: "Consignes",
                             text: "La SAÉ S4.Stage s'est réalisée en entreprise. Pour ma part, je l'ai réalisée à <span style='color:red;'><strong>Natural Solutions</strong></span>, une entreprise à Marseille.\n\nChaque mois, cette entreprise doit établir des devis et des factures pour ses clients. Pour simplifier ce processus, un stagiaire a été recruté en 2021 pour mettre en place l’Outil Facturation qu’il a réalisé en <strong>JS, Node JS et React JS</strong>.\n\nMa mission consiste à corriger les problèmes existants, améliorer les fonctionnalités déjà en place et en ajouter de nouvelles. Les principales tâches qui m’ont été attribuées sont la mise en place de la <span style='color:green;'><strong>base de données</strong></span>, la <span style='color:green;'><strong>modification du principe de sélection des projets</strong></span>, et la <span style='color:green;'><strong>génération de documents</strong></span>.\n\nPour ce projet j’étais seule dans l’équipe, bien que je pouvais m'orienter vers mon maître de stage si besoin.\n\nÀ la fin de cette SAÉ, nous avons dû réaliser une présentation orale et deux rapports :\n<ul><li>l'un technique (destiné à un informaticien reprenant le travail)</li><li>l'autre destiné à expliquer le déroulement de notre stage sans entrer dans les détails techniques.</li></ul>"
@@ -356,16 +372,15 @@ const experiences = {
                         implementation: {
                             title: "Mise en œuvre",
                             text: "<h2>1. Base de données</h2>\n\nPour mettre en place la base de données, il a été nécessaire de :\n<ul><li>Réaliser un MCD (Modèle Conceptuel de Données)</li><li>Utiliser le système de gestion de bases de données <strong>PostgreSQL</strong></li><li>Utiliser l'ORM <strong>Sequelize</strong> (destiné à simplifier l'interaction avec la base de données)</li><li>Connecter la base de données avec le backend (à l'aide de variables d'environnement)</li><li>Enrichir la base de données en créant une fonction qui y insérerait les éléments un à un à partir d'un <strong>fichier JSON</strong></li></ul>\n\n<h2>2. Modification du principe de sélection des projets</h2>\n\nAvant les modifications apportées, l’utilisateur devait connaître le nom exact du projet (majuscules et minuscules comprises) sur lequel il souhaitait effectuer une action. Il a été convenu que le nouveau principe de recherche de projet se présenterait sous la forme de deux listes déroulantes où chaque élément les constituant pourrait être coché ou décoché.\n\nUne des deux listes contiendrait tous les projets développés pour RENECO tandis que l'autre contiendrait tous les autres projets.\n\nPour cette tâche, j’ai dû :\n<ul><li>Récupérer la liste de tous les projets à partir d’une API externe où ils sont stockés</li><li>Trier les résultats précédemment obtenus en fonction de s'ils sont développés pour le client principal ou non</li><li>Lire la documentation de ReactJS pour créer un nouveau composant (élément réutilisable d’une page web qui peut être utilisé par plusieurs autres pages)</li><li>Permettre à mon nouveau composant de transmettre des informations telles que les projets sélectionnés à son composant parent (page HTML qui utilise un autre composant, appelé composant enfant)</li></ul>\n\nLe rapport demandé présente les activités de support réalisées pendant une période spécifiée par l’utilisateur. Les activités de support font référence aux tâches effectuées par l’équipe de développement après la livraison du produit au client et en service après-vente.\n\nPour régler ce type de problèmes, Natural Solutions utilise <strong>Zendesk</strong> (une plateforme de service client et de gestion des relations avec la clientèle). Pour générer le rapport, il est donc essentiel d'interroger l'API de Zendesk.\n\nNous avons donc d'abord établi une connexion avec cette API. Ensuite, j'ai dû faire trois requêtes à cette API :\n<ul><li>La première permettait de récupérer tous les tickets mis à jour entre deux dates spécifiées par l'utilisateur.</li><li>La deuxième était utilisée pour obtenir le nom du ticket, qui, dans notre cas, correspondait également au nom de la spécification.</li><li>La troisième récupérait le rôle de la personne sur tous les commentaires associés aux tickets.</li></ul>\n\nEnsuite, j'ai sélectionné les résultats pertinents à afficher et les ai triés par ordre chronologique.\n\nLe code permettant le téléchargement du fichier était déjà présent dans le code initial, mais il a nécessité plusieurs modifications. Par ailleurs, j’ai dû créer un Template Word destiné à fournir une structure prédéfinie à suivre lors de la génération des rapports.",
-                            images: {
-                                image_1: {
-                                    name: "",
-                                    alt: ""
-                                },
-                                image_2: {
-                                    name: "",
-                                    alt: ""
+                            images: [
+                                {
+                                    path: sae_s4_mcd,
+                                    legend: "Légende : MCD de l'application"
+                                }, {
+                                    path: sae_s4_principe_selection_apres,
+                                    legend: "Légende : MCD de l'application"
                                 }
-                            } // TODO
+                            ]
                         },
                         result: {
                             title: "Résultat de la SAÉ",
@@ -402,7 +417,6 @@ const experiences = {
                     sae_s5: {
                         title: "Présentation de la SAÉ",
                         category: "Universitaire",
-                        type: "presentation",
                         instructions: {
                             title: "Objectif",
                             text: "Cette SAÉ, réalisée par <span style='color:red;'><strong>cinq étudiants</strong></span> en troisième année de BUT Informatique, a pour objectif de développer une application multi-architecture en utilisant des micro-contrôleurs et des objets connectés pour collecter des données, les traiter et les visualiser.\nMon groupe et moi avons choisi de créer une application de tests de réflexe destinée à des scientifiques."
@@ -410,12 +424,12 @@ const experiences = {
                         architecture: {
                             title: "Architecture",
                             text: "L'application comprend plusieurs infrastructures complexes que nous devons faire communiquer entre elles.\n\nNous disposons d’une <span style='color:blue;'><strong>application mobile</strong></span> (codée pour les Android dans notre cas) celle-ci a été conçue pour prendre des vidéos et les envoyer à un <span style='color:blue;'><strong>serveur d'analyse</strong></span>. Ce serveur comme son nom l'indique a pour but d’analyser les informations reçues. Une fois le traitement effectué il envoie les résultats à un <span style='color:blue;'><strong>serveur de centralisation</strong></span> des données codé en java. Ce serveur reçoit également des données de la part des microcontrôleurs. Il communique avec une <span style='color:blue;'><strong>API</strong></span> réalisée en Node.js afin de stocker les données reçues dans une <span style='color:blue;'><strong>base de données MongoDB</strong></span>. Le serveur de centralisation est tout de même capable de communiquer lui-même avec la BDD sans passer au travers de l’API. Pour finir les données seront affichées sous forme de statistiques dans une page Web (<span style='color:blue;'><strong>frontend</strong></span>) réalisée en Vue.js.\n\nSur la figure ci-dessous est représentée l'architecture de l'application.",
-                            images: {
-                                image_1: {
-                                    name: "",
-                                    alt: ""
-                                }
-                            }
+                            images: [
+                                {
+                                    path: archi_sae,
+                                    legend: "Légende : architecture de la SAÉ"
+                                },
+                            ]
                         },
                         organization_of_work: {
                             title: "Processus de développement",
@@ -430,7 +444,6 @@ const experiences = {
                     stage_s6: {
                         title: "Présentation du Stage",
                         category: "Professionnel",
-                        type: "presentation",
                         instructions: {
                             title: "Objectif",
                             text: "J'ai réalisé mon stage chez <span style='color:red;'><strong>Natural Solutions</strong></span>, une entreprise basée à Marseille. Cette entreprise se consacre à mettre la technologie au service de la biodiversité en développant des outils pour les acteurs environnementaux et les associations. Ces outils sont principalement des applications Web et mobiles.\n\nL'équipe que j'ai rejoint était composée :\n<ul><li>de deux autres développeurs ;</li><li>d'un chef de projet ;</li><li>d'une designeuse.</li></ul>\n\nMon équipe et moi avons travaillé sur un projet pour <span style='color:green;'><strong>Wings of Ocean</strong></span>, une association dédiée à la préservation de l'environnement. Notre mission était de développer une plateforme de gestion de ramassage de déchets.\n\nMon objectif pendant ce stage était de <span style='color:blue;'><strong>contribuer au développement de ce projet</strong></span>, appelé DepollutionMap. Les tâches dont j'ai été chargée m'ont été confiées au fur et à mesure du projet."
@@ -442,40 +455,42 @@ const experiences = {
                         result: {
                             title: "Résultat de la SAÉ",
                             text: "À la fin de ce stage, j'ai dû réaliser une présentation orale et deux rapports :\n<ul><li>l'un technique (destiné à un informaticien reprenant le travail) ;</li><li>l'autre destiné à expliquer le déroulement de notre stage sans entrer dans les détails techniques.</li></ul>\n\n<a href='https://docs.google.com/presentation/d/1LiP-nK3gmnG1EadbeIMfyvVh-VUsXMA4EwR9I6H2e2o/edit?usp=sharing'>Lien de la présentation</a>",
-                            files: {
-                                file_1: {
-
-                                },
-                                file_2: {
-
-                                }
-                            }
+                            // files: [
+                            //     {
+                            //         path: rapport_general,
+                            //         alt: "Rapport général"
+                            //     }, {
+                            //         path: rapport_technique,
+                            //         alt: "Rapport technique"
+                            //     },
+                            // ]
                         },
                         technologies: [technologies[14], technologies[18], technologies[15], technologies[22], technologies[9], technologies[10]]
                     },
                     competence_1: {
                         title: "Compétence 1 – Réaliser un développement d’application",
-                        type: "competence",
                         instructions: {
                             text: "La compétence 1 consiste à concevoir, coder, tester et intégrer une solution informatique pour un client."
                         },
                         skill_1: {
                             title: "Développer des applications informatiques simples",
                             text: "<h2>Projet de SAÉ</h2>Tout au long de ce projet, j'ai pu mettre en pratique des compétences essentielles dans le développement d'applications informatiques simples.\n\nEn collaboration avec un binôme, j'ai travaillé sur une <span style='color:blue;'><strong>application mobile</strong></span> permettant aux utilisateurs de prendre des photos et de les envoyer à un serveur d'analyse que nous avons également développé. Cette expérience m'a permis de créer une interface utilisateur intuitive et facile d'utilisation, tout en implémentant et en élaborant des conceptions simples.\n\nDe plus, j'ai activement contribué au <span style='color:red;'><strong>développement de l'API et du frontend</strong></span>, où j'ai été responsable de l'affichage des données de la base sous forme de graphiques. Pour garantir la fiabilité de cette partie, j'ai effectué plusieurs <span style='color:green;'><strong>tests en JavaScript</strong></span> afin de vérifier que les résultats obtenus correspondaient à ceux attendus.\n\n<h2>Expérience professionnelle</h2>\n\nLors de mon stage en entreprise, j'ai été chargé de plusieurs missions, dont la <span style='color:blue;'><strong>mise en place d'un Dashboard</strong></span> accessible à tous les utilisateurs, qu'ils soient connectés ou non. Pour mener à bien cette tâche, j'ai dû penser l'interface selon les besoins des utilisateurs, extraire des données de la base, les manipuler et les afficher comme demandé par le client.\n\n<em>Ci dessous, vous trouverez une capture d'écran du Dashboard de l'application.</em>\n\nPour chacun de ces projets, j'ai pris soin de <span style='color:red;'><strong>commenter mon code</strong></span> pour rendre l'application évolutive et faciliter sa prise en main par un autre développeur.",
-                            images: {
-                                image_1: {
-
-                                }
-                            }
+                            images: [
+                                {
+                                    path: competence_1_dashboard,
+                                    legend: "Légende : dashboard de l'application"
+                                },
+                            ]
                         },
                         skill_2: {
                             title: "Des exigences à une application complète",
                             text: "<h2>Projet de SAÉ</h2>Dans le cadre de ce projet, mon groupe et moi avons commencé par <span style='color:red;'><strong>analyser les exigences</strong></span> fonctionnelles et techniques fournies par nos professeurs. À partir de ces exigences, nous avons élaboré un <span style='color:green;'><strong>cahier des charges</strong></span> détaillé. Ensuite, en utilisant <span style='color:blue;'><strong>Trello</strong></span>, nous avons organisé et réparti les tâches entre nous, ce qui nous a permis de suivre et de structurer efficacement notre travail tout au long du projet.\n\n<em>Sur la photo ci-contre voici un extrait de notre Trello.</em>\n\n<h2>Expérience professionnelle</h2>\n\nAu cours de mon stage, nous ne disposions pas d'un cahier des charges initial. Le client nous communiquait ses besoins progressivement. Par conséquent, nous avons adopté la <span style='color:red;'><strong>méthodologie agile Scrum</strong></span> en travaillant par sprints. En amont de chaque sprint, nous définissions les besoins des utilisateurs et les fonctionnalités à développer pour les deux semaines suivantes, ce qui nous permettait d'affiner et d'<span style='color:blue;'><strong>ajuster continuellement l'application</strong></span> en fonction des retours et des exigences émergentes.",
-                            images: {
-                                image_1: {
-
-                                }
-                            }
+                            images: [
+                                {
+                                    path: competence_1_trello,
+                                    legend: "Légende : Trello utilisé lors de la SAÉ"
+                                },
+                            ]
                         },
                         skill_3: {
                             title: "Adapter des applications sur un ensemble de supports",
@@ -488,7 +503,6 @@ const experiences = {
                     },
                     competence_2: {
                         title: "Compétence 2 : Optimiser des applications",
-                        type: "competence",
                         instructions: {
                             text: "Cette compétence implique de modéliser des situations complexes, de s'appuyer sur des schémas de raisonnement et de justifier ses choix."
                         },
@@ -516,7 +530,6 @@ const experiences = {
                     },
                     competence_6: {
                         title: "Compétence 6 : Collaborer au sein d’une équipe",
-                        type: "competence",
                         instructions: {
                             text: "Le but de cette compétence est d'acquérir, de développer et d'exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatique."
                         },
@@ -527,11 +540,12 @@ const experiences = {
                         skill_2: {
                             title: "Situer son rôle et ses missions au sein d’une équipe informatique",
                             text: "Pour chaque projet auquel j'ai contribué, j'ai activement participé aux <span style='color:blue;'><strong>réunions d'équipe</strong></span> et utilisé divers <span style='color:green;'><strong>outils de collaboration</strong></span> tels que <span style='color:red;'><strong>GitLab</strong></span>, Microsoft Teams et Discord. Ces expériences m'ont permis de m'intégrer rapidement et efficacement dans les équipes informatiques, contribuant de manière significative aux projets en cours.\n\nJ'ai également développé et perfectionné mes compétences interpersonnelles, notamment en matière de collaboration, de communication et d'écoute. Ces compétences m'ont aidée à <span style='color:blue;'><strong>travailler efficacement</strong></span> dans des environnements d'équipe diversifiés, en favorisant une atmosphère de coopération.\n\nEnfin, pour <span style='color:green;'><strong>suivre mon activité</strong></span> et garantir une transparence et une responsabilisation continues dans mon travail, j'ai utilisé des outils de gestion de projet comme <span style='color:red;'><strong>Trello</strong></span> et <span style='color:red;'><strong>Jira</strong></span>.",
-                            images: {
-                                image_1: {
-
+                            images: [
+                                {
+                                    path: competence_6_gitlab,
+                                    legend: "Légende : dépôt GitLab de la SAÉ"
                                 }
-                            }
+                            ]
                         },
                         skill_3: {
                             title: "Manager une équipe informatique",
