@@ -17,7 +17,7 @@
                                         <h5>{{ project.title }}</h5>
                                         <p class="badge bg-primary text-wrap">{{ project.category }}</p>
                                     </div>
-                                    <p class="mb-3" v-html="project.type != 'competence' ? formattedText(truncatedInstructions(project.instructions.text)) : formattedText(project.instructions.text)"></p>
+                                    <p class="mb-3" v-html="formattedText(project.technologies ? truncatedInstructions(project.instructions.text) : project.instructions.text)"></p>
                                     <div class="d-flex flex-wrap">
                                         <span
                                             v-for="(technologie, index) in project.technologies"
@@ -61,9 +61,9 @@ export default {
         },
         getClass(length) {
             if (length <= 2) {
-                return 'col-md-6'; // Prend la moitié de la page
+                return 'col-md-6';
             }
-            return 'col-md-4'; // Taille par défaut pour 3 projets ou plus
+            return 'col-md-4';
         }
     }
 }
