@@ -10,23 +10,25 @@
             <div class="container">
                 <div class="row">
                     <div v-for="(project, key) in projects" :key="key" :class="[getClass(Object.keys(projects).length), 'mb-4']">
-                        <div class="card project-card">
-                            <div class="card-body m-3">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5>{{ project.title }}</h5>
-                                    <p class="badge bg-primary text-wrap">{{ project.category }}</p>
-                                </div>
-                                <p class="mb-3" v-html="formattedText(truncatedInstructions(project.instructions.text))"></p>
-                                <div class="d-flex flex-wrap">
-                                    <span
-                                        v-for="(technologie, index) in project.technologies"
-                                        :key="index"
-                                        :class="[colors[index % colors.length], 'badge', 'text-wrap', 'me-2', 'mb-2']">
-                                        {{ technologie }}
-                                    </span>
+                        <router-link :to="{ name: 'details', params: { elem: project } }" class="text-decoration-none">
+                            <div class="card project-card">
+                                <div class="card-body m-3">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <h5>{{ project.title }}</h5>
+                                        <p class="badge bg-primary text-wrap">{{ project.category }}</p>
+                                    </div>
+                                    <p class="mb-3" v-html="project.type != 'competence' ? formattedText(truncatedInstructions(project.instructions.text)) : formattedText(project.instructions.text)"></p>
+                                    <div class="d-flex flex-wrap">
+                                        <span
+                                            v-for="(technologie, index) in project.technologies"
+                                            :key="index"
+                                            :class="[technologie.class, 'badge', 'text-wrap', 'me-2', 'mb-2']">
+                                            {{ technologie.name }}
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -38,13 +40,9 @@
 export default {
     name: 'ProjectsView',
 
-    data: () => ({
-        colors: ["bg-success", "bg-danger", "bg-warning", "bg-info", "bg-secondary", "bg-dark"],
-    }),
-
     props: {
         title: String,
-        projects: Array
+        projects: Object
     },
 
     methods: {
