@@ -15,6 +15,51 @@ const linkedin = "https://www.linkedin.com/in/giuliana-godail-fabrizio-20639525b
 
 /* ***************************************************************** projects page ************************************************************* */
 
+const technologies = [
+    // Frontend Web Development
+    { name: "Boostrap", class: "bg-success" },
+    { name: "CSS", class: "bg-success" },
+    { name: "HTML", class: "bg-success" },
+    { name: "Vue.JS", class: "bg-success" },
+
+    // Backend Web Development
+    { name: "React.JS", class: "bg-success" },
+    { name: "Node.JS", class: "bg-danger" },
+    { name: "Flask", class: "bg-danger" },
+
+    // Collaboration Tools
+    { name: "GitHub", class: "bg-warning" },
+    { name: "GitLab", class: "bg-warning" },
+    { name: "Jira", class: "bg-warning" },
+    { name: "SCRUM", class: "bg-warning" },
+    { name: "Trello", class: "bg-warning" },
+
+    // Containerization & Virtualization
+    { name: "Docker", class: "bg-secondary" },
+    { name: "VirtualBox", class: "bg-secondary" },
+
+    // Database & Query Languages
+    { name: "GraphQL", class: "bg-info" },
+    { name: "Minio", class: "bg-info" },
+    { name: "PostgreSQL", class: "bg-info" },
+    { name: "SQL", class: "bg-info" },
+    { name: "Hasura", class: "bg-info" },
+
+    // Programming Languages
+    { name: "Java", class: "bg-dark" },
+    { name: "JS", class: "bg-dark" },
+    { name: "Python", class: "bg-dark" },
+    { name: "TypeScript", class: "bg-dark" },
+    { name: "Kotlin", class: "bg-dark" },
+
+    // IoT & Embedded Systems
+    { name: "Arduino", class: "bg-primary" },
+
+    // Presentation Tools
+    { name: "Word", class: "bg-light text-dark" },
+    { name: "Google Slides", class: "bg-light text-dark" }
+];
+
 const experiences = {
     university_experience: {
         title: "Projets réalisés en BUT Informatique",
@@ -58,7 +103,7 @@ const experiences = {
                             title: "Analyse réflexive",
                             text: "Je pense que pour mieux réussir cette SAÉ il faudrait se motiver davantage bien que le sujet soit peu attractif.\nDe plus, comme dit précédemment il faudrait mieux communiquer les uns avec les autres et s'organiser correctement.\nPour l'aspect esthétique de notre diaporama il aurait été intéressant de prendre un canvas."
                         },
-                        technologies: ["Word", "Google Slides"]
+                        technologies: [technologies[25], technologies[26]]
                     },
                     sae_s1_06: {
                         title: "SAE S1 06",
@@ -93,7 +138,7 @@ const experiences = {
                             title: "Analyse réflexive",
                             text: "Dans le but d'être plus productive et moins dépassée par la charge de travail (cette SAÉ se faisait en parallèle d'une autre), il faudrait que je parvienne mieux à cibler les tâches à faire de sorte de pouvoir m'organiser selon la charge de travail.\nJe dois également m'investir davantage dans les tâches qui ne me motivent pas."
                         },
-                        technologies: ["HTML", "CSS", "Bootstrap", "GitHub"]
+                        technologies: [technologies[2], technologies[1], technologies[0], technologies[7]]
                     },
                     sae_s1_03: {
                         title: "SAE S1 03",
@@ -127,7 +172,7 @@ const experiences = {
                             title: "Analyse réflexive",
                             text: "Je pense que nous nous sommes bien organisés pour cette SAÉ et que notre stratégie de se répartir les SAÉ était une bonne idée, cependant je regrette de ne pas avoir participé pour la V.M."
                         },
-                        technologies: ["VirtualBox"]
+                        technologies: [technologies[13]]
                     },
                     sae_s1_04: {
                         title: "SAE S1 04",
@@ -164,7 +209,7 @@ const experiences = {
                             title: "Analyse réflexive",
                             text: "Dans le but d'être plus rapide et plus efficace à l'avenir, il faudrait que je m'exerce davantage à ce type d'exercice, que ce soit la production de MCD ou la réalisation d'un site web.\nConcernant le travail en groupe, il faudrait que je cesse de vouloir tout contrôler et que je m'adapte au rythme des autres."
                         },
-                        technologies: ["SQL", "Python", "Flask"]
+                        technologies: [technologies[17], technologies[21], technologies[6]]
                     },
                     sae_101_102: {
                         title: "SAE 101-102",
@@ -201,7 +246,7 @@ const experiences = {
                             title: "Analyse réflexive",
                             text: "Pour être plus efficace à l'avenir il faudrait que je travaille davantage l'algorithmique afin de développer des réflexes et de me concentrer davantage sur l'optimisation de mon code.\nDe plus, mon anglais étant moyen, il faudrait que je l'améliore pour éviter que ça ne me pénalise un jour."
                         },
-                        technologies: ["GitHub", "Java"]
+                        technologies: [technologies[7], technologies[19]]
                     },
                     sae_s2_04: {
                         title: "SAE S2 04",
@@ -245,59 +290,11 @@ const experiences = {
                             title: "Analyse réflexive",
                             text: "La réalisation du site web s'est globalement bien déroulée : le planning que nous avions décidé de suivre s'est déroulé sans encombre et nous avons pu tout rendre dans le temps imparti.\nPour ce qui est de la présentation orale, elle s'est assez bien déroulé, mais à mon sens il faudrait s'y prendre davantage à l'avance à l'avenir."
                         },
-                        technologies: ["Boostrap", "HTML", "JS", "SQL", "Flask", "Python"]
+                        technologies: [technologies[0], technologies[2], technologies[6], technologies[17], technologies[20], technologies[21]]
                     },
-                    // sae_s2_05: {
-                    //     title: "SAE S2 05",
-                    //     category: "Universitaire",
-                    //     type: "project",
-                    //     instructions: "",
-                    //     organization_of_work: "",
-                    //     implementation: "",
-                    //     result: {
-                    //         title: "Résultat de la SAÉ",
-                    //         image: "", // TODO
-                    //         text: ""
-                    //     },
-                    //     personal_enrichment: "",
-                    //     skills_worked: "",
-                    //     analysis: "",
-                    //     technologies: ["HTML", "CSS", "Bootstrap"]
-                    // },
-                    // sae_s2_03: {
-                    //     title: "SAE S2 03",
-                    //     category: "Universitaire",
-                    //     type: "project",
-                    //     instructions: "",
-                    //     organization_of_work: "",
-                    //     implementation: "",
-                    //     result: {
-                    //         title: "Résultat de la SAÉ",
-                    //         image: "", // TODO
-                    //         text: ""
-                    //     },
-                    //     personal_enrichment: "",
-                    //     skills_worked: "",
-                    //     analysis: "",
-                    //     technologies: ["HTML", "CSS", "Bootstrap"]
-                    // },
-                    // sae_s2_1_2_6: {
-                    //     title: "SAE S2 1-2-6",
-                    //     category: "Universitaire",
-                    //     type: "project",
-                    //     instructions: "",
-                    //     organization_of_work: "",
-                    //     implementation: "",
-                    //     result: {
-                    //         title: "Résultat de la SAÉ",
-                    //         image: "", // TODO
-                    //         text: ""
-                    //     },
-                    //     personal_enrichment: "",
-                    //     skills_worked: "",
-                    //     analysis: "",
-                    //     technologies: ["HTML", "CSS", "Bootstrap"]
-                    // }
+                    // sae_s2_05: {},
+                    // sae_s2_03: {},
+                    // sae_s2_1_2_6: {}
                 }
             },
             2023: {
@@ -342,7 +339,7 @@ const experiences = {
                             title: "Analyse réflexive",
                             text: "Cette SAÉ a été très intéressante bien que j'ai rencontré plusieurs difficultés dans la mise en place de la base de données. En outre, il aurait été intéressant que je fasse un peu plus de développement Web, ou que je participe à la carte interactive.\n\nConcernant le travail en groupe nous nous sommes bien organisés mais nous aurions dû faire plusieurs branches sur le dépôt GitHub afin de mieux organiser notre travail."
                         },
-                        technologies: ["GitHub", "Trello", "JS", "Node.JS", "PostgreSQL", "Vue.JS"]
+                        technologies: [technologies[7], technologies[11], technologies[20], technologies[5], technologies[3], technologies[16]]
                     },
                     stage_s4: {
                         title: "SAÉ S4.Stage",
@@ -394,7 +391,7 @@ const experiences = {
                             title: "Analyse réflexive",
                             text: "Pour être plus efficace à l'avenir, il faudrait que je cherche des informations de façon plus pertinente et efficace de sorte à moins perdre de temps. De plus, il faudrait que je me familiarise davantage avec GitLab et les bonnes pratiques de développement collaboratif. Enfin, il faudrait que je sous-estime moins les tâches qui m'ont été confiées, car ça m'a parfois conduite à faire des heures supplémentaires."
                         },
-                        technologies: ["JS", "Node.JS", "PostgreSQL", "React.JS", "GitLab"]
+                        technologies: [technologies[20], technologies[5], technologies[4], technologies[16], technologies[8]]
                     }
                 }
             },
@@ -404,6 +401,7 @@ const experiences = {
                 projects: {
                     sae_s5: {
                         title: "Présentation de la SAÉ",
+                        category: "Universitaire",
                         type: "presentation",
                         instructions: {
                             title: "Objectif",
@@ -427,10 +425,11 @@ const experiences = {
                             title: "Résultat de la SAÉ",
                             text: `Actuellement, ce projet est en cours de réalisation. Cependant, vous trouverez <a href="https://gitlab.iut-bm.univ-fcomte.fr/ggodailf/sae_s5">ci-joint</a> le dépôt GitLab du projet.`
                         },
-                        technologies: ["Arduino", "Java", "JS", "Kotlin", "Docker", "GitLab"]
+                        technologies: [technologies[24], technologies[19], technologies[20], technologies[23], technologies[12], technologies[8]]
                     },
                     stage_s6: {
                         title: "Présentation du Stage",
+                        category: "Professionnel",
                         type: "presentation",
                         instructions: {
                             title: "Objectif",
@@ -452,17 +451,17 @@ const experiences = {
                                 }
                             }
                         },
-                        technologies: ["GraphQL", "Hasura", "Minio", "PostgreSQL", "TypeScript", "React.JS", "Jira", "SCRUM"]
+                        technologies: [technologies[14], technologies[18], technologies[15], technologies[22], technologies[9], technologies[10]]
                     },
                     competence_1: {
-                        title: "Compétence 1",
+                        title: "Compétence 1 – Réaliser un développement d’application",
                         type: "competence",
                         instructions: {
-                            text: "La compétence 1 consiste à réaliser un développement d’application."
+                            text: "La compétence 1 consiste à concevoir, coder, tester et intégrer une solution informatique pour un client."
                         },
                         skill_1: {
                             title: "Développer des applications informatiques simples",
-                            text: "Tout au long de ce projet, j'ai pu mettre en pratique des compétences essentielles dans le développement d'applications informatiques simples.\n\nEn collaboration avec un binôme, j'ai travaillé sur une <span style='color:blue;'><strong>application mobile</strong></span> permettant aux utilisateurs de prendre des photos et de les envoyer à un serveur d'analyse que nous avons également développé. Cette expérience m'a permis de créer une interface utilisateur intuitive et facile d'utilisation, tout en implémentant et en élaborant des conceptions simples.\n\nDe plus, j'ai activement contribué au <span style='color:red;'><strong>développement de l'API et du frontend</strong></span>, où j'ai été responsable de l'affichage des données de la base sous forme de graphiques. Pour garantir la fiabilité de cette partie, j'ai effectué plusieurs <span style='color:green;'><strong>tests en JavaScript</strong></span> afin de vérifier que les résultats obtenus correspondaient à ceux attendus.\n\n<h2>Expérience professionnelle</h2>\n\nLors de mon stage en entreprise, j'ai été chargé de plusieurs missions, dont la <span style='color:blue;'><strong>mise en place d'un Dashboard</strong></span> accessible à tous les utilisateurs, qu'ils soient connectés ou non. Pour mener à bien cette tâche, j'ai dû penser l'interface selon les besoins des utilisateurs, extraire des données de la base, les manipuler et les afficher comme demandé par le client.\n\n<em>Ci dessous, vous trouverez une capture d'écran du Dashboard de l'application.</em>\n\nPour chacun de ces projets, j'ai pris soin de <span style='color:red;'><strong>commenter mon code</strong></span> pour rendre l'application évolutive et faciliter sa prise en main par un autre développeur.",
+                            text: "<h2>Projet de SAÉ</h2>Tout au long de ce projet, j'ai pu mettre en pratique des compétences essentielles dans le développement d'applications informatiques simples.\n\nEn collaboration avec un binôme, j'ai travaillé sur une <span style='color:blue;'><strong>application mobile</strong></span> permettant aux utilisateurs de prendre des photos et de les envoyer à un serveur d'analyse que nous avons également développé. Cette expérience m'a permis de créer une interface utilisateur intuitive et facile d'utilisation, tout en implémentant et en élaborant des conceptions simples.\n\nDe plus, j'ai activement contribué au <span style='color:red;'><strong>développement de l'API et du frontend</strong></span>, où j'ai été responsable de l'affichage des données de la base sous forme de graphiques. Pour garantir la fiabilité de cette partie, j'ai effectué plusieurs <span style='color:green;'><strong>tests en JavaScript</strong></span> afin de vérifier que les résultats obtenus correspondaient à ceux attendus.\n\n<h2>Expérience professionnelle</h2>\n\nLors de mon stage en entreprise, j'ai été chargé de plusieurs missions, dont la <span style='color:blue;'><strong>mise en place d'un Dashboard</strong></span> accessible à tous les utilisateurs, qu'ils soient connectés ou non. Pour mener à bien cette tâche, j'ai dû penser l'interface selon les besoins des utilisateurs, extraire des données de la base, les manipuler et les afficher comme demandé par le client.\n\n<em>Ci dessous, vous trouverez une capture d'écran du Dashboard de l'application.</em>\n\nPour chacun de ces projets, j'ai pris soin de <span style='color:red;'><strong>commenter mon code</strong></span> pour rendre l'application évolutive et faciliter sa prise en main par un autre développeur.",
                             images: {
                                 image_1: {
 
@@ -471,7 +470,7 @@ const experiences = {
                         },
                         skill_2: {
                             title: "Des exigences à une application complète",
-                            text: "Dans le cadre de ce projet, mon groupe et moi avons commencé par <span style='color:red;'><strong>analyser les exigences</strong></span> fonctionnelles et techniques fournies par nos professeurs. À partir de ces exigences, nous avons élaboré un <span style='color:green;'><strong>cahier des charges</strong></span> détaillé. Ensuite, en utilisant <span style='color:blue;'><strong>Trello</strong></span>, nous avons organisé et réparti les tâches entre nous, ce qui nous a permis de suivre et de structurer efficacement notre travail tout au long du projet.\n\n<em>Sur la photo ci-contre voici un extrait de notre Trello.</em>\n\n<h2>Expérience professionnelle</h2>\n\nAu cours de mon stage, nous ne disposions pas d'un cahier des charges initial. Le client nous communiquait ses besoins progressivement. Par conséquent, nous avons adopté la <span style='color:red;'><strong>méthodologie agile Scrum</strong></span> en travaillant par sprints. En amont de chaque sprint, nous définissions les besoins des utilisateurs et les fonctionnalités à développer pour les deux semaines suivantes, ce qui nous permettait d'affiner et d'<span style='color:blue;'><strong>ajuster continuellement l'application</strong></span> en fonction des retours et des exigences émergentes.",
+                            text: "<h2>Projet de SAÉ</h2>Dans le cadre de ce projet, mon groupe et moi avons commencé par <span style='color:red;'><strong>analyser les exigences</strong></span> fonctionnelles et techniques fournies par nos professeurs. À partir de ces exigences, nous avons élaboré un <span style='color:green;'><strong>cahier des charges</strong></span> détaillé. Ensuite, en utilisant <span style='color:blue;'><strong>Trello</strong></span>, nous avons organisé et réparti les tâches entre nous, ce qui nous a permis de suivre et de structurer efficacement notre travail tout au long du projet.\n\n<em>Sur la photo ci-contre voici un extrait de notre Trello.</em>\n\n<h2>Expérience professionnelle</h2>\n\nAu cours de mon stage, nous ne disposions pas d'un cahier des charges initial. Le client nous communiquait ses besoins progressivement. Par conséquent, nous avons adopté la <span style='color:red;'><strong>méthodologie agile Scrum</strong></span> en travaillant par sprints. En amont de chaque sprint, nous définissions les besoins des utilisateurs et les fonctionnalités à développer pour les deux semaines suivantes, ce qui nous permettait d'affiner et d'<span style='color:blue;'><strong>ajuster continuellement l'application</strong></span> en fonction des retours et des exigences émergentes.",
                             images: {
                                 image_1: {
 
@@ -480,7 +479,30 @@ const experiences = {
                         },
                         skill_3: {
                             title: "Adapter des applications sur un ensemble de supports",
-                            text: "Pour la partie frontend de la SAÉ et de l'application développée lors de mon stage, nous avons veillé à ce que l'<span style='color:blue;'><strong>interface utilisateur</strong></span> soit <span style='color:blue;'><strong>responsive</strong></span>, s'adaptant à différentes tailles d'écran, que ce soit sur ordinateur ou sur téléphone.\n\nEn outre, j'ai participé à la <span style='color:green;'><strong>conteneurisation des deux projets avec Docker</strong></span>. L'utilisation de cette technologie a facilité le déploiement et l'installation des applications sur différentes plateformes et systèmes d'exploitation.",
+                            text: "Pour la partie frontend de la SAÉ et de l'application développée lors de mon stage, nous avons veillé à ce que l'<span style='color:blue;'><strong>interface utilisateur</strong></span> soit <span style='color:blue;'><strong>responsive</strong></span>, s'adaptant à différentes tailles d'écran, que ce soit sur ordinateur ou sur téléphone.\n\nEn outre, j'ai participé à la <span style='color:green;'><strong>conteneurisation des deux projets avec Docker</strong></span>. L'utilisation de cette technologie a facilité le déploiement et l'installation des applications sur différentes plateformes et systèmes d'exploitation."
+                        },
+                        analysis: {
+                            title: "Conclusion",
+                            text: "Ces expériences m'ont permis d'acquérir et de renforcer mes <span style='color:red;'><strong>connaissances dans le développement d'applications</strong></span>.\n\nEn effet, lors de ma SAÉ et de mon stage, j'ai veillé à respecter les besoins des clients et à assurer la qualité du code par une documentation soignée, facilitant ainsi l'évolution des applications."
+                        }
+                    },
+                    competence_2: {
+                        title: "Compétence 2 : Optimiser des applications",
+                        type: "competence",
+                        instructions: {
+                            text: "Cette compétence implique de modéliser des situations complexes, de s'appuyer sur des schémas de raisonnement et de justifier ses choix."
+                        },
+                        skill_1: {
+                            title: "Appréhender et construire des algorithmes",
+                            text: "<h2>Projet de SAÉ</h2>Dans ce projet, j'ai participé au développement d'une application de tests de réflexe destinée aux scientifiques. Ce projet a nécessité une analyse approfondie des besoins et une <span style='color:red;'><strong>décomposition du problème</strong></span> en éléments simples. Nous avons conçu une architecture complexe où des microcontrôleurs et des objets connectés collectent des données, les transmettent à divers serveurs pour qu'elles soient analysées et sauvegardées.\n\n<h2>Expérience professionnelle</h2>\n\nPendant mon stage, j'ai développé un Dashboard nécessitant la récupération, le formatage, l'analyse et l'affichage des données enregistrées dans la base. Pour cela, j'ai écrit des <span style='color:blue;'><strong>requêtes optimales</strong></span> afin de minimiser le traitement des données. De plus, le Dashboard devant réagir instantanément aux filtres sélectionnés par l'utilisateur j'ai <span style='color:green;'><strong>optimisé les calculs</strong></span> et les appels à la base de données pour ne pas surcharger le serveur et pour obtenir un côté instantané côté client."
+                        },
+                        skill_2: {
+                            title: "Sélectionner les algorithmes adéquats pour répondre à un problème donné",
+                            text: "<h2>Projet de SAÉ</h2>L'application que nous avons développée nécessitait l'utilisation de structures de données complexes. En effet, les informations provenant des microcontrôleurs et de l'application mobile étaient non structurées, ce qui nous a conduits à <span style='color:blue;'><strong>choisir MongoDB</strong></span> pour sa capacité à gérer efficacement ce type de données.\n\n<h2>Expérience professionnelle</h2>\n\nPendant mon stage, la gestion et la <span style='color:red;'><strong>sécurisation des données</strong></span> sensibles ont été des priorités pour le développement de l'application DepollutionMap. Nous avons mis en place des mesures de sécurité robustes pour protéger les données de l'association, notamment en sélectionnant les <span style='color:green;'><strong>droits d'accès</strong></span> associés à chaque table en fonction des types d'utilisateurs (administrateurs, bénévoles, etc.). Nous avons également implémenté un <span style='color:green;'><strong>système d'authentification</strong></span> utilisant des tokens et mis à jour l'interface utilisateur en fonction des droits de l'utilisateur connecté (par exemple, un bouton permettant de créer une ressource n'est accessible qu'aux administrateurs)."
+                        },
+                        skill_3: {
+                            title: "Analyser et optimiser des applications",
+                            text: "Dans le cadre de la SAÉ, j'ai développé un serveur d'analyse capable de détecter si deux visages regardent dans la même direction. Pour ce faire, j'ai entrepris un travail de <span style='color:red;'><strong>recherche et de veille informatique</strong></span>. J'ai réalisé de nombreux essais qui ont abouti à des échecs, mais après avoir adapté un fichier trouvé sur GitHub j'ai pu réaliser cette tâche.\n\nCette expérience m'a permis de <span style='color:green;'><strong>sélectionner</strong></span> et d'<span style='color:green;'><strong>exploiter</strong></span> efficacement des <span style='color:green;'><strong>bibliothèques</strong></span> et des méthodes spécifiques au domaine d'application, en tenant compte des divers problèmes et contraintes rencontrés.",
                             images: {
                                 image_1: {
 
@@ -489,82 +511,42 @@ const experiences = {
                         },
                         analysis: {
                             title: "Conclusion",
-                            text: "Ces expériences m'ont permis d'acquérir et de renforcer mes <span style='color:red;'><strong>connaissances dans le développement d'applications</strong></span>.\n\nEn effet, lors de ma SAÉ et de mon stage, j'ai veillé à respecter les besoins des clients et à assurer la qualité du code par une documentation soignée, facilitant ainsi l'évolution des applications."
+                            text: "Ces expériences m'ont permis d'acquérir et de renforcer mes <span style='color:red;'><strong>connaissances en optimisation des applications</strong></span>.\n\nEn effet, lors de ma SAÉ et de mon stage, j'ai appris à concevoir et à sélectionner des algorithmes adaptés aux problèmes rencontrés, ainsi qu'à analyser et optimiser les applications de manière efficace."
                         }
                     },
-                    // competence_2: {
-                    //     title: "",
-                    //     skill_1: {
-                    //         title: "",
-                    //         text: "",
-                    //         images: {
-                    //             image_1: {
+                    competence_6: {
+                        title: "Compétence 6 : Collaborer au sein d’une équipe",
+                        type: "competence",
+                        instructions: {
+                            text: "Le but de cette compétence est d'acquérir, de développer et d'exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatique."
+                        },
+                        skill_1: {
+                            title: "Identifier ses aptitudes pour travailler dans une équipe",
+                            text: "<h2>Projet de SAÉ</h2>Pour ce projet, mon groupe et moi avons <span style='color:green;'><strong>réparti les tâches</strong></span> en fonction des aptitudes de chacun. Il a été crucial d'<span style='color:red;'><strong>identifier</strong></span> mes <span style='color:red;'><strong>compétences</strong></span>, celles des autres membres de l'équipe, ainsi que celles requises pour chaque tâche afin de les attribuer de manière optimale.\n\n<h2>Expérience professionnelle</h2>\n\nDurant mon stage, j'ai été encadrée par mon maître de stage et le chef de projet. Bien que je n'aie pas eu à <span style='color:blue;'><strong>identifier directement les aptitudes</strong></span> de chacun, j'ai appris à reconnaître le rôle et le statut de chaque membre de l'équipe. Cela m'a permis de savoir vers qui me tourner en fonction de mes besoins spécifiques.\n\nPour ces deux expériences, j'ai développé de <span style='color:green;'><strong>solides compétences interpersonnelles</strong></span>. J'ai appris à m'adapter rapidement à diverses situations et à renforcer mon esprit d'équipe et ma communication. Cela a grandement facilité la <span style='color:red;'><strong>collaboration</strong></span> et la <span style='color:red;'><strong>cohésion</strong></span> au sein des équipes avec lesquelles j'ai travaillé."
+                        },
+                        skill_2: {
+                            title: "Situer son rôle et ses missions au sein d’une équipe informatique",
+                            text: "Pour chaque projet auquel j'ai contribué, j'ai activement participé aux <span style='color:blue;'><strong>réunions d'équipe</strong></span> et utilisé divers <span style='color:green;'><strong>outils de collaboration</strong></span> tels que <span style='color:red;'><strong>GitLab</strong></span>, Microsoft Teams et Discord. Ces expériences m'ont permis de m'intégrer rapidement et efficacement dans les équipes informatiques, contribuant de manière significative aux projets en cours.\n\nJ'ai également développé et perfectionné mes compétences interpersonnelles, notamment en matière de collaboration, de communication et d'écoute. Ces compétences m'ont aidée à <span style='color:blue;'><strong>travailler efficacement</strong></span> dans des environnements d'équipe diversifiés, en favorisant une atmosphère de coopération.\n\nEnfin, pour <span style='color:green;'><strong>suivre mon activité</strong></span> et garantir une transparence et une responsabilisation continues dans mon travail, j'ai utilisé des outils de gestion de projet comme <span style='color:red;'><strong>Trello</strong></span> et <span style='color:red;'><strong>Jira</strong></span>.",
+                            images: {
+                                image_1: {
 
-                    //             }
-                    //         }
-                    //     },
-                    //     skill_2: {
-                    //         title: "",
-                    //         text: "",
-                    //         images: {
-                    //             image_1: {
-
-                    //             }
-                    //         }
-                    //     },
-                    //     skill_3: {
-                    //         title: "",
-                    //         text: "",
-                    //         images: {
-                    //             image_1: {
-
-                    //             }
-                    //         }
-                    //     },
-                    //     analysis: {
-                    //         title: "Conclusion",
-                    //         text: ""
-                    //     }
-                    // },
-                    // competence_6: {
-                    //     title: "",
-                    //     skill_1: {
-                    //         title: "",
-                    //         text: "",
-                    //         images: {
-                    //             image_1: {
-
-                    //             }
-                    //         }
-                    //     },
-                    //     skill_2: {
-                    //         title: "",
-                    //         text: "",
-                    //         images: {
-                    //             image_1: {
-
-                    //             }
-                    //         }
-                    //     },
-                    //     skill_3: {
-                    //         title: "",
-                    //         text: "",
-                    //         images: {
-                    //             image_1: {
-
-                    //             }
-                    //         }
-                    //     },
-                    //     analysis: {
-                    //         title: "Conclusion",
-                    //         text: ""
-                    //     }
-                    // }
+                                }
+                            }
+                        },
+                        skill_3: {
+                            title: "Manager une équipe informatique",
+                            text: "Au cours des projets que j'ai réalisés cette année, j'ai souvent pris l'initiative d'<span style='color:blue;'><strong>aider</strong></span> et d'<span style='color:blue;'><strong>attribuer des tâches</strong></span> à mon groupe. Dans les situations où nous rencontrions des problèmes, j'étais fréquemment en mesure de <span style='color:green;'><strong>proposer des solutions</strong></span> possibles. Ces propositions étaient ensuite discutées en groupe, permettant de trouver la meilleure approche collective.\n\nGrâce à cette dynamique, j'ai contribué à maintenir un flux de travail efficace et à renforcer la cohésion de l'équipe, tout en développant mes compétences en management et en résolution de problèmes."
+                        },
+                        analysis: {
+                            title: "Conclusion",
+                            text: "Ces expériences m'ont permis d'acquérir et de renforcer mes <span style='color:red;'><strong>compétences en collaboration</strong></span> au sein d'une équipe informatique.\n\nEn effet, j'ai appris à utiliser des outils essentiels dans le domaine de l'informatique, tels que GitLab. De plus, au cours de ma SAÉ et de mon stage, j'ai veillé à rendre compte de mon activité professionnelle, à développer mes compétences interpersonnelles et à soutenir activement mon équipe."
+                        }
+                    },
                 }
             }
         }
     }
-}
+};
 
 module.exports = {
     name: name,
