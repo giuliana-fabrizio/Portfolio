@@ -25,16 +25,19 @@ const experiences = {
                 projects: {
                     sae_S1_05: {
                         title: "SAE S1 05",
+                        category: "Universitaire",
                         instructions: `Cette SAÉ est la première que nous avons dû réaliser.\nLe but était de faire une présentation en groupe sur une thématique assez surprenante (car n'ayant pas de rapport particulier avec l'informatique). La problématique que mon groupe devait traiter était "Comment présenteriez-vous votre formation dans votre ancien lycée ?".\nPlus précisément nous devions décrire le scénario (besoins du client, organisation pour répondre aux attentes du client) à l'aide des questions - réponses échangées avec les professeurs (se mettant à la place du client), ainsi que notre travail de groupe pour réaliser cette SAÉ.`,
                         organization_of_group_work: "Pour cette SAÉ nous nous sommes à mon sens assez mal organisé.\nNous ne nous sommes répartis les tâches qu'assez tardivement ce qui ne nous a pas permis de rendre un très bon travail.\nAinsi nous nous sommes répartis la réalisation : \n\t• d'un diagramme de Gantt (diagramme décrivant l'organisation selon laquelle nous avons opéré pour réaliser cette SAÉ) ;\n\t• du diaporama à présenter lors de notre soutenance ;\n\t• du texte.",
                         actions_in_the_group: "Pour ma part je me suis chargée de la réalisation du diagramme de Gant ainsi que d'une partie du texte accompagnant le diaporama le jour de la soutenance.",
                         result: "", // TODO
                         personal_enrichment: "Cette SAÉ m'aura permis de me rapprocher de mes camarades de classe en travaillant avec certains pour ce projet et en passant à l'oral devant les autres.",
                         skills_worked: "Parmi les compétences au programme du premier semestre du BUT, je pense avoir travaillé la compétence 5 qui consiste à gérer un projet.\nEn effet cette SAÉ aura été plus compliquée à réaliser que nous le pensions principalement dû au fait que nous avons négligé la gestion de projet au commencement.",
-                        reflective_analysis: "Je pense que pour mieux réussir cette SAÉ il faudrait se motiver davantage bien que le sujet soit peu attractif.\nDe plus, comme dit précédemment il faudrait mieux communiquer les uns avec les autres et s'organiser correctement.\nPour l'aspect esthétique de notre diaporama il aurait été intéressant de prendre un canvas."
+                        reflective_analysis: "Je pense que pour mieux réussir cette SAÉ il faudrait se motiver davantage bien que le sujet soit peu attractif.\nDe plus, comme dit précédemment il faudrait mieux communiquer les uns avec les autres et s'organiser correctement.\nPour l'aspect esthétique de notre diaporama il aurait été intéressant de prendre un canvas.",
+                        technologies: ["Word", "Google Slides"]
                     },
                     sae_S1_06: {
                         title: "SAE S1 06",
+                        category: "Universitaire",
                         instructions: "Cette SAÉ, consistait à créer un site web sur une entreprise informatique française. De plus, nous devions faire un rapport analytique de l'entreprise choisie ainsi qu'un diagramme de Gantt ou un réseau Pert pour planifier les tâches que nous devions réaliser.",
                         organization_of_group_work: "Mon groupe comptait 4 personnes.\nConcernant le rapport économique, nous nous sommes divisés les différentes parties à faire (présentation de l'entreprise, aspect économique, aspect environnemental).\nPour ce qui est du site Web, nous nous sommes d'abord mis d'accord au sujet de la charte graphique afin que le style du site soit cohérent pour chaque page. Nous avons ensuite décidé qui fera quelle page.",
                         actions_in_the_group: "Ma partie du rapport (aspect économique) résidait à faire des recherches et une analyse sur :\n\t• les partenariats et les concurrents de Capgemini, l'entreprise que nous avions choisie ;\n\t• le chiffre d'affaires et autres aspects financiers de l'entreprise.\nConcernant le site web, j'ai participé à la création de la charte graphique.\nAu niveau du développement du site, je me suis en partie chargée de faire le menu, la sous-page d'accueil, le formulaire de contact, le bouton de téléchargement, et de rendre le site adaptable selon la taille de l'appareil avec lequel on le consulte (responsive).",
@@ -45,6 +48,7 @@ const experiences = {
                     },
                     sae_S1_03: {
                         title: "SAE S1 03",
+                        category: "Universitaire",
                         instructions: "L'objectif de cette SAÉ était d'installer et de configurer une machine virtuelle (V.M) en fonction d'un cahier des charges donné.\nNous devions pour cela rendre 3 livrables :\n\t• un dossier d'étude et de choix des solutions (rapport contenant la demande formulée par le client, description des architectures matérielles proposées, description des architectures logicielles proposées) ;\n\t• un schéma de l'architecture logicielle / notice d'utilisation (rapport contenant les étapes de l'installation de la machine virtuelle + la machine virtuelle complète) ;\n\t• une présentation orale.\nPour ce faire, mon groupe était constitué de 4 personnes.",
                         organization_of_group_work: "Mon groupe (de 4 personnes) et moi nous sommes répartis les différentes parties constituant le premier rapport.\nLa V.M a été réalisée par deux membres du groupe car les deux autres s'occupaient de faire la SAÉ S1.04 faite conjointement à celle-ci et disponible dans ce portfolio. Le rapport contenant les étapes d'installation a donc été rédigé par ces deux membres et relu dans son intégralité par tout le groupe.",
                         actions_in_the_group: "Concernant le premier rapport j'ai fait la partie consistant à déterminer et décrire les différents logiciels à installer. Pour cela je me suis documentée sur plusieurs sites ce qui m'a d'ailleurs permis d'apprendre beaucoup de choses.\nJe n'ai personnellement pas participé à l'installation et à la configuration de la V.M.",
@@ -55,6 +59,7 @@ const experiences = {
                     },
                     sae_S1_04: {
                         title: "SAE S1 04",
+                        category: "Universitaire",
                         instructions: "Pour cette SAÉ nous devions faire un MCD, un rapport et une application destinée aux habitants d'une petite commune.\nLe MCD (ou Modèle Conceptuel de Données) est une sorte de représentation des données utilisées par le système d'information.\nLe rapport devait justifier nos choix fait lors de la réalisation du MCD.\nParallèlement le but de l'application était que les habitants de la commune puissent s'en servir pour réserver ou proposer des trajets entre leur mairie et un autre endroit et inversement.\nNotre  mission était de faire en sorte de pouvoir ajouter, éditer ou supprimer un trajet, un véhicule, une réservation (sauf éditer), et un habitant, pour lequel nous devions aussi faire un profil.",
                         organization_of_group_work: "Il nous était imposé que chaque membre du groupe (constitué de 4 personnes) se charge d'une page (soit habitant, soit véhicule, etc).\nAinsi chacun a choisi la page dont il souhaitait se charger et l'a faite.\nConcernant le rapport, la rédaction s'est faite par ceux qui avaient fait le MCD.",
                         actions_in_the_group: "Je me suis chargée d'une partie du script SQL et de la partie habitant.\nPour cela, j'ai dû faire en sorte de pouvoir ajouter un nouvel habitant, de l'éditer (changer le nom par exemple), de le supprimer, ainsi que de montrer son profil (voir photo ci-dessous).",
@@ -65,6 +70,7 @@ const experiences = {
                     },
                     sae_101_102: {
                         title: "SAE 101-102",
+                        category: "Universitaire",
                         instructions: "",
                         organization_of_group_work: "",
                         actions_in_the_group: "",
@@ -75,6 +81,7 @@ const experiences = {
                     },
                     sae_S2_04: {
                         title: "SAE S2 04",
+                        category: "Universitaire",
                         instructions: "",
                         organization_of_group_work: "",
                         actions_in_the_group: "",
@@ -85,6 +92,7 @@ const experiences = {
                     },
                     sae_S2_05: {
                         title: "SAE S2 05",
+                        category: "Universitaire",
                         instructions: "",
                         organization_of_group_work: "",
                         actions_in_the_group: "",
@@ -95,6 +103,7 @@ const experiences = {
                     },
                     sae_S2_03: {
                         title: "SAE S2 03",
+                        category: "Universitaire",
                         instructions: "",
                         organization_of_group_work: "",
                         actions_in_the_group: "",
@@ -105,6 +114,7 @@ const experiences = {
                     },
                     sae_S2_1_2_6: {
                         title: "SAE S2 1-2-6",
+                        category: "Universitaire",
                         instructions: "",
                         organization_of_group_work: "",
                         actions_in_the_group: "",
