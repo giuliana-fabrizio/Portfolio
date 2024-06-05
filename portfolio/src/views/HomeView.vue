@@ -13,7 +13,7 @@
     <main id="home_main" class="d-flex justify-content-center pb-5 pt-5">
         <div class="col-md-7">
             <section id="formation" class="mb-5 text-center">
-                <h5 class="mb-3">À propos de moi</h5>
+                <h5 class="mb-3"><strong>À propos de moi</strong></h5>
                 <p class="mb-4">{{ about_me }}</p>
 
                 <a class="btn btn-outline-primary rounded-pill w-25" href="/Portfolio/#/all_projects" role="button">
@@ -27,12 +27,12 @@
             </section>
 
             <section id="experiences_professionnelles" class="mb-5 text-center">
-                <h5 class="mb-3">Expériences professionnelles</h5>
+                <h5 class="mb-3"><strong>Expériences professionnelles</strong></h5>
                 <p class="mb-4">{{ professional_experience }}</p>
             </section>
 
             <section id="loisirs" class="mb-5 text-center">
-                <h5 class="mb-3">Loisirs</h5>
+                <h5 class="mb-3"><strong>Loisirs</strong></h5>
                 <p>{{ hobbies }}</p>
             </section>
 
