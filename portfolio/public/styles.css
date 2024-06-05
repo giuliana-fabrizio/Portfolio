@@ -151,3 +151,15 @@ footer {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+
+/* ***************************************************************** page de details ************************************************************* */
+
+.img-page-details {
+    transition: transform 0.4s ease;
+}
+
+.img-page-details:hover {
+    transform: scale(1.8);
+    z-index: 100;
+}
