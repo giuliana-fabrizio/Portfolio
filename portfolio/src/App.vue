@@ -2,7 +2,7 @@
   <div id="app">
     <div class="barre_menu">
         <nav class="container d-flex justify-content-between align-items-center py-3">
-            <a href="#" class="logo">
+            <a href="/Portfolio/#/" class="logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#333" class="bi bi-grid"
                     viewBox="0 0 16 16">
                     <path
