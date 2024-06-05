@@ -1,23 +1,27 @@
 <template>
     <div>
-        <header id="projects_header">
+        <header id="all_projects_header">
             <section id="titre" class="w-100">
                 <h1 class="mt-5 text-primary">Mes projets</h1>
             </section>
         </header>
   
-        <main id="projects_main">
+        <main id="all_projects_main">
             <div class="container">
                 <div v-for="(experience, key) in experiences" :key="key">
                     <h3 class="heading">{{ experience.title }}</h3>
-                    <div v-for="(year, index) in experience.years" :key="index" class="project">
-                        <div class="project-image">
-                            <img src="images/developer.webp" class="project-image" />
+                    <div v-for="(year, index) in experience.years" :key="index" class="projects">
+                        <div class="project-category-image">
+                            <img src="images/developer.webp" class="project-category-image" />
                         </div>
-                        <div class="project-info">
+                        <div class="project-category-info">
                             <h5>{{ year.category }}</h5>
                             <p>{{ year.summary }}</p>
-                            <a href="#">Voir les projets</a>
+                            <router-link
+                                :to="{ name: 'projects', params: { title: year.category, projects: year.projects } }"
+                                class="btn btn-primary mt-3">
+                                Voir les projets
+                            </router-link>
                         </div>
                     </div>
                 </div>
@@ -25,7 +29,6 @@
         </main>
     </div>
 </template>
-
 
 <script>
 import variables from '../variables.js';
@@ -41,6 +44,4 @@ export default {
         this.experiences = variables.experiences;
     }
 }
-
 </script>
-  

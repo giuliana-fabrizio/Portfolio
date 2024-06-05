@@ -1,9 +1,10 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import AllProjectsView from '../views/AllProjectsView.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import AllProjectsView from '../views/AllProjectsView.vue';
+import ProjectsView from '../views/ProjectsView.vue';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -13,13 +14,19 @@ const routes = [
   },
   {
     path: '/all_projects',
-    name: 'projects',
+    name: 'all_projects',
     component: AllProjectsView
+  },
+  {
+    path: '/projects',
+    name: 'projects',
+    component: ProjectsView,
+    props: route => ({ title: route.params.title, projects: route.params.projects })
   }
-]
+];
 
 const router = new VueRouter({
   routes
-})
+});
 
-export default router
+export default router;
