@@ -10,6 +10,7 @@ body {
     background: #ffffff9c;
     position: fixed;
     width: 100%;
+    z-index: 100;
 }
 
 #titre {
@@ -137,6 +138,7 @@ footer {
 /* ***************************************************************** page de projets ************************************************************* */
 
 .project-card {
+    background-color: #f4f4f9;
     border: none;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
