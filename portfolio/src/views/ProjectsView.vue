@@ -14,7 +14,7 @@
                             <div class="card project-card">
                                 <div class="card-body m-3">
                                     <div class="d-flex justify-content-between mb-3">
-                                        <h5>{{ project.title }}</h5>
+                                        <h5><strong>{{ project.title }}</strong></h5>
                                         <p class="badge bg-primary text-wrap">{{ project.category }}</p>
                                     </div>
                                     <p class="mb-3" v-html="formattedText(project.technologies ? truncatedInstructions(project.instructions.text) : project.instructions.text)"></p>
