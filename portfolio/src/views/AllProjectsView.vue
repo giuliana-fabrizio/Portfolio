@@ -5,7 +5,7 @@
                 <h1 class="mt-5 text-primary">Mes projets</h1>
             </section>
         </header>
-  
+
         <main id="all_projects_main">
             <div class="container">
                 <div v-for="(experience, key) in experiences" :key="key">
@@ -17,10 +17,8 @@
                         <div class="project-category-info">
                             <h5>{{ year.category }}</h5>
                             <p>{{ year.summary }}</p>
-                            <router-link
-                                :to="{ name: 'projects', params: { title: year.category, projects: year.projects } }"
-                                class="btn btn-primary mt-3">
-                                Voir les projets
+                            <router-link :to="{ name: 'projects' }" class="btn btn-primary mt-3">
+                                <div @click="setProjects(year)">Voir les projets</div>
                             </router-link>
                         </div>
                     </div>
@@ -42,6 +40,12 @@ export default {
 
     created() {
         this.experiences = variables.experiences;
+    },
+
+    methods: {
+        setProjects(projects) {
+            this.$store.commit('setProjects', projects);
+        }
     }
 }
 </script>

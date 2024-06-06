@@ -16,7 +16,7 @@
                 <h5 class="mb-3"><strong>À propos de moi</strong></h5>
                 <p class="mb-4">{{ about_me }}</p>
 
-                <a class="btn btn-outline-primary rounded-pill w-25" href="/Portfolio/#/all_projects" role="button">
+                <a class="btn btn-outline-primary rounded-pill w-30" href="/Portfolio/#/all_projects" role="button">
                     Consulter mes projets
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                         class="bi bi-arrow-right-circle mb-1" viewBox="0 0 16 16">
@@ -61,25 +61,25 @@
 import variables from '../variables.js';
 
 export default {
-  name: 'HomeView',
+    name: 'HomeView',
 
-  data: () => ({
-    name: "",
-    status: "",
-    about_me: "",
-    professional_experience: "",
-    hobbies: "",
-    cv_link: "",
-  }),
+    data: () => ({
+        name: "",
+        status: "",
+        about_me: "",
+        professional_experience: "",
+        hobbies: "",
+        cv_link: "",
+    }),
 
-  created() {
-    this.name = variables.name;
-    this.status = variables.status;
-    this.about_me = variables.about_me;
-    this.professional_experience = variables.professional_experience;
-    this.hobbies = variables.hobbies;
-    this.cv_link = variables.cv_link;
-  }
+    created() {
+        this.name = variables.name;
+        this.status = variables.status;
+        this.about_me = variables.about_me;
+        this.professional_experience = variables.professional_experience;
+        this.hobbies = variables.hobbies;
+        this.cv_link = variables.cv_link;
+    }
 }
 
 </script>

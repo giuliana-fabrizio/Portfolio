@@ -2,16 +2,16 @@
     <div>
         <header id="projects_header" class="text-center">
             <section id="titre" class="w-100">
-                <h1 class="mt-5 text-primary">{{ title }}</h1>
+                <h1 class="mt-5 text-primary">{{ data.category }}</h1>
             </section>
         </header>
   
         <main id="projects_main" class="py-5">
             <div class="container">
                 <div class="row">
-                    <div v-for="(project, key) in projects" :key="key" :class="[getClass(Object.keys(projects).length), 'mb-4']">
-                        <router-link :to="{ name: 'details', params: { elem: project } }" class="text-decoration-none">
-                            <div class="card project-card">
+                    <div v-for="(project, key) in data.projects" :key="key" :class="[getClass(Object.keys(data.projects).length), 'mb-4']">
+                        <router-link :to="{ name: 'details' }" class="text-decoration-none">
+                            <div class="card project-card" @click="setProject(project)">
                                 <div class="card-body m-3">
                                     <div class="d-flex justify-content-between mb-3">
                                         <h5><strong>{{ project.title }}</strong></h5>
@@ -40,14 +40,24 @@
 export default {
     name: 'ProjectsView',
 
-    props: {
-        title: String,
-        projects: Object
+    data() {
+        return {
+            data: null
+        };
+    },
+
+    beforeRouteEnter(to, from, next) {
+        next(vm => {
+            vm.loadData();
+        });
     },
 
     methods: {
+        loadData() {
+            this.data = this.$store.getters.getProjects;
+        },
         truncatedInstructions(instructions) {
-            const maxLength = Object.keys(this.projects).length <= 2 ? 175 : 100;
+            const maxLength = Object.keys(this.data.projects).length <= 2 ? 175 : 100;
             if (instructions.length > maxLength) {
                 return instructions.substring(0, maxLength) + '...';
             }
@@ -64,6 +74,9 @@ export default {
                 return 'col-md-6';
             }
             return 'col-md-4';
+        },
+        setProject(project) {
+            this.$store.commit('setProject', project);
         }
     }
 }

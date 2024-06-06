@@ -28,7 +28,6 @@ const routes = [
     path: '/details',
     name: 'details',
     component: DetailsView,
-    props: route => ({ elem: route.params.elem })
   }
 ];
 
