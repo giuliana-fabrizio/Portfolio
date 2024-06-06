@@ -12,7 +12,7 @@
                     <h3 class="heading">{{ experience.title }}</h3>
                     <div v-for="(year, index) in experience.years" :key="index" class="projects">
                         <div class="project-category-image">
-                            <img src="images/developer.webp" class="project-category-image" />
+                            <img src="images/case.png" class="project-category-image" />
                         </div>
                         <div class="project-category-info">
                             <h5>{{ year.category }}</h5>
