@@ -1,5 +1,5 @@
 <template>
-<div id="app">
+<div id="app" class="font-monospace">
     <div class="barre_menu">
         <nav class="container d-flex justify-content-between align-items-center py-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#333" class="bi bi-grid logo" viewBox="0 0 16 16">

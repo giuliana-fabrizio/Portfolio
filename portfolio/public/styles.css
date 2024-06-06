@@ -124,7 +124,6 @@ footer {
 
 .project-category-info h5 {
     font-size: 1.3em;
-    font-weight: 300;
     color: #374054;
     margin-bottom: 15px;
 }
@@ -156,10 +155,10 @@ footer {
 /* ***************************************************************** page de details ************************************************************* */
 
 .img-page-details {
-    transition: transform 0.4s ease;
+    transition: transform 0.3s ease;
 }
 
 .img-page-details:hover {
-    transform: scale(1.8);
+    transform: scale(1.6);
     z-index: 100;
 }
