@@ -99,40 +99,6 @@ footer {
     margin: 0 0 30px 0
 }
 
-.projects {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
-    height: 270px;
-    margin: 0 auto 30px auto;
-    width: 900px;
-    position: relative;
-}
-
-.project-category-image {
-    padding: 15px;
-    width: 200px;
-}
-
-.project-category-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 250px;
-    padding: 20px;
-}
-
-.project-category-info h5 {
-    font-size: 1.3em;
-    color: #374054;
-    margin-bottom: 15px;
-}
-
-.project-category-info p {
-    color: #74808a;
-    font-size: 0.9em
-}
-
 
 /* ***************************************************************** page de projets ************************************************************* */
 
