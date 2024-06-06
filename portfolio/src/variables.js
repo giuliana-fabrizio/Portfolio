@@ -24,7 +24,7 @@ const about_me = "Actuellement en dernière année de BUT Informatique, je souha
 const professional_experience = "En 2021 j'ai réalisé un CDD de 2 mois en tant qu’employée de supérette. Dans le cadre de ma formation j’ai aussi effectué 2 stages en entreprise chacun d’une durée de 12 semaines. Ces expériences m'ont permis de découvrir le travail en équipe, où j'ai pu apprendre des autres tout en partageant mes connaissances.";
 const hobbies = "Durant mon temps libre, je pratique un peu d’activité physique comme le jogging. Je développe aussi des projets personnels. J’aime aussi beaucoup la couture, par exemple, j’ai réalisé des trousses pour ranger mes stylos et quelques autres gadgets.";
 
-const cv_link = "https://raw.githubusercontent.com/mbeaudru-iut90/SAE_06_Capgemini/main/doc/Fernandes_SAES106_C1_Capgemini.pdf";
+const cv_link = "https://raw.githubusercontent.com/giuliana-fabrizio/Portfolio/253247d87ed0a8fd4a434af54c122fb21aaeedb5/portfolio/files/Curriculum_vitae_Giuliana_GODAIL-FABRIZIO.pdf";
 const mail = "mailto:godailfabriziogiuliana@gmail.com";
 const github = "https://github.com/giuliana-fabrizio";
 const linkedin = "https://www.linkedin.com/in/giuliana-godail-fabrizio-20639525b/";
