@@ -100,24 +100,6 @@ footer {
 }
 
 
-/* ***************************************************************** page de projets ************************************************************* */
-
-.project-card {
-    background-color: #f4f4f9;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #555;
-    height: 250px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-
 /* ***************************************************************** page de details ************************************************************* */
 
 .img-page-details {
