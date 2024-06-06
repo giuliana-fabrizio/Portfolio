@@ -38,16 +38,11 @@ export default {
         };
     },
 
-    beforeRouteEnter(to, from, next) {
-        next(vm => {
-            vm.loadProject();
-        });
+    created() {
+        this.project = this.$store.getters.getProject;
     },
 
     methods: {
-        loadProject() {
-            this.project = this.$store.getters.getProject;
-        },
         formattedText(text) {
             if (!text) return '';
             return text

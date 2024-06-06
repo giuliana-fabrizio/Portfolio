@@ -47,16 +47,11 @@ export default {
         };
     },
 
-    beforeRouteEnter(to, from, next) {
-        next(vm => {
-            vm.loadData();
-        });
+    created() {
+        this.data = this.$store.getters.getProjects;
     },
 
     methods: {
-        loadData() {
-            this.data = this.$store.getters.getProjects;
-        },
         truncatedInstructions(instructions) {
             const maxLength = Object.keys(this.data.projects).length <= 2 ? 175 : 100;
             if (instructions.length > maxLength) {

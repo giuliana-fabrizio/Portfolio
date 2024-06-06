@@ -18,8 +18,8 @@
                             <div class="col-8">
                                 <h5 class="text-dark mb-3" style="font-size: 1.3em;">{{ year.category }}</h5>
                                 <p class="text-secondary" style="font-size: 0.9em;">{{ year.summary }}</p>
-                                <router-link :to="{ name: 'projects' }" class="btn btn-primary mt-2" @click="setProjects(year)">
-                                    Voir les projets
+                                <router-link :to="{ name: 'projects' }" class="btn btn-primary mt-2">
+                                    <div @click="setProjects(year)">Voir les projets</div>
                                 </router-link>
                             </div>
                         </div>
