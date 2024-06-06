@@ -15,22 +15,38 @@ const competence_1_trello = require("../files/competence_1/trello_sae.png");
 const competence_6_gitlab = require("../files/competence_6/gitlab.png");
 
 
-/* ***************************************************************** home page ***************************************************************** */
+/* ***************************************************************** common ***************************************************************** */
 
 const name = "Giuliana GODAIL FABRIZIO";
+
+
+/* ***************************************************************** home page ***************************************************************** */
+
 const status = "Étudiante en informatique";
 
+const about_me_title = "À propos de moi";
 const about_me = "Actuellement en dernière année de BUT Informatique, je souhaite poursuivre mes études en écoles d'ingénieurs. Si j’ai choisi l’informatique c’est parce que j’aime concevoir et optimiser des projets, en trouvant des solutions adaptées aux besoins des utilisateurs.";
+const my_projects = "Consulter mes projets";
+const professional_experience_title = "Expériences professionnelles";
 const professional_experience = "En 2021 j'ai réalisé un CDD de 2 mois en tant qu’employée de supérette. Dans le cadre de ma formation j’ai aussi effectué 2 stages en entreprise chacun d’une durée de 12 semaines. Ces expériences m'ont permis de découvrir le travail en équipe, où j'ai pu apprendre des autres tout en partageant mes connaissances.";
+const hobbies_title = "Loisirs";
 const hobbies = "Durant mon temps libre, je pratique un peu d’activité physique comme le jogging. Je développe aussi des projets personnels. J’aime aussi beaucoup la couture, par exemple, j’ai réalisé des trousses pour ranger mes stylos et quelques autres gadgets.";
+const download_cv = "Télécharger mon CV";
 
-const cv_link = "https://raw.githubusercontent.com/giuliana-fabrizio/Portfolio/253247d87ed0a8fd4a434af54c122fb21aaeedb5/portfolio/files/Curriculum_vitae_Giuliana_GODAIL-FABRIZIO.pdf";
+
+/* ***************************************************************** footer ***************************************************************** */
+
+const link_cv = "https://raw.githubusercontent.com/giuliana-fabrizio/Portfolio/253247d87ed0a8fd4a434af54c122fb21aaeedb5/portfolio/files/Curriculum_vitae_Giuliana_GODAIL-FABRIZIO.pdf";
 const mail = "mailto:godailfabriziogiuliana@gmail.com";
 const github = "https://github.com/giuliana-fabrizio";
 const linkedin = "https://www.linkedin.com/in/giuliana-godail-fabrizio-20639525b/";
 
 
 /* ***************************************************************** projects page ***************************************************************** */
+
+const projects_page_title = "Mes projets";
+
+const more_projects = "Voir les projets";
 
 const technologies = [
     // Frontend Web Development
@@ -103,16 +119,6 @@ const experiences = {
                             title: "Mes actions dans le groupe",
                             text: "Pour ma part je me suis chargée de la réalisation du diagramme de Gantt ainsi que d'une partie du texte accompagnant le diaporama le jour de la soutenance.",
                         },
-                        // result: {
-                        //     title: "Résultat de la SAÉ",
-                        //     file: "", // TODO
-                        //     images: [
-                        //         {
-                        //             path: sae_s1_05_slide_accueil,
-                        //             legend: "Légende: première page du slide"
-                        //         }
-                        //     ]
-                        // },
                         personal_enrichment: {
                             title: "Enrichissement personnel",
                             text: "Cette SAÉ m'aura permis de me rapprocher de mes camarades de classe en travaillant avec certains pour ce projet et en passant à l'oral devant les autres."
@@ -607,12 +613,19 @@ const experiences = {
 module.exports = {
     name: name,
     status: status,
+    about_me_title: about_me_title,
     about_me: about_me,
+    my_projects: my_projects,
+    professional_experience_title: professional_experience_title,
     professional_experience: professional_experience,
+    hobbies_title: hobbies_title,
     hobbies: hobbies,
-    cv_link: cv_link,
+    download_cv: download_cv,
+    link_cv: link_cv,
     mail: mail,
     github: github,
     linkedin: linkedin,
-    experiences: experiences
+    projects_page_title: projects_page_title,
+    experiences: experiences,
+    more_projects: more_projects
 }
