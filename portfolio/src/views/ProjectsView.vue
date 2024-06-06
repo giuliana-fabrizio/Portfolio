@@ -6,7 +6,7 @@
             </section>
         </header>
   
-        <main id="projects_main" class="py-5">
+        <main id="projects_main" class="m-3 py-5">
             <div class="container">
                 <div class="row">
                     <div v-for="(project, key) in data.projects" :key="key" :class="[getClass(Object.keys(data.projects).length), 'mb-4']">

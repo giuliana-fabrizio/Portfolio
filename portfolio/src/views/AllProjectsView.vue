@@ -7,7 +7,7 @@
         </header>
 
         <main id="all_projects_main">
-            <div class="container">
+            <div>
                 <div v-for="(experience, key) in experiences" :key="key">
                     <h3 class="heading">{{ experience.title }}</h3>
                     <div v-for="(year, index) in experience.years" :key="index" class="container projects">
@@ -16,7 +16,7 @@
                         </div>
                         <div class="project-category-info">
                             <h5>{{ year.category }}</h5>
-                            <p>{{ year.summary }}</p>
+                            <p class="display-summary">{{ year.summary }}</p>
                             <router-link :to="{ name: 'projects' }" class="btn btn-primary mt-2">
                                 <div @click="setProjects(year)">Voir les projets</div>
                             </router-link>
@@ -49,3 +49,11 @@ export default {
     }
 }
 </script>
+
+<style>
+@media (max-width: 770px) {
+    .display-summary {
+        display: none !important;
+    }
+}
+</style>
