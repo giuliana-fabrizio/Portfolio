@@ -2,7 +2,7 @@
     <div>
         <header id="all_projects_header">
             <section id="titre" class="w-100">
-                <h1 class="mt-5 text-primary">Mes projets</h1>
+                <h1 class="mt-5 text-primary">{{ title }}</h1>
             </section>
         </header>
 
@@ -19,7 +19,7 @@
                                 <h5 class="text-dark mb-3" style="font-size: 1.3em;">{{ year.category }}</h5>
                                 <p class="text-secondary" style="font-size: 0.9em;">{{ year.summary }}</p>
                                 <router-link :to="{ name: 'projects' }" class="btn btn-primary mt-2">
-                                    <div @click="setProjects(year)">Voir les projets</div>
+                                    <div @click="setProjects(year)">{{ see_projects }}</div>
                                 </router-link>
                             </div>
                         </div>
@@ -31,17 +31,25 @@
 </template>
 
 <script>
-import variables from '../variables.js';
+import variables_fr from '../variables_fr.js';
+import variables_en from '../variables_en.js';
 
 export default {
     name: 'AllProjectsView',
 
     data: () => ({
+        title: "",
         experiences: {},
+        see_projects: ""
     }),
 
     created() {
-        this.experiences = variables.experiences;
+        const language = this.$store.getters.getLanguage;
+        const isFrench = language === 'french';
+
+        this.title = isFrench ? variables_fr.projects_page_title : variables_en.projects_page_title;
+        this.experiences = isFrench ? variables_fr.experiences : variables_en.experiences;
+        this.see_projects = isFrench ? variables_fr.more_projects : variables_en.more_projects;
     },
 
     methods: {
