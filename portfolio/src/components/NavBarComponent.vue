@@ -6,10 +6,10 @@
 
             <ul class="d-flex">
                 <li>
-                    <router-link to="/">Accueil</router-link>
+                    <router-link to="/">{{ home_btn }}</router-link>
                 </li>
                 <li>
-                    <router-link to="/all_projects">Projets</router-link>
+                    <router-link to="/all_projects">{{ projects_btn }}</router-link>
                 </li>
                 <li v-if="canChangeLanguage" :class="langage === 'french' && 'd-none'">
                     <button class="btn p-0" @click="changeLanguage('french')">
@@ -26,27 +26,47 @@
 </template>
 
 <script>
+import variables_fr from '../variables_fr.js';
+import variables_en from '../variables_en.js';
+
 export default {
     name: "NavBarComponent",
 
     data: () => ({
-        language: "",
+        home_btn: "",
+        projects_btn: "",
         canChangeLanguage: true
     }),
 
+    created() {
+        this.updateNavBar();
+    },
+
     computed: {
+        language() {
+            return this.$store.getters.getLanguage;
+        },
         path() {
             return this.$route.path;
         }
     },
 
     watch: {
+        language() {
+            this.updateNavBar();
+        },
         path() {
             this.canChangeLanguage = this.$route.path === '/';
         }
     },
 
     methods: {
+        updateNavBar() {
+            const isFrench = this.language === 'french';
+
+            this.home_btn = isFrench ? variables_fr.home_btn : variables_en.home_btn;
+            this.projects_btn = isFrench ? variables_fr.projects_btn : variables_en.projects_btn;
+        },
         changeLanguage(lang) {
             this.$store.commit('setLanguage', lang);
         }

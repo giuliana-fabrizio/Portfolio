@@ -20,6 +20,12 @@ const competence_6_gitlab = require("../files/competence_6/gitlab.png");
 const name = "Giuliana GODAIL FABRIZIO";
 
 
+/* ***************************************************************** nav bar ***************************************************************** */
+
+const home_btn = "Home";
+const projects_btn = "Projects";
+
+
 /* ***************************************************************** home page ***************************************************************** */
 
 const status = "Computer science student";
@@ -610,6 +616,8 @@ const experiences = {
 
 module.exports = {
     name: name,
+    home_btn: home_btn,
+    projects_btn: projects_btn,
     status: status,
     about_me_title: about_me_title,
     about_me: about_me,
