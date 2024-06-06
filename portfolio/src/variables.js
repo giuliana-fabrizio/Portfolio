@@ -144,7 +144,7 @@ const experiences = {
                         },
                         result: {
                             title: "Résultat de la SAÉ",
-                            text: `Le code ainsi que le rapport de cette SAÉ sont disponibles <a href="https://mbeaudru-iut90.github.io/SAE_06_Capgemini/Projet/site_web.html">ici</a>.`,
+                            text: `Le code ainsi que le rapport de cette SAÉ sont disponibles <a href="https://mbeaudru-iut90.github.io/SAE_06_Capgemini/Projet/site_web.html" target="_blank">ici</a>.`,
                             file: "" // TODO
                         },
                         personal_enrichment: {
@@ -250,7 +250,7 @@ const experiences = {
                         },
                         result: {
                             title: "Résultat de la SAÉ",
-                            text: `Sur cette capture d'écran, on peut voir le résultat d'une partie entre les deux IA. Celle qui gagne (la bleue) était celle dont la stratégie était "plus poussée" que celle de l'autre IA. <a href="https://github.com/giuliana-fabrizio/SAE-Jeu-du-jeton-manquant">Ci-joint</a> se trouve le dépôt GitHub de ce jeu.`,
+                            text: `Sur cette capture d'écran, on peut voir le résultat d'une partie entre les deux IA. Celle qui gagne (la bleue) était celle dont la stratégie était "plus poussée" que celle de l'autre IA. <a href="https://github.com/giuliana-fabrizio/SAE-Jeu-du-jeton-manquant" target="_blank">Ci-joint</a> se trouve le dépôt GitHub de ce jeu.`,
                             images: [
                                 {
                                     path: sae_101_102_partie_de_jeu,
@@ -325,11 +325,11 @@ const experiences = {
                         },
                         organization_of_work: {
                             title: "Organisation du travail en groupe",
-                            text: "Mon groupe et moi avions choisi le <span style='color:red;'><strong>jeu du Kamisado</strong></span> (<a href='http://jeuxstrategie1.free.fr/jeu_kamisado/regle.pdf'>voir règles ci-jointes</a>).\n\nDans le but d'être régulier dans notre travail, nous devions rendre des livrables :\n<ul><li><span style='color:green;'><strong>4 mai</strong></span> : code source avec tests unitaires et rapport en anglais ;</li><li><span style='color:green;'><strong>31 mai</strong></span> : rapport en français contenant la description de l'application et une étude économique portant sur la problématique de publier un jeu ;</li><li><span style='color:green;'><strong>2 juin</strong></span> : code final et une soutenance de 15 à 20 minutes en anglais afin de présenter l'application.</li></ul>Pour rendre à temps ces différents livrables, nous nous sommes réparti le travail (trouver des stratégies pour les I.A, coder le plateau de jeu, faire les différents rapports...)."
+                            text: "Mon groupe et moi avions choisi le <span style='color:red;'><strong>jeu du Kamisado</strong></span> (<a href='http://jeuxstrategie1.free.fr/jeu_kamisado/regle.pdf' target='_blank'>voir règles ci-jointes</a>).\n\nDans le but d'être régulier dans notre travail, nous devions rendre des livrables :\n<ul><li><span style='color:green;'><strong>4 mai</strong></span> : code source avec tests unitaires et rapport en anglais ;</li><li><span style='color:green;'><strong>31 mai</strong></span> : rapport en français contenant la description de l'application et une étude économique portant sur la problématique de publier un jeu ;</li><li><span style='color:green;'><strong>2 juin</strong></span> : code final et une soutenance de 15 à 20 minutes en anglais afin de présenter l'application.</li></ul>Pour rendre à temps ces différents livrables, nous nous sommes réparti le travail (trouver des stratégies pour les I.A, coder le plateau de jeu, faire les différents rapports...)."
                         },
                         implementation: {
                             title: "Mes actions dans le groupe",
-                            text: "Pour le premier livrable, je me suis chargée de déterminer l'algorithme pour <span style='color:green;'><strong>placer les couleurs sur le plateau</strong></span> de jeu (voir en annexe).\n\nAvec l'aide d'un autre membre du groupe nous avons <span style='color:blue;'><strong>codé les pions</strong></span> (position, état, couleur...). Toujours en binôme, j'ai ensuite basculé sur la conception d'une <span style='color:red;'><strong>Intellignece Artificielle</strong></span> dont la stratégie était d'avancer toujours tout droit et qui calculait les coups à venir en fonction d'où elle plaçait son pion.\n\nMalgré que l'I.A ne soit pas terminée, je me suis occupée avec d'autres membres de faire des <span style='color:green;'><strong>tests unitaires</strong></span> laissant mon binôme finir l'I.A.\n\nJ'ai ensuite fait le <span style='color:blue;'><strong>contrôleur 'KeyBoard'</strong></span> lequel permet d'utiliser les touches du clavier lors d'une partie.</li></ul>",
+                            text: "Pour le premier livrable, je me suis chargée de déterminer l'algorithme pour <span style='color:green;'><strong>placer les couleurs sur le plateau</strong></span> de jeu (voir en annexe).\n\nAvec l'aide d'un autre membre du groupe nous avons <span style='color:blue;'><strong>codé les pions</strong></span> (position, état, couleur...). Toujours en binôme, j'ai ensuite basculé sur la conception d'une <span style='color:red;'><strong>Intelligence Artificielle</strong></span> dont la stratégie était d'avancer toujours tout droit et qui calculait les coups à venir en fonction d'où elle plaçait son pion.\n\nMalgré que l'I.A ne soit pas terminée, je me suis occupée avec d'autres membres de faire des <span style='color:green;'><strong>tests unitaires</strong></span> laissant mon binôme finir l'I.A.\n\nJ'ai ensuite fait le <span style='color:blue;'><strong>contrôleur 'KeyBoard'</strong></span> lequel permet d'utiliser les touches du clavier lors d'une partie.</li></ul>",
                             images: [
                                 {
                                     path: sae_s2_1_2_6_plateau_Kamisado,
@@ -384,7 +384,7 @@ const experiences = {
                         },
                         result: {
                             title: "Résultat de la SAÉ",
-                            text: `<a href="https://github.com/mcrayssac/SAE-S3">Dépôt GitHub</a>\n<a href="https://docs.google.com/presentation/d/1S9f4xpcZSaWmyRGIQ57jWnSQk5dWe2ssHt2VOZI6oEs/edit?usp=sharing">Diaporama de la soutenance</a>`
+                            text: `<a href="https://github.com/mcrayssac/SAE-S3" target="_blank">Dépôt GitHub</a>\n<a href="https://docs.google.com/presentation/d/1S9f4xpcZSaWmyRGIQ57jWnSQk5dWe2ssHt2VOZI6oEs/edit?usp=sharing" target="_blank">Diaporama de la soutenance</a>`
                         },
                         personal_enrichment: {
                             title: "Enrichissement personnel",
@@ -426,7 +426,7 @@ const experiences = {
                         },
                         result: {
                             title: "Résultat de la SAÉ",
-                            text: "<a href='https://docs.google.com/presentation/d/1uueQqS5IAyxeuxPOwv-2YE4rRnxuOs72wY5auPL-VPI/edit?usp=sharing'>Lien de la présentation</a>",
+                            text: "<a href='https://docs.google.com/presentation/d/1uueQqS5IAyxeuxPOwv-2YE4rRnxuOs72wY5auPL-VPI/edit?usp=sharing' target='_blank'>Lien de la présentation</a>",
                             files: {
                                 file_1: {
 
@@ -479,7 +479,7 @@ const experiences = {
                         },
                         result: {
                             title: "Résultat de la SAÉ",
-                            text: `Actuellement, ce projet est en cours de réalisation. Cependant, vous trouverez <a href="https://gitlab.iut-bm.univ-fcomte.fr/ggodailf/sae_s5">ci-joint</a> le dépôt GitLab du projet.`
+                            text: `Actuellement, ce projet est en cours de réalisation. Cependant, vous trouverez <a href="https://gitlab.iut-bm.univ-fcomte.fr/ggodailf/sae_s5" target='_blank'>ci-joint</a> le dépôt GitLab du projet.`
                         },
                         technologies: [technologies[24], technologies[19], technologies[20], technologies[23], technologies[12], technologies[8]]
                     },
@@ -496,7 +496,7 @@ const experiences = {
                         },
                         result: {
                             title: "Résultat de la SAÉ",
-                            text: "À la fin de ce stage, j'ai dû réaliser une présentation orale et deux rapports :\n<ul><li>l'un technique (destiné à un informaticien reprenant le travail) ;</li><li>l'autre destiné à expliquer le déroulement de notre stage sans entrer dans les détails techniques.</li></ul>\n<a href='https://docs.google.com/presentation/d/1LiP-nK3gmnG1EadbeIMfyvVh-VUsXMA4EwR9I6h4e2o/edit?usp=sharing'>Lien de la présentation</a>",
+                            text: "À la fin de ce stage, j'ai dû réaliser une présentation orale et deux rapports :\n<ul><li>l'un technique (destiné à un informaticien reprenant le travail) ;</li><li>l'autre destiné à expliquer le déroulement de notre stage sans entrer dans les détails techniques.</li></ul>\n<a href='https://docs.google.com/presentation/d/1LiP-nK3gmnG1EadbeIMfyvVh-VUsXMA4EwR9I6h4e2o/edit?usp=sharing' target='_blank'>Lien de la présentation</a>",
                             // files: [
                             //     {
                             //         path: rapport_general,
