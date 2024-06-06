@@ -13,11 +13,12 @@
                         <router-link :to="{ name: 'details' }" class="text-decoration-none">
                             <div class="card project-card" @click="setProject(project)">
                                 <div class="card-body m-3">
-                                    <div class="d-flex justify-content-between mb-3">
+                                    <div class="custom-card-header d-flex justify-content-between align-items-center mb-3">
                                         <h5><strong>{{ project.title }}</strong></h5>
                                         <p class="badge bg-primary text-wrap">{{ project.category }}</p>
                                     </div>
-                                    <p class="mb-3" v-html="formattedText(project.technologies ? truncatedInstructions(project.instructions.text) : project.instructions.text)"></p>
+
+                                    <p class="custom-text-size mb-3" v-html="formattedText(project.technologies ? truncatedInstructions(project.instructions.text) : project.instructions.text)"></p>
                                     <div class="d-flex flex-wrap">
                                         <span
                                             v-for="(technologie, index) in project.technologies"
@@ -81,3 +82,18 @@ export default {
     }
 }
 </script>
+
+<style>
+@media (max-width: 1200px) {
+    .custom-text-size {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .custom-card-header {
+        display: block !important;
+        text-align: center;
+    }
+}
+</style>
