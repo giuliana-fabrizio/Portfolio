@@ -38,7 +38,7 @@
 
             <div class="text-center">
                 <!-- TODO mettre le bon lien -->
-                <a class="btn btn-primary w-25"
+                <a class="btn btn-primary w-30"
                     :href="cv_link"
                     role="button">
                     Télécharger mon CV

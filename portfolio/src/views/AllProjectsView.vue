@@ -10,14 +10,14 @@
             <div class="container">
                 <div v-for="(experience, key) in experiences" :key="key">
                     <h3 class="heading">{{ experience.title }}</h3>
-                    <div v-for="(year, index) in experience.years" :key="index" class="projects">
+                    <div v-for="(year, index) in experience.years" :key="index" class="container projects">
                         <div class="project-category-image">
                             <img src="images/case.png" class="project-category-image" />
                         </div>
                         <div class="project-category-info">
                             <h5>{{ year.category }}</h5>
                             <p>{{ year.summary }}</p>
-                            <router-link :to="{ name: 'projects' }" class="btn btn-primary mt-3">
+                            <router-link :to="{ name: 'projects' }" class="btn btn-primary mt-2">
                                 <div @click="setProjects(year)">Voir les projets</div>
                             </router-link>
                         </div>
