@@ -1,12 +1,15 @@
 <template>
     <div>
-        <header id="home_header">
-            <section id="titre" class="container">
+        <header id="home_header" style="position: relative;">
+            <AnimeBackground />
+            <section id="titre" class="container" style="position: relative; z-index: 1;">
                 <div class="mt-5">
                     <h1 class="mb-4 text-primary">{{ name }}</h1>
-                    <h3 class="text-secondary">{{ status }}</h3>
+                    <h3 class="text-secondary">
+                        <AnimeTitleComponent :text="status" :duration="2000" />
+                    </h3>
                 </div>
-                <img src="images/developer.webp" class="image_accueil">
+                <img src="images/developer.png" class="image_accueil">
             </section>
         </header>
 
@@ -52,8 +55,16 @@
 import variables_fr from '../variables_fr.js';
 import variables_en from '../variables_en.js';
 
+import AnimeBackground from '../components/AnimeBackground.vue';
+import AnimeTitleComponent from '../components/AnimeTitleComponent.vue';
+
 export default {
     name: 'HomeView',
+
+    components: {
+        AnimeBackground,
+        AnimeTitleComponent
+    },
 
     data: () => ({
         name: "",
