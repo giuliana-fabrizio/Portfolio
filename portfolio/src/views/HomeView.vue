@@ -1,7 +1,7 @@
 <template>
     <div>
         <header id="home_header">
-            <section id="titre">
+            <section id="titre" class="container">
                 <div class="mt-5">
                     <h1 class="mb-4 text-primary">{{ name }}</h1>
                     <h3 class="text-secondary">{{ status }}</h3>
