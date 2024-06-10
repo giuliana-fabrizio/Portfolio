@@ -48,6 +48,7 @@
                 </div>
             </div>
         </main>
+        <TopButtonComponent />
     </div>
 </template>
 
@@ -57,13 +58,15 @@ import variables_en from '../variables_en.js';
 
 import AnimeBackground from '../components/AnimeBackground.vue';
 import AnimeTitleComponent from '../components/AnimeTitleComponent.vue';
+import TopButtonComponent from '../components/TopButtonComponent.vue';
 
 export default {
     name: 'HomeView',
 
     components: {
         AnimeBackground,
-        AnimeTitleComponent
+        AnimeTitleComponent,
+        TopButtonComponent
     },
 
     data: () => ({

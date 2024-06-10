@@ -27,6 +27,7 @@
                 </div>
             </div>
         </main>
+        <TopButtonComponent />
     </div>
 </template>
 
@@ -34,8 +35,14 @@
 import variables_fr from '../variables_fr.js';
 import variables_en from '../variables_en.js';
 
+import TopButtonComponent from '../components/TopButtonComponent.vue';
+
 export default {
     name: 'AllProjectsView',
+
+    components: {
+        TopButtonComponent
+    },
 
     data: () => ({
         title: "",

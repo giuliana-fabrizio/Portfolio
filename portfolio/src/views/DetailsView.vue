@@ -25,12 +25,19 @@
                 </div>
             </div>
         </main>
+        <TopButtonComponent />
     </div>
 </template>
 
 <script>
+import TopButtonComponent from '../components/TopButtonComponent.vue';
+
 export default {
     name: 'DetailsView',
+
+    components: {
+        TopButtonComponent
+    },
 
     data() {
         return {
