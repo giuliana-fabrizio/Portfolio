@@ -41,6 +41,19 @@ nav ul li a.router-link-exact-hover {
 }
 
 
+/* ***************************************************************** btn go up ************************************************************* */
+
+.scroll-to-top-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #007BFF;
+    border: none;
+    border-radius: 5px;
+}
+
+
 /* ***************************************************************** footer ************************************************************* */
 
 footer {
@@ -106,6 +119,6 @@ footer {
 }
 
 .img-page-details:hover {
-    transform: scale(1.6);
+    transform: scale(1.4);
     z-index: 100;
 }

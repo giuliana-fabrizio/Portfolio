@@ -1,7 +1,7 @@
 <template>
-<div id="background">
-    <canvas id="c"></canvas>
-</div>
+    <div id="background">
+        <canvas id="c"></canvas>
+    </div>
 </template>
 
 <script>
@@ -224,21 +224,21 @@ export default {
 </script>
 
 <style>
-    #background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-    }
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
 
-    canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: transparent;
-    }
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
 </style>
