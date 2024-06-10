@@ -1,7 +1,7 @@
 <template>
     <div>
         <header id="home_header" style="position: relative;">
-            <AnimeBackground />
+            <AnimeBackgroundComponent />
             <section id="titre" class="container" style="position: relative; z-index: 1;">
                 <div class="mt-5">
                     <h1 class="mb-4 text-primary">{{ name }}</h1>
@@ -56,7 +56,7 @@
 import variables_fr from '../variables_fr.js';
 import variables_en from '../variables_en.js';
 
-import AnimeBackground from '../components/AnimeBackground.vue';
+import AnimeBackgroundComponent from '../components/AnimeBackgroundComponent.vue';
 import AnimeTitleComponent from '../components/AnimeTitleComponent.vue';
 import TopButtonComponent from '../components/TopButtonComponent.vue';
 
@@ -64,7 +64,7 @@ export default {
     name: 'HomeView',
 
     components: {
-        AnimeBackground,
+        AnimeBackgroundComponent,
         AnimeTitleComponent,
         TopButtonComponent
     },
