@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue';
 import AllProjectsView from '../views/AllProjectsView.vue';
 import ProjectsView from '../views/ProjectsView.vue';
 import DetailsView from '../views/DetailsView.vue';
+import NotFoundView from '../views/NotFoundView.vue';
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,11 @@ const routes = [
     path: '/details',
     name: 'details',
     component: DetailsView,
+  },
+  {
+    path: '*',
+    name: 'not_found',
+    component: NotFoundView,
   }
 ];
 
