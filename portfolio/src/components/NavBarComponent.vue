@@ -40,6 +40,7 @@ export default {
 
     created() {
         this.updateNavBar();
+        this.canChangeLanguage = this.$route.path === '/';
     },
 
     computed: {
