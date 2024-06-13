@@ -1,7 +1,7 @@
 <template>
-    <div id="background">
-        <canvas id="c"></canvas>
-    </div>
+<div id="background">
+    <canvas id="c"></canvas>
+</div>
 </template>
 
 <script>
@@ -159,7 +159,7 @@ export default {
 
             function resize() {
                 screenWidth = canvas.width = window.innerWidth;
-                screenHeight = canvas.height = document.getElementById('home_header').offsetHeight;
+                screenHeight = canvas.height = document.documentElement.clientHeight;
                 bufferCvs.width = screenWidth;
                 bufferCvs.height = screenHeight;
                 context = canvas.getContext('2d');
@@ -223,7 +223,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #background {
     position: absolute;
     top: 0;
