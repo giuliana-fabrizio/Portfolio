@@ -150,7 +150,7 @@ export default {
         });
 
         (function () {
-            const PARTICLE_RADIUS = 1, // Augmenter le rayon des particules pour une meilleure visibilité
+            const PARTICLE_RADIUS = 1.5, // Augmenter le rayon des particules pour une meilleure visibilité
                 canvas = document.getElementById('c'),
                 bufferCvs = document.createElement('canvas'),
                 particles = [];
