@@ -17,7 +17,7 @@ const competence_6_gitlab = require("../files/competence_6/gitlab.png");
 
 /* ***************************************************************** common ***************************************************************** */
 
-const name = "Giuliana GODAIL FABRIZIO";
+const name = "Giuliana GODAIL-FABRIZIO";
 
 
 /* ***************************************************************** nav bar ***************************************************************** */
@@ -107,7 +107,7 @@ const experiences = {
         years: {
             2022: {
                 category: "Projets de première année",
-                summary: "Dans le cadre de ma première année, j'ai eu à faire des SAÉ (projets de groupe encadrés par des professeurs). Chaque SAÉ concerne une ou plusieurs compétences au programme de l'année concernée. Au cours de cette année universitaire nous avons eu à faire 10 SAÉ.",
+                summary: "Dans le cadre de ma première année, j'ai eu à faire des SAÉ (projets de groupe encadrés par des professeurs). Chaque SAÉ concerne une ou plusieurs compétences au programme de l'année concernée. Au cours de cette année universitaire nous avons eu à faire 7 SAÉ.",
                 projects: {
                     sae_s1_05: {
                         title: "SAE S1 05",

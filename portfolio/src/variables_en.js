@@ -17,7 +17,7 @@ const competence_6_gitlab = require("../files/competence_6/gitlab.png");
 
 /* ***************************************************************** common ***************************************************************** */
 
-const name = "Giuliana GODAIL FABRIZIO";
+const name = "Giuliana GODAIL-FABRIZIO";
 
 
 /* ***************************************************************** nav bar ***************************************************************** */
@@ -108,7 +108,7 @@ const experiences = {
         years: {
             2022: {
                 category: "First year projects",
-                summary: "During my first year, I worked on group projects supervised by professors (SAÉ). Each SAÉ focuses on one or more skills from the year's curriculum. Over the academic year, we completed 10 SAÉs.",
+                summary: "During my first year, I worked on group projects supervised by professors (SAÉ). Each SAÉ focuses on one or more skills from the year's curriculum. Over the academic year, we completed 7 SAÉ.",
                 projects: {
                     sae_s1_05: {
                         title: "SAE S1 05",
