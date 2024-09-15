@@ -17,7 +17,7 @@
             <div class="col-md-7">
                 <section id="formation" class="mb-5 text-center">
                     <h5 class="mb-3"><strong>{{ about_me_title }}</strong></h5>
-                    <p class="mb-4">{{ about_me }}</p>
+                    <p class="mb-4" v-html="formattedText(about_me)"></p>
 
                     <a class="btn btn-outline-primary rounded-pill w-30" href="/Portfolio/#/all_projects" role="button">
                         {{ my_projects }}
@@ -112,6 +112,13 @@ export default {
 
             this.link_cv = isFrench ? variables_fr.link_cv : variables_en.link_cv;
             this.download_cv = isFrench ? variables_fr.download_cv : variables_en.download_cv;
+        },
+
+        formattedText(text) {
+            if (!text) return '';
+            return text
+                .replace(/\n/g, '<br>')
+                .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
         }
     }
 }
