@@ -79,6 +79,7 @@ const technos = {
     graphql: { name: "GraphQL", class: "bg-info" },
     minio: { name: "Minio", class: "bg-info" },
     postgresql: { name: "PostgreSQL", class: "bg-info" },
+    sequelize: {name: "Sequelize", class: "bg-info" },
     sql: { name: "SQL", class: "bg-info" },
     hasura: { name: "Hasura", class: "bg-info" },
 
@@ -127,32 +128,49 @@ const projects = {
         technologies: [technos.github, technos.java]
     },
     stage_s4: {
-        title: `SAÉ S4.Stage`,
+        title: `Stage (2023)`,
         category: categories.professional,
         instructions: {
             title: `Consignes`,
-            text: `La SAÉ S4.Stage s'est réalisée en entreprise. Pour ma part, je l'ai réalisée à <span style='color:red;'><strong>Natural Solutions</strong></span>, une entreprise à Marseille.\n\nChaque mois, cette entreprise doit établir des devis et des factures pour ses clients. Pour simplifier ce processus, un stagiaire a été recruté en 2021 pour mettre en place l’Outil Facturation qu’il a réalisé en <strong>JS, Node JS et React JS</strong>.\n\nMa mission consiste à corriger les problèmes existants, améliorer les fonctionnalités déjà en place et en ajouter de nouvelles. Les principales tâches qui m’ont été attribuées sont la mise en place de la <span style='color:green;'><strong>base de données</strong></span>, la <span style='color:green;'><strong>modification du principe de sélection des projets</strong></span>, et la <span style='color:green;'><strong>génération de documents</strong></span>.\n\nPour ce projet j’étais seule dans l’équipe, bien que je pouvais m'orienter vers mon maître de stage si besoin.\n\nÀ la fin de cette SAÉ, nous avons dû réaliser une présentation orale et deux rapports :\n<ul><li>l'un technique (destiné à un informaticien reprenant le travail)</li><li>l'autre destiné à expliquer le déroulement de notre stage sans entrer dans les détails techniques.</li></ul>`
+            text: `Au cours de ma deuxième année en BUT Informatique, j'ai effectué un stage de trois mois (avril - juin 2023) au sein de <span style='color:red;'><strong>Natural Solutions</strong></span>, une entreprise du secteur numérique basée à Marseille.\n
+            Chaque mois, l'entreprise doit établir des devis et des factures pour ses clients. Pour simplifier ce processus, un stagiaire avait été recruté en 2021 pour mettre en place l’Outil Facturation, réalisé en <span style='color:blue'><strong>${technos.js.name}</strong></span>, <span style='color:blue'><strong>${technos.node_js.name}</strong></span> et <span style='color:blue'><strong>${technos.react_js.name}</strong></span>.\n
+            Ma mission était de corriger les problèmes existants, d'améliorer les fonctionnalités déjà en place et d'en ajouter de nouvelles. Parmi les tâches qui m'ont été confiées, figuraient la mise en place de la base de données (BDD), la modification du principe de sélection des projets et la génération de documents.\n
+            Bien que j'ai travaillé seule sur ce projet, j'ai pu solliciter mon maître de stage en cas de besoin.`
         },
         organization_of_work: {
-            title: `Organisation du travail en groupe`,
-            text: `Chez Natural Solutions, on applique la <span style='color:red;'><strong>méthodologie Scrum</strong></span>. Il s'agit d'une méthode agile basée sur une approche empirique, dynamique et participative de la conduite du projet.\n\nD’autre part, tout au cours de mon stage, j’ai été amené à utiliser <span style='color:red;'><strong>GitLab</strong></span>. C'est une plateforme de gestion du cycle de vie des applications (ALM) qui fournit des fonctionnalités de développement collaboratif. Pour l’utiliser de façon appropriée mon maître de stage et moi avons créé plusieurs branches du projet (une pour le développement, une pour la production, une pour les modifications globales, etc.). Son utilisation régulière m’a permis de respecter les <span style='color:green;'><strong>bonnes pratiques du développement</strong></span>.`
+            title: `Organisation du travail`,
+            text: `Chez Natural Solutions, j'ai appliqué la <a href="https://chef-de-projet.fr/methodologie-scrum/">méthodologie ${technos.scrum.name}</a>, une méthode agile qui favorise l'amélioration continue et la collaboration pour adapter le développement aux besoins évolutifs des clients.\n
+            En parallèle, j'ai également travaillé avec <span style='color:red;'><strong>${technos.gitlab.name}</strong></span> tout au long de mon stage. Pour une gestion efficace, j'ai créé plusieurs branches du projet (pour le développement, la production, les modifications globales, etc.), ce qui m'a permis de suivre les <span style='color:green;'><strong>bonnes pratiques du développement</strong></span>.`
         },
         implementation: {
             title: `Mise en œuvre`,
-            text: `<h4 style='color:black;'><strong>Base de données</strong></h4>\nPour mettre en place la base de données, il a été nécessaire de :\n<ul><li>Réaliser un MCD (Modèle Conceptuel de Données)</li><li>Utiliser le système de gestion de bases de données <span style='color:blue;'><strong>PostgreSQL</strong></span></li><li>Utiliser l'ORM <span style='color:blue;'><strong>Sequelize</strong></span> (destiné à simplifier l'interaction avec la base de données)</li><li>Connecter la base de données avec le backend (à l'aide de variables d'environnement)</li><li>Enrichir la base de données en créant une fonction qui y insérerait les éléments un à un à partir d'un <span style='color:blue;'><strong>fichier JSON</strong></span></li></ul>\n\n<h4 style='color:black;'><strong>Modification du principe de sélection des projets</strong></h4>\nAvant les modifications apportées, l’utilisateur devait connaître le nom exact du projet (majuscules et minuscules comprises) sur lequel il souhaitait effectuer une action. Il a été convenu que le nouveau principe de recherche de projet se présenterait sous la forme de deux listes déroulantes où chaque élément les constituant pourrait être coché ou décoché.\n\nUne des deux listes contiendrait tous les projets développés pour RENECO tandis que l'autre contiendrait tous les autres projets.\n\nPour cette tâche, j’ai dû :\n<ul><li>Récupérer la liste de tous les projets à partir d’une API externe où ils sont stockés</li><li>Trier les résultats précédemment obtenus en fonction de s'ils sont développés pour le client principal ou non</li><li>Lire la documentation de ReactJS pour créer un nouveau composant (élément réutilisable d’une page web qui peut être utilisé par plusieurs autres pages)</li><li>Permettre à mon nouveau composant de transmettre des informations telles que les projets sélectionnés à son composant parent (page HTML qui utilise un autre composant, appelé composant enfant)</li></ul>\n\nLe rapport demandé présente les activités de support réalisées pendant une période spécifiée par l’utilisateur. Les activités de support font référence aux tâches effectuées par l’équipe de développement après la livraison du produit au client et en service après-vente.\n\nPour régler ce type de problèmes, Natural Solutions utilise <span style='color:red;'><strong>Zendesk</strong></span> (une plateforme de service client et de gestion des relations avec la clientèle). Pour générer le rapport, il est donc essentiel d'interroger l'API de Zendesk.\n\nNous avons donc d'abord établi une connexion avec cette API. Ensuite, j'ai dû faire trois requêtes à cette API :\n<ul><li>La première permettait de récupérer tous les tickets mis à jour entre deux dates spécifiées par l'utilisateur.</li><li>La deuxième était utilisée pour obtenir le nom du ticket, qui, dans notre cas, correspondait également au nom de la spécification.</li><li>La troisième récupérait le rôle de la personne sur tous les commentaires associés aux tickets.</li></ul>\n\nEnsuite, j'ai sélectionné les résultats pertinents à afficher et les ai triés par ordre chronologique.\n\nLe code permettant le téléchargement du fichier était déjà présent dans le code initial, mais il a nécessité plusieurs modifications. Par ailleurs, j’ai dû créer un Template Word destiné à fournir une structure prédéfinie à suivre lors de la génération des rapports.`,
+            text: `<h4 style='color:black;'><strong>Base de données</strong></h4>
+            Avant mon arrivée, les données de l'Outil Facturation étaient conservées dans un <span style='color:blue'><strong>fichier JSON</strong></span>. Pour les migrer vers une base de données, j'ai réalisé les étapes suivantes :
+            <ul><li>création d'un MCD (Modèle Conceptuel de Données) ;</li><li>utilisation du SGBD (Système de Gestion de Bases de Données) <span style='color:red;'><strong>${technos.postgresql.name}</strong></span> ;</li><li>emploi de l'ORM <span style='color:red;'><strong>${technos.sequelize.name}</strong></span> pour simplifier l'interaction avec la base de données ;</li><li>connexion de la base de données avec le backend via des variables d'environnement. Lors de cette étape, j'ai dû adapter l'intégralité du code de l'application ;</li><li>enrichissement de la base de données en développant une fonction pour <span style='color:green;'><strong>insérer les données</strong></span>, élément par élément, à partir du fichier JSON où elles étaient précédemment stockées.</li></ul>
+            <h4 style='color:black;'><strong>Modification du principe de sélection des projets</strong></h4>
+            Lorsque l'utilisateur souhaitait modifier un projet, il devait connaître son nom exact. Il a été décidé que le nouveau système de recherche de projet utiliserait <span style='color:blue'><strong>deux listes déroulantes</strong></span>, permettant de sélectionner ou désélectionner chaque projet. L'une des listes afficherait tous les projets développés pour RENECO (le principal client de Natural Solutions), tandis que l'autre inclurait tous les autres projets.\n
+            Pour accomplir cette tâche, j’ai dû :
+            <ul><li><span style='color:red'><strong>interroger une API externe</strong></span> pour obtenir la liste complète des projets ;</li><li>identifier si chaque projet était développé pour RENECO ou non ;</li><li>ajuster l'interface graphique en conséquence.</li></ul>
+            <h4 style='color:black;'><strong>Génération de documents</strong></h4>
+            Cette mission consistait à créer un rapport sur les activités de support réalisées pendant une période donnée. Ces activités concernent les tâches effectuées par l'équipe de développement après la livraison du produit (service après-vente).\n
+            Pour gérer ces activités, Natural Solutions utilise <span style='color:blue;'><strong>Zendesk</strong></span>, une plateforme de gestion de la relation client. Il était donc crucial d'interroger l'API de Zendesk pour générer le rapport.\n
+            J'ai d'abord établi une connexion avec l'API pour obtenir les données pertinentes, que j'ai ensuite sélectionnées, triées par ordre chronologique et formatées pour le rapport.\n
+            Le code permettant le téléchargement du fichier était déjà présent, mais j'ai dû l'adapter pour générer correctement les documents. En complément, j'ai créé un <span style='color:green'><strong>modèle Word</strong></span> afin de structurer et d'organiser automatiquement le contenu du rapport lors de sa génération.`,
             images: [
                 {
                     path: sae_s4_mcd,
-                    legend: `Légende : MCD de l'application`
+                    legend: `Figure 1 : MCD de l'application`
                 }, {
                     path: sae_s4_principe_selection_apres,
-                    legend: `Légende : MCD de l'application`
+                    legend: `Figure 2 : MCD de l'application`
                 }
             ]
         },
         result: {
             title: `Résultat de la SAÉ`,
-            text: `<a href='https://docs.google.com/presentation/d/1uueQqS5IAyxeuxPOwv-2YE4rRnxuOs72wY5auPL-VPI/edit?usp=sharing' target='_blank'>Lien de la présentation</a>`,
+            text: `J'ai beaucoup aimé cette première expérience professionnelle, c'est en grande partie grâce à mes collègues qui se sont montrés très attentifs.\n
+            De plus, j'ai pu m'améliorer en <span style='color:red'><strong>gestion de projet</strong></span> grâce à l'utilisation quotidienne de la méthodologie SCRUM. J'ai aussi développé ma capacité à me documenter et à chercher des informations par moi-même ainsi que ma capacité à utiliser des outils tels que GitLab.\n
+            Vous pouvez consulter le diaporama de ma soutenance <a href='https://docs.google.com/presentation/d/1uueQqS5IAyxeuxPOwv-2YE4rRnxuOs72wY5auPL-VPI/edit?usp=sharing' target='_blank'>ci-joint</a>.`,
             files: {
                 file_1: {
 
@@ -161,18 +179,6 @@ const projects = {
 
                 }
             }
-        },
-        personal_enrichment: {
-            title: `Enrichissement personnel`,
-            text: `Si j'ai beaucoup aimé cette SAÉ, c'est en grande partie grâce à mes collègues qui se sont montrés très attentifs.\nDe plus, j'ai pu m'améliorer en gestion de projet grâce à l'utilisation quotidienne de la méthodologie SCRUM. J'ai aussi développé ma capacité à me documenter et à chercher des informations par moi-même ainsi que ma capacité à utiliser des outils tels que GitLab.`
-        },
-        skills_worked: {
-            title: `Compétences Développées`,
-            text: `Concernant les compétences au programme du BUT Informatique concernées par cette SAÉ, je pense avoir assez bien travaillé :\n<ul><li><span style='color:black;'><strong>Compétence 1 : Réaliser un développement d'application</strong></span><ul><li>Partir des exigences et aller jusqu'à une application complète</li><li>Mettre en place une architecture logicielle appropriée pour assurer la modularité et la maintenabilité de l'application.</li></ul></li><li><span style='color:black;'><strong>Compétence 2 : Optimiser des applications informatiques</strong></span><ul><li>Analyser et optimiser des applications</li><li>Appréhender et construire des algorithmes</li></ul></li><li><span style='color:black;'><strong>Compétence 4 : Gérer des données de l'information</strong></span><ul><li>Concevoir et modéliser une base de données</li></ul></li></ul>`
-        },
-        analysis: {
-            title: `Analyse réflexive`,
-            text: `Pour être plus efficace à l'avenir, il faudrait que je cherche des informations de façon plus pertinente et efficace de sorte à moins perdre de temps. De plus, il faudrait que je me familiarise davantage avec GitLab et les bonnes pratiques de développement collaboratif. Enfin, il faudrait que je sous-estime moins les tâches qui m'ont été confiées, car ça m'a parfois conduite à faire des heures supplémentaires.`
         },
         technologies: [technos.js, technos.node_js, technos.react_js, technos.postgresql, technos.gitlab]
     },
