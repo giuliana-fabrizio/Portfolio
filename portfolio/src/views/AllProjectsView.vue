@@ -92,3 +92,10 @@ export default {
     }
 }
 </script>
+
+<style>
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+</style>
