@@ -7,6 +7,9 @@
                     <router-link to="/">{{ home_btn }}</router-link>
                 </li>
                 <li>
+                    <router-link to="/academic_training">{{ academic_training }}</router-link>
+                </li>
+                <li>
                     <router-link to="/all_projects">{{ projects_btn }}</router-link>
                 </li>
                 <li v-if="canChangeLanguage" :class="language === 'french' && 'd-none'">
@@ -64,6 +67,7 @@ export default {
             const isFrench = this.language === 'french';
 
             this.home_btn = isFrench ? variables_fr.home_btn : variables_en.home_btn;
+            this.academic_training = isFrench ? variables_fr.academic_training : variables_en.academic_training;
             this.projects_btn = isFrench ? variables_fr.projects_btn : variables_en.projects_btn;
         },
         changeLanguage(lang) {
