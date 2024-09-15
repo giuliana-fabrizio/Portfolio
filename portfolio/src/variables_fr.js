@@ -105,39 +105,26 @@ const projects = {
         category: categories.academic,
         instructions: {
             title: `Consignes`,
-            text: `Ce projet universitaire consistait à concevoir un mini-jeu en Java.\n
-            Le jeu se déroulait sur un plateau triangulaire comportant 21 cases. Chaque joueur disposait de 10 jetons numérotés de 1 à 10. L'objectif était de positionner ces jetons de manière à ce que, lorsque la partie se terminait et qu'il restait une case vide, la somme des numéros des jetons situés autour de cette case soit inférieure à celle des jetons de l'adversaire.
-            Pour enrichir ce jeu, j'ai dû développer deux intelligences artificielles (IA) pour jouer contre un joueur, en fonction de la réponse à l'invite "Jouer seul ?" affichée dans le terminal. La première IA adoptait une stratégie simple, tandis que la seconde était conçue pour suivre une approche plus complexe et optimisée.`
-        },
-        organization_of_work: {
-            title: `Organisation du travail en groupe`,
-            text: `Dans le cadre de cette SAÉ, nous étions répartis en binôme. Pour réaliser le jeu ainsi que les intelligences artificielles, nous disposions d'un peu plus d'un mois (du 2 décembre au 7 janvier).\n\nDans le but d'être un maximum efficace et rapide, nous avons décidé avec mon binôme de nous répartir le travail de sorte à pallier nos points faibles. Ainsi, je me suis chargée de la <span style='color:blue;'><strong>partie codage</strong></span> tandis que lui faisait le rapport en anglais.`
+            text: `Ce projet universitaire consistait à concevoir un <span style='color:red;'><strong>mini-jeu en Java</strong></span>.\n
+            Ce jeu se déroule sur un plateau triangulaire de 21 cases, où chaque joueur possède 10 jetons numérotés de 1 à 10. Le but est de placer ses jetons de manière à ce que, à la fin du jeu, la somme des numéros des jetons autour de la case vide soit inférieure à celle de l'adversaire.\n
+            Pour rendre le jeu plus intéressant, j'ai dû développer <span style='color:green;'><strong>deux intelligences artificielles</span></strong> (IA) permettant de jouer contre l'ordinateur, selon la réponse à la question "Jouer seul ?" affichée dans le terminal.`
         },
         implementation: {
-            title: `Mes actions dans le groupe`,
-            text: `Étant chargée de faire le code, j'ai dû diviser ma partie en plusieurs étapes.\n\nTout d'abord, j'ai dû faire des <span style='color:red;'><strong>algorithmes</strong></span> (étape préalable à l'implémentation d'un code). Pour cela, j'ai créé un fichier test, lequel me servait à implémenter mes algorithmes afin de les tester. Ça me permettait d'avoir une version fonctionnelle du code, et une destinée à soit compléter les fonctions manquantes, soit améliorer les méthodes déjà existantes.\n\nEnsuite, lorsque l'implémentation était terminée, je me suis chargée de faire les <span style='color:green;'><strong>traces d'essai</strong></span> du code. (Il s'agissait de faire la démonstration d'une partie et de mettre le résultat et les numéros des cases jouées dans un fichier txt.)\n\nPour ce qui est des IA, j'ai <span style='color:green;'><strong>imaginé plusieurs stratégies</strong></span> que j'ai chacune implémentée et fais tester à diverses personnes dans le but de voir et pallier leurs défauts.`,
+            title: `Mise en œuvre`,
+            text: `Pour mener à bien ce projet, j'ai structuré mon travail en plusieurs étapes. Tout d'abord, j'ai conçu différents <span style='color:red;'><strong>algorithmes</strong></span> (une étape essentielle avant l'implémentation du code).\n
+            J'ai ensuite créé un fichier de test dans lequel j'implémentais ces algorithmes pour les évaluer en conditions réelles. Cela me permettait d'avoir une <span style='color:blue;'><strong>version stable</strong></span> du code tout en travaillant sur une version parallèle dédiée à l'ajout de nouvelles fonctionnalités ou à l'amélioration des méthodes existantes.\n
+            Pour les IA, j'ai développé et implémenté <span style="color:green"><strong>deux stratégies différentes</strong></span>. La première IA utilise une approche simple et naïve : elle sélectionne aléatoirement une case libre parmi celles disponibles. La seconde IA, plus élaborée, met l'accent sur les extrémités des lignes, puis passe à une méthode aléatoire lorsque sa stratégie initiale est épuisée.`,
         },
         result: {
             title: `Résultat de la SAÉ`,
-            text: `Sur cette capture d'écran, on peut voir le résultat d'une partie entre les deux IA. Celle qui gagne (la bleue) était celle dont la stratégie était "plus poussée" que celle de l'autre IA. <a href="https://github.com/giuliana-fabrizio/SAE-Jeu-du-jeton-manquant" target="_blank">Ci-joint</a> se trouve le dépôt GitHub de ce jeu.`,
+            text: `Sur la capture d'écran ci-dessous, on observe le résultat d'une partie entre les deux IA. L'IA gagnante (en bleu) est celle dont la stratégie était plus avancée que celle de l'autre IA. Vous pouvez consulter le dépôt GitHub de ce jeu à l'adresse suivante : <a href="https://github.com/giuliana-fabrizio/SAE-Jeu-du-jeton-manquant" target="_blank">GitHub</a>.\n
+            J'ai beaucoup apprécié cette SAÉ en raison de sa complexité, qui m'a poussée à sortir de ma zone de confort. Elle m'a également permis de faire des progrès significatifs en algorithmique.`,
             images: [
                 {
                     path: sae_101_102_partie_de_jeu,
-                    legend: `Plateau de jeu`
+                    legend: `Figure 1 : Plateau de jeu`
                 }
             ],
-        },
-        personal_enrichment: {
-            title: `Enrichissement personnel`,
-            text: `Si j'ai beaucoup aimé cette SAÉ, c'est en partie parce que je l'ai trouvée compliquée et que ça m'a obligé à sortir de ma zone de confort :\n<ul><li>elle m'aura considérablement fait progresser en algorithmique ;</li><li>j'ai pu comprendre que faire un code ne signifie pas seulement taper des lignes dans un éditeur de texte, mais également réfléchir à un moyen de l'optimiser notamment pour réduire les ressources nécessaires lors de son exécution ;</li><li>j'ai aussi découvert comment s'organiser dans une équipe réduite.</li></ul>`
-        },
-        skills_worked: {
-            title: `Compétences Développées`,
-            text: `Concernant les compétences au programme du BUT Informatique concernées par cette SAÉ, je pense avoir assez bien travaillé :<ul><li>la compétence n°1 relative à la <span style='color:black;'><strong>réalisation d'un développement d'applications</strong></span> (implémenter et élaborer des conceptions simples, faire des essais, développer des interfaces utilisateurs) ;</li><li>la compétence n°2 consistant à <span style='color:black;'><strong>optimiser des applications informatiques</strong></span> (analyser un problème avec une méthode précise, expérimenter la notion de compilation, formaliser et mettre en œuvre des outils mathématiques) ;</li><li>la compétence n°5 correspondant au <span style='color:black;'><strong>\"pilotage\" d'un projet informatique</strong></span> (appréhender les besoins du client et de l'utilisateur, mettre en place les outils de gestion de projet, identifier les différentes phases d'un cycle de développement).</li></ul>`
-        },
-        analysis: {
-            title: `Analyse réflexive`,
-            text: `Pour être plus efficace à l'avenir il faudrait que je travaille davantage l'algorithmique afin de développer des réflexes et de me concentrer davantage sur l'optimisation de mon code.\n\nDe plus, mon anglais étant moyen, il faudrait que je l'améliore pour éviter que ça ne me pénalise un jour.`
         },
         technologies: [technologies[7], technologies[19]]
     },
