@@ -18,6 +18,7 @@ const competence_6_gitlab = require("../files/competence_6/gitlab.png");
 /* ***************************************************************** common ***************************************************************** */
 
 const name = "Giuliana GODAIL-FABRIZIO";
+const age = 21;
 
 
 /* ***************************************************************** nav bar ***************************************************************** */
@@ -30,12 +31,11 @@ const projects_btn = "Projets";
 const status = "Étudiante en informatique";
 
 const about_me_title = "À propos de moi";
-const about_me = "Actuellement en dernière année de BUT Informatique, je souhaite poursuivre mes études en écoles d'ingénieurs. Si j’ai choisi l’informatique c’est parce que j’aime concevoir et optimiser des projets, en trouvant des solutions adaptées aux besoins des utilisateurs.";
-const my_projects = "Consulter mes projets";
-const professional_experience_title = "Expériences professionnelles";
-const professional_experience = "En 2021 j'ai réalisé un CDD de 2 mois en tant qu’employée de supérette. Dans le cadre de ma formation j’ai aussi effectué 2 stages en entreprise chacun d’une durée de 12 semaines. Ces expériences m'ont permis de découvrir le travail en équipe, où j'ai pu apprendre des autres tout en partageant mes connaissances.";
+const about_me = `Bonjour, je suis ${name}. Agée de ${age} ans, je suis actuellement étudiante en première année à <a href="https://telecomnancy.univ-lorraine.fr/" target="_blank">Télécom Nancy</a>. Passionnée par l'informatique, je cherche constamment à me perfectionner. J'apprécie tout particulièrement la conception et l'optimisation de projets, avec pour objectif de répondre au mieux aux besoins des utilisateurs.`;
+const my_projects = "Consulter mes projets"; 
+
 const hobbies_title = "Loisirs";
-const hobbies = "Durant mon temps libre, je pratique un peu d’activité physique comme le jogging. Je développe aussi des projets personnels. J’aime aussi beaucoup la couture, par exemple, j’ai réalisé des trousses pour ranger mes stylos et quelques autres gadgets.";
+const hobbies = "Durant mon temps libre, je fais un peu de sport comme du jogging ou de la natation. Je travaille également sur des projets personnels. Enfin, j’aime beaucoup la couture, par exemple, j’ai réalisé des trousses pour ranger mes stylos et quelques autres gadgets.";
 const download_cv = "Télécharger mon CV";
 
 
@@ -618,13 +618,12 @@ const experiences = {
 module.exports = {
     name: name,
     home_btn: home_btn,
+    academic_training: academic_training,
     projects_btn: projects_btn,
     status: status,
     about_me_title: about_me_title,
     about_me: about_me,
     my_projects: my_projects,
-    professional_experience_title: professional_experience_title,
-    professional_experience: professional_experience,
     hobbies_title: hobbies_title,
     hobbies: hobbies,
     download_cv: download_cv,
