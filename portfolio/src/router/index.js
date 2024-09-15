@@ -2,7 +2,6 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import AllProjectsView from '../views/AllProjectsView.vue';
-import ProjectsView from '../views/ProjectsView.vue';
 import DetailsView from '../views/DetailsView.vue';
 import NotFoundView from '../views/NotFoundView.vue';
 
@@ -18,11 +17,6 @@ const routes = [
     path: '/all_projects',
     name: 'all_projects',
     component: AllProjectsView
-  },
-  {
-    path: '/projects',
-    name: 'projects',
-    component: ProjectsView,
   },
   {
     path: '/details',
