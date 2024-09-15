@@ -51,53 +51,51 @@ const categories = {
     personal: { name: "Personnel", class: "bg-success" },
 };
 
-const technologies = [
+const technos = {
     // Frontend Development
-    { name: "Boostrap", class: "bg-success" },
-    { name: "CSS", class: "bg-success" },
-    { name: "HTML", class: "bg-success" },
-    { name: "Vue.JS", class: "bg-success" },
+    boostrap: { name: "Boostrap", class: "bg-success" },
+    css: { name: "CSS", class: "bg-success" },
+    html: { name: "HTML", class: "bg-success" },
+    javafx: { name: "JavaFX", class: "bg-secondary" },
+    vue_js: { name: "Vue.JS", class: "bg-success" },
 
     // Backend Web Development
-    { name: "React.JS", class: "bg-success" },
-    { name: "Node.JS", class: "bg-danger" },
-    { name: "Flask", class: "bg-danger" },
+    react_js: { name: "React JS", class: "bg-success" },
+    node_js: { name: "Node JS", class: "bg-danger" },
+    flask: { name: "Flask", class: "bg-danger" },
 
     // Collaboration Tools
-    { name: "GitHub", class: "bg-warning" },
-    { name: "GitLab", class: "bg-warning" },
-    { name: "Jira", class: "bg-warning" },
-    { name: "SCRUM", class: "bg-warning" },
-    { name: "Trello", class: "bg-warning" },
+    github: { name: "GitHub", class: "bg-warning" },
+    gitlab: { name: "GitLab", class: "bg-warning" },
+    jira: { name: "Jira", class: "bg-warning" },
+    scrum: { name: "SCRUM", class: "bg-warning" },
+    trello: { name: "Trello", class: "bg-warning" },
 
     // Containerization & Virtualization
-    { name: "Docker", class: "bg-secondary" },
-    { name: "VirtualBox", class: "bg-secondary" },
+    docker: { name: "Docker", class: "bg-secondary" },
+    virtualbox: { name: "VirtualBox", class: "bg-secondary" },
 
     // Database & Query Languages
-    { name: "GraphQL", class: "bg-info" },
-    { name: "Minio", class: "bg-info" },
-    { name: "PostgreSQL", class: "bg-info" },
-    { name: "SQL", class: "bg-info" },
-    { name: "Hasura", class: "bg-info" },
+    graphql: { name: "GraphQL", class: "bg-info" },
+    minio: { name: "Minio", class: "bg-info" },
+    postgresql: { name: "PostgreSQL", class: "bg-info" },
+    sql: { name: "SQL", class: "bg-info" },
+    hasura: { name: "Hasura", class: "bg-info" },
 
     // Programming Languages
-    { name: "Java", class: "bg-dark" },
-    { name: "JS", class: "bg-dark" },
-    { name: "Python", class: "bg-dark" },
-    { name: "TypeScript", class: "bg-dark" },
-    { name: "Kotlin", class: "bg-dark" },
+    java: { name: "Java", class: "bg-dark" },
+    js: { name: "JS", class: "bg-dark" },
+    python: { name: "Python", class: "bg-dark" },
+    ts: { name: "TypeScript", class: "bg-dark" },
+    kotlin: { name: "Kotlin", class: "bg-dark" },
 
     // IoT & Embedded Systems
-    { name: "Arduino", class: "bg-primary" },
+    arduino: { name: "Arduino", class: "bg-primary" },
 
     // Presentation Tools
-    { name: "Word", class: "bg-light text-dark" },
-    { name: "Google Slides", class: "bg-light text-dark" },
-
-    // Framework
-    { name: "JavaFX", class: "bg-secondary" }
-];
+    word: { name: "Word", class: "bg-light text-dark" },
+    slide: { name: "Google Slides", class: "bg-light text-dark" }
+};
 
 const projects = {
     sae_101_102: {
@@ -126,7 +124,7 @@ const projects = {
                 }
             ],
         },
-        technologies: [technologies[7], technologies[19]]
+        technologies: [technos.github, technos.java]
     },
     stage_s4: {
         title: `SAÉ S4.Stage`,
@@ -176,7 +174,7 @@ const projects = {
             title: `Analyse réflexive`,
             text: `Pour être plus efficace à l'avenir, il faudrait que je cherche des informations de façon plus pertinente et efficace de sorte à moins perdre de temps. De plus, il faudrait que je me familiarise davantage avec GitLab et les bonnes pratiques de développement collaboratif. Enfin, il faudrait que je sous-estime moins les tâches qui m'ont été confiées, car ça m'a parfois conduite à faire des heures supplémentaires.`
         },
-        technologies: [technologies[20], technologies[5], technologies[4], technologies[16], technologies[8]]
+        technologies: [technos.js, technos.node_js, technos.react_js, technos.postgresql, technos.gitlab]
     },
     sae_s5: {
         title: `Présentation de la SAÉ`,
@@ -203,7 +201,7 @@ const projects = {
             title: `Résultat de la SAÉ`,
             text: `Actuellement, ce projet est en cours de réalisation. Cependant, vous trouverez <a href="https://gitlab.iut-bm.univ-fcomte.fr/ggodailf/sae_s5" target='_blank'>ci-joint</a> le dépôt GitLab du projet.`
         },
-        technologies: [technologies[24], technologies[19], technologies[20], technologies[23], technologies[12], technologies[8]]
+        technologies: [technos.arduino, technos.java, technos.js, technos.kotlin, technos.docker, technos.gitlab]
     },
     stage_s6: {
         title: `Présentation du Stage`,
@@ -229,7 +227,7 @@ const projects = {
             //     },
             // ]
         },
-        technologies: [technologies[14], technologies[18], technologies[15], technologies[22], technologies[9], technologies[10]]
+        technologies: [technos.graphql, technos.hasura, technos.minio, technos.ts, technos.jira, technos.scrum]
     }
 };
 
