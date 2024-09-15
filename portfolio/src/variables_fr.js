@@ -105,7 +105,7 @@ const projects = {
         category: categories.academic,
         instructions: {
             title: `Consignes`,
-            text: `Ce projet universitaire consistait à concevoir un <span style='color:red;'><strong>mini-jeu en Java</strong></span>.\n
+            text: `J'ai réalisé ce projet universitaire dans le cadre de ma première année en BUT Informatique. Il consistait à concevoir un <span style='color:red;'><strong>mini-jeu en Java</strong></span>.\n
             Ce jeu se déroule sur un plateau triangulaire de 21 cases, où chaque joueur possède 10 jetons numérotés de 1 à 10. Le but est de placer ses jetons de manière à ce que, à la fin du jeu, la somme des numéros des jetons autour de la case vide soit inférieure à celle de l'adversaire.\n
             Pour rendre le jeu plus intéressant, j'ai dû développer <span style='color:green;'><strong>deux intelligences artificielles</span></strong> (IA) permettant de jouer contre l'ordinateur, selon la réponse à la question "Jouer seul ?" affichée dans le terminal.`
         },
@@ -117,8 +117,8 @@ const projects = {
         },
         result: {
             title: `Résultat de la SAÉ`,
-            text: `Sur la capture d'écran ci-dessous, on observe le résultat d'une partie entre les deux IA. L'IA gagnante (en bleu) est celle dont la stratégie était plus avancée que celle de l'autre IA. Vous pouvez consulter le dépôt GitHub de ce jeu à l'adresse suivante : <a href="https://github.com/giuliana-fabrizio/SAE-Jeu-du-jeton-manquant" target="_blank">GitHub</a>.\n
-            J'ai beaucoup apprécié cette SAÉ en raison de sa complexité, qui m'a poussée à sortir de ma zone de confort. Elle m'a également permis de faire des progrès significatifs en algorithmique.`,
+            text: `Sur la capture d'écran ci-dessous, on observe le résultat d'une partie entre les deux IA. L'IA gagnante (en bleu) est celle dont la stratégie était plus avancée que celle de l'autre IA. Vous pouvez consulter le dépôt GitHub de ce jeu à l'adresse <a href="https://github.com/giuliana-fabrizio/SAE-Jeu-du-jeton-manquant" target="_blank">suivante</a>.\n
+            J'ai beaucoup apprécié cette SAÉ en raison de sa <span style='color:red'><strong>complexité</strong></span>, qui m'a poussée à sortir de ma zone de confort. Elle m'a également permis de faire des progrès significatifs en algorithmique.`,
             images: [
                 {
                     path: sae_101_102_partie_de_jeu,
