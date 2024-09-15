@@ -6,10 +6,10 @@
             </section>
         </header>
 
-        <main id="projects_main" class="d-flex justify-content-center pb-5 pt-5">
+        <main id="projects_main" class="d-flex justify-content-center pb-5 pt-2">
             <div class="col-md-8">
                 <div class="row position-relative">
-                    <div v-for="(section, key) in project" :key="key" class="col-12">
+                    <div v-for="(section, key, id) in project" :key="key" class="col-12">
                         <section v-if="section.title && section.text" class="p-5 pb-0 pt-0">
                             <h2 class="text-dark mb-5">{{ section.title }}</h2>
                             <p v-html="formattedText(section.text)" class="text-xl-start text-secondary mt-3"></p>
@@ -19,7 +19,7 @@
                                     <p class="text-muted text-center mt-2 fst-italic">{{ image.legend }}</p>
                                 </div>
                             </div>
-                            <hr class="mb-5 mt-5">
+                            <hr v-if="id < project_length" class="mb-5 mt-5">
                         </section>
                     </div>
                 </div>
@@ -41,12 +41,14 @@ export default {
 
     data() {
         return {
-            project: null
+            project: null,
+            project_length: 0
         };
     },
 
     created() {
         this.project = this.$store.getters.getProject;
+        this.project_length = (Object.keys(this.project).length - 2)
     },
 
     methods: {

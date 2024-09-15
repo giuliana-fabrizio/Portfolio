@@ -16,7 +16,7 @@
                                 <div class="card-body m-3">
                                     <div class="d-flex justify-content-between align-items-center mb-3 flex-column flex-md-row text-center text-md-start">
                                         <h5 style="color:#555"><strong>{{ project.title }}</strong></h5>
-                                        <p class="badge bg-primary text-wrap">{{ project.category }}</p>
+                                        <p :class="['badge', project.category.class, 'text-wrap']">{{ project.category.name }}</p>
                                     </div>
                                     <p class="text-secondary mb-3 d-xl-block" v-html="formattedText(project.technologies ? truncatedInstructions(project.instructions.text) : project.instructions.text)"></p>
                                     <div class="d-flex flex-wrap">
