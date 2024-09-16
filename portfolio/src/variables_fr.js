@@ -46,9 +46,9 @@ const projects_page_presentation = "Sur cette page, vous découvrirez l'ensemble
 /* ***************************************************************** projects page ***************************************************************** */
 
 const categories = {
-    academic: { name: "Universitaire", class: "bg-primary" },
-    professional: { name: "Professionnel", class: "bg-info" },
     personal: { name: "Personnel", class: "bg-success" },
+    professional: { name: "Professionnel", class: "bg-info" },
+    academic: { name: "Universitaire", class: "bg-primary" },
 };
 
 const technos = {
@@ -255,5 +255,7 @@ module.exports = {
     linkedin: linkedin,
     projects_page_title: projects_page_title,
     projects_page_presentation: projects_page_presentation,
+    categories: categories,
+    technos: technos,
     projects: projects,
 }
