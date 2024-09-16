@@ -9,6 +9,8 @@
 
         <main id="all_projects_main" class="d-flex justify-content-center pb-5">
             <div class="container">
+
+            <FilterProjectsComponent />
                 <div class="row">
                     <div v-for="(project, key) in projects" :key="key" :class="[getClass(Object.keys(projects).length), 'mb-4']">
                         <router-link :to="{ name: 'details' }" class="text-decoration-none">
@@ -42,12 +44,14 @@
 import variables_fr from '../variables_fr.js';
 import variables_en from '../variables_en.js';
 
+import FilterProjectsComponent from '../components/FilterProjectsComponent.vue';
 import TopButtonComponent from '../components/TopButtonComponent.vue';
 
 export default {
     name: 'AllProjectsView',
 
     components: {
+        FilterProjectsComponent,
         TopButtonComponent
     },
 
