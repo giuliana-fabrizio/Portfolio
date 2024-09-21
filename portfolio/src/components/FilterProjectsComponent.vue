@@ -60,12 +60,8 @@ export default {
         this.categories = isFrench ? variables_fr.categories : variables_en.categories;
         this.technos = isFrench ? variables_fr.technos : variables_en.technos;
 
-        this.categories_values = this.$route.query.categories ?
-            JSON.parse(this.$route.query.categories) :
-            [];
-        this.technos_values = this.$route.query.technologies ?
-            JSON.parse(this.$route.query.technologies) :
-            [];
+        this.categories_values = this.categories_props;
+        this.technos_values = this.technos_props;
     },
 
     methods: {

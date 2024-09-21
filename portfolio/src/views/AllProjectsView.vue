@@ -94,6 +94,13 @@ export default {
         this.introText = isFrench ? variables_fr.projects_page_presentation : variables_en.projects_page_presentation;
         this.allProjects = Object.values(isFrench ? variables_fr.projects : variables_en.projects);
         this.projects = this.allProjects;
+
+        this.categories = this.$route.query.categories ?
+            JSON.parse(this.$route.query.categories) :
+            [];
+        this.technos = this.$route.query.technologies ?
+            JSON.parse(this.$route.query.technologies) :
+            [];
     },
 
     methods: {
