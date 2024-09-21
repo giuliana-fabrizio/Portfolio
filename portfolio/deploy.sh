@@ -9,6 +9,7 @@ cd dist
 git init
 git add -A
 git commit -m 'New Deployment'
+git branch -M main
 git push -f git@github.com:giuliana-fabrizio/Portfolio.git main:prod
 
 cd -
