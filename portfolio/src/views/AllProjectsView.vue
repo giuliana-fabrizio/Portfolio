@@ -24,13 +24,24 @@
                                 (technos.length === 0 || project.technologies.filter(techno => technos.includes(techno.name)).length > 0)"
                             class="text-decoration-none">
 
-                            <div class="card bg-light h-100 shadow-sm border-0 rounded" @click="setProject(project)" style="background-color: #f4f4f9; transition: transform 0.3s, box-shadow 0.3s;">
+                            <div
+                                class="card bg-light h-100 shadow-sm border-0 rounded"
+                                @click="setProject(project)"
+                                style="background-color: #f4f4f9; transition: transform 0.3s, box-shadow 0.3s;">
+
                                 <div class="card-body m-3">
                                     <div class="d-flex justify-content-between align-items-center mb-3 flex-column flex-md-row text-center text-md-start">
                                         <h5 style="color:#555"><strong>{{ project.title }}</strong></h5>
                                         <p :class="['badge', project.category.class, 'text-wrap']">{{ project.category.name }}</p>
                                     </div>
-                                    <p class="text-secondary mb-3 d-xl-block" v-html="formattedText(project.technologies ? truncatedInstructions(project.instructions.text) : project.instructions.text)"></p>
+
+                                    <p
+                                        class="text-secondary mb-3 d-xl-block"
+                                        v-html="formattedText(project.technologies ?
+                                            truncatedInstructions(project.instructions.text) :
+                                            project.instructions.text)">
+                                    </p>
+
                                     <div class="d-flex flex-wrap">
                                         <span
                                             v-for="(technologie, index) in project.technologies"
@@ -68,6 +79,7 @@ export default {
     data: () => ({
         title: "",
         introText: "",
+        allProjects: {},
         projects: {},
 
         categories: [],
@@ -80,7 +92,8 @@ export default {
 
         this.title = isFrench ? variables_fr.projects_page_title : variables_en.projects_page_title;
         this.introText = isFrench ? variables_fr.projects_page_presentation : variables_en.projects_page_presentation;
-        this.projects = isFrench ? variables_fr.projects : variables_en.projects;
+        this.allProjects = Object.values(isFrench ? variables_fr.projects : variables_en.projects);
+        this.projects = this.allProjects;
     },
 
     methods: {
@@ -98,7 +111,10 @@ export default {
                 .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
         },
         getClass(length) {
-            if (length <= 2) {
+            if (length <= 1) {
+                return 'col-md-12';
+            }
+            if (length == 2) {
                 return 'col-md-6';
             }
             return 'col-12 col-sm-6 col-md-4';
@@ -106,11 +122,20 @@ export default {
         setProject(project) {
             this.$store.commit('setProject', project);
         },
+
+        setProjects() {
+            this.projects = this.allProjects.filter(project =>
+                (this.categories.length === 0 || this.categories.includes(project.category.name)) &&
+                (this.technos.length === 0 || project.technologies.some(techno => this.technos.includes(techno.name)))
+            );
+        },
         updateCategories(categories) {
             this.categories = categories;
+            this.setProjects();
         },
         updateTechnos(technos) {
             this.technos = technos;
+            this.setProjects();
         },
     },
 }
