@@ -9,6 +9,7 @@
     "deploy": "sh deploy.sh"
   },
   "dependencies": {
+    "@kouts/vue-modal": "^2.1.12",
     "animejs": "^3.2.2",
     "core-js": "^3.8.3",
     "vue": "^2.6.14",
