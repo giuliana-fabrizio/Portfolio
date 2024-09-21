@@ -10,10 +10,20 @@
         <main id="all_projects_main" class="d-flex justify-content-center pb-5">
             <div class="container">
 
-            <FilterProjectsComponent />
+            <FilterProjectsComponent
+                :categories_props="categories"
+                :technos_props="technos"
+                @categories_props="updateCategories"
+                @technos_props="updateTechnos" />
+
                 <div class="row">
                     <div v-for="(project, key) in projects" :key="key" :class="[getClass(Object.keys(projects).length), 'mb-4']">
-                        <router-link :to="{ name: 'details' }" class="text-decoration-none">
+                        <router-link
+                            :to="{ name: 'details' }"
+                            v-if="(categories.length === 0 || categories.includes(project.category.name)) &&
+                                (technos.length === 0 || project.technologies.filter(techno => technos.includes(techno.name)).length > 0)"
+                            class="text-decoration-none">
+
                             <div class="card bg-light h-100 shadow-sm border-0 rounded" @click="setProject(project)" style="background-color: #f4f4f9; transition: transform 0.3s, box-shadow 0.3s;">
                                 <div class="card-body m-3">
                                     <div class="d-flex justify-content-between align-items-center mb-3 flex-column flex-md-row text-center text-md-start">
@@ -59,6 +69,9 @@ export default {
         title: "",
         introText: "",
         projects: {},
+
+        categories: [],
+        technos: []
     }),
 
     created() {
@@ -92,8 +105,14 @@ export default {
         },
         setProject(project) {
             this.$store.commit('setProject', project);
-        }
-    }
+        },
+        updateCategories(categories) {
+            this.categories = categories;
+        },
+        updateTechnos(technos) {
+            this.technos = technos;
+        },
+    },
 }
 </script>
 

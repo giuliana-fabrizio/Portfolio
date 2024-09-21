@@ -48,6 +48,11 @@ export default {
         technos_values: []
     }),
 
+    props: {
+        categories_props: [],
+        technos_props: []
+    },
+
     created() {
         const language = this.$store.getters.getLanguage;
         const isFrench = language === 'french';
@@ -82,6 +87,7 @@ export default {
             if (JSON.stringify(this.$route.query) !== JSON.stringify(query)) {
                 router.push({ path: this.$route.path, query: query });
             }
+            this.$emit('categories_props', this.categories_values);
         },
 
         technos_values() {
@@ -89,6 +95,7 @@ export default {
             if (JSON.stringify(this.$route.query) !== JSON.stringify(query)) {
                 router.push({ path: this.$route.path, query: query });
             }
+            this.$emit('technos_props', this.technos_values);
         }
     }
 }
