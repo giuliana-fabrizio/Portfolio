@@ -1,7 +1,7 @@
 <template>
     <div>
         <main id="filter_projects_main" class="container">
-            <div class="position-fixed" style="top: 7em; z-index: 1050;">
+            <div class="position-fixed" style="top: 5em; z-index: 1050;">
                 <button class="btn btn-primary" @click="wantFilter = true">
                     {{ filterLabel }}
                     <i :class="['bi', 'bi-filter']"></i>

@@ -1,59 +1,56 @@
 <template>
-    <div>
+    <div class="container">
         <header id="all_projects_header">
             <section id="titre" class="w-100">
-                <h1 class="mb-4 mt-5 text-primary">{{ title }}</h1>
+                <h1 class="mb-4 mt-3 text-primary">{{ title }}</h1>
                 <p class="text-secondary">{{introText}}</p>
             </section>
         </header>
 
-        <main id="all_projects_main" class="d-flex justify-content-center pb-5">
-            <div class="container">
+        <main id="all_projects_main" class="pb-5">
+            <FilterProjectsComponent
+                :categories_props="categories"
+                :technos_props="technos"
+                @categories_props="updateCategories"
+                @technos_props="updateTechnos" />
 
-                <FilterProjectsComponent
-                    :categories_props="categories"
-                    :technos_props="technos"
-                    @categories_props="updateCategories"
-                    @technos_props="updateTechnos" />
+            <div class="row">
+                <div v-for="(project, key) in projects" :key="key" :class="[getClass(Object.keys(projects).length), 'mb-4']">
+                    <router-link
+                        :to="{ name: 'details' }"
+                        v-if="(categories.length === 0 || categories.includes(project.category.name)) &&
+                            (technos.length === 0 || project.technologies.filter(techno => technos.includes(techno.name)).length > 0)"
+                        class="text-decoration-none">
 
-                <div class="row">
-                    <div v-for="(project, key) in projects" :key="key" :class="[getClass(Object.keys(projects).length), 'mb-4']">
-                        <router-link
-                            :to="{ name: 'details' }"
-                            v-if="(categories.length === 0 || categories.includes(project.category.name)) &&
-                                (technos.length === 0 || project.technologies.filter(techno => technos.includes(techno.name)).length > 0)"
-                            class="text-decoration-none">
+                        <div
+                            class="card bg-light h-100 shadow-sm border-0 rounded"
+                            @click="setProject(project)"
+                            style="background-color: #f4f4f9; transition: transform 0.3s, box-shadow 0.3s;">
 
-                            <div
-                                class="card bg-light h-100 shadow-sm border-0 rounded"
-                                @click="setProject(project)"
-                                style="background-color: #f4f4f9; transition: transform 0.3s, box-shadow 0.3s;">
+                            <div class="card-body m-3">
+                                <div class="d-flex justify-content-between align-items-center mb-3 flex-column flex-md-row text-center text-md-start">
+                                    <h5 style="color:#555"><strong>{{ project.title }}</strong></h5>
+                                    <p :class="['badge', project.category.class, 'text-wrap']">{{ project.category.name }}</p>
+                                </div>
 
-                                <div class="card-body m-3">
-                                    <div class="d-flex justify-content-between align-items-center mb-3 flex-column flex-md-row text-center text-md-start">
-                                        <h5 style="color:#555"><strong>{{ project.title }}</strong></h5>
-                                        <p :class="['badge', project.category.class, 'text-wrap']">{{ project.category.name }}</p>
-                                    </div>
+                                <p
+                                    class="text-secondary mb-3 d-xl-block"
+                                    v-html="formattedText(project.technologies ?
+                                        truncatedInstructions(project.instructions.text) :
+                                        project.instructions.text)">
+                                </p>
 
-                                    <p
-                                        class="text-secondary mb-3 d-xl-block"
-                                        v-html="formattedText(project.technologies ?
-                                            truncatedInstructions(project.instructions.text) :
-                                            project.instructions.text)">
-                                    </p>
-
-                                    <div class="d-flex flex-wrap">
-                                        <span
-                                            v-for="(technologie, index) in project.technologies"
-                                            :key="index"
-                                            :class="[technologie.class, 'badge', 'text-wrap', 'me-2', 'mb-2']">
-                                            {{ technologie.name }}
-                                        </span>
-                                    </div>
+                                <div class="d-flex flex-wrap">
+                                    <span
+                                        v-for="(technologie, index) in project.technologies"
+                                        :key="index"
+                                        :class="[technologie.class, 'badge', 'text-wrap', 'me-2', 'mb-2']">
+                                        {{ technologie.name }}
+                                    </span>
                                 </div>
                             </div>
-                        </router-link>
-                    </div>
+                        </div>
+                    </router-link>
                 </div>
             </div>
         </main>
