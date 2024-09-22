@@ -10,11 +10,11 @@
         <main id="all_projects_main" class="d-flex justify-content-center pb-5">
             <div class="container">
 
-            <FilterProjectsComponent
-                :categories_props="categories"
-                :technos_props="technos"
-                @categories_props="updateCategories"
-                @technos_props="updateTechnos" />
+                <FilterProjectsComponent
+                    :categories_props="categories"
+                    :technos_props="technos"
+                    @categories_props="updateCategories"
+                    @technos_props="updateTechnos" />
 
                 <div class="row">
                     <div v-for="(project, key) in projects" :key="key" :class="[getClass(Object.keys(projects).length), 'mb-4']">
@@ -92,8 +92,6 @@ export default {
 
         this.title = isFrench ? variables_fr.projects_page_title : variables_en.projects_page_title;
         this.introText = isFrench ? variables_fr.projects_page_presentation : variables_en.projects_page_presentation;
-        this.allProjects = Object.values(isFrench ? variables_fr.projects : variables_en.projects);
-        this.projects = this.allProjects;
 
         this.categories = this.$route.query.categories ?
             JSON.parse(this.$route.query.categories) :
@@ -101,6 +99,9 @@ export default {
         this.technos = this.$route.query.technologies ?
             JSON.parse(this.$route.query.technologies) :
             [];
+
+        this.allProjects = Object.values(isFrench ? variables_fr.projects : variables_en.projects);
+        this.setProjects();
     },
 
     methods: {
