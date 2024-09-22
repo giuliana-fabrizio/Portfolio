@@ -15,6 +15,11 @@
                 @technos_props="updateTechnos" />
 
             <div class="row">
+                <div v-if="projects.length === 0">
+                    <p><strong>Aucun résultat</strong></p>
+                    <p>Modifier ou supprimer certains de vos filtres</p>
+                </div>
+
                 <div v-for="(project, key) in projects" :key="key" :class="[getClass(Object.keys(projects).length), 'mb-4']">
                     <router-link
                         :to="{ name: 'details' }"
