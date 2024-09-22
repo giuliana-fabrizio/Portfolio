@@ -45,6 +45,12 @@ const projects_page_presentation = "Sur cette page, vous découvrirez l'ensemble
 
 /* ***************************************************************** projects page ***************************************************************** */
 
+const filterLabel = "Filtrer";
+const categoriesLabel = "Type de projet";
+const technosLabel = "Technologies";
+const confirmFilters = "Valider";
+const resetFilters = "Réinitialiser";
+
 const categories = {
     personal: { name: "Personnel", class: "bg-success" },
     professional: { name: "Professionnel", class: "bg-info" },
@@ -255,6 +261,11 @@ module.exports = {
     linkedin: linkedin,
     projects_page_title: projects_page_title,
     projects_page_presentation: projects_page_presentation,
+    filterLabel: filterLabel,
+    categoriesLabel: categoriesLabel,
+    technosLabel: technosLabel,
+    confirmFilters: confirmFilters,
+    resetFilters : resetFilters,
     categories: categories,
     technos: technos,
     projects: projects,
