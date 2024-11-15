@@ -35,7 +35,7 @@
                             <div class="card-body m-3">
                                 <div class="d-flex justify-content-between align-items-center mb-3 flex-column flex-lg-row text-center text-md-start">
                                     <h5 style="color:#555"><strong>{{ project.title }}</strong></h5>
-                                    <p :class="['badge', project.category.class, 'text-wrap']">{{ project.category.name }}</p>
+                                    <p :class="['badge', project.category.class, 'mt-1', 'text-wrap']">{{ project.category.name }}</p>
                                 </div>
 
                                 <p
