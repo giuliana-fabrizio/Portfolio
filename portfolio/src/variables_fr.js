@@ -2,6 +2,7 @@ const sae_101_102_partie_de_jeu = require("../files/sae_101_102/partie_de_jeu.pn
 const sae_s4_mcd = require("../files/sae_stage_s4/MCD.png");
 const sae_s4_principe_selection_apres = require("../files/sae_stage_s4/principe_selection_apres.png");
 const archi_sae = require("../files/sae_s5/archi_sae.png");
+const graphs_frontend = require("../files/sae_s5/graphs_frontend.png");
 
 
 /* ***************************************************************** common ***************************************************************** */
@@ -84,8 +85,9 @@ const technos = {
     // Database & Query Languages
     graphql: { name: "GraphQL", class: "bg-info" },
     minio: { name: "Minio", class: "bg-info" },
+    mongo: { name: "MongoDB", class: "bg-info" },
     postgresql: { name: "PostgreSQL", class: "bg-info" },
-    sequelize: {name: "Sequelize", class: "bg-info" },
+    sequelize: { name: "Sequelize", class: "bg-info" },
     sql: { name: "SQL", class: "bg-info" },
     hasura: { name: "Hasura", class: "bg-info" },
 
@@ -137,7 +139,7 @@ const projects = {
         title: `Stage (2023)`,
         category: categories.professional,
         instructions: {
-            title: `Consignes`,
+            title: `Présentation`,
             text: `Au cours de ma deuxième année en BUT Informatique, j'ai effectué un stage de trois mois (avril - juin 2023) au sein de <span style='color:red;'><strong>Natural Solutions</strong></span>, une entreprise du secteur numérique basée à Marseille.\n
             Chaque mois, l'entreprise doit établir des devis et des factures pour ses clients. Pour simplifier ce processus, un stagiaire avait été recruté en 2021 pour mettre en place l’Outil Facturation, réalisé en <span style='color:blue'><strong>${technos.js.name}</strong></span>, <span style='color:blue'><strong>${technos.node_js.name}</strong></span> et <span style='color:blue'><strong>${technos.react_js.name}</strong></span>.\n
             Ma mission était de corriger les problèmes existants, d'améliorer les fonctionnalités déjà en place et d'en ajouter de nouvelles. Parmi les tâches qui m'ont été confiées, figuraient la mise en place de la base de données (BDD), la modification du principe de sélection des projets et la génération de documents.\n
@@ -150,68 +152,82 @@ const projects = {
         },
         implementation: {
             title: `Mise en œuvre`,
-            text: `<h4 style='color:black;'><strong>Base de données</strong></h4>
+            section_1: `<h4 style='color:black;'><strong>Base de données</strong></h4>
             Avant mon arrivée, les données de l'Outil Facturation étaient conservées dans un <span style='color:blue'><strong>fichier JSON</strong></span>. Pour les migrer vers une base de données, j'ai réalisé les étapes suivantes :
-            <ul><li>création d'un MCD (Modèle Conceptuel de Données) ;</li><li>utilisation du SGBD (Système de Gestion de Bases de Données) <span style='color:red;'><strong>${technos.postgresql.name}</strong></span> ;</li><li>emploi de l'ORM <span style='color:red;'><strong>${technos.sequelize.name}</strong></span> pour simplifier l'interaction avec la base de données ;</li><li>connexion de la base de données avec le backend via des variables d'environnement. Lors de cette étape, j'ai dû adapter l'intégralité du code de l'application ;</li><li>enrichissement de la base de données en développant une fonction pour <span style='color:green;'><strong>insérer les données</strong></span>, élément par élément, à partir du fichier JSON où elles étaient précédemment stockées.</li></ul>
-            <h4 style='color:black;'><strong>Modification du principe de sélection des projets</strong></h4>
-            Lorsque l'utilisateur souhaitait modifier un projet, il devait connaître son nom exact. Il a été décidé que le nouveau système de recherche de projet utiliserait <span style='color:blue'><strong>deux listes déroulantes</strong></span>, permettant de sélectionner ou désélectionner chaque projet. L'une des listes afficherait tous les projets développés pour RENECO (le principal client de Natural Solutions), tandis que l'autre inclurait tous les autres projets.\n
-            Pour accomplir cette tâche, j’ai dû :
-            <ul><li><span style='color:red'><strong>interroger une API externe</strong></span> pour obtenir la liste complète des projets ;</li><li>identifier si chaque projet était développé pour RENECO ou non ;</li><li>ajuster l'interface graphique en conséquence.</li></ul>
-            <h4 style='color:black;'><strong>Génération de documents</strong></h4>
-            Cette mission consistait à créer un rapport sur les activités de support réalisées pendant une période donnée. Ces activités concernent les tâches effectuées par l'équipe de développement après la livraison du produit (service après-vente).\n
-            Pour gérer ces activités, Natural Solutions utilise <span style='color:blue;'><strong>Zendesk</strong></span>, une plateforme de gestion de la relation client. Il était donc crucial d'interroger l'API de Zendesk pour générer le rapport.\n
-            J'ai d'abord établi une connexion avec l'API pour obtenir les données pertinentes, que j'ai ensuite sélectionnées, triées par ordre chronologique et formatées pour le rapport.\n
-            Le code permettant le téléchargement du fichier était déjà présent, mais j'ai dû l'adapter pour générer correctement les documents. En complément, j'ai créé un <span style='color:green'><strong>modèle Word</strong></span> afin de structurer et d'organiser automatiquement le contenu du rapport lors de sa génération.`,
-            images: [
+            <ul><li>création d'un MCD (Modèle Conceptuel de Données) ;</li><li>utilisation du SGBD (Système de Gestion de Bases de Données) <span style='color:red;'><strong>${technos.postgresql.name}</strong></span> ;</li><li>emploi de l'ORM <span style='color:red;'><strong>${technos.sequelize.name}</strong></span> pour simplifier l'interaction avec la base de données ;</li><li>connexion de la base de données avec le backend via des variables d'environnement. Lors de cette étape, j'ai dû adapter l'intégralité du code de l'application ;</li><li>enrichissement de la base de données en développant une fonction pour <span style='color:green;'><strong>insérer les données</strong></span>, élément par élément, à partir du fichier JSON où elles étaient précédemment stockées.</li></ul>`,
+            images_1: [
                 {
                     path: sae_s4_mcd,
                     legend: `Figure 1 : MCD de l'application`
-                }, {
-                    path: sae_s4_principe_selection_apres,
-                    legend: `Figure 2 : MCD de l'application`
                 }
-            ]
+            ],
+            section_2: `\n<h4 style='color:black;'><strong>Modification du principe de sélection des projets</strong></h4>
+            Lorsque l'utilisateur souhaitait modifier un projet, il devait connaître son nom exact. Il a été décidé que le nouveau système de recherche de projet utiliserait <span style='color:blue'><strong>deux listes déroulantes</strong></span>, permettant de sélectionner ou désélectionner chaque projet. L'une des listes afficherait tous les projets développés pour RENECO (le principal client de Natural Solutions), tandis que l'autre inclurait tous les autres projets.\n
+            Pour accomplir cette tâche, j’ai dû :
+            <ul><li><span style='color:red'><strong>interroger une API externe</strong></span> pour obtenir la liste complète des projets ;</li><li>identifier si chaque projet était développé pour RENECO ou non ;</li><li>ajuster l'interface graphique en conséquence.</li></ul>`,
+            images_2: [
+                {
+                    path: sae_s4_principe_selection_apres,
+                    legend: `Figure 2 : Principe de sélection des projets`
+                }
+            ],
+            section_3: `\n<h4 style='color:black;'><strong>Génération de documents</strong></h4>
+            Cette mission consistait à créer un rapport sur les activités de support réalisées pendant une période donnée. Ces activités concernent les tâches effectuées par l'équipe de développement après la livraison du produit (service après-vente).\n
+            Pour gérer ces activités, Natural Solutions utilise <span style='color:blue;'><strong>Zendesk</strong></span>, une plateforme de gestion de la relation client. Il était donc crucial d'interroger l'API de Zendesk pour générer le rapport.\n
+            J'ai d'abord établi une connexion avec l'API pour obtenir les données pertinentes, que j'ai ensuite sélectionnées, triées par ordre chronologique et formatées pour le rapport.\n
+            Le code permettant le téléchargement du fichier était déjà présent, mais j'ai dû l'adapter pour générer correctement les documents. En complément, j'ai créé un <span style='color:green'><strong>modèle Word</strong></span> afin de structurer et d'organiser automatiquement le contenu du rapport lors de sa génération.`
         },
         result: {
             title: `Résultat de la SAÉ`,
             text: `J'ai beaucoup aimé cette première expérience professionnelle, c'est en grande partie grâce à mes collègues qui se sont montrés très attentifs.\n
             De plus, j'ai pu m'améliorer en <span style='color:red'><strong>gestion de projet</strong></span> grâce à l'utilisation quotidienne de la méthodologie SCRUM. J'ai aussi développé ma capacité à me documenter et à chercher des informations par moi-même ainsi que ma capacité à utiliser des outils tels que GitLab.\n
             Vous pouvez consulter le diaporama de ma soutenance <a href='https://docs.google.com/presentation/d/1uueQqS5IAyxeuxPOwv-2YE4rRnxuOs72wY5auPL-VPI/edit?usp=sharing' target='_blank'>ci-joint</a>.`,
-            files: {
-                file_1: {
-
-                },
-                file_2: {
-
-                }
-            }
         },
         technologies: [technos.js, technos.node_js, technos.react_js, technos.postgresql, technos.gitlab]
     },
     sae_s5: {
-        title: `Présentation de la SAÉ`,
+        title: `SAÉ 501-601`,
         category: categories.academic,
         instructions: {
             title: `Objectif`,
-            text: `Cette SAÉ, réalisée par <span style='color:red;'><strong>cinq étudiants</strong></span> en troisième année de BUT Informatique, a pour objectif de développer une application multi-architecture en utilisant des micro-contrôleurs et des objets connectés pour collecter des données, les traiter et les visualiser.\nMon groupe et moi avons choisi de créer une application de tests de réflexe destinée à des scientifiques.`
+            text: `Dans le cadre de ma troisième année de BUT informatique, j'ai travaillé sur ce projet en collaboration avec quatre autres étudiants. Notre mission consistait à concevoir une <span style='color: red'><strong>application multi-architecture</strong></span> intégrant des <span style='color:green'><strong>microcontrôleurs</strong></span> et des <span style='color:green'><strong>objets connectés</strong></span>, afin de collecter, traiter et visualiser des données.\n
+            Nous avions la liberté de définir une situation d'application pour mettre en œuvre ces consignes, et notre équipe a opté pour le développement d'une application destinée aux scientifiques, permettant de réaliser des tests de réflexe.`
         },
         architecture: {
-            title: `Architecture`,
-            text: `L'application comprend plusieurs infrastructures complexes que nous devons faire communiquer entre elles.\n\nNous disposons d’une <span style='color:blue;'><strong>application mobile</strong></span> (codée pour les Android dans notre cas) celle-ci a été conçue pour prendre des vidéos et les envoyer à un <span style='color:blue;'><strong>serveur d'analyse</strong></span>. Ce serveur comme son nom l'indique a pour but d’analyser les informations reçues. Une fois le traitement effectué il envoie les résultats à un <span style='color:blue;'><strong>serveur de centralisation</strong></span> des données codé en java. Ce serveur reçoit également des données de la part des microcontrôleurs. Il communique avec une <span style='color:blue;'><strong>API</strong></span> réalisée en Node.js afin de stocker les données reçues dans une <span style='color:blue;'><strong>base de données MongoDB</strong></span>. Le serveur de centralisation est tout de même capable de communiquer lui-même avec la BDD sans passer au travers de l’API. Pour finir les données seront affichées sous forme de statistiques dans une page Web (<span style='color:blue;'><strong>frontend</strong></span>) réalisée en Vue.js.\n\nSur la figure ci-dessous est représentée l'architecture de l'application.`,
+            title: `Architecture du projet`,
+            text: `L’architecture du projet, imposée par nos professeurs, suivait des consignes précises. Nous devions concevoir une <span style='color: #d4d6ff'><strong>application mobile</strong></span> capable de transmettre des informations (son, vidéos ou images) à un <span style='color: #e7dec7'><strong>serveur d’analyse</strong></span>. Ce dernier avait pour rôle de traiter ces données et de transmettre les résultats à un <span style='color: #c5dcf1'><strong>serveur de centralisation</strong></span>, considéré comme le "noyau" de l’application. Développé impérativement en ${technos.java.name}, ce serveur devait enregistrer les données issues du serveur d’analyse dans une <span style='color: #fce5cd'><strong>base de données</strong></span> ${technos.mongo.name}.\n
+            Comme illustré dans le schéma ci-dessous, ce serveur était également chargé de récupérer et de sauvegarder les résultats envoyés par les <span style='color: #fdd9ff'><strong>microcontrôleurs</strong></span>. Par ailleurs, une <span style='color: #d9ead3'><strong>API</strong></span> en ${technos.node_js.name} devait être créée pour assurer les échanges entre le serveur de centralisation, la base de données, et une interface <span style='color: #f8e0e0'><strong>frontend</strong></span> obligatoirement réalisée en ${technos.vue_js.name}, destinée à la visualisation des données.`,
             images: [
                 {
                     path: archi_sae,
-                    legend: `Légende : architecture de la SAÉ`
+                    legend: `Figure 1 : architecture de la SAÉ`
                 },
             ]
         },
         organization_of_work: {
-            title: `Processus de développement`,
-            text: `Pour développer cette application nous avons utilisé <span style='color:green;'><strong>GitLab</strong></span> et <span style='color:green;'><strong>Trello</strong></span> pour gérer le versioning et la planification des tâches.\n\nEn ce qui concerne le déploiement, une grande partie de l'application est déployée en conteneurs <span style='color:green;'><strong>Docker</strong></span>.\n\nLes principaux langages que j'ai pu manipuler sont les suivants :\n<ul><li>Arduino ;</li><li>Java ;</li><li>JavaScript ;</li><li>Kotlin ;</li><li>YAML ;</li></ul>`
+            title: `Réalisation de la SAÉ`,
+            section_1: `Tout au long du cycle de vie du projet, nous avons utilisé <span style='color:green;'><strong>GitLab</strong></span> et <span style='color:green;'><strong>Trello</strong></span> afin de faciliter le versioning et la planification des tâches.\n
+                Nous nous sommes rapidemment répartis les tâches en tenant compte des préférences de chacun et en veillant à ce que chaque membre puisse contribuer à l'ensemble du projet. C'est ainsi que j'ai entammé mon travail avec le développement de l’API et le frontend.`,
+            section_2: `\n<h4 style='color:black;'><strong>Réalisation de l'API et du frontend</strong></h4>
+                Le frontend devant afficher les informations de la base de données sous forme de graphiques et de statistiques, j’ai commencé par identifier les données pertinentes à présenter, puis imaginé différentes façons de les visualiser.\n
+                J’ai d’abord travaillé sur l’API en utilisant la dépendance "express" de ${technos.node_js.name}, qui simplifie la création d’un serveur. Une fois celui-ci en place, j’ai établi une connexion avec la base de données ${technos.mongo.name}, créée par un camarade, afin d’en extraire les informations nécessaires. Avant de passer au frontend, j’ai réalisé des tests unitaires pour m’assurer que les méthodes de l’API fonctionnaient correctement.\n
+                Pour le frontend, j'ai commencé par assurer la connexion avec l’API puis j'ai opté pour la bibliothèque "Vue chartjs" qui permet de faire des graphiques dynamiques.\n
+                Avant de passer au développement du serveur d'analyse, j'ai permit le déploiement de l'API avec ${technos.docker.name}.`,
+            images: [
+                {
+                    path: graphs_frontend,
+                    legend: `Figure 2 : Graphiques du frontend (données de tests)`
+                },
+            ],
+            section_3: `\n<h4 style='color:black;'><strong>Développement du serveur d'analyse</strong></h4>
+                Cette étape a été sans doute l’une des plus complexes, car elle a exigé une longue phase de recherche et de nombreuses reprises de l'application mobile, initialement prévue pour manipuler des vidéos.\n
+                La principale difficulté résidait dans la recherche d’une bibliothèque capable de traiter un média. Dans un premier temps, nous avons tenté de travailler avec des vidéos, mais cette approche étant trop compliquée pour le temps imparti, nous avons opté pour l'utilisation de fichiers SVG pour analyser exclusivement des images. Cette décision a entrainé la modification de l'application mobile.\n
+                Enfin, nous avons établi la connexion entre l’application mobile et le serveur d’analyse en réalisant, pour chacun, plusieurs corrections au cours du temps. Pour cette partie aussi, il a été essentiel de réaliser des tests unitaires.`
         },
         result: {
             title: `Résultat de la SAÉ`,
-            text: `Actuellement, ce projet est en cours de réalisation. Cependant, vous trouverez <a href="https://gitlab.iut-bm.univ-fcomte.fr/ggodailf/sae_s5" target='_blank'>ci-joint</a> le dépôt GitLab du projet.`
+            text: `Cette SAÉ s'est révélée extrêmement enrichissante. J'ai pu développer de nombreuses compétences, humaines et professionnelles, ainsi que comprendre l'importance de la communication au sein d'une équipe.\n
+            Vous pouvez consulter notre soutenance <a href='https://docs.google.com/presentation/d/1ciTwJQT0wF97OlqsJSNzQmrdxO6tPPnuQ1vWaAyG5aA/edit#slide=id.g230ccc5832e_0_0' target='blank'>ici</a> et notre dépôt Git <a href='#'>ici</a>.`
         },
         technologies: [technos.arduino, technos.java, technos.js, technos.kotlin, technos.docker, technos.gitlab]
     },
@@ -265,7 +281,7 @@ module.exports = {
     categoriesLabel: categoriesLabel,
     technosLabel: technosLabel,
     confirmFilters: confirmFilters,
-    resetFilters : resetFilters,
+    resetFilters: resetFilters,
     categories: categories,
     technos: technos,
     projects: projects,
