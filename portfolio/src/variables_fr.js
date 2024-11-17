@@ -53,57 +53,52 @@ const confirmFilters = "Valider";
 const resetFilters = "Réinitialiser";
 
 const categories = {
-    personal: { name: "Personnel", class: "bg-success" },
-    professional: { name: "Professionnel", class: "bg-info" },
-    academic: { name: "Universitaire", class: "bg-primary" },
+    personal: { name: "Personnel" },
+    professional: { name: "Professionnel" },
+    academic: { name: "Universitaire" },
 };
 
 const technos = {
     // Frontend Development
-    boostrap: { name: "Boostrap", class: "bg-success" },
-    css: { name: "CSS", class: "bg-success" },
-    html: { name: "HTML", class: "bg-success" },
-    javafx: { name: "JavaFX", class: "bg-secondary" },
-    vue_js: { name: "Vue.JS", class: "bg-success" },
+    boostrap: { name: "Boostrap", logo: "images/bootstrap.png" },
+    css: { name: "CSS", logo: "images/css.png" },
+    html: { name: "HTML", logo: "images/html.png" },
+    vue_js: { name: "Vue.js", logo: "images/vue-js.png" },
+    react_js: { name: "React.js", logo: "images/react-js.png" },
 
     // Backend Web Development
-    react_js: { name: "React JS", class: "bg-success" },
-    node_js: { name: "Node JS", class: "bg-danger" },
-    flask: { name: "Flask", class: "bg-danger" },
+    flask: { name: "Flask", logo: "images/flask.png" },
+    next_js: { name: "Next.js", logo: "images/next-js.png" },
+    node_js: { name: "Node.js", logo: "images/node-js.png" },
 
     // Collaboration Tools
-    github: { name: "GitHub", class: "bg-warning" },
-    gitlab: { name: "GitLab", class: "bg-warning" },
-    jira: { name: "Jira", class: "bg-warning" },
-    scrum: { name: "SCRUM", class: "bg-warning" },
-    trello: { name: "Trello", class: "bg-warning" },
+    github: { name: "GitHub", logo: "images/github.png" },
+    gitlab: { name: "GitLab", logo: "images/gitlab.png" },
+    jira: { name: "Jira", logo: "images/jira.png" },
+    scrum: { name: "SCRUM", logo: "images/scrum.png" },
+    trello: { name: "Trello", logo: "images/trello.png" },
 
     // Containerization & Virtualization
-    docker: { name: "Docker", class: "bg-secondary" },
-    virtualbox: { name: "VirtualBox", class: "bg-secondary" },
+    docker: { name: "Docker", logo: "images/docker.png" },
+    virtualbox: { name: "VirtualBox", logo: "images/virtualbox.png" },
 
     // Database & Query Languages
-    graphql: { name: "GraphQL", class: "bg-info" },
-    minio: { name: "Minio", class: "bg-info" },
-    mongo: { name: "MongoDB", class: "bg-info" },
-    postgresql: { name: "PostgreSQL", class: "bg-info" },
-    sequelize: { name: "Sequelize", class: "bg-info" },
-    sql: { name: "SQL", class: "bg-info" },
-    hasura: { name: "Hasura", class: "bg-info" },
+    sql: { name: "SQL", logo: "images/sql.png" },
+    graphql: { name: "GraphQL", logo: "images/graphql.png" },
+    hasura: { name: "Hasura", logo: "images/hasura.png" },
+    minio: { name: "Minio", logo: "images/minio.png" },
+    mongo: { name: "MongoDB", logo: "images/mongodb.png" },
+    postgresql: { name: "PostgreSQL", logo: "images/postgreesql.png" },
+    sequelize: { name: "Sequelize", logo: "images/sequelize.png" },
 
     // Programming Languages
-    java: { name: "Java", class: "bg-dark" },
-    js: { name: "JS", class: "bg-dark" },
-    python: { name: "Python", class: "bg-dark" },
-    ts: { name: "TypeScript", class: "bg-dark" },
-    kotlin: { name: "Kotlin", class: "bg-dark" },
-
-    // IoT & Embedded Systems
-    arduino: { name: "Arduino", class: "bg-primary" },
-
-    // Presentation Tools
-    word: { name: "Word", class: "bg-light text-dark" },
-    slide: { name: "Google Slides", class: "bg-light text-dark" }
+    arduino: { name: "Arduino", logo: "images/arduino.png" },
+    java: { name: "Java", logo: "images/java.png" },
+    js: { name: "JS", logo: "images/js.png" },
+    python: { name: "Python", logo: "images/python.png" },
+    ts: { name: "TypeScript", logo: "images/ts.png" },
+    kotlin: { name: "Kotlin", logo: "images/kotlin.png" },
+    swift: { name: "Swift", logo: "images/swift.png" },
 };
 
 const projects = {
@@ -183,7 +178,7 @@ const projects = {
             De plus, j'ai pu m'améliorer en <span style='color:red'><strong>gestion de projet</strong></span> grâce à l'utilisation quotidienne de la méthodologie SCRUM. J'ai aussi développé ma capacité à me documenter et à chercher des informations par moi-même ainsi que ma capacité à utiliser des outils tels que GitLab.\n
             Vous pouvez consulter le diaporama de ma soutenance <a href='https://docs.google.com/presentation/d/1uueQqS5IAyxeuxPOwv-2YE4rRnxuOs72wY5auPL-VPI/edit?usp=sharing' target='_blank'>ci-joint</a>.`,
         },
-        technologies: [technos.js, technos.node_js, technos.react_js, technos.postgresql, technos.gitlab]
+        technologies: [technos.gitlab, technos.js, technos.node_js, technos.postgresql, technos.react_js, technos.sequelize]
     },
     sae_s5: {
         title: `SAÉ 501-601`,
@@ -229,7 +224,7 @@ const projects = {
             text: `Cette SAÉ s'est révélée extrêmement enrichissante. J'ai pu développer de nombreuses compétences, humaines et professionnelles, ainsi que comprendre l'importance de la communication au sein d'une équipe.\n
             Vous pouvez consulter notre soutenance <a href='https://docs.google.com/presentation/d/1ciTwJQT0wF97OlqsJSNzQmrdxO6tPPnuQ1vWaAyG5aA/edit#slide=id.g230ccc5832e_0_0' target='blank'>ici</a> et notre dépôt Git <a href='#'>ici</a>.`
         },
-        technologies: [technos.arduino, technos.java, technos.js, technos.kotlin, technos.docker, technos.gitlab]
+        technologies: [technos.arduino, technos.docker, technos.gitlab, technos.java, technos.node_js, technos.kotlin, technos.mongo, technos.vue_js]
     },
     stage_s6: {
         title: `Présentation du Stage`,
@@ -245,17 +240,8 @@ const projects = {
         result: {
             title: `Résultat de la SAÉ`,
             text: `À la fin de ce stage, j'ai dû réaliser une présentation orale et deux rapports :\n<ul><li>l'un technique (destiné à un informaticien reprenant le travail) ;</li><li>l'autre destiné à expliquer le déroulement de notre stage sans entrer dans les détails techniques.</li></ul>\n<a href='https://docs.google.com/presentation/d/1LiP-nK3gmnG1EadbeIMfyvVh-VUsXMA4EwR9I6h4e2o/edit?usp=sharing' target='_blank'>Lien de la présentation</a>`,
-            // files: [
-            //     {
-            //         path: rapport_general,
-            //         alt: `Rapport général"
-            //     }, {
-            //         path: rapport_technique,
-            //         alt: `Rapport technique"
-            //     },
-            // ]
         },
-        technologies: [technos.graphql, technos.hasura, technos.minio, technos.ts, technos.jira, technos.scrum]
+        technologies: [technos.graphql, technos.hasura, technos.jira, technos.minio, technos.next_js, technos.react_js, technos.scrum, technos.ts]
     }
 };
 
