@@ -105,6 +105,21 @@ footer {
 
 /* ***************************************************************** page de details ************************************************************* */
 
+.multiselect__tag {
+    background: #0D6EFD !important;
+}
+
+.multiselect__tag-icon {
+    background: #0D6EFD !important;
+}
+
+.multiselect__option--highlight {
+    background: #0D6EFD !important;
+}
+
+
+/* ***************************************************************** page de details ************************************************************* */
+
 .img-page-all-projects {
     height: 25px;
 }

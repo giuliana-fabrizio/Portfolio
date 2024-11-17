@@ -53,9 +53,9 @@ const confirmFilters = "Valider";
 const resetFilters = "Réinitialiser";
 
 const categories = {
-    personal: { name: "Personnel" },
-    professional: { name: "Professionnel" },
-    academic: { name: "Universitaire" },
+    personal: { name: "Personnel", style: "background-color: #b6d3fe" },
+    professional: { name: "Professionnel", style: "background-color: #86b6fe" },
+    academic: { name: "Universitaire", style: "background-color: #5599fd" },
 };
 
 const technos = {
