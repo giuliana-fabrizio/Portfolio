@@ -7,8 +7,22 @@ const graphs_frontend = require("../files/sae_s5/graphs_frontend.png");
 
 /* ***************************************************************** common ***************************************************************** */
 
+const birthday = new Date("11-27-2002");
+
+function getAge() {
+    const currentDate = new Date();
+    var age = currentDate.getFullYear() - birthday.getFullYear(); // >
+    if (currentDate.getMonth() < birthday.getMonth()) {
+        age -= 1;
+    } else if (currentDate.getMonth() == birthday.getMonth() &&
+            currentDate.getUTCDate() < birthday.getUTCDate()) {
+        age -= 1;
+    }
+    return age;
+}
+
 const name = "Giuliana GODAIL-FABRIZIO";
-const age = 21;
+const age = getAge();
 
 
 /* ***************************************************************** nav bar ***************************************************************** */
@@ -22,7 +36,7 @@ const projects_btn = "Projets";
 const status = "Étudiante en informatique";
 
 const about_me_title = "À propos de moi";
-const about_me = `Bonjour, je suis ${name}. Agée de ${age} ans, je suis actuellement étudiante en première année à <a href="https://telecomnancy.univ-lorraine.fr/" target="_blank">Télécom Nancy</a>. Passionnée par l'informatique, je cherche constamment à me perfectionner. J'apprécie tout particulièrement la conception et l'optimisation de projets, avec pour objectif de répondre au mieux aux besoins des utilisateurs.`;
+const about_me = `Bonjour, je suis ${name}. Agée de ${age} ans, je suis actuellement étudiante en première année du cycle ingénieur à <a href="https://telecomnancy.univ-lorraine.fr/" target="_blank">Télécom Nancy</a>. Passionnée par l'informatique, je cherche constamment à me perfectionner. J'apprécie tout particulièrement la conception et l'optimisation de projets, avec pour objectif de répondre au mieux aux besoins des utilisateurs. Actuellement, j'ambitionne de me spécialiser dans le domaine du traitement des données massives.`;
 const my_projects = "Consulter mes projets";
 
 const hobbies_title = "Loisirs";
