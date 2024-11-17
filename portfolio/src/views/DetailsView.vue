@@ -10,8 +10,8 @@
             <div class="col-md-8">
                 <div class="row position-relative">
                     <div v-for="(content, key, id) in project" :key="key" class="col-12">
-                        <hr v-if="id > 2" class="mb-5 mt-5">
                         <div v-if="id > 1">
+                            <hr v-if="id > 2 && id < project_length" class="mb-5 mt-5">
                             <div v-for="(section, skey) in content" :key="skey">
                                 <section v-if="typeof skey == String('string')" class="p-5 pb-0 pt-0">
                                     <div v-if="skey.substring(0, 6) != String('images')">
@@ -56,7 +56,7 @@ export default {
 
     created() {
         this.project = this.$store.getters.getProject;
-        this.project_length = (Object.keys(this.project).length - 2)
+        this.project_length = (Object.keys(this.project).length - 1)
     },
 
     methods: {
