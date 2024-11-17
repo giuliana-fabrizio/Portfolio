@@ -67,7 +67,7 @@
 </template>
 
 <script>
-import * as bootstrap from 'bootstrap';
+import { Tooltip } from 'bootstrap';
 import variables_fr from '../variables_fr.js';
 import variables_en from '../variables_en.js';
 
@@ -89,7 +89,9 @@ export default {
         projects: {},
 
         categories: [],
-        technos: []
+        technos: [],
+
+        tooltips: []
     }),
 
     created() {
@@ -112,8 +114,17 @@ export default {
 
     mounted() {
         document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
-            new bootstrap.Tooltip(el);
+            const tooltip = new Tooltip(el);
+            this.tooltips.push(tooltip);
         });
+    },
+
+    beforeRouteLeave(to, from, next) {
+        if (this.tooltips && this.tooltips.length > 0) {
+            this.tooltips.forEach(tooltip => tooltip.dispose());
+            this.tooltips = [];
+        }
+        next();
     },
 
     methods: {
