@@ -32,7 +32,7 @@
                             @click="setProject(project)"
                             style="background-color: #f4f4f9; transition: transform 0.3s, box-shadow 0.3s;">
 
-                            <div class="card-body m-3">
+                            <div class="card-body m-2">
                                 <div class="d-flex justify-content-between align-items-center mb-3 flex-column flex-lg-row text-center text-md-start">
                                     <h5 style="color:#555"><strong>{{ project.title }}</strong></h5>
                                     <p :class="['badge', project.category.class, 'mt-1', 'text-wrap']">{{ project.category.name }}</p>
@@ -46,12 +46,11 @@
                                 </p>
 
                                 <div class="d-flex flex-wrap">
-                                    <span
+                                    <img
                                         v-for="(technologie, index) in project.technologies"
                                         :key="index"
-                                        :class="[technologie.class, 'badge', 'text-wrap', 'me-2', 'mb-2']">
-                                        {{ technologie.name }}
-                                    </span>
+                                        :src="technologie.logo"
+                                        class="img-page-all-projects me-3">
                                 </div>
                             </div>
                         </div>
