@@ -6,7 +6,7 @@
             </section>
         </header>
 
-        <main id="projects_main" class="d-flex justify-content-center pb-5 pt-2">
+        <main id="details_main" class="d-flex justify-content-center pb-5 pt-2">
             <div class="col-md-8">
                 <div class="row position-relative">
                     <div v-for="(content, key, id) in project" :key="key" class="col-12">
