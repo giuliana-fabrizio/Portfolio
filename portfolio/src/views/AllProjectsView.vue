@@ -50,6 +50,10 @@
                                         v-for="(technologie, index) in project.technologies"
                                         :key="index"
                                         :src="technologie.logo"
+                                        data-bs-toggle="tooltip"
+                                        data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip"
+                                        :data-bs-title="technologie.name"
                                         class="img-page-all-projects me-3">
                                 </div>
                             </div>
@@ -63,6 +67,7 @@
 </template>
 
 <script>
+import * as bootstrap from 'bootstrap';
 import variables_fr from '../variables_fr.js';
 import variables_en from '../variables_en.js';
 
@@ -103,6 +108,12 @@ export default {
 
         this.allProjects = Object.values(isFrench ? variables_fr.projects : variables_en.projects);
         this.setProjects();
+    },
+
+    mounted() {
+        document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+            new bootstrap.Tooltip(el);
+        });
     },
 
     methods: {
