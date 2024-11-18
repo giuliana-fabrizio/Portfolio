@@ -13,7 +13,7 @@
             </section>
         </header>
 
-        <main id="home_main" class="d-flex justify-content-center p-3 pb-5 pt-5">
+        <main id="home_main" class="d-flex justify-content-center bg-light p-3 pb-5 pt-5">
             <div class="col-md-7">
                 <section id="formation" class="mb-5 text-center">
                     <h5 class="mb-3"><strong>{{ about_me_title }}</strong></h5>
