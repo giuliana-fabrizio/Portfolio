@@ -28,7 +28,7 @@
                         class="text-decoration-none">
 
                         <div
-                            class="card bg-light h-100 shadow-sm border-0 rounded"
+                            class="card bg-light h-100 border-0 rounded"
                             @click="setProject(project)"
                             style="background-color: #f4f4f9; transition: transform 0.3s, box-shadow 0.3s;">
 
@@ -171,10 +171,3 @@ export default {
     },
 }
 </script>
-
-<style>
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-</style>
