@@ -15,7 +15,7 @@ function getAge() {
     if (currentDate.getMonth() < birthday.getMonth()) {
         age -= 1;
     } else if (currentDate.getMonth() == birthday.getMonth() &&
-            currentDate.getUTCDate() < birthday.getUTCDate()) {
+        currentDate.getUTCDate() < birthday.getUTCDate()) {
         age -= 1;
     }
     return age;
@@ -28,7 +28,8 @@ const age = getAge();
 /* ***************************************************************** nav bar ***************************************************************** */
 
 const home_btn = "Accueil";
-const academic_training = "Formations";
+const academic_training_btn = "Formations";
+const experiences_btn = "Expériences";
 const projects_btn = "Projets";
 
 /* ***************************************************************** home page ***************************************************************** */
@@ -36,7 +37,7 @@ const projects_btn = "Projets";
 const status = "Étudiante en informatique";
 
 const about_me_title = "À propos de moi";
-const about_me = `Bonjour, je suis ${name}. Agée de ${age} ans, je suis actuellement étudiante en première année du cycle ingénieur à <a href="https://telecomnancy.univ-lorraine.fr/" target="_blank">Télécom Nancy</a>. Passionnée par l'informatique, je cherche constamment à me perfectionner. J'apprécie tout particulièrement la conception et l'optimisation de projets, avec pour objectif de répondre au mieux aux besoins des utilisateurs. Actuellement, j'ambitionne de me spécialiser dans le domaine du traitement des données massives.`;
+const about_me = `Agée de ${age} ans, je suis actuellement étudiante en première année du cycle ingénieur à <a href="https://telecomnancy.univ-lorraine.fr/" target="_blank">Télécom Nancy</a>. Passionnée par l'informatique, je cherche constamment à me perfectionner. J'apprécie tout particulièrement la conception et l'optimisation de projets, avec pour objectif de répondre au mieux aux besoins des utilisateurs. Actuellement, j'ambitionne de me spécialiser dans le domaine du traitement des données massives.`;
 const my_projects = "Consulter mes projets";
 
 const hobbies_title = "Loisirs";
@@ -56,9 +57,6 @@ const linkedin = "https://www.linkedin.com/in/giuliana-godail-fabrizio-20639525b
 
 const projects_page_title = "MES PROJETS";
 const projects_page_presentation = "Sur cette page, vous découvrirez l'ensemble des projets sur lesquels j'ai travaillé.";
-
-
-/* ***************************************************************** projects page ***************************************************************** */
 
 const filterLabel = "Filtrer";
 const categoriesLabel = "Type de projet";
@@ -108,7 +106,7 @@ const technos = {
     // Programming Languages
     arduino: { name: "Arduino", logo: "images/arduino.png" },
     java: { name: "Java", logo: "images/java.png" },
-    js: { name: "JS", logo: "images/js.png" },
+    js: { name: "JavaScript", logo: "images/js.png" },
     python: { name: "Python", logo: "images/python.png" },
     ts: { name: "TypeScript", logo: "images/ts.png" },
     kotlin: { name: "Kotlin", logo: "images/kotlin.png" },
@@ -241,7 +239,7 @@ const projects = {
         technologies: [technos.arduino, technos.docker, technos.gitlab, technos.java, technos.js, technos.node_js, technos.kotlin, technos.mongo, technos.vue_js]
     },
     stage_s6: {
-        title: `Présentation du Stage`,
+        title: `Stage (2024)`,
         category: categories.professional,
         instructions: {
             title: `Objectif`,
@@ -259,10 +257,81 @@ const projects = {
     }
 };
 
+
+// /* ***************************************************************** degrees page ***************************************************************** */
+
+// const degrees_page_title = "MES FORMATIONS";
+// const degrees = {
+//     but: {
+//         title: `BUT Informatique`,
+//         mention: `Major de promotion`,
+//         description: `<ul>
+//             <li>Acquisition de connaissances générales dans le domaine de l'informatique</li>
+//             <li>Développement de divers projets individuels et collaboratifs, renforçant mon autonomie et mes compétences en travail d'équipe</li>
+//             <li>Réalisation de deux stages de trois mois, permettant d'obtenir une expérience professionnelle</li>
+//         </ul>`,
+//         school: `IUT de Belfort-Montbéliard`,
+//         place: `Belfort, France`,
+//         date: `2024`,
+//     },
+//     bac: {
+//         title: `Baccalauréat général`,
+//         speciality: `Spécialité : scientifique`,
+//         school: `Lycée Périer`,
+//         place: `Marseille, France`,
+//         date: `2020`
+//     }
+// }
+
+
+/* ***************************************************************** experiences page ***************************************************************** */
+
+const experiences_page_title = "MES EXPÉRIENCES";
+const experiences = {
+    stage_2024: {
+        title: `Stage en développement fullstack`,
+        description: `Principales tâches réalisées :
+        <ul><li>insertion de données Excel dans une base de données PostgreSQL ;</li>
+        <li>réalisation du tableau de bord principal (ou Dashboard) ;</li>
+        <li>utilisation d'Hasura pour la gestion des permissions utilisateurs.</li></ul>
+        Pour plus de détails, merci de consulter la page suivante : `,
+        redirection: projects.stage_s6,
+        date: `janvier - avril 2024`,
+        company: `Natural Solutions`,
+        place: `Marseille, France`,
+    },
+    stage_2023: {
+        title: `Stage en développement fullstack`,
+        description: `Principales tâches réalisées :
+        <ul><li>ajout d'une base de données PostgreSQL et utilisation de l'ORM Sequelize ;</li>
+        <li>correction d'erreurs de calcul existantes ;</li>
+        <li>modification de l'interface utilisateur : manipulation de ReactJs et interrogation d'une API externe ;</li>
+        <li>réalisation de tests unitaires en JavaScript.</li></ul>
+        Pour plus de détails, merci de consulter la page suivante : `,
+        redirection: projects.stage_s4,
+        date: `avril - juin 2023`,
+        company: `Natural Solutions`,
+        place: `Marseille, France`,
+    },
+    cdd_2022: {
+        title: `Employée de supérette`,
+        description: `Principales tâches réalisées :
+        <ul><li>encaissement des clients ;</li>
+        <li>rangement des rayons et réception des marchandises ;</li>
+        <li>formation des nouveaux salariés à la caisse ;</li>
+        <li>cuisson du pain.</li></ul>`,
+        date: `juillet - août 2022`,
+        company: `U Express`,
+        place: `Marseille, France`,
+    }
+}
+
+
 module.exports = {
     name: name,
     home_btn: home_btn,
-    academic_training: academic_training,
+    academic_training_btn: academic_training_btn,
+    experiences_btn: experiences_btn,
     projects_btn: projects_btn,
     status: status,
     about_me_title: about_me_title,
@@ -275,6 +344,8 @@ module.exports = {
     mail: mail,
     github: github,
     linkedin: linkedin,
+    experiences_page_title: experiences_page_title,
+    experiences: experiences,
     projects_page_title: projects_page_title,
     projects_page_presentation: projects_page_presentation,
     filterLabel: filterLabel,
