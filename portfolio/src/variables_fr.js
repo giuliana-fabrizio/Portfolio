@@ -289,7 +289,7 @@ const projects = {
 const experiences_page_title = "MES EXPÉRIENCES";
 const experiences = {
     stage_2024: {
-        title: `Stage en développement fullstack`,
+        title: `Stage en développement fullstack II`,
         description: `Principales tâches réalisées :
         <ul><li>insertion de données Excel dans une base de données PostgreSQL ;</li>
         <li>réalisation du tableau de bord principal (ou Dashboard) ;</li>
@@ -301,7 +301,7 @@ const experiences = {
         place: `Marseille, France`,
     },
     stage_2023: {
-        title: `Stage en développement fullstack`,
+        title: `Stage en développement fullstack I`,
         description: `Principales tâches réalisées :
         <ul><li>ajout d'une base de données PostgreSQL et utilisation de l'ORM Sequelize ;</li>
         <li>correction d'erreurs de calcul existantes ;</li>
