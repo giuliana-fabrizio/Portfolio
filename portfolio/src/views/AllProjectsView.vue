@@ -54,7 +54,7 @@
                                         data-bs-placement="top"
                                         data-bs-custom-class="custom-tooltip"
                                         :data-bs-title="technologie.name"
-                                        class="img-page-all-projects me-3">
+                                        class="img-page-all-projects me-2 mt-2">
                                 </div>
                             </div>
                         </div>
@@ -148,7 +148,7 @@ export default {
             if (length == 2) {
                 return 'col-md-6';
             }
-            return 'col-12 col-sm-6 col-md-4';
+            return 'col-12 col-md-6 col-lg-4 col-xl-4';
         },
         setProject(project) {
             this.$store.commit('setProject', project);
