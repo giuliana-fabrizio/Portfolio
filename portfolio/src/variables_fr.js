@@ -296,7 +296,7 @@ const experiences = {
         <li>utilisation d'Hasura pour la gestion des permissions utilisateurs.</li></ul>
         Pour plus de détails, merci de consulter la page suivante : `,
         redirection: projects.stage_s6,
-        date: `janvier - avril 2024`,
+        date: `Janvier - Avril 2024`,
         company: `Natural Solutions`,
         place: `Marseille, France`,
     },
@@ -309,7 +309,7 @@ const experiences = {
         <li>réalisation de tests unitaires en JavaScript.</li></ul>
         Pour plus de détails, merci de consulter la page suivante : `,
         redirection: projects.stage_s4,
-        date: `avril - juin 2023`,
+        date: `Avril - Juin 2023`,
         company: `Natural Solutions`,
         place: `Marseille, France`,
     },
@@ -320,7 +320,7 @@ const experiences = {
         <li>rangement des rayons et réception des marchandises ;</li>
         <li>formation des nouveaux salariés à la caisse ;</li>
         <li>cuisson du pain.</li></ul>`,
-        date: `juillet - août 2022`,
+        date: `Juillet - Août 2022`,
         company: `U Express`,
         place: `Marseille, France`,
     }
