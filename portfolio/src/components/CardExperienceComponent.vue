@@ -2,24 +2,14 @@
     <div
         class="border-0 col-12 col-md-5 m-5 mt-2"
         :style="hidden ? 'visibility: hidden' : ''">
-        <div
-            v-if="displayAlert"
-            class="modal-overlay d-flex align-items-center justify-content-center rounded h-100 w-100">
-            <div class="modal-content bg-light p-2">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5">
-                        <strong>{{ experience.title }}</strong>
-                    </h1>
-                    <button type="button" class="btn-close" @click="displayMore()"></button>
-                </div>
-                <div class="modal-body">
-                    <p
-                        class="text-start mb-3"
-                        v-html="formattedText(experience.description)"></p>
-                </div>
-            </div>
-        </div>
 
+        <Modal
+            v-model="displayAlert"
+            :title="experience.title"
+            :modalStyle="modalStyle"
+            class="p-3">
+            <p class="mb-3" v-html="formattedText(experience.description)"></p>
+        </Modal>
 
         <div
             class="card_experiences p-3 rounded">
@@ -63,11 +53,23 @@
 </template>
 
 <script>
+import VueModal from '@kouts/vue-modal';
+import '@kouts/vue-modal/dist/vue-modal.css';
+
 export default {
     name: 'CardExperienceComponent',
 
+    components: {
+        'Modal': VueModal
+    },
+
     data: () => ({
-        displayAlert: false
+        displayAlert: false,
+
+        modalStyle: {
+            borderRadius: '5px',
+            padding: '10px',
+        }
     }),
 
     props: {

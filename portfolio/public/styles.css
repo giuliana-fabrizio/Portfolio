@@ -110,6 +110,20 @@ footer {
 }
 
 
+/* ***************************************************************** modal component ************************************************************* */
+
+.vm-title {
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+}
+
+.vm {
+    background-color: #f8f9fa !important;
+    color: #2c3e50;
+    top: 35% !important;
+}
+
+
 /* ***************************************************************** filter component ************************************************************* */
 
 .multiselect__tag {
@@ -163,20 +177,6 @@ footer {
 
 .card_experiences {
     background: linear-gradient(45deg, #cbe0fe, #f0f6fe);
-}
-
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(1px);
-    z-index: 1000;
-}
-
-.modal-content {
-    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
 }
 
 .vr {
