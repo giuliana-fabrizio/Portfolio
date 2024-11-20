@@ -1,8 +1,11 @@
-const sae_101_102_partie_de_jeu = require("../files/sae_101_102/partie_de_jeu.png");
-const sae_s4_mcd = require("../files/sae_stage_s4/MCD.png");
-const sae_s4_principe_selection_apres = require("../files/sae_stage_s4/principe_selection_apres.png");
-const archi_sae = require("../files/sae_s5/archi_sae.png");
-const graphs_frontend = require("../files/sae_s5/graphs_frontend.png");
+const sae_101_102_partie_de_jeu = require("../public/images/projects/sae_101_102/partie_de_jeu.png");
+const sae_s4_mcd = require("../public/images/projects/sae_stage_s4/MCD.png");
+const sae_s4_principe_selection_apres = require("../public/images/projects/sae_stage_s4/principe_selection_apres.png");
+const archi_sae = require("../public/images/projects/sae_s5/archi_sae.png");
+const graphs_frontend = require("../public/images/projects/sae_s5/graphs_frontend.png");
+
+const natural_solutions = require("../public/images/experiences/natural_solutions.png");
+const u_express = require("../public/images/experiences/u_express.png");
 
 
 /* ***************************************************************** common ***************************************************************** */
@@ -72,45 +75,45 @@ const categories = {
 
 const technos = {
     // Frontend Development
-    boostrap: { name: "Boostrap", logo: "images/bootstrap.png" },
-    css: { name: "CSS", logo: "images/css.png" },
-    html: { name: "HTML", logo: "images/html.png" },
-    vue_js: { name: "Vue.js", logo: "images/vue-js.png" },
-    react_js: { name: "React.js", logo: "images/react-js.png" },
+    boostrap: { name: "Boostrap", logo: "images/technologies/bootstrap.png" },
+    css: { name: "CSS", logo: "images/technologies/css.png" },
+    html: { name: "HTML", logo: "images/technologies/html.png" },
+    vue_js: { name: "Vue.js", logo: "images/technologies/vue-js.png" },
+    react_js: { name: "React.js", logo: "images/technologies/react-js.png" },
 
     // Backend Web Development
-    flask: { name: "Flask", logo: "images/flask.png" },
-    next_js: { name: "Next.js", logo: "images/next-js.png" },
-    node_js: { name: "Node.js", logo: "images/node-js.png" },
+    flask: { name: "Flask", logo: "images/technologies/flask.png" },
+    next_js: { name: "Next.js", logo: "images/technologies/next-js.png" },
+    node_js: { name: "Node.js", logo: "images/technologies/node-js.png" },
 
     // Collaboration Tools
-    github: { name: "GitHub", logo: "images/github.png" },
-    gitlab: { name: "GitLab", logo: "images/gitlab.png" },
-    jira: { name: "Jira", logo: "images/jira.png" },
-    scrum: { name: "SCRUM", logo: "images/scrum.png" },
-    trello: { name: "Trello", logo: "images/trello.png" },
+    github: { name: "GitHub", logo: "images/technologies/github.png" },
+    gitlab: { name: "GitLab", logo: "images/technologies/gitlab.png" },
+    jira: { name: "Jira", logo: "images/technologies/jira.png" },
+    scrum: { name: "SCRUM", logo: "images/technologies/scrum.png" },
+    trello: { name: "Trello", logo: "images/technologies/trello.png" },
 
     // Containerization & Virtualization
-    docker: { name: "Docker", logo: "images/docker.png" },
-    virtualbox: { name: "VirtualBox", logo: "images/virtualbox.png" },
+    docker: { name: "Docker", logo: "images/technologies/docker.png" },
+    virtualbox: { name: "VirtualBox", logo: "images/technologies/virtualbox.png" },
 
     // Database & Query Languages
-    sql: { name: "SQL", logo: "images/sql.png" },
-    graphql: { name: "GraphQL", logo: "images/graphql.png" },
-    hasura: { name: "Hasura", logo: "images/hasura.png" },
-    minio: { name: "Minio", logo: "images/minio.png" },
-    mongo: { name: "MongoDB", logo: "images/mongodb.png" },
-    postgresql: { name: "PostgreSQL", logo: "images/postgreesql.png" },
-    sequelize: { name: "Sequelize", logo: "images/sequelize.png" },
+    sql: { name: "SQL", logo: "images/technologies/sql.png" },
+    graphql: { name: "GraphQL", logo: "images/technologies/graphql.png" },
+    hasura: { name: "Hasura", logo: "images/technologies/hasura.png" },
+    minio: { name: "Minio", logo: "images/technologies/minio.png" },
+    mongo: { name: "MongoDB", logo: "images/technologies/mongodb.png" },
+    postgresql: { name: "PostgreSQL", logo: "images/technologies/postgreesql.png" },
+    sequelize: { name: "Sequelize", logo: "images/technologies/sequelize.png" },
 
     // Programming Languages
-    arduino: { name: "Arduino", logo: "images/arduino.png" },
-    java: { name: "Java", logo: "images/java.png" },
-    js: { name: "JavaScript", logo: "images/js.png" },
-    python: { name: "Python", logo: "images/python.png" },
-    ts: { name: "TypeScript", logo: "images/ts.png" },
-    kotlin: { name: "Kotlin", logo: "images/kotlin.png" },
-    swift: { name: "Swift", logo: "images/swift.png" },
+    arduino: { name: "Arduino", logo: "images/technologies/arduino.png" },
+    java: { name: "Java", logo: "images/technologies/java.png" },
+    js: { name: "JavaScript", logo: "images/technologies/js.png" },
+    python: { name: "Python", logo: "images/technologies/python.png" },
+    ts: { name: "TypeScript", logo: "images/technologies/ts.png" },
+    kotlin: { name: "Kotlin", logo: "images/technologies/kotlin.png" },
+    swift: { name: "Swift", logo: "images/technologies/swift.png" },
 };
 
 const projects = {
@@ -296,6 +299,7 @@ const experiences = {
         <li>utilisation d'Hasura pour la gestion des permissions utilisateurs.</li></ul>
         Pour plus de détails, merci de consulter la page suivante : `,
         redirection: projects.stage_s6,
+        logo: natural_solutions,
         date: `Janvier - Avril 2024`,
         company: `Natural Solutions`,
         place: `Marseille, France`,
@@ -309,6 +313,8 @@ const experiences = {
         <li>réalisation de tests unitaires en JavaScript.</li></ul>
         Pour plus de détails, merci de consulter la page suivante : `,
         redirection: projects.stage_s4,
+        logo: natural_solutions,
+        type: `Type : stage`,
         date: `Avril - Juin 2023`,
         company: `Natural Solutions`,
         place: `Marseille, France`,
@@ -320,6 +326,8 @@ const experiences = {
         <li>rangement des rayons et réception des marchandises ;</li>
         <li>formation des nouveaux salariés à la caisse ;</li>
         <li>cuisson du pain.</li></ul>`,
+        logo: u_express,
+        type: `Type : CDD`,
         date: `Juillet - Août 2022`,
         company: `U Express`,
         place: `Marseille, France`,
