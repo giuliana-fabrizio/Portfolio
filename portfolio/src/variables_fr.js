@@ -292,25 +292,21 @@ const projects = {
 const experiences_page_title = "MES EXPÉRIENCES";
 const experiences = {
     stage_2024: {
-        title: `Stage en développement fullstack II`,
+        title: `Développeuse Fullstack II`,
         description: `Principales tâches réalisées :
-        <ul><li>insertion de données Excel dans une base de données PostgreSQL ;</li>
-        <li>réalisation du tableau de bord principal (ou Dashboard) ;</li>
-        <li>utilisation d'Hasura pour la gestion des permissions utilisateurs.</li></ul>
+        <ul><li>insertion de données Excel dans une base de données PostgreSQL ;</li><li>réalisation du tableau de bord principal (ou Dashboard) ;</li><li>utilisation d'Hasura pour la gestion des permissions utilisateurs.</li></ul>
         Pour plus de détails, merci de consulter la page suivante : `,
         redirection: projects.stage_s6,
         logo: natural_solutions,
+        type: `Type : stage`,
         date: `Janvier - Avril 2024`,
         company: `Natural Solutions`,
         place: `Marseille, France`,
     },
     stage_2023: {
-        title: `Stage en développement fullstack I`,
+        title: `Développeuse Fullstack I`,
         description: `Principales tâches réalisées :
-        <ul><li>ajout d'une base de données PostgreSQL et utilisation de l'ORM Sequelize ;</li>
-        <li>correction d'erreurs de calcul existantes ;</li>
-        <li>modification de l'interface utilisateur : manipulation de ReactJs et interrogation d'une API externe ;</li>
-        <li>réalisation de tests unitaires en JavaScript.</li></ul>
+        <ul><li>ajout d'une base de données PostgreSQL et utilisation de l'ORM Sequelize ;</li><li>correction d'erreurs de calcul existantes ;</li><li>modification de l'interface utilisateur : manipulation de ReactJs et interrogation d'une API externe ;</li><li>réalisation de tests unitaires en JavaScript.</li></ul>
         Pour plus de détails, merci de consulter la page suivante : `,
         redirection: projects.stage_s4,
         logo: natural_solutions,
@@ -321,11 +317,7 @@ const experiences = {
     },
     cdd_2022: {
         title: `Employée de supérette`,
-        description: `Principales tâches réalisées :
-        <ul><li>encaissement des clients ;</li>
-        <li>rangement des rayons et réception des marchandises ;</li>
-        <li>formation des nouveaux salariés à la caisse ;</li>
-        <li>cuisson du pain.</li></ul>`,
+        description: `Principales tâches réalisées :<ul><li>encaissement des clients ;</li><li>rangement des rayons et réception des marchandises ;</li><li>formation des nouveaux salariés à la caisse ;</li><li>cuisson du pain.</li></ul>`,
         logo: u_express,
         type: `Type : CDD`,
         date: `Juillet - Août 2022`,
