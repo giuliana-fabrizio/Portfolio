@@ -127,18 +127,23 @@ footer {
 
 /* ***************************************************************** all projects page ************************************************************* */
 
-.card {
+.card_projects {
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-.card:hover {
+.card_projects:hover {
     transform: translateY(-3px);
     box-shadow: 0 9px 15px rgba(0, 0, 0, 0.2);
 }
 
-.img-page-all-projects {
-    height: 20px;
-    width: 20px;
+.div-img-technos {
+    width: 30px;
+}
+
+.img-technos {
+    max-height: 20px;
+    max-width: 30px;
 }
 
 
@@ -156,8 +161,22 @@ footer {
 
 /* ***************************************************************** experiences page ************************************************************* */
 
-.card_experience {
+.card_experiences {
     background: linear-gradient(45deg, #cbe0fe, #f0f6fe);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(1px);
+    z-index: 1000;
+}
+
+.modal-content {
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
 }
 
 .vr {
