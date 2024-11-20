@@ -28,10 +28,8 @@
                         class="text-decoration-none">
 
                         <div
-                            class="card bg-light h-100 border-0 rounded"
-                            @click="setProject(project)"
-                            style="background-color: #f4f4f9; transition: transform 0.3s, box-shadow 0.3s;">
-
+                            class="card card_projects bg-light h-100 border-0 rounded"
+                            @click="setProject(project)">
                             <div class="card-body m-2">
                                 <div class="d-flex justify-content-between align-items-center mb-3 flex-column flex-lg-row text-center text-md-start">
                                     <h5 style="color:#555"><strong>{{ project.title }}</strong></h5>
@@ -45,16 +43,19 @@
                                         project.instructions.text)">
                                 </p>
 
-                                <div class="d-flex flex-wrap">
-                                    <img
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <div
                                         v-for="(technologie, index) in project.technologies"
                                         :key="index"
-                                        :src="technologie.logo"
-                                        data-bs-toggle="tooltip"
-                                        data-bs-placement="top"
-                                        data-bs-custom-class="custom-tooltip"
-                                        :data-bs-title="technologie.name"
-                                        class="img-page-all-projects me-2 mt-2">
+                                        class="div-img-technos me-2">
+                                        <img
+                                            :src="technologie.logo"
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip"
+                                            :data-bs-title="technologie.name"
+                                            class="img-technos">
+                                    </div>
                                 </div>
                             </div>
                         </div>

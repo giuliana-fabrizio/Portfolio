@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header id="projects_header">
+        <header id="details_header">
             <section id="titre" class="w-100">
                 <h1 class="mt-5 text-primary">{{ project?.title }}</h1>
             </section>
