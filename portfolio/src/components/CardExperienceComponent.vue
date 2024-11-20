@@ -1,5 +1,5 @@
 <template>
-    <div 
+    <div
         class="border-0 col-12 col-md-5 m-5 mt-2"
         :style="hidden ? 'visibility: hidden' : ''">
         <div
