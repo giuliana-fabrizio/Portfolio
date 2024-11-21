@@ -13,7 +13,6 @@
                 class="d-flex justify-content-center">
                 <CardExperienceComponent :experience="experience" :hidden="pos % 2 != 0" />
                 <div class="d-flex flex-column align-items-center col-2" style="width: 1px;">
-                    <div class="vr"></div>
                     <img
                         :src="experience.logo"
                         :alt="experience.company"
