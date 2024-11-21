@@ -2,8 +2,8 @@
     <div>
         <main id="filter_projects_main" class="container">
             <div class="position-fixed" style="top: 5em; z-index: 1050;">
-                <button class="btn btn-primary" @click="wantFilter = true">
-                    {{ filterLabel }}
+                <button class="btn btn-primary btn_filter d-flex d-none d-md-block" @click="wantFilter = true">
+                    <span class="me-1">{{ filterLabel }}</span>
                     <i :class="['bi', 'bi-filter']"></i>
                 </button>
             </div>
