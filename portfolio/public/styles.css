@@ -6,6 +6,10 @@
     color: #2c3e50;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 body {
     line-height: 1.8;
     color: #333;

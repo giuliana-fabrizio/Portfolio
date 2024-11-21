@@ -1,8 +1,8 @@
 <template>
-    <nav class="container d-flex justify-content-between align-items-center py-3">
+    <nav class="container d-flex justify-content-between py-3">
         <img src="images/logo.png" style="width: 27px;">
 
-        <ul class="d-flex">
+        <ul class="d-flex align-items-center">
             <li>
                 <router-link to="/">{{ home_btn }}</router-link>
             </li>
