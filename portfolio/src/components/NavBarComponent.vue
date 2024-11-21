@@ -1,31 +1,40 @@
 <template>
-    <nav class="container d-flex justify-content-between py-3">
-        <img src="images/logo.png" style="width: 27px;">
-
-        <ul class="d-flex align-items-center">
-            <li>
-                <router-link to="/">{{ home_btn }}</router-link>
-            </li>
-            <li>
-                <router-link to="/academic_training">{{ academic_training_btn }}</router-link>
-            </li>
-            <li>
-                <router-link to="/experiences">{{ experiences_btn }}</router-link>
-            </li>
-            <li>
-                <router-link to="/all_projects">{{ projects_btn }}</router-link>
-            </li>
-            <li v-if="canChangeLanguage" :class="language === 'french' && 'd-none'">
-                <button class="btn p-0" @click="changeLanguage('french')">
-                    <img src="images/france.png"  style="width: 27px;">
-                </button>
-            </li>
-            <li v-if="canChangeLanguage" :class="language === 'english' && 'd-none'">
-                <button class="btn p-0" @click="changeLanguage('english')">
-                    <img src="images/royaume-uni.png" style="width: 27px;">
-                </button>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <img src="images/logo.png" class="d-none d-lg-block" style="width: 27px;">
+            <a
+                class="navbar-brand navbar-toggler border-0"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <img src="images/logo.png" style="width: 27px;">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <router-link to="/">{{ home_btn }}</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/academic_training">{{ academic_training_btn }}</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/experiences">{{ experiences_btn }}</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/all_projects">{{ projects_btn }}</router-link>
+                    </li>
+                    <li v-if="canChangeLanguage" :class="[nav-item, language === 'french' && 'd-none']">
+                        <button class="btn p-0" @click="changeLanguage('french')">
+                            <img src="images/france.png"  style="width: 27px;">
+                        </button>
+                    </li>
+                    <li v-if="canChangeLanguage" :class="[nav-item, language === 'english' && 'd-none']">
+                        <button class="btn p-0" @click="changeLanguage('english')">
+                            <img src="images/royaume-uni.png" style="width: 27px;">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 </template>
 
