@@ -11,7 +11,10 @@
                 v-for="(experience, key, pos) in experiences"
                 :key="key"
                 class="d-flex justify-content-center">
-                <CardExperienceComponent :experience="experience" :hidden="pos % 2 != 0" />
+                <CardExperienceComponent
+                    :experience="experience"
+                    :hidden="pos % 2 != 0"
+                    class="d-none d-md-block" />
                 <div class="d-flex flex-column align-items-center col-2" style="width: 1px;">
                     <img
                         :src="experience.logo"
@@ -20,7 +23,9 @@
                         style="width: 40px">
                     <div class="vr"></div>
                 </div>
-                <CardExperienceComponent :experience="experience" :hidden="pos % 2 == 0" />
+                <CardExperienceComponent
+                    :experience="experience"
+                    :hidden="pos % 2 == 0 && windowWidth >= 768" />
             </div>
         </main>
     </div>
@@ -41,7 +46,8 @@ export default {
 
     data: () => ({
         experiences_page_title: "",
-        experiences: {}
+        experiences: {},
+        windowWidth: window.innerWidth
     }),
 
     created() {
@@ -49,7 +55,15 @@ export default {
         const isFrench = language === 'french';
 
         this.experiences_page_title = isFrench ? variables_fr.experiences_page_title : variables_en.experiences_page_title;
-        this.experiences = isFrench ? variables_fr.experiences : variables_en.experiences
-    }
+        this.experiences = isFrench ? variables_fr.experiences : variables_en.experiences;
+
+        window.addEventListener('resize', this.updateWindowWidth);
+    },
+
+    methods: {
+        updateWindowWidth() {
+            this.windowWidth = window.innerWidth;
+        },
+    },
 }
 </script>
