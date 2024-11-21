@@ -53,7 +53,7 @@ nav ul li a.router-link-exact-hover {
 
 .scroll-to-top-button {
     position: fixed;
-    bottom: 40px;
+    bottom: 60px;
     right: 30px;
     background-color: rgba(0, 0, 0, 0);
     color: #007BFF;
