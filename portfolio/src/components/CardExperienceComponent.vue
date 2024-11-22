@@ -8,7 +8,18 @@
             :title="experience.title"
             :modalStyle="modalStyle"
             class="p-3">
-            <p class="mb-3" v-html="formattedText(experience.description)"></p>
+            <p v-html="formattedText(experience.description)"></p>
+            <router-link
+                :to="{ name: 'details' }"
+                v-if="experience.redirection"
+                class="d-flex justify-content-end">
+                <button
+                    class="btn btn-primary btn-sm mb-3 me-3"
+                    @click="setProject(experience.redirection)">
+                    <span class="me-1">{{ experience.label_redirection }}</span>
+                    <i class="bi bi-zoom-in"></i>
+                </button>
+            </router-link>
         </Modal>
 
         <div
@@ -22,7 +33,7 @@
                     class="btn"
                     style="margin-top: -10px;"
                     @click="displayMore()">
-                    <i class="bi bi-zoom-in"></i>
+                    <i class="bi bi-box-arrow-in-up-right"></i>
                 </button>
             </div>
 
@@ -92,6 +103,9 @@ export default {
             return text
                 .replace(/\n/g, '<br>')
                 .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+        },
+        setProject(project) {
+            this.$store.commit('setProject', project);
         }
     }
 };
