@@ -20,7 +20,10 @@
                     <p>Modifier ou supprimer certains de vos filtres</p>
                 </div>
 
-                <div v-for="(project, key) in projects" :key="key" :class="[getClass(Object.keys(projects).length), 'mb-4']">
+                <div
+                    v-for="(project, key) in projects"
+                    :key="key"
+                    :class="[getClass(Object.keys(projects).length), 'mb-4']">
                     <router-link
                         :to="{ name: 'details' }"
                         v-if="(categories.length === 0 || categories.includes(project.category.name)) &&

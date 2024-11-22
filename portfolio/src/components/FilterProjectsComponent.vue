@@ -77,7 +77,7 @@ export default {
         technos_values: [],
 
         modalStyle: {
-            borderRadius: '5px',
+            borderRadius: '0.25rem',
             padding: '10px',
         }
     }),

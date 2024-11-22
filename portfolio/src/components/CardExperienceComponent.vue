@@ -13,7 +13,7 @@
 
         <div
             class="card_experiences p-3 rounded">
-            <div class="card_experiences d-flex align-items-center justify-content-center rounded">
+            <div class="d-flex align-items-center justify-content-center">
                 <h5>
                     <strong>{{ experience.title }}</strong>
                 </h5>
@@ -67,7 +67,7 @@ export default {
         displayAlert: false,
 
         modalStyle: {
-            borderRadius: '5px',
+            borderRadius: '0.25rem',
             padding: '10px',
         }
     }),
