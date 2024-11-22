@@ -14,7 +14,7 @@ const birthday = new Date("11-27-2002");
 
 function getAge() {
     const currentDate = new Date();
-    var age = currentDate.getFullYear() - birthday.getFullYear(); // >
+    var age = currentDate.getFullYear() - birthday.getFullYear();
     if (currentDate.getMonth() < birthday.getMonth()) {
         age -= 1;
     } else if (currentDate.getMonth() == birthday.getMonth() &&
@@ -294,8 +294,8 @@ const experiences = {
     stage_2024: {
         title: `Développeuse Fullstack II`,
         description: `Principales tâches réalisées :
-        <ul><li>insertion de données Excel dans une base de données PostgreSQL ;</li><li>réalisation du tableau de bord principal (ou Dashboard) ;</li><li>utilisation d'Hasura pour la gestion des permissions utilisateurs.</li></ul>
-        Pour plus de détails, merci de consulter la page suivante : `,
+        <ul><li>insertion de données Excel dans une base de données PostgreSQL ;</li><li>réalisation du tableau de bord principal (ou Dashboard) ;</li><li>utilisation d'Hasura pour la gestion des permissions utilisateurs.</li></ul>`,
+        label_redirection: `Plus de détails`,
         redirection: projects.stage_s6,
         logo: natural_solutions,
         type: `Type : stage`,
@@ -306,8 +306,8 @@ const experiences = {
     stage_2023: {
         title: `Développeuse Fullstack I`,
         description: `Principales tâches réalisées :
-        <ul><li>ajout d'une base de données PostgreSQL et utilisation de l'ORM Sequelize ;</li><li>correction d'erreurs de calcul existantes ;</li><li>modification de l'interface utilisateur : manipulation de ReactJs et interrogation d'une API externe ;</li><li>réalisation de tests unitaires en JavaScript.</li></ul>
-        Pour plus de détails, merci de consulter la page suivante : `,
+        <ul><li>ajout d'une base de données PostgreSQL et utilisation de l'ORM Sequelize ;</li><li>correction d'erreurs de calcul existantes ;</li><li>modification de l'interface utilisateur : manipulation de ReactJs et interrogation d'une API externe ;</li><li>réalisation de tests unitaires en JavaScript.</li></ul>`,
+        label_redirection: `Plus de détails`,
         redirection: projects.stage_s4,
         logo: natural_solutions,
         type: `Type : stage`,
