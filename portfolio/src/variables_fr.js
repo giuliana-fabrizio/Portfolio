@@ -1,8 +1,11 @@
 const sae_101_102_partie_de_jeu = require("../public/images/projects/sae_101_102/partie_de_jeu.png");
 const sae_s4_mcd = require("../public/images/projects/sae_stage_s4/MCD.png");
 const sae_s4_principe_selection_apres = require("../public/images/projects/sae_stage_s4/principe_selection_apres.png");
-const archi_sae = require("../public/images/projects/sae_s5/archi_sae.png");
-const graphs_frontend = require("../public/images/projects/sae_s5/graphs_frontend.png");
+const sae_s5_archi_sae = require("../public/images/projects/sae_s5/archi_sae.png");
+// const sae_s5_trello = require("../public/images/projects/sae_s5/trello.png")
+const sae_s5_graphs_frontend = require("../public/images/projects/sae_s5/graphs_frontend.png");
+const sae_s6_map = require("../public/images/projects/sae_stage_s6/map.png");
+// const sae_s6_dashboard = require("../public/images/projects/sae_stage_s6/dashboard.png");
 
 const natural_solutions = require("../public/images/experiences/natural_solutions.png");
 const u_express = require("../public/images/experiences/u_express.png");
