@@ -14,7 +14,7 @@
                 <CardExperienceComponent
                     :experience="experience"
                     :hidden="pos % 2 != 0"
-                    class="d-none d-md-block" />
+                    class="d-none d-md-block card-enter-left *"/>
                 <div class="d-flex flex-column align-items-center col-2" style="width: 1px;">
                     <img
                         :src="experience.logo"
@@ -25,7 +25,8 @@
                 </div>
                 <CardExperienceComponent
                     :experience="experience"
-                    :hidden="pos % 2 == 0 && windowWidth >= 768" />
+                    :hidden="pos % 2 == 0 && windowWidth >= 768"
+                    class="card-enter-right"/>
             </div>
         </main>
     </div>

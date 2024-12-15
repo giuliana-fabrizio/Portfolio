@@ -196,3 +196,35 @@ footer {
     border-left: 5px solid #bdd7fe;
     height: 100%;
 }
+
+@keyframes slideToLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card-enter-right {
+    animation: slideToLeft 1.5s ease-out;
+}
+
+@keyframes slideToRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card-enter-left {
+    animation: slideToRight 1.5s ease-out;
+}
