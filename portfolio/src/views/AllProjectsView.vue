@@ -33,7 +33,7 @@
                         <div
                             class="card card_projects bg-light h-100 border-0 rounded"
                             @click="setProject(project)">
-                            <div class="card-body m-2">
+                            <div class="card-body mb-0 m-2 pb-0">
                                 <div class="d-flex justify-content-between align-items-center mb-3 flex-column flex-lg-row text-center text-md-start">
                                     <h5 style="color:#555"><strong>{{ project.title }}</strong></h5>
                                     <p class="badge mt-1 text-wrap" :style=project.category.style>{{ project.category.name }}</p>
@@ -45,7 +45,8 @@
                                         truncatedInstructions(project.instructions.text) :
                                         project.instructions.text)">
                                 </p>
-
+                            </div>
+                            <div class="card-footer bg-light border-0 mb-1">
                                 <div class="d-flex flex-wrap justify-content-center">
                                     <div
                                         v-for="(technologie, index) in project.technologies"
