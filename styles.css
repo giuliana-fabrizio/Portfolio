@@ -1,0 +1,230 @@
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    line-height: 1.8;
+    color: #333;
+}
+
+
+/* ***************************************************************** navbar ************************************************************* */
+
+.barre_menu {
+    background: #ffffff9c;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+#titre {
+    padding: 60px 0 40px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+nav ul li a.router-link-exact-active,
+nav ul li a.router-link-exact-hover {
+    color: #007bff;
+}
+
+
+/* ***************************************************************** btn go up ************************************************************* */
+
+.scroll-to-top-button {
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #007BFF;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* ***************************************************************** footer ************************************************************* */
+
+footer {
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    width: 100%;
+    z-index: 100;
+}
+
+#contact {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.social {
+    text-align: center;
+}
+
+.social a {
+    padding: 12px;
+}
+
+.copyright {
+    color: #74808a;
+    margin: 0;
+    text-align: center;
+}
+
+
+/* ***************************************************************** home page ************************************************************* */
+
+#home_header {
+    /* background: url('images/image_accueil.webp'); */
+    background-color: #fff;
+    width: 100%;
+}
+
+#home_main {
+    border-top: 1px solid #e0e0e0;
+}
+
+.image_accueil {
+    width: 330px;
+    height: auto;
+    margin-top: 20px;
+}
+
+
+/* ***************************************************************** modal component ************************************************************* */
+
+.vm-title {
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+}
+
+.vm-btn-close {
+    color: #0D6EFD !important;
+}
+
+.vm {
+    background-color: #f8f9fa !important;
+    color: #2c3e50;
+    top: 35% !important;
+}
+
+.vm-content {
+    padding: 10px 15px 0px !important;
+}
+
+
+/* ***************************************************************** filter component ************************************************************* */
+
+.multiselect__tag {
+    background: #0D6EFD !important;
+}
+
+.multiselect__tag-icon {
+    background: #0D6EFD !important;
+}
+
+.multiselect__option--highlight {
+    background: #0D6EFD !important;
+}
+
+
+/* ***************************************************************** all projects page ************************************************************* */
+
+.card_projects {
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card_projects:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 15px rgba(0, 0, 0, 0.2);
+}
+
+.div-img-technos {
+    width: 30px;
+}
+
+.img-technos {
+    max-height: 20px;
+    max-width: 30px;
+}
+
+
+/* ***************************************************************** project details page ************************************************************* */
+
+.img-page-details {
+    transition: transform 0.3s ease;
+}
+
+.img-page-details:hover {
+    transform: scale(1.4);
+    z-index: 100;
+}
+
+
+/* ***************************************************************** experiences page ************************************************************* */
+
+.card_experiences {
+    background: linear-gradient(45deg, #cbe0fe, #f0f6fe);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+}
+
+.vr {
+    border-left: 5px solid #bdd7fe;
+    height: 100%;
+}
+
+@keyframes slideToLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card-enter-right {
+    animation: slideToLeft 1.2s ease-out;
+}
+
+@keyframes slideToRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card-enter-left {
+    animation: slideToRight 1.2s ease-out;
+}
