@@ -5,7 +5,7 @@ const sae_s5_archi_sae = require("../public/images/projects/sae_s5/archi_sae.png
 // const sae_s5_trello = require("../public/images/projects/sae_s5/trello.png")
 const sae_s5_graphs_frontend = require("../public/images/projects/sae_s5/graphs_frontend.png");
 const sae_s6_map = require("../public/images/projects/sae_stage_s6/map.png");
-// const sae_s6_dashboard = require("../public/images/projects/sae_stage_s6/dashboard.png");
+const sae_s6_dashboard = require("../public/images/projects/sae_stage_s6/dashboard.png");
 
 const natural_solutions = require("../public/images/experiences/natural_solutions.png");
 const u_express = require("../public/images/experiences/u_express.png");
@@ -124,16 +124,51 @@ const projects = {
         title: `Stage (2024)`,
         category: categories.professional,
         instructions: {
-            title: `Objectif`,
-            text: `J'ai réalisé mon stage chez <span style='color:red;'><strong>Natural Solutions</strong></span>, une entreprise basée à Marseille. Cette entreprise se consacre à mettre la technologie au service de la biodiversité en développant des outils pour les acteurs environnementaux et les associations. Ces outils sont principalement des applications Web et mobiles.\n\nL'équipe que j'ai rejoint était composée :\n<ul><li>de deux autres développeurs ;</li><li>d'un chef de projet ;</li><li>d'une designeuse.</li></ul>\nMon équipe et moi avons travaillé sur un projet pour <span style='color:green;'><strong>Wings of Ocean</strong></span>, une association dédiée à la préservation de l'environnement. Notre mission était de développer une plateforme de gestion de ramassage de déchets.\n\nMon objectif pendant ce stage était de <span style='color:blue;'><strong>contribuer au développement de ce projet</strong></span>, appelé DepollutionMap. Les tâches dont j'ai été chargée m'ont été confiées au fur et à mesure du projet.`
+            title: `Présentation`,
+            text: `En troisième année de BUT Informatique, j'ai effectué un stage de trois mois chez <span style='color:red;'><strong>Natural Solutions</strong></span>, une entreprise basée à Marseille. Cette dernière a pour vocation de mettre la technologie au service de la biodiversité en concevant des outils destinés aux acteurs environnementaux et aux associations. Ces outils prennent principalement la forme d'applications Web et mobiles.\n
+            L'équipe que j'ai intégrée était composée :
+            <ul><li>de deux autres développeurs ;</li><li>d'un chef de projet ;</li><li>d'une designeuse.</li></ul>
+            Nous avons travaillé sur un projet pour <a href="https://www.wingsoftheocean.com/" target="blank" style='color:green;'><strong>Wings of Ocean</strong></a>, une association dédiée à la préservation de l'environnement. Notre missionconsistait à développer une plateforme dédiée à la gestion de ramassage de déchets.\n
+            durant ce stage, mon objectif était de <span style='color:blue;'><strong>contribuer activement au développement de ce projet</strong></span>, nommé DepollutionMap.`
         },
         organization_of_work: {
-            title: `Processus de développement`,
-            text: `Pour développer cette application nous avons utilisé <span style='color:green;'><strong>GitLab</strong></span> et <span style='color:green;'><strong>Jira</strong></span> pour gérer le versioning et la planification des tâches.\nEn ce qui concerne le déploiement, l'application est déployée en conteneurs <span style='color:green;'><strong>Docker</strong></span>.\nLes principaux langages que j'ai pu manipuler sont les suivants :\n<ul><li>GraphQL ;</li><li>SQL ;</li><li>TypeScript ;</li><li>React.js ;</li></ul>`
+            title: `Organisation du travail`,
+            text: `Les tâches dont j'ai été chargée m'ont été attribuées progressivement, car nous procédions selon la méthodologie agile <span style="color: red;"><strong>${technos.scrum.name}</strong></span>. De plus, pour simplifier le versionning et la planification des tâches tout au long du cycle de vie du projet, nous avons utilisé <span style='color:green;'><strong>${technos.gitlab.name}</strong></span> et <span style='color:green;'><strong>${technos.jira.name}</strong></span>.\n
+            Concernant le déploiement de l'application, celui-ci a été effectué avec l'aide de <span style='color:green;'><strong>${technos.docker.name}</strong></span>.`
+        },
+        implementation: {
+            title: `Mise en œuvre`,
+            section_1: `<h4 style='color:black;'><strong>Carte de la page d'accueil</strong></h4>
+            Chaque ramassage organisé par Wings of Ocean est associé à un formulaire où les participants saisissent des données sur les déchets collectés (nombre, poids, volume). Ces formulaires passent par quatre états : à faire, en cours, en attente de validation, et validé (lequel indique que les données sont correctes et que le ramassage est terminé). Mon rôle a été d'afficher les <span style='color:red'><strong>ramassages terminés</strong></span> sur une carte du monde et de permettre aux utilisateurs de les filtrer selon plusieurs critères (date, localisation, partenaires...).\n
+            J'ai d'abord récupéré les ramassages ayant un formulaire validé grâce à une requête <span style='color:blue;'><strong>${technos.graphql.name}</strong></span>. Ensuite je les ai positionnés sur une carte à l’aide de leurs points de départ. Plutôt que d’utiliser des marqueurs simples, j’ai implémenté une <span style='color:green'><strong>clusterisation</strong></span> pour regrouper les ramassages selon le niveau de zoom. Pour cela, je me suis appuyée sur la bibliothèque <span style='color: blue;'><strong>react-map-gl</strong></span>. Chaque cluster affiche le nombre de collectes qu'il contient, et un clic dessus recentre et zoome la carte.\n
+            Un clic sur un ramassage affiche une popup (réalisée avec <span style='color:red;'><strong>Material UI</strong></span>) contenant son nom, sa localisation, sa date et une photo. Un bouton permet d’accéder à plus d'informations sur une page dédiée.`,
+            images_1: [
+                {
+                    path: sae_s6_map,
+                    legend: `Figure 1 : carte du monde - page d'accueil`
+                }
+            ],
+            section_2: `<h4 style='color:black;'><strong>Mise en place des filtres</strong></h4>
+            J'ai ajouté un bouton « Filtres » sur la carte, qui ouvre une popup. Pour rendre cette popup réutilisable sur d'autres pages, j'ai regroupé son code dans un fichier commun.\n
+            J'ai d'abord écrit des requêtes pour récupérer les données de filtrages depuis la base de données. Ensuite, j'ai utilisé la bibliothèque <span style='color:green;'><strong>Material UI</strong></span> pour concevoir la popup en suivant les maquettes fournies par la <span style='color:red;'><strong>designeuse</strong></span>.\n
+            Lorsque l’utilisateur valide des filtres, ils sont intégrés à l’URL. Tous les ramassages terminés étant déjà stockés dans un tableau en mémoire, les filtres de l’URL sont appliqués directement à ce tableau <span style='color:blue;'><strong>côté client</strong></span> (dans le navigateur). Les résultats filtrés sont enregistrés dans un second tableau, qui sert à afficher les ramassages correspondants sur la carte. Chaque modification des filtres met à jour ce tableau.\n\n`,
+            section_3: `<h4 style='color:black;'><strong>Dashboard</strong></h4>
+            Pour générer des statistiques sur les ramassages terminés, j'ai d'abord écrit des requêtes ${technos.graphql.name} que j'ai testées avec l'interface d'${technos.hasura.name}.\n
+            J’ai ensuite ajouté une <span style='color:blue'><strong>route</strong></span> spécifique au dashboard dans le backend. Cette route prend en paramètre les identifiants des ramassages souhaités afin de les transmettre aux requêtes GraphQL précédemment écrites.\n
+            Côté frontend, au chargement initial de la page, j’ai réutilisé la requête écrite dans la carte afin de récupérer tous les ramassages terminés et je les ai stockés dans un tableau. Ensuite, les <span style='color:green'><strong>filtres définis dans l’URL</strong></span> sont appliqués à ce tableau et le résultat est rangé dans un second tableau. Enfin, j’ai fait appel à la route du backend en lui transmettant les identifiants des ramassages filtrés. Chaque mise à jour des filtres déclenche ce processus.\n
+            Pour l'interface utilisateur, j'ai utilisé <span style='color:green;'><strong>Material UI</strong></span> et le template <span style='color:red;'><strong>Materio</strong></span>, que j'ai intégré à DepollutionMap et légèrement adapté pour afficher les résultats dynamiquement.`,
+            images_3: [
+                {
+                    path: sae_s6_dashboard,
+                    legend: `Figure 2 : dashboard`
+                }
+            ]
         },
         result: {
             title: `Résultat de la SAÉ`,
-            text: `À la fin de ce stage, j'ai dû réaliser une présentation orale et deux rapports :\n<ul><li>l'un technique (destiné à un informaticien reprenant le travail) ;</li><li>l'autre destiné à expliquer le déroulement de notre stage sans entrer dans les détails techniques.</li></ul>\n<a href='https://docs.google.com/presentation/d/1LiP-nK3gmnG1EadbeIMfyvVh-VUsXMA4EwR9I6h4e2o/edit?usp=sharing' target='_blank'>Lien de la présentation</a>`,
+            text: `J’ai beaucoup apprécié ce stage, en grande partie grâce à mes collègues qui se sont montrés disponibles et pédagogues chaque fois que j'en ai eu besoin.\n
+            À l’issue de cette expérience professionnelle, j’ai rédigé deux rapports : un rapport général détaillant les principales tâches que j’ai accomplies et un autre plus technique destiné à permettre à un informaticien de poursuivre le travail.\n
+            Vous pouvez consulter le diaporama de ma soutenance <a href='https://docs.google.com/presentation/d/1LiP-nK3gmnG1EadbeIMfyvVh-VUsXMA4EwR9I6h4e2o/edit?usp=sharing' target='_blank'>ici</a>`,
         },
         technologies: [technos.graphql, technos.hasura, technos.jira, technos.minio, technos.next_js, technos.react_js, technos.scrum, technos.ts]
     },
@@ -151,7 +186,7 @@ const projects = {
             Comme illustré dans le schéma ci-dessous, ce serveur était également chargé de récupérer et de sauvegarder les résultats envoyés par les <span style='color: #fdd9ff'><strong>microcontrôleurs</strong></span>. Par ailleurs, une <span style='color: #d9ead3'><strong>API</strong></span> en ${technos.node_js.name} devait être créée pour assurer les échanges entre le serveur de centralisation, la base de données, et une interface <span style='color: #f8e0e0'><strong>frontend</strong></span> obligatoirement réalisée en ${technos.vue_js.name}, destinée à la visualisation des données.`,
             images: [
                 {
-                    path: archi_sae,
+                    path: sae_s5_archi_sae,
                     legend: `Figure 1 : architecture de la SAÉ`
                 },
             ]
@@ -159,22 +194,23 @@ const projects = {
         organization_of_work: {
             title: `Réalisation de la SAÉ`,
             section_1: `Tout au long du cycle de vie du projet, nous avons utilisé <span style='color:green;'><strong>GitLab</strong></span> et <span style='color:green;'><strong>Trello</strong></span> afin de faciliter le versioning et la planification des tâches.\n
-                Nous nous sommes rapidement répartis les tâches en tenant compte des préférences de chacun et en veillant à ce que chaque membre puisse contribuer à l'ensemble du projet. C'est ainsi que j'ai entamé mon travail avec le développement de l’API et le frontend.`,
+            Nous nous sommes rapidement répartis les tâches en tenant compte des préférences de chacun et en veillant à ce que chaque membre puisse contribuer à l'ensemble du projet. C'est ainsi que j'ai entamé mon travail avec le développement de l’API et le frontend.`,
+
             section_2: `\n<h4 style='color:black;'><strong>Réalisation de l'API et du frontend</strong></h4>
-                Le frontend devant afficher les informations de la base de données sous forme de graphiques et de statistiques, j’ai commencé par identifier les données pertinentes à présenter, puis imaginé différentes façons de les visualiser.\n
-                J’ai d’abord travaillé sur l’API en utilisant la dépendance "express" de ${technos.node_js.name}, qui simplifie la création d’un serveur. Une fois celui-ci en place, j’ai établi une connexion avec la base de données ${technos.mongo.name}, créée par un camarade, afin d’en extraire les informations nécessaires. Avant de passer au frontend, j’ai réalisé des tests unitaires pour m’assurer que les méthodes de l’API fonctionnaient correctement.\n
-                Pour le frontend, j'ai commencé par assurer la connexion avec l’API puis j'ai opté pour la bibliothèque "Vue chartjs" qui permet de faire des graphiques dynamiques.\n
-                Avant de passer au développement du serveur d'analyse, j'ai permit le déploiement de l'API avec ${technos.docker.name}.`,
+            Le frontend devant afficher les informations de la base de données sous forme de graphiques et de statistiques, j’ai commencé par identifier les données pertinentes à présenter, puis imaginé différentes façons de les visualiser.\n
+            J’ai d’abord travaillé sur l’API en utilisant la dépendance "express" de ${technos.node_js.name}, qui simplifie la création d’un serveur. Une fois celui-ci en place, j’ai établi une connexion avec la base de données ${technos.mongo.name}, créée par un camarade, afin d’en extraire les informations nécessaires. Avant de passer au frontend, j’ai réalisé des tests unitaires pour m’assurer que les méthodes de l’API fonctionnaient correctement.\n
+            Pour le frontend, j'ai commencé par assurer la connexion avec l’API puis j'ai opté pour la bibliothèque "Vue chartjs" qui permet de faire des graphiques dynamiques.\n
+            Avant de passer au développement du serveur d'analyse, j'ai permit le déploiement de l'API avec ${technos.docker.name}.`,
             images: [
                 {
-                    path: graphs_frontend,
-                    legend: `Figure 2 : Graphiques du frontend (données de tests)`
+                    path: sae_s5_graphs_frontend,
+                    legend: `Figure 3 : Graphiques du frontend (données de tests)`
                 },
             ],
             section_3: `\n<h4 style='color:black;'><strong>Développement du serveur d'analyse</strong></h4>
-                Cette étape a été sans doute l’une des plus complexes, car elle a exigé une longue phase de recherche et de nombreuses reprises de l'application mobile, initialement prévue pour manipuler des vidéos.\n
-                La principale difficulté résidait dans la recherche d’une bibliothèque capable de traiter un média. Dans un premier temps, nous avons tenté de travailler avec des vidéos, mais cette approche étant trop compliquée pour le temps imparti, nous avons opté pour l'utilisation de fichiers SVG pour analyser exclusivement des images. Cette décision a entrainé la modification de l'application mobile.\n
-                Enfin, nous avons établi la connexion entre l’application mobile et le serveur d’analyse en réalisant, pour chacun, plusieurs corrections au cours du temps. Pour cette partie aussi, il a été essentiel de réaliser des tests unitaires.`
+            Cette étape a été sans doute l’une des plus complexes, car elle a exigé une longue phase de recherche et de nombreuses reprises de l'application mobile, initialement prévue pour manipuler des vidéos.\n
+            La principale difficulté résidait dans la recherche d’une bibliothèque capable de traiter un média. Dans un premier temps, nous avons tenté de travailler avec des vidéos, mais cette approche étant trop compliquée pour le temps imparti, nous avons opté pour l'utilisation de fichiers SVG pour analyser exclusivement des images. Cette décision a entrainé la modification de l'application mobile.\n
+            Enfin, nous avons établi la connexion entre l’application mobile et le serveur d’analyse en réalisant, pour chacun, plusieurs corrections au cours du temps. Pour cette partie aussi, il a été essentiel de réaliser des tests unitaires.`
         },
         result: {
             title: `Résultat de la SAÉ`,
@@ -195,7 +231,7 @@ const projects = {
         },
         organization_of_work: {
             title: `Organisation du travail`,
-            text: `Chez Natural Solutions, j'ai appliqué la <a href="https://chef-de-projet.fr/methodologie-scrum/">méthodologie ${technos.scrum.name}</a>, une méthode agile qui favorise l'amélioration continue et la collaboration pour adapter le développement aux besoins évolutifs des clients.\n
+            text: `Chez Natural Solutions, j'ai appliqué la <a href="https://chef-de-projet.fr/methodologie-scrum/" target="black">méthodologie ${technos.scrum.name}</a>, une méthode agile qui favorise l'amélioration continue et la collaboration pour adapter le développement aux besoins évolutifs des clients.\n
             En parallèle, j'ai également travaillé avec <span style='color:red;'><strong>${technos.gitlab.name}</strong></span> tout au long de mon stage. Pour une gestion efficace, j'ai créé plusieurs branches du projet (pour le développement, la production, les modifications globales, etc.), ce qui m'a permis de suivre les <span style='color:green;'><strong>bonnes pratiques du développement</strong></span>.`
         },
         implementation: {
@@ -231,7 +267,7 @@ const projects = {
             De plus, j'ai pu m'améliorer en <span style='color:red'><strong>gestion de projet</strong></span> grâce à l'utilisation quotidienne de la méthodologie SCRUM. J'ai aussi développé ma capacité à me documenter et à chercher des informations par moi-même ainsi que ma capacité à utiliser des outils tels que GitLab.\n
             Vous pouvez consulter le diaporama de ma soutenance <a href='https://docs.google.com/presentation/d/1uueQqS5IAyxeuxPOwv-2YE4rRnxuOs72wY5auPL-VPI/edit?usp=sharing' target='_blank'>ci-joint</a>.`,
         },
-        technologies: [technos.gitlab, technos.js, technos.node_js, technos.postgresql, technos.react_js, technos.sequelize]
+        technologies: [technos.gitlab, technos.js, technos.node_js, technos.postgresql, technos.react_js, technos.sequelize, technos.scrum]
     },
     sae_101_102: {
         title: `SAE 101-102`,
