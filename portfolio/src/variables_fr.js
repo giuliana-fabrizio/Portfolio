@@ -128,8 +128,8 @@ const projects = {
             text: `En troisième année de BUT Informatique, j'ai effectué un stage de trois mois chez <span style='color:red;'><strong>Natural Solutions</strong></span>, une entreprise basée à Marseille. Cette dernière a pour vocation de mettre la technologie au service de la biodiversité en concevant des outils destinés aux acteurs environnementaux et aux associations. Ces outils prennent principalement la forme d'applications Web et mobiles.\n
             L'équipe que j'ai intégrée était composée :
             <ul><li>de deux autres développeurs ;</li><li>d'un chef de projet ;</li><li>d'une designeuse.</li></ul>
-            Nous avons travaillé sur un projet pour <a href="https://www.wingsoftheocean.com/" target="blank" style='color:green;'><strong>Wings of Ocean</strong></a>, une association dédiée à la préservation de l'environnement. Notre missionconsistait à développer une plateforme dédiée à la gestion de ramassage de déchets.\n
-            durant ce stage, mon objectif était de <span style='color:blue;'><strong>contribuer activement au développement de ce projet</strong></span>, nommé DepollutionMap.`
+            Nous avons travaillé sur un projet pour <a href="https://www.wingsoftheocean.com/" target="blank" style='color:green;'><strong>Wings of Ocean</strong></a>, une association dédiée à la préservation de l'environnement. Notre mission consistait à développer une plateforme dédiée à la gestion de ramassage de déchets.\n
+            Durant ce stage, mon objectif était de <span style='color:blue;'><strong>contribuer activement au développement de ce projet</strong></span>, nommé DepollutionMap.`
         },
         organization_of_work: {
             title: `Organisation du travail`,
@@ -168,7 +168,7 @@ const projects = {
             title: `Résultat de la SAÉ`,
             text: `J’ai beaucoup apprécié ce stage, en grande partie grâce à mes collègues qui se sont montrés disponibles et pédagogues chaque fois que j'en ai eu besoin.\n
             À l’issue de cette expérience professionnelle, j’ai rédigé deux rapports : un rapport général détaillant les principales tâches que j’ai accomplies et un autre plus technique destiné à permettre à un informaticien de poursuivre le travail.\n
-            Vous pouvez consulter le diaporama de ma soutenance <a href='https://docs.google.com/presentation/d/1LiP-nK3gmnG1EadbeIMfyvVh-VUsXMA4EwR9I6h4e2o/edit?usp=sharing' target='_blank'>ici</a>`,
+            Vous pouvez consulter le diaporama de ma soutenance <a href='https://docs.google.com/presentation/d/1LiP-nK3gmnG1EadbeIMfyvVh-VUsXMA4EwR9I6H2e2o/edit?usp=sharing' target='_blank'>ici</a>.`,
         },
         technologies: [technos.graphql, technos.hasura, technos.jira, technos.minio, technos.next_js, technos.react_js, technos.scrum, technos.ts]
     },
