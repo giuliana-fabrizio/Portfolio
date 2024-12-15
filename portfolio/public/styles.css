@@ -210,7 +210,7 @@ footer {
 }
 
 .card-enter-right {
-    animation: slideToLeft 1.5s ease-out;
+    animation: slideToLeft 1.2s ease-out;
 }
 
 @keyframes slideToRight {
@@ -226,5 +226,5 @@ footer {
 }
 
 .card-enter-left {
-    animation: slideToRight 1.5s ease-out;
+    animation: slideToRight 1.2s ease-out;
 }
