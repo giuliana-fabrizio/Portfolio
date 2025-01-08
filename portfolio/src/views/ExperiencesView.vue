@@ -3,7 +3,7 @@
         <header id="experiences_header">
             <section id="titre" class="w-100">
                 <h1 class="mb-4 mt-3 text-primary">{{ experiences_page_title }}</h1>
-            </section>        
+            </section>
         </header>
 
         <main id="experiences_main" class="pb-5 pt-2">

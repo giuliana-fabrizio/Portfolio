@@ -2,7 +2,7 @@
     <div>
         <header id="not_found_header" style="position: relative;">
             <section id="titre" class="container" style="position: relative; z-index: 1;">
-                <h1 class="fw-bold text-primary mt-5">Page non trouvée</h1>
+                <h1 class="text-primary mt-3">{{ not_found_title }}</h1>
             </section>
         </header>
 
@@ -328,8 +328,22 @@
 <script>
 import anime from 'animejs/lib/anime.es.js';
 
+import variables_fr from '../variables_fr.js';
+import variables_en from '../variables_en.js';
+
 export default {
     name: 'NotFoundView',
+
+    data: () => ({
+        not_found_title: ""
+    }),
+
+    created() {
+        const language = this.$store.getters.getLanguage;
+        const isFrench = language === 'french';
+
+        this.not_found_title = isFrench ? variables_fr.not_found_title : variables_en.not_found_title;
+    },
 
     mounted() {
         anime({
