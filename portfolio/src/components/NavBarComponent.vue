@@ -1,7 +1,9 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <img src="images/logo.png" class="d-none d-lg-block" style="width: 27px;">
+            <router-link to="/" class="d-none d-lg-block">
+                <img src="images/logo.png" style="width: 27px;">
+            </router-link>
             <a
                 class="navbar-brand navbar-toggler border-0"
                 data-bs-toggle="collapse"
