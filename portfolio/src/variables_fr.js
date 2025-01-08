@@ -53,7 +53,7 @@ const download_cv = "Télécharger mon CV";
 
 /* ***************************************************************** footer ***************************************************************** */
 
-const link_cv = "https://raw.githubusercontent.com/giuliana-fabrizio/Portfolio/master/portfolio/files/Curriculum_vitae_Giuliana_GODAIL-FABRIZIO.pdf";
+const link_cv = "https://github.com/giuliana-fabrizio/Portfolio/raw/refs/heads/main/portfolio/public/files/Curriculum_vitae_Giuliana_GODAIL-FABRIZIO.pdf";
 const mail = "mailto:godailfabriziogiuliana@gmail.com";
 const github = "https://github.com/giuliana-fabrizio";
 const linkedin = "https://www.linkedin.com/in/giuliana-godail-fabrizio-20639525b/";
