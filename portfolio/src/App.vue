@@ -1,6 +1,6 @@
 <template>
 <div id="app" class="font-monospace">
-    <div class="barre_menu">
+    <div>
         <NavBarComponent />
     </div>
 
