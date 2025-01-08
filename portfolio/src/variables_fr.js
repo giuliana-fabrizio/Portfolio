@@ -366,6 +366,11 @@ const experiences = {
 }
 
 
+/* ***************************************************************** experiences page ***************************************************************** */
+
+const not_found_title = "PAGE NON TROUVÉE";
+
+
 module.exports = {
     name: name,
     home_btn: home_btn,
@@ -395,4 +400,5 @@ module.exports = {
     categories: categories,
     technos: technos,
     projects: projects,
+    not_found_title: not_found_title
 }
