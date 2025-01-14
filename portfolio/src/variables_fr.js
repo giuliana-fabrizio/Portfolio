@@ -43,11 +43,11 @@ const projects_btn = "Projets";
 const status = "Étudiante en informatique";
 
 const about_me_title = "À propos de moi";
-const about_me = `Agée de ${age} ans, je suis actuellement étudiante en première année du cycle ingénieur à <a href="https://telecomnancy.univ-lorraine.fr/" target="_blank">Télécom Nancy</a>. Passionnée par l'informatique, je cherche constamment à me perfectionner. J'apprécie tout particulièrement la conception et l'optimisation de projets, avec pour objectif de répondre au mieux aux besoins des utilisateurs. Actuellement, j'ambitionne de me spécialiser dans le domaine du traitement des données massives.`;
+const about_me = `Agée de ${age} ans, je suis actuellement étudiante en première année du cycle ingénieur à l'<a href="https://www.utbm.fr/formations/ingenieur/informatique/" target="_blank">UTBM</a>. Passionnée par l'informatique, je cherche constamment à me perfectionner. J'apprécie tout particulièrement la conception et l'optimisation de projets, avec pour objectif de répondre au mieux aux besoins des utilisateurs. Actuellement, j'ambitionne de me spécialiser dans le domaine du traitement des données massives et de l'intelligence artificielle.`;
 const my_projects = "Consulter mes projets";
 
 const hobbies_title = "Loisirs";
-const hobbies = "Durant mon temps libre, je fais un peu de sport comme du jogging ou de la natation. Je travaille également sur des projets personnels. Enfin, j’aime beaucoup la couture, par exemple, j’ai réalisé des trousses pour ranger mes stylos et quelques autres gadgets.";
+const hobbies = "Durant mon temps libre, j'aime beaucoup faire de la natation ou des randonnées. Je consacre également du temps à mes projets personnels dans le domaine informatique. Par ailleurs, j’apprécie jouer à des jeux vidéo avec mes amis ou m’adonner à la couture : j’ai notamment confectionné des trousses pour ranger mes stylos et divers petits objets.";
 const download_cv = "Télécharger mon CV";
 
 
@@ -302,28 +302,37 @@ const projects = {
 
 // /* ***************************************************************** degrees page ***************************************************************** */
 
-// const degrees_page_title = "MES FORMATIONS";
-// const degrees = {
-//     but: {
-//         title: `BUT Informatique`,
-//         mention: `Major de promotion`,
-//         description: `<ul>
-//             <li>Acquisition de connaissances générales dans le domaine de l'informatique</li>
-//             <li>Développement de divers projets individuels et collaboratifs, renforçant mon autonomie et mes compétences en travail d'équipe</li>
-//             <li>Réalisation de deux stages de trois mois, permettant d'obtenir une expérience professionnelle</li>
-//         </ul>`,
-//         school: `IUT de Belfort-Montbéliard`,
-//         place: `Belfort, France`,
-//         date: `2024`,
-//     },
-//     bac: {
-//         title: `Baccalauréat général`,
-//         speciality: `Spécialité : scientifique`,
-//         school: `Lycée Périer`,
-//         place: `Marseille, France`,
-//         date: `2020`
-//     }
-// }
+const degrees_page_title = "MES FORMATIONS";
+const degrees = {
+    engineer: {
+        title: `Cycle ingénieur`,
+        description: `<ul>
+            <li></li>
+        </ul>`,
+        school: `Université de technologie de Belfort-Montbéliard`,
+        place: `Belfort, France`,
+        date: `Depuis février 2025`,
+    },
+    but: {
+        title: `BUT Informatique`,
+        mention: `Major de promotion`,
+        description: `<ul>
+            <li>Acquisition de connaissances générales dans le domaine de l'informatique</li>
+            <li>Développement de divers projets individuels et collaboratifs, renforçant mon autonomie et mes compétences en travail d'équipe</li>
+            <li>Réalisation de deux stages de trois mois, permettant d'obtenir une expérience professionnelle</li>
+        </ul>`,
+        school: `IUT de Belfort-Montbéliard`,
+        place: `Belfort, France`,
+        date: `2024`,
+    },
+    bac: {
+        title: `Baccalauréat général`,
+        speciality: `Spécialité : scientifique`,
+        school: `Lycée Périer`,
+        place: `Marseille, France`,
+        date: `2020`
+    }
+}
 
 
 /* ***************************************************************** experiences page ***************************************************************** */
@@ -400,5 +409,7 @@ module.exports = {
     categories: categories,
     technos: technos,
     projects: projects,
+    degrees_page_title: degrees_page_title,
+    degrees: degrees,
     not_found_title: not_found_title
 }
