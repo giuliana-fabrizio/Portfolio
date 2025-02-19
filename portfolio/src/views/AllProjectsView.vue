@@ -35,7 +35,7 @@
                             @click="setProject(project)">
                             <div class="card-body mb-0 m-2 pb-0">
                                 <div class="d-flex justify-content-between align-items-center mb-3 flex-column flex-lg-row text-center text-md-start">
-                                    <h5 style="color:#555"><strong>{{ project.title }}</strong></h5>
+                                    <h5 class="subtitle"><strong>{{ project.title }}</strong></h5>
                                     <p class="badge mt-1 text-wrap" :style=project.category.style>{{ project.category.name }}</p>
                                 </div>
 

@@ -26,7 +26,7 @@
             class="card_experiences p-3 rounded">
             <div class="d-flex align-items-center justify-content-center">
                 <h5>
-                    <strong>{{ experience.title }}</strong>
+                    <strong class="subtitle">{{ experience.title }}</strong>
                 </h5>
                 <button
                     type="button"
