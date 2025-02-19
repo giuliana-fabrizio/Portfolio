@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <router-link to="/" class="d-none d-lg-block">
+            <router-link to="/not_found" class="d-none d-lg-block">
                 <img src="images/logo.png" style="width: 27px;">
             </router-link>
             <a
