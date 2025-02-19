@@ -25,11 +25,6 @@
                     </a>
                 </section>
 
-                <section id="experiences_professionnelles" class="mb-5 text-center">
-                    <h5 class="mb-3"><strong>{{ professional_experience_title }}</strong></h5>
-                    <p class="mb-4">{{ professional_experience }}</p>
-                </section>
-
                 <section id="loisirs" class="mb-5 text-center">
                     <h5 class="mb-3"><strong>{{ hobbies_title }}</strong></h5>
                     <p>{{ hobbies }}</p>
@@ -69,8 +64,6 @@ export default {
         about_me_title: "",
         about_me: "",
         my_projects: "",
-        professional_experience_title: "",
-        professional_experience: "",
         hobbies_title: "",
         hobbies: "",
         download_cv: "",
@@ -103,9 +96,6 @@ export default {
             this.about_me_title = isFrench ? variables_fr.about_me_title : variables_en.about_me_title;
             this.about_me = isFrench ? variables_fr.about_me : variables_en.about_me;
             this.my_projects = isFrench ? variables_fr.my_projects : variables_en.my_projects;
-
-            this.professional_experience_title = isFrench ? variables_fr.professional_experience_title : variables_en.professional_experience_title;
-            this.professional_experience = isFrench ? variables_fr.professional_experience : variables_en.professional_experience;
 
             this.hobbies_title = isFrench ? variables_fr.hobbies_title : variables_en.hobbies_title;
             this.hobbies = isFrench ? variables_fr.hobbies : variables_en.hobbies;
