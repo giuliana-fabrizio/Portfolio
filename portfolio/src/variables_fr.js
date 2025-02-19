@@ -1,14 +1,19 @@
-const sae_101_102_partie_de_jeu = require("../public/images/projects/sae_101_102/partie_de_jeu.png");
+const sae_101_102_image = require("../public/images/projects/sae_101_102/partie_de_jeu.png");
 const sae_s4_mcd = require("../public/images/projects/sae_stage_s4/MCD.png");
-const sae_s4_principe_selection_apres = require("../public/images/projects/sae_stage_s4/principe_selection_apres.png");
-const sae_s5_archi_sae = require("../public/images/projects/sae_s5/archi_sae.png");
-// const sae_s5_trello = require("../public/images/projects/sae_s5/trello.png")
-const sae_s5_graphs_frontend = require("../public/images/projects/sae_s5/graphs_frontend.png");
-const sae_s6_map = require("../public/images/projects/sae_stage_s6/map.png");
-const sae_s6_dashboard = require("../public/images/projects/sae_stage_s6/dashboard.png");
+const sae_s4_image = require("../public/images/projects/sae_stage_s4/principe_selection_apres.png");
+const sae_s5_image1 = require("../public/images/projects/sae_s5/archi_sae.png");
+const sae_s5_image2 = require("../public/images/projects/sae_s5/graphs_frontend.png");
+// const sae_s5_image3 = require("../public/images/projects/sae_s5/trello.png")
+const sae_s6_image1 = require("../public/images/projects/sae_stage_s6/map.png");
+const sae_s6_image2 = require("../public/images/projects/sae_stage_s6/dashboard.png");
 
-const natural_solutions = require("../public/images/experiences/natural_solutions.png");
-const u_express = require("../public/images/experiences/u_express.png");
+const engineer_logo = require("../public/images/degrees/engineer.png");
+const but_logo = require("../public/images/degrees/but.png");
+const bac_logo = require("../public/images/degrees/bac.png");
+const mooc_gdp_logo = require("../public/images/degrees/mooc_gdp.png");
+
+const natural_solutions_logo = require("../public/images/experiences/natural_solutions.png");
+const u_express_logo = require("../public/images/experiences/u_express.png");
 
 
 /* ***************************************************************** common ***************************************************************** */
@@ -144,7 +149,7 @@ const projects = {
             Un clic sur un ramassage affiche une popup (réalisée avec <span style='color:red;'><strong>Material UI</strong></span>) contenant son nom, sa localisation, sa date et une photo. Un bouton permet d’accéder à plus d'informations sur une page dédiée.`,
             images_1: [
                 {
-                    path: sae_s6_map,
+                    path: sae_s6_image1,
                     legend: `Figure 1 : carte du monde - page d'accueil`
                 }
             ],
@@ -156,10 +161,10 @@ const projects = {
             Pour générer des statistiques sur les ramassages terminés, j'ai d'abord écrit des requêtes ${technos.graphql.name} que j'ai testées avec l'interface d'${technos.hasura.name}.\n
             J’ai ensuite ajouté une <span style='color:blue'><strong>route</strong></span> spécifique au dashboard dans le backend. Cette route prend en paramètre les identifiants des ramassages souhaités afin de les transmettre aux requêtes GraphQL précédemment écrites.\n
             Côté frontend, au chargement initial de la page, j’ai réutilisé la requête écrite dans la carte afin de récupérer tous les ramassages terminés et je les ai stockés dans un tableau. Ensuite, les <span style='color:green'><strong>filtres définis dans l’URL</strong></span> sont appliqués à ce tableau et le résultat est rangé dans un second tableau. Enfin, j’ai fait appel à la route du backend en lui transmettant les identifiants des ramassages filtrés. Chaque mise à jour des filtres déclenche ce processus.\n
-            Pour l'interface utilisateur, j'ai utilisé <span style='color:green;'><strong>Material UI</strong></span> et le template <span style='color:red;'><strong>Materio</strong></span>, que j'ai intégré à DepollutionMap et légèrement adapté pour afficher les résultats dynamiquement.`,
+            Pour l'interface utilisateur, j'ai utilisé <span style='color:green;'><strong>Material UI</strong></span> et un template <span style='color:red;'><strong>Materio</strong></span>, que j'ai intégré à DepollutionMap et légèrement adapté pour afficher les résultats dynamiquement.`,
             images_3: [
                 {
-                    path: sae_s6_dashboard,
+                    path: sae_s6_image2,
                     legend: `Figure 2 : dashboard`
                 }
             ]
@@ -186,7 +191,7 @@ const projects = {
             Comme illustré dans le schéma ci-dessous, ce serveur était également chargé de récupérer et de sauvegarder les résultats envoyés par les <span style='color: #fdd9ff'><strong>microcontrôleurs</strong></span>. Par ailleurs, une <span style='color: #d9ead3'><strong>API</strong></span> en ${technos.node_js.name} devait être créée pour assurer les échanges entre le serveur de centralisation, la base de données, et une interface <span style='color: #f8e0e0'><strong>frontend</strong></span> obligatoirement réalisée en ${technos.vue_js.name}, destinée à la visualisation des données.`,
             images: [
                 {
-                    path: sae_s5_archi_sae,
+                    path: sae_s5_image1,
                     legend: `Figure 1 : architecture de la SAÉ`
                 },
             ]
@@ -203,7 +208,7 @@ const projects = {
             Avant de passer au développement du serveur d'analyse, j'ai permit le déploiement de l'API avec ${technos.docker.name}.`,
             images: [
                 {
-                    path: sae_s5_graphs_frontend,
+                    path: sae_s5_image2,
                     legend: `Figure 3 : Graphiques du frontend (données de tests)`
                 },
             ],
@@ -251,7 +256,7 @@ const projects = {
             <ul><li><span style='color:red'><strong>interroger une API externe</strong></span> pour obtenir la liste complète des projets ;</li><li>identifier si chaque projet était développé pour RENECO ou non ;</li><li>ajuster l'interface graphique en conséquence.</li></ul>`,
             images_2: [
                 {
-                    path: sae_s4_principe_selection_apres,
+                    path: sae_s4_image,
                     legend: `Figure 2 : Principe de sélection des projets`
                 }
             ],
@@ -290,7 +295,7 @@ const projects = {
             J'ai beaucoup apprécié cette SAÉ en raison de sa <span style='color:red'><strong>complexité</strong></span>, qui m'a poussée à sortir de ma zone de confort. Elle m'a également permis de faire des progrès significatifs en algorithmique.`,
             images: [
                 {
-                    path: sae_101_102_partie_de_jeu,
+                    path: sae_101_102_image,
                     legend: `Figure 1 : Plateau de jeu`
                 }
             ],
@@ -303,34 +308,66 @@ const projects = {
 // /* ***************************************************************** degrees page ***************************************************************** */
 
 const degrees_page_title = "MES FORMATIONS";
+
+const school_career = {
+    title: `Mon parcours`,
+    content: `Après l'obtention de mon baccalauréat scientifique en 2020, j'ai décidé de prendre une année de césure pour réfléchir à mon avenir professionnel. Durant cette année, je me suis beaucoup documentée et j'ai consulté plusieurs conseillers d’orientation.\n
+    C’est un peu par hasard que j'ai découvert l'informatique. Son caractère en constante évolution et l’opportunité de contribuer à des avancées technologiques majeures m'ont motivée à intégrer un BUT Informatique en 2021. Cette discipline rapidement passionnée, me donnant envie d'approfondir mes connaissances et de me perfectionner davantage. C'est pourquoi j'ai choisi de poursuivre mes études en école d'ingénieurs.`
+}
+
+const degrees_title = `Mes diplômes`;
+
 const degrees = {
     engineer: {
         title: `Cycle ingénieur`,
-        description: `<ul>
-            <li></li>
-        </ul>`,
+        logo: engineer_logo,
         school: `Université de technologie de Belfort-Montbéliard`,
         place: `Belfort, France`,
         date: `Depuis février 2025`,
     },
     but: {
         title: `BUT Informatique`,
+        logo: but_logo,
+        speciality: `Spécialité : réalisation d'applications : conception, développement, validation`,
         mention: `Major de promotion`,
-        description: `<ul>
-            <li>Acquisition de connaissances générales dans le domaine de l'informatique</li>
-            <li>Développement de divers projets individuels et collaboratifs, renforçant mon autonomie et mes compétences en travail d'équipe</li>
-            <li>Réalisation de deux stages de trois mois, permettant d'obtenir une expérience professionnelle</li>
-        </ul>`,
         school: `IUT de Belfort-Montbéliard`,
         place: `Belfort, France`,
         date: `2024`,
     },
     bac: {
         title: `Baccalauréat général`,
+        logo: bac_logo,
         speciality: `Spécialité : scientifique`,
         school: `Lycée Périer`,
         place: `Marseille, France`,
         date: `2020`
+    }
+}
+
+const certifications_title = `Mes certifications`;
+
+const certifications = {
+    mooc_management: {
+        title: `Gestion de Projet`,
+        logo: mooc_gdp_logo,
+        description: `<ul>
+            <li>Tronc commun</li>
+            <li>Spécialisation Analyse Fonctionnelle Externe</li>
+            <li>Spécialisation Analyse Stratégique dans les Projets</li>
+            <li>Spécialisation Diagnostic de Fonctionnement d'un Système (technique)</li>
+            <li>Spécialisation Évaluation d'Impact des Projets</li>
+            <li>Spécialisation Gestion de projet agile avec Scrum</li>
+            <li>Spécialisation Management de la Créativité et Brainstorming</li>
+            <li>Spécialisation Management d'Équipe Projet</li>
+            <li>Spécialisation Outils et Méthodologie de Résolution de Problème</li>
+            <li>Spécialisation Management Visuel de Projet</li>
+            <li>Spécialisation OAW - Outils et applications web pour la gestion de projet</li>
+            <li>Spécialisation Planification Avancée</li>
+            <li>Spécialisation Du Projet à l'Action Entrepreneuriale</li>
+            <li>Spécialisation Introduction aux principaux outils de TRIZ</li>
+        </ul>`,
+        school: `MOOC`,
+        date: `Novembre 2024`,
     }
 }
 
@@ -345,7 +382,7 @@ const experiences = {
         <ul><li>insertion de données Excel dans une base de données PostgreSQL ;</li><li>réalisation du tableau de bord principal (ou Dashboard) ;</li><li>utilisation d'Hasura pour la gestion des permissions utilisateurs.</li></ul>`,
         label_redirection: `Plus de détails`,
         redirection: projects.stage_s6,
-        logo: natural_solutions,
+        logo: natural_solutions_logo,
         type: `Type : stage`,
         date: `Janvier - Avril 2024`,
         company: `Natural Solutions`,
@@ -357,7 +394,7 @@ const experiences = {
         <ul><li>ajout d'une base de données PostgreSQL et utilisation de l'ORM Sequelize ;</li><li>correction d'erreurs de calcul existantes ;</li><li>modification de l'interface utilisateur : manipulation de ReactJs et interrogation d'une API externe ;</li><li>réalisation de tests unitaires en JavaScript.</li></ul>`,
         label_redirection: `Plus de détails`,
         redirection: projects.stage_s4,
-        logo: natural_solutions,
+        logo: natural_solutions_logo,
         type: `Type : stage`,
         date: `Avril - Juin 2023`,
         company: `Natural Solutions`,
@@ -366,7 +403,7 @@ const experiences = {
     cdd_2022: {
         title: `Employée de supérette`,
         description: `Principales tâches réalisées :<ul><li>encaissement des clients ;</li><li>rangement des rayons et réception des marchandises ;</li><li>formation des nouveaux salariés à la caisse ;</li><li>cuisson du pain.</li></ul>`,
-        logo: u_express,
+        logo: u_express_logo,
         type: `Type : CDD`,
         date: `Juillet - Août 2022`,
         company: `U Express`,
@@ -410,6 +447,10 @@ module.exports = {
     technos: technos,
     projects: projects,
     degrees_page_title: degrees_page_title,
+    school_career: school_career,
+    degrees_title: degrees_title,
     degrees: degrees,
+    certifications_title: certifications_title,
+    certifications: certifications,
     not_found_title: not_found_title
 }
