@@ -23,7 +23,7 @@
         </Modal>
 
         <div
-            class="card_experiences p-3 rounded">
+            class="card_degrees_experiences p-3 rounded">
             <div class="d-flex align-items-center justify-content-center">
                 <h5>
                     <strong class="subtitle">{{ experience.title }}</strong>
