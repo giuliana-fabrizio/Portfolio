@@ -24,7 +24,7 @@
                     <li class="nav-item">
                         <router-link to="/all_projects">{{ projects_btn }}</router-link>
                     </li>
-                    <li v-if="canChangeLanguage" :class="['nav-item', language === 'french' && 'd-none']">
+                    <!-- <li v-if="canChangeLanguage" :class="['nav-item', language === 'french' && 'd-none']">
                         <button class="btn p-0" @click="changeLanguage('french')">
                             <img src="images/france.png"  style="width: 27px;">
                         </button>
@@ -33,7 +33,7 @@
                         <button class="btn p-0" @click="changeLanguage('english')">
                             <img src="images/royaume-uni.png" style="width: 27px;">
                         </button>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
