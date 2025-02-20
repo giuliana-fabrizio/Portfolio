@@ -186,6 +186,29 @@ footer {
 }
 
 
+/* ***************************************************************** degrees page ************************************************************* */
+
+.flip-inner {
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    backface-visibility: hidden;
+}
+
+.flip-back {
+    max-height: 160px;
+    overflow: auto;
+    transform: rotateY(180deg);
+}
+
+
 /* ***************************************************************** experiences page ************************************************************* */
 
 .vr {
