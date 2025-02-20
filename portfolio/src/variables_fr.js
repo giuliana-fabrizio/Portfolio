@@ -332,7 +332,7 @@ const degrees = {
         mention: `Major de promotion`,
         school: `IUT de Belfort-Montbéliard`,
         place: `Belfort, France`,
-        date: `2024`,
+        date: `Juin 2024`,
     },
     bac: {
         title: `Baccalauréat général`,
@@ -340,7 +340,7 @@ const degrees = {
         speciality: `Spécialité : scientifique`,
         school: `Lycée Périer`,
         place: `Marseille, France`,
-        date: `2020`
+        date: `Juillet 2020`
     }
 }
 
@@ -350,21 +350,22 @@ const certifications = {
     mooc_management: {
         title: `Gestion de Projet`,
         logo: mooc_gdp_logo,
-        description: `<ul>
+        speciality: `Spécialités :
+        <ul class='text-start'>
             <li>Tronc commun</li>
-            <li>Spécialisation Analyse Fonctionnelle Externe</li>
-            <li>Spécialisation Analyse Stratégique dans les Projets</li>
-            <li>Spécialisation Diagnostic de Fonctionnement d'un Système (technique)</li>
-            <li>Spécialisation Évaluation d'Impact des Projets</li>
-            <li>Spécialisation Gestion de projet agile avec Scrum</li>
-            <li>Spécialisation Management de la Créativité et Brainstorming</li>
-            <li>Spécialisation Management d'Équipe Projet</li>
-            <li>Spécialisation Outils et Méthodologie de Résolution de Problème</li>
-            <li>Spécialisation Management Visuel de Projet</li>
-            <li>Spécialisation OAW - Outils et applications web pour la gestion de projet</li>
-            <li>Spécialisation Planification Avancée</li>
-            <li>Spécialisation Du Projet à l'Action Entrepreneuriale</li>
-            <li>Spécialisation Introduction aux principaux outils de TRIZ</li>
+            <li>Analyse fonctionnelle externe</li>
+            <li>Analyse stratégique dans les projets</li>
+            <li>Diagnostic de fonctionnement d'un système (technique)</li>
+            <li>Évaluation d'impact des projets</li>
+            <li>Gestion de projet agile avec Scrum</li>
+            <li>Management de la créativité et brainstorming</li>
+            <li>Management d'équipe projet</li>
+            <li>Outils et méthodologie de résolution de problème</li>
+            <li>Management visuel de projet</li>
+            <li>OAW - Outils et applications web pour la gestion de projet</li>
+            <li>Planification avancée</li>
+            <li>Du Projet à l'action entrepreneuriale</li>
+            <li>Introduction aux principaux outils de TRIZ</li>
         </ul>`,
         school: `MOOC`,
         date: `Novembre 2024`,
