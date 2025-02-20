@@ -1,13 +1,13 @@
 <template>
-    <div>
+    <div class="container">
         <header id="degrees_header">
             <section id="titre" class="w-100">
                 <h1 class="mb-4 mt-3 text-primary">{{ title }}</h1>
             </section>        
         </header>
 
-        <main id="degrees_main" class="d-flex justify-content-center pb-5 pt-2">
-            <div class="align-items-center container gx-md-5 row">
+        <main id="degrees_main" class="pb-5">
+            <div class="align-items-center gx-md-5 row">
                 <div class="card_degrees_experiences card col-12 col-md-6 col-xl-5 col-xxl-4">
                     <h5 class="mb-3 mt-3">
                         <strong class="subtitle">{{ school_career.title }}</strong>
