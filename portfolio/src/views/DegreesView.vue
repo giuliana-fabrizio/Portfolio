@@ -7,12 +7,19 @@
         </header>
 
         <main id="degrees_main" class="pb-5">
-            <div class="align-items-center gx-md-5 row">
+            <div class="align-items-center gx-md-5 p-1 row">
                 <div class="card_degrees_experiences card col-12 col-md-6 col-xl-5 col-xxl-4">
-                    <h5 class="mb-3 mt-3">
-                        <strong class="subtitle">{{ school_career.title }}</strong>
-                    </h5>
-                    <p v-html="formattedText(school_career.content)" class="text-start"></p>
+                    <div class="align-items-center d-flex justify-content-between justify-content-md-center mb-3 mt-3">
+                        <h5 class="subtitle m-0"><strong>{{ school_career.title }}</strong></h5>
+                        <button @click="setExpand()" class="btn d-md-none">
+                            <i v-if="!expand" class="bi bi-chevron-compact-down"></i>
+                            <i v-else class="bi bi-chevron-compact-up"></i>
+                        </button>
+                    </div>
+                    <p
+                        v-html="formattedText(school_career.content)"
+                        :class="[expand ? 'd-block' : 'd-none', 'd-md-block', 'text-start']">
+                    </p>
                 </div>
 
                 <div class="col-12 col-md-6 col-xl-7 col-xxl-8">
@@ -43,6 +50,7 @@ export default {
     },
 
     data: () => ({
+        expand: false,
         title: "",
         school_career: {},
         degrees_title: "",
@@ -70,6 +78,9 @@ export default {
                 .replace(/\n/g, '<br>')
                 .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
         },
+        setExpand() {
+            this.expand = !this.expand;
+        }
     }
 }
 </script>
