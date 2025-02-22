@@ -11,6 +11,24 @@
                 <div v-if="interest.support == 'mc'" class="col-12 col-md-6">
                     <MinecraftComponent />
                 </div>
+                <div v-if="interest.support == 'modelling'" class="align-items-stretch col-12 col-md-6 d-flex m-0 p-0">
+                    <ModellingComponent
+                        :width="
+                            windowWidth >= 1400 ? 665 :
+                            windowWidth >= 1200 ? 570 :
+                            windowWidth >= 992 ? 480 :
+                            windowWidth >= 768 ? 360 :
+                            windowWidth >= 576 ? 540 : 0
+                        "
+                        :height="
+                            windowWidth >= 1400 ? 350 :
+                            windowWidth >= 1200 ? 350 :
+                            windowWidth >= 992 ? 350 :
+                            windowWidth >= 768 ? 360 :
+                            windowWidth >= 576 ? 270 : 0
+                        "
+                    />
+                </div>
                 <div class="col-12 col-md-6">
                     <h5 class="subtitle mb-2 text-start"><strong>{{ interest.title }}</strong></h5>
                     <p class="text-start">{{ interest.description }}</p>
@@ -25,12 +43,14 @@ import variables_fr from '@/variables_fr';
 import variables_en from '@/variables_en';
 
 import MinecraftComponent from '@/components/MinecraftComponent.vue';
+import ModellingComponent from '@/components/ModellingComponent.vue';
 
 export default {
     name: 'InterestsView',
 
     components: {
         MinecraftComponent,
+        ModellingComponent
     },
 
     data: () => ({
