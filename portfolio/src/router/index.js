@@ -5,6 +5,7 @@ import DegreesView from '../views/DegreesView.vue';
 import ExperiencesView from '../views/ExperiencesView.vue';
 import AllProjectsView from '../views/AllProjectsView.vue';
 import DetailsView from '../views/DetailsView.vue';
+import InterestsView from '@/views/InterestsView.vue';
 import NotFoundView from '../views/NotFoundView.vue';
 
 Vue.use(VueRouter);
@@ -34,6 +35,11 @@ const routes = [
     path: '/details',
     name: 'details',
     component: DetailsView,
+  },
+  {
+    path: '/interests',
+    name: 'interests',
+    component: InterestsView
   },
   {
     path: '*',

@@ -24,6 +24,9 @@
                     <li class="nav-item">
                         <router-link to="/all_projects">{{ projects_btn }}</router-link>
                     </li>
+                    <li class="nav-item">
+                        <router-link to="/interests">{{ interests_btn }}</router-link>
+                    </li>
                     <!-- <li v-if="canChangeLanguage" :class="['nav-item', language === 'french' && 'd-none']">
                         <button class="btn p-0" @click="changeLanguage('french')">
                             <img src="images/france.png"  style="width: 27px;">
@@ -52,6 +55,7 @@ export default {
         academic_training_btn: "",
         experiences_btn: "",
         projects_btn: "",
+        interests_btn: "",
         canChangeLanguage: true
     }),
 
@@ -86,6 +90,7 @@ export default {
             this.academic_training_btn = isFrench ? variables_fr.academic_training_btn : variables_en.academic_training_btn;
             this.experiences_btn = isFrench ? variables_fr.experiences_btn : variables_en.experiences_btn;
             this.projects_btn = isFrench ? variables_fr.projects_btn : variables_en.projects_btn;
+            this.interests_btn = isFrench ? variables_fr.interests_btn : variables_en.interests_btn;
         },
         changeLanguage(lang) {
             this.$store.commit('setLanguage', lang);
