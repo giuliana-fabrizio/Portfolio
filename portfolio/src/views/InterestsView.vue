@@ -8,11 +8,14 @@
 
         <main id="interests_main" class="pb-5">
             <div v-for="(interest, key) in interests" :key="key" class="align-items-center gx-5 mb-5 row">
-                <div v-if="interest.support == 'mc'" class="col-12 col-md-6">
-                    <MinecraftComponent />
+                <div v-if="key % 2 == 1" class="col-12 col-md-6">
+                    <h5 class="subtitle mb-2 text-start"><strong>{{ interest.title }}</strong></h5>
+                    <p class="text-start">{{ interest.description }}</p>
                 </div>
-                <div v-if="interest.support == 'modelling'" class="align-items-stretch col-12 col-md-6 d-flex m-0 p-0">
+                <div class="col-12 col-md-6 m-0 p-0">
+                    <MinecraftComponent v-if="interest.support == 'mc'" />
                     <ModellingComponent
+                        v-if="interest.support == 'modelling'"
                         :width="
                             windowWidth >= 1400 ? 665 :
                             windowWidth >= 1200 ? 570 :
@@ -28,8 +31,9 @@
                             windowWidth >= 576 ? 270 : 0
                         "
                     />
+                    <p class="fst-italic text-secondary">Figure {{ key }} : {{ interest.legend }}</p>
                 </div>
-                <div class="col-12 col-md-6">
+                <div v-if="key % 2 == 0" class="col-12 col-md-6">
                     <h5 class="subtitle mb-2 text-start"><strong>{{ interest.title }}</strong></h5>
                     <p class="text-start">{{ interest.description }}</p>
                 </div>
