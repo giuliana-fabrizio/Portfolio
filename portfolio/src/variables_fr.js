@@ -15,6 +15,11 @@ const mooc_gdp_logo = require("../public/images/degrees/mooc_gdp.png");
 const natural_solutions_logo = require("../public/images/experiences/natural_solutions.png");
 const u_express_logo = require("../public/images/experiences/u_express.png");
 
+const carousel_1 = require("../public/images/interests/carousel-1.jpg");
+const carousel_2 = require("../public/images/interests/carousel-2.png");
+const carousel_3 = require("../public/images/interests/carousel-3.jpg");
+// const image_sewing = require("../public/images/interests/sewing.png");
+
 
 /* ***************************************************************** common ***************************************************************** */
 
@@ -419,22 +424,30 @@ const experiences = {
 const interests_page_title = "MES CENTRES D'INTÉRÊT";
 
 const interests = {
-    sport: {
-        title: `Activité sportive`,
-        description: `Depuis 2010, je pratique la natation. D’abord membre d’un club durant mon enfance, je continue aujourd’hui à nager de manière occasionnelle. Par ailleurs, j’aime explorer de nouveaux lieux et admirer leurs paysages. Bonne marcheuse, je fais régulièrement des randonnées, une activité qui me permet de relever de nouveaux défits tout en faisant de belles découvertes.`
+    1: {
+        title: `Activité sportive & voyages`,
+        description: `Depuis 2010, je pratique la natation. D’abord membre d’un club durant mon enfance, je continue aujourd’hui à nager de manière occasionnelle. Par ailleurs, j’aime explorer de nouveaux lieux et admirer leurs paysages. Bonne marcheuse, je fais régulièrement des randonnées, une activité qui me permet de relever de nouveaux défits tout en faisant de belles découvertes.`,
+        legend: 'images prises lors de mes randonnées et / ou voyages',
+        images: [carousel_1, carousel_2, carousel_3],
+        support: `carousel`
     },
-    modeling: {
+    2: {
         title: `Modélisation 3D`,
-        description: `C’est en discutant avec ma famille d’un projet de réaménagement que j’ai décidé de me lancer dans la modélisation 3D. C’est ainsi que j’ai découvert le logiciel Sweet Home 3D. Avec cet outil, j’ai d’abord imaginé un nouvel agencement pour une pièce de la maison avant de reproduire un studio dans lequel j’ai vécu et que je trouvais particulièrement esthétique.`,
+        description: `C’est en discutant avec ma mère d’un projet de réaménagement que j’ai décidé de me lancer dans la modélisation 3D. C’est ainsi que j’ai découvert le logiciel Sweet Home 3D. Avec cet outil, j’ai d’abord imaginé un nouvel agencement pour une pièce de la maison avant de reproduire un studio dans lequel j’ai vécu et que je trouvais particulièrement esthétique.`,
+        legend: `modélisation 3D d’un studio réalisée avec Sweet Home 3D. Utilisez la souris (ou le tactile) pour zoomer et faire pivoter le modèle.`,
         support: `modelling`
     },
-    sewing: {
+    3: {
         title: `Couture`,
-        description: `Dès mon plus jeune âge, j’ai découvert la couture grâce à ma grand-mère, ancienne couturière. J’ai commencé par confectionner des vêtements pour mes poupées avant de réaliser aujourd’hui des objets pratiques dans mon quotidien : housses de protection pour batterie, sac à main, trousses à stylos...`
+        description: `Dès mon plus jeune âge, j’ai découvert la couture grâce à ma grand-mère, ancienne couturière. J’ai commencé par confectionner des vêtements pour mes poupées avant de réaliser aujourd’hui des objets pratiques dans mon quotidien : housses de protection pour batterie, sac à main, trousses à stylos...`,
+        legend: `housse de protection pour batterie externe.`,
+        // image: image_sewing,
+        support: `img`
     },
-    gaming: {
+    4: {
         title: `Jeux vidéos`,
         description: `C’est durant mon BUT Informatique à Belfort que des amis m’ont initiée aux jeux vidéo. Cependant, n’étant pas une grande joueuse, je me consacre principalement à Minecraft. Ce que j’apprécie particulièrement dans ce jeu, c’est la diversité des mods disponibles, qui permettent de renouveler l’expérience en introduisant de nouveaux mondes, personnages, créatures et matériaux.`,
+        legend: `modélisation 3D de mon skin Minecraft. Utilisez la souris (ou le tactile) pour faire pivoter le modèle.`,
         support: `mc`
     }
 }
