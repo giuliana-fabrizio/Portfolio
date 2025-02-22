@@ -42,6 +42,7 @@ const home_btn = "Accueil";
 const academic_training_btn = "Formations";
 const experiences_btn = "Expériences";
 const projects_btn = "Projets";
+const interests_btn = "Intérêts";
 
 /* ***************************************************************** home page ***************************************************************** */
 
@@ -413,7 +414,33 @@ const experiences = {
 }
 
 
-/* ***************************************************************** experiences page ***************************************************************** */
+/* ***************************************************************** not found page ***************************************************************** */
+
+const interests_page_title = "MES CENTRES D'INTÉRÊT";
+
+const interests = {
+    sport: {
+        title: `Activité sportive`,
+        description: `Depuis 2010, je pratique la natation. D’abord membre d’un club durant mon enfance, je continue aujourd’hui à nager de manière occasionnelle. Par ailleurs, j’aime explorer de nouveaux lieux et admirer leurs paysages. Bonne marcheuse, je fais régulièrement des randonnées, une activité qui me permet de relever de nouveaux défits tout en faisant de belles découvertes.`
+    },
+    modeling: {
+        title: `Modélisation 3D`,
+        description: `C’est en discutant avec ma famille d’un projet de réaménagement que j’ai décidé de me lancer dans la modélisation 3D. C’est ainsi que j’ai découvert le logiciel Sweet Home 3D. Avec cet outil, j’ai d’abord imaginé un nouvel agencement pour une pièce de la maison avant de reproduire un studio dans lequel j’ai vécu et que je trouvais particulièrement esthétique.`,
+        support: `modelling`
+    },
+    sewing: {
+        title: `Couture`,
+        description: `Dès mon plus jeune âge, j’ai découvert la couture grâce à ma grand-mère, ancienne couturière. J’ai commencé par confectionner des vêtements pour mes poupées avant de réaliser aujourd’hui des objets pratiques dans mon quotidien : housses de protection pour batterie, sac à main, trousses à stylos...`
+    },
+    gaming: {
+        title: `Jeux vidéos`,
+        description: `C’est durant mon BUT Informatique à Belfort que des amis m’ont initiée aux jeux vidéo. Cependant, n’étant pas une grande joueuse, je me consacre principalement à Minecraft. Ce que j’apprécie particulièrement dans ce jeu, c’est la diversité des mods disponibles, qui permettent de renouveler l’expérience en introduisant de nouveaux mondes, personnages, créatures et matériaux.`,
+        support: `mc`
+    }
+}
+
+
+/* ***************************************************************** not found page ***************************************************************** */
 
 const not_found_title = "PAGE NON TROUVÉE";
 
@@ -424,6 +451,7 @@ module.exports = {
     academic_training_btn: academic_training_btn,
     experiences_btn: experiences_btn,
     projects_btn: projects_btn,
+    interests_btn: interests_btn,
     status: status,
     about_me_title: about_me_title,
     about_me: about_me,
@@ -453,5 +481,7 @@ module.exports = {
     degrees: degrees,
     certifications_title: certifications_title,
     certifications: certifications,
+    interests_page_title: interests_page_title,
+    interests: interests,
     not_found_title: not_found_title
 }
