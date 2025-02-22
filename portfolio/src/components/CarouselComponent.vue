@@ -5,7 +5,7 @@
                 v-for="(image, key) in images"
                 :key="key"
                 :class="['carousel-item', key === 0 ? 'active' : '']">
-                <img :src="image" alt="Image" class="d-block w-100" style="height: 300px;">
+                <img :src="image" alt="Image" class="carousel-img d-block img-fluid w-100">
             </div>
         </div>
         <button
@@ -37,3 +37,10 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.carousel-img {
+    height: 300px;
+    object-fit: cover;
+}
+</style>
