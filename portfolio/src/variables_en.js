@@ -15,6 +15,11 @@ const mooc_gdp_logo = require("../public/images/degrees/mooc_gdp.png");
 const natural_solutions_logo = require("../public/images/experiences/natural_solutions.png");
 const u_express_logo = require("../public/images/experiences/u_express.png");
 
+const carousel_1 = require("../public/images/interests/carousel-1.jpg");
+const carousel_2 = require("../public/images/interests/carousel-2.png");
+const carousel_3 = require("../public/images/interests/carousel-3.jpg");
+// const image_sewing = require("../public/images/interests/sewing.png");
+
 
 /* ***************************************************************** common ***************************************************************** */
 
@@ -42,17 +47,15 @@ const home_btn = "Accueil";
 const academic_training_btn = "Formations";
 const experiences_btn = "Expériences";
 const projects_btn = "Projets";
+const interests_btn = "Intérêts";
 
 /* ***************************************************************** home page ***************************************************************** */
 
 const status = "Étudiante en informatique";
 
 const about_me_title = "À propos de moi";
-const about_me = `Agée de ${age} ans, je suis actuellement étudiante en première année du cycle ingénieur à l'<a href="https://www.utbm.fr/formations/ingenieur/informatique/" target="_blank">UTBM</a>. Passionnée par l'informatique, je cherche constamment à me perfectionner. J'apprécie tout particulièrement la conception et l'optimisation de projets, avec pour objectif de répondre au mieux aux besoins des utilisateurs. Actuellement, j'ambitionne de me spécialiser dans le domaine du traitement des données massives et de l'intelligence artificielle.`;
-const my_projects = "Consulter mes projets";
-
-const hobbies_title = "Loisirs";
-const hobbies = "Durant mon temps libre, j'aime beaucoup faire de la natation ou des randonnées. Je consacre également du temps à mes projets personnels dans le domaine informatique. Par ailleurs, j’apprécie jouer à des jeux vidéo avec mes amis ou m’adonner à la couture : j’ai notamment confectionné des trousses pour ranger mes stylos et divers petits objets.";
+const about_me = `Âgée de ${age} ans, je suis actuellement étudiante en première année du cycle ingénieur en informatique à l'<a href="https://www.utbm.fr/formations/ingenieur/informatique/" target="_blank">UTBM</a>. Passionnée par cette discipline, je cherche constamment à me perfectionner. Pour cela, je réalise régulièrement des projets personnels en imaginant moi-même un besoin, ce qui me permet d’expérimenter différentes approches et technologies.\n
+J'apprécie tout particulièrement concevoir et optimiser des solutions afin de proposer des outils performants et adaptés aux besoins des utilisateurs. Actuellement, j'ambitionne de me spécialiser dans le domaine du traitement des données massives et de l'intelligence artificielle.`;
 const download_cv = "Télécharger mon CV";
 
 
@@ -132,7 +135,7 @@ const projects = {
             title: `Présentation`,
             text: `En troisième année de BUT Informatique, j'ai effectué un stage de trois mois chez <span style='color:red;'><strong>Natural Solutions</strong></span>, une entreprise basée à Marseille. Cette dernière a pour vocation de mettre la technologie au service de la biodiversité en concevant des outils destinés aux acteurs environnementaux et aux associations. Ces outils prennent principalement la forme d'applications Web et mobiles.\n
             L'équipe que j'ai intégrée était composée :
-            <ul><li>de deux autres développeurs ;</li><li>d'un chef de projet ;</li><li>d'une designeuse.</li></ul>
+            <ul><li>de deux autres développeurs ;</li><li>d'un chef de projet ;</li><li>d'une désigneuse.</li></ul>
             Nous avons travaillé sur un projet pour <a href="https://www.wingsoftheocean.com/" target="blank" style='color:green;'><strong>Wings of Ocean</strong></a>, une association dédiée à la préservation de l'environnement. Notre mission consistait à développer une plateforme dédiée à la gestion de ramassage de déchets.\n
             Durant ce stage, mon objectif était de <span style='color:blue;'><strong>contribuer activement au développement de ce projet</strong></span>, nommé DepollutionMap.`
         },
@@ -145,7 +148,7 @@ const projects = {
             title: `Mise en œuvre`,
             section_1: `<h4 style='color:black;'><strong>Carte de la page d'accueil</strong></h4>
             Chaque ramassage organisé par Wings of Ocean est associé à un formulaire où les participants saisissent des données sur les déchets collectés (nombre, poids, volume). Ces formulaires passent par quatre états : à faire, en cours, en attente de validation, et validé (lequel indique que les données sont correctes et que le ramassage est terminé). Mon rôle a été d'afficher les <span style='color:red'><strong>ramassages terminés</strong></span> sur une carte du monde et de permettre aux utilisateurs de les filtrer selon plusieurs critères (date, localisation, partenaires...).\n
-            J'ai d'abord récupéré les ramassages ayant un formulaire validé grâce à une requête <span style='color:blue;'><strong>${technos.graphql.name}</strong></span>. Ensuite je les ai positionnés sur une carte à l’aide de leurs points de départ. Plutôt que d’utiliser des marqueurs simples, j’ai implémenté une <span style='color:green'><strong>clusterisation</strong></span> pour regrouper les ramassages selon le niveau de zoom. Pour cela, je me suis appuyée sur la bibliothèque <span style='color: blue;'><strong>react-map-gl</strong></span>. Chaque cluster affiche le nombre de collectes qu'il contient, et un clic dessus recentre et zoome la carte.\n
+            J'ai d'abord récupéré les ramassages ayant un formulaire validé grâce à une requête <span style='color:blue;'><strong>${technos.graphql.name}</strong></span>. Ensuite, je les ai positionnés sur une carte à l’aide de leurs points de départ. Plutôt que d’utiliser des marqueurs simples, j’ai implémenté une <span style='color:green'><strong>clusterisation</strong></span> pour regrouper les ramassages selon le niveau de zoom. Pour cela, je me suis appuyée sur la bibliothèque <span style='color: blue;'><strong>react-map-gl</strong></span>. Chaque cluster affiche le nombre de collectes qu'il contient, et un clic, dessus, recentre et zoome sur la carte.\n
             Un clic sur un ramassage affiche une popup (réalisée avec <span style='color:red;'><strong>Material UI</strong></span>) contenant son nom, sa localisation, sa date et une photo. Un bouton permet d’accéder à plus d'informations sur une page dédiée.`,
             images_1: [
                 {
@@ -155,7 +158,7 @@ const projects = {
             ],
             section_2: `<h4 style='color:black;'><strong>Mise en place des filtres</strong></h4>
             J'ai ajouté un bouton « Filtres » sur la carte, qui ouvre une popup. Pour rendre cette popup réutilisable sur d'autres pages, j'ai regroupé son code dans un fichier commun.\n
-            J'ai d'abord écrit des requêtes pour récupérer les données de filtrages depuis la base de données. Ensuite, j'ai utilisé la bibliothèque <span style='color:green;'><strong>Material UI</strong></span> pour concevoir la popup en suivant les maquettes fournies par la <span style='color:red;'><strong>designeuse</strong></span>.\n
+            J'ai d'abord écrit des requêtes pour récupérer les données de filtrages depuis la base de données. Ensuite, j'ai utilisé la bibliothèque <span style='color:green;'><strong>Material UI</strong></span> pour concevoir la popup en suivant les maquettes fournies par la <span style='color:red;'><strong>désigneuse</strong></span>.\n
             Lorsque l’utilisateur valide des filtres, ils sont intégrés à l’URL. Tous les ramassages terminés étant déjà stockés dans un tableau en mémoire, les filtres de l’URL sont appliqués directement à ce tableau <span style='color:blue;'><strong>côté client</strong></span> (dans le navigateur). Les résultats filtrés sont enregistrés dans un second tableau, qui sert à afficher les ramassages correspondants sur la carte. Chaque modification des filtres met à jour ce tableau.\n\n`,
             section_3: `<h4 style='color:black;'><strong>Dashboard</strong></h4>
             Pour générer des statistiques sur les ramassages terminés, j'ai d'abord écrit des requêtes ${technos.graphql.name} que j'ai testées avec l'interface d'${technos.hasura.name}.\n
@@ -205,11 +208,11 @@ const projects = {
             Le frontend devant afficher les informations de la base de données sous forme de graphiques et de statistiques, j’ai commencé par identifier les données pertinentes à présenter, puis imaginé différentes façons de les visualiser.\n
             J’ai d’abord travaillé sur l’API en utilisant la dépendance "express" de ${technos.node_js.name}, qui simplifie la création d’un serveur. Une fois celui-ci en place, j’ai établi une connexion avec la base de données ${technos.mongo.name}, créée par un camarade, afin d’en extraire les informations nécessaires. Avant de passer au frontend, j’ai réalisé des tests unitaires pour m’assurer que les méthodes de l’API fonctionnaient correctement.\n
             Pour le frontend, j'ai commencé par assurer la connexion avec l’API puis j'ai opté pour la bibliothèque "Vue chartjs" qui permet de faire des graphiques dynamiques.\n
-            Avant de passer au développement du serveur d'analyse, j'ai permit le déploiement de l'API avec ${technos.docker.name}.`,
+            Avant de passer au développement du serveur d'analyse, j'ai permis le déploiement de l'API avec ${technos.docker.name}.`,
             images: [
                 {
                     path: sae_s5_image2,
-                    legend: `Figure 3 : Graphiques du frontend (données de tests)`
+                    legend: `Figure 2 : graphiques du frontend (données de tests)`
                 },
             ],
             section_3: `\n<h4 style='color:black;'><strong>Développement du serveur d'analyse</strong></h4>
@@ -231,7 +234,7 @@ const projects = {
             title: `Présentation`,
             text: `Au cours de ma deuxième année en BUT Informatique, j'ai effectué un stage de trois mois (avril - juin 2023) au sein de <span style='color:red;'><strong>Natural Solutions</strong></span>, une entreprise du secteur numérique basée à Marseille.\n
             Chaque mois, l'entreprise doit établir des devis et des factures pour ses clients. Pour simplifier ce processus, un stagiaire avait été recruté en 2021 pour mettre en place l’Outil Facturation, réalisé en <span style='color:blue'><strong>${technos.js.name}</strong></span>, <span style='color:blue'><strong>${technos.node_js.name}</strong></span> et <span style='color:blue'><strong>${technos.react_js.name}</strong></span>.\n
-            Ma mission était de corriger les problèmes existants, d'améliorer les fonctionnalités déjà en place et d'en ajouter de nouvelles. Parmi les tâches qui m'ont été confiées, figuraient la mise en place de la base de données (BDD), la modification du principe de sélection des projets et la génération de documents.\n
+            Ma mission était de corriger les problèmes existants, d'améliorer les fonctionnalités déjà en place et d'en ajouter de nouvelles. Parmi les tâches qui m'ont été confiées, figurait la mise en place de la base de données (BDD), la modification du principe de sélection des projets et la génération de documents.\n
             Bien que j'ai travaillé seule sur ce projet, j'ai pu solliciter mon maître de stage en cas de besoin.`
         },
         organization_of_work: {
@@ -257,7 +260,7 @@ const projects = {
             images_2: [
                 {
                     path: sae_s4_image,
-                    legend: `Figure 2 : Principe de sélection des projets`
+                    legend: `Figure 2 : principe de sélection des projets`
                 }
             ],
             section_3: `\n<h4 style='color:black;'><strong>Génération de documents</strong></h4>
@@ -275,7 +278,7 @@ const projects = {
         technologies: [technos.gitlab, technos.js, technos.node_js, technos.postgresql, technos.react_js, technos.sequelize, technos.scrum]
     },
     sae_101_102: {
-        title: `SAE 101-102`,
+        title: `SAÉ 101-102`,
         category: categories.academic,
         instructions: {
             title: `Consignes`,
@@ -296,7 +299,7 @@ const projects = {
             images: [
                 {
                     path: sae_101_102_image,
-                    legend: `Figure 1 : Plateau de jeu`
+                    legend: `Figure 1 : plateau de jeu`
                 }
             ],
         },
@@ -413,7 +416,41 @@ const experiences = {
 }
 
 
-/* ***************************************************************** experiences page ***************************************************************** */
+/* ***************************************************************** not found page ***************************************************************** */
+
+const interests_page_title = "MES CENTRES D'INTÉRÊT";
+
+const interests = {
+    1: {
+        title: `Activité sportive & voyages`,
+        description: `Depuis 2010, je pratique la natation. D’abord membre d’un club durant mon enfance, je continue aujourd’hui à nager de manière occasionnelle. Par ailleurs, j’aime explorer de nouveaux lieux et admirer leurs paysages. Bonne marcheuse, je fais régulièrement des randonnées, une activité qui me permet de relever de nouveaux défis tout en faisant de belles découvertes.`,
+        legend: 'images prises lors de mes randonnées et/ou voyages',
+        images: [carousel_1, carousel_2, carousel_3],
+        support: `carousel`
+    },
+    2: {
+        title: `Modélisation 3D`,
+        description: `C’est en discutant avec ma mère d’un projet de réaménagement que j’ai décidé de me lancer dans la modélisation 3D. C’est ainsi que j’ai découvert le logiciel Sweet Home 3D. Avec cet outil, j’ai d’abord imaginé un nouvel agencement pour une pièce de la maison avant de reproduire un studio dans lequel j’ai vécu et que je trouvais particulièrement esthétique.`,
+        legend: `modélisation 3D d’un studio réalisée avec Sweet Home 3D. Utilisez la souris (ou le tactile) pour zoomer et faire pivoter le modèle.`,
+        support: `modelling`
+    },
+    3: {
+        title: `Couture`,
+        description: `Dès mon plus jeune âge, j’ai découvert la couture grâce à ma grand-mère, ancienne couturière. J’ai commencé par confectionner des vêtements pour mes poupées avant de réaliser aujourd’hui des objets pratiques dans mon quotidien : housses de protection pour batterie, sac à main, trousses à stylos...`,
+        legend: `housse de protection pour batterie externe`,
+        // image: image_sewing,
+        support: `img`
+    },
+    4: {
+        title: `Jeux vidéo`,
+        description: `C’est durant mon BUT Informatique à Belfort que des amis m’ont initiée aux jeux vidéo. Cependant, n’étant pas une grande joueuse, je me consacre principalement à Minecraft. Ce que j’apprécie particulièrement dans ce jeu, c’est la diversité des mods disponibles, qui permettent de renouveler l’expérience en introduisant de nouveaux mondes, personnages, créatures et matériaux.`,
+        legend: `modélisation 3D de mon skin Minecraft. Utilisez la souris (ou le tactile) pour faire pivoter le modèle.`,
+        support: `mc`
+    }
+}
+
+
+/* ***************************************************************** not found page ***************************************************************** */
 
 const not_found_title = "PAGE NON TROUVÉE";
 
@@ -424,12 +461,10 @@ module.exports = {
     academic_training_btn: academic_training_btn,
     experiences_btn: experiences_btn,
     projects_btn: projects_btn,
+    interests_btn: interests_btn,
     status: status,
     about_me_title: about_me_title,
     about_me: about_me,
-    my_projects: my_projects,
-    hobbies_title: hobbies_title,
-    hobbies: hobbies,
     download_cv: download_cv,
     link_cv: link_cv,
     mail: mail,
@@ -453,5 +488,7 @@ module.exports = {
     degrees: degrees,
     certifications_title: certifications_title,
     certifications: certifications,
+    interests_page_title: interests_page_title,
+    interests: interests,
     not_found_title: not_found_title
 }
