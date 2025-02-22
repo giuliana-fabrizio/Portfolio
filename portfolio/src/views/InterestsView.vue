@@ -6,7 +6,7 @@
             </section>
         </header>
 
-        <main id="interests_main" class="pb-5">
+        <main id="interests_main" class="pb-5 pt-2">
             <div
                 v-for="(interest, key) in interests"
                 :key="key"
