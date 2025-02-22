@@ -429,10 +429,10 @@ const interests = {
         support: `carousel`
     },
     2: {
-        title: `Modélisation 3D`,
-        description: `C’est en discutant avec ma mère d’un projet de réaménagement que j’ai décidé de me lancer dans la modélisation 3D. C’est ainsi que j’ai découvert le logiciel Sweet Home 3D. Avec cet outil, j’ai d’abord imaginé un nouvel agencement pour une pièce de la maison avant de reproduire un studio dans lequel j’ai vécu et que je trouvais particulièrement esthétique.`,
-        legend: `modélisation 3D d’un studio réalisée avec Sweet Home 3D. Utilisez la souris (ou le tactile) pour zoomer et faire pivoter le modèle.`,
-        support: `modelling`
+        title: `Jeux vidéo`,
+        description: `C’est durant mon BUT Informatique à Belfort que des amis m’ont initiée aux jeux vidéo. Cependant, n’étant pas une grande joueuse, je me consacre principalement à Minecraft. Ce que j’apprécie particulièrement dans ce jeu, c’est la diversité des mods disponibles, qui permettent de renouveler l’expérience en introduisant de nouveaux mondes, personnages, créatures et matériaux.`,
+        legend: `modélisation 3D de mon skin Minecraft. Utilisez la souris (ou le tactile) pour faire pivoter le modèle.`,
+        support: `mc`
     },
     3: {
         title: `Couture`,
@@ -442,10 +442,10 @@ const interests = {
         support: `img`
     },
     4: {
-        title: `Jeux vidéo`,
-        description: `C’est durant mon BUT Informatique à Belfort que des amis m’ont initiée aux jeux vidéo. Cependant, n’étant pas une grande joueuse, je me consacre principalement à Minecraft. Ce que j’apprécie particulièrement dans ce jeu, c’est la diversité des mods disponibles, qui permettent de renouveler l’expérience en introduisant de nouveaux mondes, personnages, créatures et matériaux.`,
-        legend: `modélisation 3D de mon skin Minecraft. Utilisez la souris (ou le tactile) pour faire pivoter le modèle.`,
-        support: `mc`
+        title: `Modélisation 3D`,
+        description: `C’est en discutant avec ma mère d’un projet de réaménagement que j’ai décidé de me lancer dans la modélisation 3D. C’est ainsi que j’ai découvert le logiciel Sweet Home 3D. Avec cet outil, j’ai d’abord imaginé un nouvel agencement pour une pièce de la maison avant de reproduire un studio dans lequel j’ai vécu et que je trouvais particulièrement esthétique.`,
+        legend: `modélisation 3D d’un studio réalisée avec Sweet Home 3D. Utilisez la souris (ou le tactile) pour zoomer et faire pivoter le modèle.`,
+        support: `modelling`
     }
 }
 
