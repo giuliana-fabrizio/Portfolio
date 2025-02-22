@@ -7,12 +7,23 @@
         </header>
 
         <main id="interests_main" class="pb-5">
-            <div v-for="(interest, key) in interests" :key="key" class="align-items-center gx-5 mb-5 row">
+            <div
+                v-for="(interest, key) in interests"
+                :key="key"
+                class="align-items-center gx-5 mb-5 row">
                 <div v-if="key % 2 == 1" class="col-12 col-md-6">
                     <h5 class="subtitle mb-2 text-start"><strong>{{ interest.title }}</strong></h5>
                     <p class="text-start">{{ interest.description }}</p>
                 </div>
                 <div class="col-12 col-md-6 m-0 p-0">
+                    <CarouselComponent
+                        v-if="interest.support == 'carousel'"
+                        :images="interest.images"
+                    />
+                    <img
+                        v-if="interest.support == 'img'"
+                        :src="interest.image"
+                        style="max-height: 350px;">
                     <MinecraftComponent v-if="interest.support == 'mc'" />
                     <ModellingComponent
                         v-if="interest.support == 'modelling'"
@@ -31,7 +42,9 @@
                             windowWidth >= 576 ? 270 : 0
                         "
                     />
-                    <p class="fst-italic text-secondary">Figure {{ key }} : {{ interest.legend }}</p>
+                    <p class="fst-italic mt-3 text-secondary">
+                        Figure {{ key }} : {{ interest.legend }}
+                    </p>
                 </div>
                 <div v-if="key % 2 == 0" class="col-12 col-md-6">
                     <h5 class="subtitle mb-2 text-start"><strong>{{ interest.title }}</strong></h5>
@@ -46,6 +59,7 @@
 import variables_fr from '@/variables_fr';
 import variables_en from '@/variables_en';
 
+import CarouselComponent from '@/components/CarouselComponent.vue';
 import MinecraftComponent from '@/components/MinecraftComponent.vue';
 import ModellingComponent from '@/components/ModellingComponent.vue';
 
@@ -53,6 +67,7 @@ export default {
     name: 'InterestsView',
 
     components: {
+        CarouselComponent,
         MinecraftComponent,
         ModellingComponent
     },
