@@ -6,7 +6,7 @@
             </section>        
         </header>
 
-        <main id="degrees_main" class="pb-5">
+        <main id="degrees_main" class="pb-5 pt-2">
             <div class="align-items-center gx-md-5 p-1 row">
                 <div class="card_degrees_experiences card col-12 col-md-6 col-xl-5 col-xxl-4">
                     <div class="align-items-center d-flex justify-content-between justify-content-md-center mb-3 mt-3">
