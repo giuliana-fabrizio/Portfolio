@@ -8,6 +8,9 @@
 
         <main id="interests_main" class="pb-5">
             <div v-for="(interest, key) in interests" :key="key" class="align-items-center gx-5 mb-5 row">
+                <div v-if="interest.support == 'mc'" class="col-12 col-md-6">
+                    <MinecraftComponent />
+                </div>
                 <div class="col-12 col-md-6">
                     <h5 class="subtitle mb-2 text-start"><strong>{{ interest.title }}</strong></h5>
                     <p class="text-start">{{ interest.description }}</p>
@@ -21,8 +24,14 @@
 import variables_fr from '@/variables_fr';
 import variables_en from '@/variables_en';
 
+import MinecraftComponent from '@/components/MinecraftComponent.vue';
+
 export default {
     name: 'InterestsView',
+
+    components: {
+        MinecraftComponent,
+    },
 
     data: () => ({
         title: "",
