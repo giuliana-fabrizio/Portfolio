@@ -281,7 +281,7 @@ const projects = {
         technologies: [technos.gitlab, technos.js, technos.node_js, technos.postgresql, technos.react_js, technos.sequelize, technos.scrum]
     },
     sae_101_102: {
-        title: `SAE 101-102`,
+        title: `SAÉ 101-102`,
         category: categories.academic,
         instructions: {
             title: `Consignes`,
@@ -440,7 +440,7 @@ const interests = {
     3: {
         title: `Couture`,
         description: `Dès mon plus jeune âge, j’ai découvert la couture grâce à ma grand-mère, ancienne couturière. J’ai commencé par confectionner des vêtements pour mes poupées avant de réaliser aujourd’hui des objets pratiques dans mon quotidien : housses de protection pour batterie, sac à main, trousses à stylos...`,
-        legend: `housse de protection pour batterie externe.`,
+        legend: `housse de protection pour batterie externe`,
         // image: image_sewing,
         support: `img`
     },
