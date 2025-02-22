@@ -54,11 +54,8 @@ const interests_btn = "Intérêts";
 const status = "Étudiante en informatique";
 
 const about_me_title = "À propos de moi";
-const about_me = `Agée de ${age} ans, je suis actuellement étudiante en première année du cycle ingénieur à l'<a href="https://www.utbm.fr/formations/ingenieur/informatique/" target="_blank">UTBM</a>. Passionnée par l'informatique, je cherche constamment à me perfectionner. J'apprécie tout particulièrement la conception et l'optimisation de projets, avec pour objectif de répondre au mieux aux besoins des utilisateurs. Actuellement, j'ambitionne de me spécialiser dans le domaine du traitement des données massives et de l'intelligence artificielle.`;
-const my_projects = "Consulter mes projets";
-
-const hobbies_title = "Loisirs";
-const hobbies = "Durant mon temps libre, j'aime beaucoup faire de la natation ou des randonnées. Je consacre également du temps à mes projets personnels dans le domaine informatique. Par ailleurs, j’apprécie jouer à des jeux vidéo avec mes amis ou m’adonner à la couture : j’ai notamment confectionné des trousses pour ranger mes stylos et divers petits objets.";
+const about_me = `Âgée de ${age} ans, je suis actuellement étudiante en première année du cycle ingénieur en informatique à l'<a href="https://www.utbm.fr/formations/ingenieur/informatique/" target="_blank">UTBM</a>. Passionnée par cette discipline, je cherche constamment à me perfectionner. Pour cela, je réalise régulièrement des projets personnels en imaginant moi-même un besoin, ce qui me permet d’expérimenter différentes approches et technologies.\n
+J'apprécie tout particulièrement concevoir et optimiser des solutions afin de proposer des outils performants et adaptés aux besoins des utilisateurs. Actuellement, j'ambitionne de me spécialiser dans le domaine du traitement des données massives et de l'intelligence artificielle.`;
 const download_cv = "Télécharger mon CV";
 
 
@@ -468,9 +465,6 @@ module.exports = {
     status: status,
     about_me_title: about_me_title,
     about_me: about_me,
-    my_projects: my_projects,
-    hobbies_title: hobbies_title,
-    hobbies: hobbies,
     download_cv: download_cv,
     link_cv: link_cv,
     mail: mail,

@@ -18,16 +18,6 @@
                 <section id="formation" class="mb-5 text-center">
                     <h5 class="mb-3"><strong>{{ about_me_title }}</strong></h5>
                     <p class="mb-4" v-html="formattedText(about_me)"></p>
-
-                    <a class="btn btn-outline-primary rounded-pill w-30" href="/Portfolio/#/all_projects" role="button">
-                        {{ my_projects }}
-                        <i class="bi bi-arrow-right-circle"></i>
-                    </a>
-                </section>
-
-                <section id="loisirs" class="mb-5 text-center">
-                    <h5 class="mb-3"><strong>{{ hobbies_title }}</strong></h5>
-                    <p>{{ hobbies }}</p>
                 </section>
 
                 <div class="text-center">
@@ -63,9 +53,6 @@ export default {
         status: "",
         about_me_title: "",
         about_me: "",
-        my_projects: "",
-        hobbies_title: "",
-        hobbies: "",
         download_cv: "",
         link_cv: ""
     }),
@@ -95,10 +82,6 @@ export default {
 
             this.about_me_title = isFrench ? variables_fr.about_me_title : variables_en.about_me_title;
             this.about_me = isFrench ? variables_fr.about_me : variables_en.about_me;
-            this.my_projects = isFrench ? variables_fr.my_projects : variables_en.my_projects;
-
-            this.hobbies_title = isFrench ? variables_fr.hobbies_title : variables_en.hobbies_title;
-            this.hobbies = isFrench ? variables_fr.hobbies : variables_en.hobbies;
 
             this.link_cv = isFrench ? variables_fr.link_cv : variables_en.link_cv;
             this.download_cv = isFrench ? variables_fr.download_cv : variables_en.download_cv;
