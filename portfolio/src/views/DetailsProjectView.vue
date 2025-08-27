@@ -1,15 +1,13 @@
 <template>
-    <div>
+    <div class="container pe-5 ps-5">
         <TitleComponent :title="project?.title" />
-        <main class="d-flex justify-content-center pb-5 pt-2">
-            <div class="col-md-8">
+        <main class="pb-5 pt-2">
                 <section v-for="(elem, elem_key) in project" :key="elem_key" class="col-12">
                     <DetailsElemComponent :elem="elem" type="h3" />
                     <div v-for="(section, section_key) in elem.sections" :key="section_key">
                         <DetailsElemComponent :elem="section" type="h5" />
                     </div>
                 </section>
-            </div>
         </main>
         <TopButtonComponent />
     </div>

@@ -25,7 +25,7 @@ export default {
     name: 'DetailsElem',
 
     props: {
-        elem: Object,
+        elem: undefined,
         type: String
     },
 
