@@ -1,12 +1,8 @@
 <template>
     <div class="container">
-        <header id="experiences_header">
-            <section id="titre" class="w-100">
-                <h1 class="mb-4 mt-3 text-primary">{{ experiences_page_title }}</h1>
-            </section>
-        </header>
+        <TitleComponent :title="experiences_page_title" />
 
-        <main id="experiences_main" class="pb-5 pt-2">
+        <main class="pb-5 pt-2">
             <div
                 v-for="(experience, key, pos) in experiences"
                 :key="key"
@@ -37,12 +33,14 @@ import variables_fr from '../variables_fr.js';
 import variables_en from '../variables_en.js';
 
 import CardExperienceComponent from '../components/CardExperienceComponent.vue';
+import TitleComponent from '../components/TitleComponent.vue';
 
 export default {
     name: 'ExperiencesView',
 
     components: {
-        CardExperienceComponent
+        CardExperienceComponent,
+        TitleComponent
     },
 
     data: () => ({

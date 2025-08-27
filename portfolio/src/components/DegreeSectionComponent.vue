@@ -3,6 +3,11 @@
         <h5><strong class="subtitle">{{ title }}</strong></h5>
         <div v-for="(item, key) in items" :key="key" class="col-6 col-lg-4 mt-3">
             <div @click="toggleFlip(key)" class="card p-1" role="button" style="height: 200px;">
+
+                <div :class="[flippedCards[key] ? 'd-none' : 'd-block', 'me-1', 'position-relative']">
+                    <i class="bi bi-journal-text position-absolute text-secondary icon-degree-details"></i>
+                </div>
+
                 <div :class="[{ flipped: flippedCards[key] }, 'flip-inner', 'my-auto']">
 
                     <!-- Front -->

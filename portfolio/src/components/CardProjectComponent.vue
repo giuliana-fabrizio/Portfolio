@@ -10,7 +10,7 @@
 
             <p
                 class="text-secondary mb-3 d-xl-block"
-                v-html="formattedText(truncatedInstructions(project.instructions.text))">
+                v-html="formattedText(truncatedIntroduction(project.introduction.text))">
             </p>
         </div>
         <div class="card-footer bg-light border-0 mb-1">
@@ -48,9 +48,9 @@ export default {
     },
 
     methods: {
-        truncatedInstructions(instructions) {
+        truncatedIntroduction(introduction) {
             const maxLength = this.projects_len <= 2 ? 175 : 100;
-            return instructions.substring(0, maxLength) + '...';
+            return introduction.substring(0, maxLength) + '...';
         },
         formattedText(text) {
             if (!text) return '';

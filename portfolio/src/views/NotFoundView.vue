@@ -1,12 +1,8 @@
 <template>
     <div>
-        <header id="not_found_header" style="position: relative;">
-            <section id="titre" class="container" style="position: relative; z-index: 1;">
-                <h1 class="text-primary mt-3">{{ not_found_title }}</h1>
-            </section>
-        </header>
+        <TitleComponent :title="not_found_title" />
 
-        <main id="not_found_main" class="d-flex justify-content-center">
+        <main class="d-flex justify-content-center">
             <div class="col-sm-12 col-md-12 mb-5">
                 <svg width="69%" height="auto" viewBox="0 0 636 324" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="OBJECTS">
@@ -331,8 +327,14 @@ import anime from 'animejs/lib/anime.es.js';
 import variables_fr from '../variables_fr.js';
 import variables_en from '../variables_en.js';
 
+import TitleComponent from '../components/TitleComponent.vue';
+
 export default {
     name: 'NotFoundView',
+
+    components: {
+        TitleComponent
+    },
 
     data: () => ({
         not_found_title: ""

@@ -1,12 +1,8 @@
 <template>
     <div class="container">
-        <header id="interests_header">
-            <section id="titre" class="w-100">
-                <h1 class="mb-4 mt-3 text-primary">{{ title }}</h1>
-            </section>
-        </header>
+        <TitleComponent :title="title" />
 
-        <main id="interests_main" class="pb-5 pt-2">
+        <main class="pb-5 pt-2">
             <div
                 v-for="(interest, key) in interests"
                 :key="key"
@@ -70,6 +66,7 @@ import variables_en from '@/variables_en';
 import CarouselComponent from '@/components/CarouselComponent.vue';
 import MinecraftComponent from '@/components/MinecraftComponent.vue';
 import ModellingComponent from '@/components/ModellingComponent.vue';
+import TitleComponent from '../components/TitleComponent.vue';
 
 export default {
     name: 'InterestsView',
@@ -77,7 +74,8 @@ export default {
     components: {
         CarouselComponent,
         MinecraftComponent,
-        ModellingComponent
+        ModellingComponent,
+        TitleComponent
     },
 
     data: () => ({

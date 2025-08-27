@@ -19,7 +19,7 @@ body {
     color: #555;
 }
 
-.card_degrees_experiences {
+.card-degrees-experiences {
     background: linear-gradient(45deg, #cbe0fe, #f0f6fe);
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
 }
@@ -188,6 +188,24 @@ footer {
 
 /* ***************************************************************** degrees page ************************************************************* */
 
+@keyframes display_career {
+    from {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.display-career {
+    display: block !important;
+    animation: display_career 1s ease-out forwards;
+}
+
+
 .flip-inner {
     transition: transform 0.9s;
     transform-style: preserve-3d;
@@ -206,6 +224,10 @@ footer {
     max-height: 160px;
     overflow: auto;
     transform: rotateY(180deg);
+}
+
+.icon-degree-details {
+    right: 0;
 }
 
 

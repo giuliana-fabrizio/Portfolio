@@ -1,13 +1,9 @@
 <template>
     <div class="container">
-        <header id="all_projects_header">
-            <section id="titre" class="w-100">
-                <h1 class="mb-4 mt-3 text-primary">{{ title }}</h1>
-                <p class="text-secondary">{{introText}}</p>
-            </section>
-        </header>
+        <TitleComponent :title="title" />
+        <p class="text-secondary">{{introText}}</p>
 
-        <main id="all_projects_main" class="pb-5">
+        <main class="pb-5">
             <FilterProjectsComponent
                 :categories_props="categories"
                 :technos_props="technos"
@@ -43,17 +39,19 @@ import { Tooltip } from 'bootstrap';
 import variables_fr from '../variables_fr.js';
 import variables_en from '../variables_en.js';
 
-import FilterProjectsComponent from '@/components/FilterProjectsComponent.vue';
-import TopButtonComponent from '@/components/TopButtonComponent.vue';
 import CardProjectComponent from '@/components/CardProjectComponent.vue';
+import FilterProjectsComponent from '@/components/FilterProjectsComponent.vue';
+import TitleComponent from '../components/TitleComponent.vue';
+import TopButtonComponent from '@/components/TopButtonComponent.vue';
 
 export default {
     name: 'AllProjectsView',
 
     components: {
+        CardProjectComponent,
         FilterProjectsComponent,
         TopButtonComponent,
-        CardProjectComponent
+        TitleComponent
     },
 
     data: () => ({
