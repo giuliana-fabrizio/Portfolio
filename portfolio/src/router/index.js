@@ -4,7 +4,7 @@ import HomeView from '../views/HomeView.vue';
 import DegreesView from '../views/DegreesView.vue';
 import ExperiencesView from '../views/ExperiencesView.vue';
 import AllProjectsView from '../views/AllProjectsView.vue';
-import DetailsView from '../views/DetailsView.vue';
+import DetailsProjectView from '../views/DetailsProjectView.vue';
 import InterestsView from '@/views/InterestsView.vue';
 import NotFoundView from '../views/NotFoundView.vue';
 
@@ -34,7 +34,7 @@ const routes = [
   {
     path: '/details',
     name: 'details',
-    component: DetailsView,
+    component: DetailsProjectView,
   },
   {
     path: '/interests',

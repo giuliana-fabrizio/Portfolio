@@ -128,6 +128,14 @@ const technos = {
 };
 
 const projects = {
+    utbm_sy43: {
+        title: `Application e-commerce`,
+        category: categories.academic,
+        introduction: {
+            text: ``
+        },
+        technologies: [technos.firebase, technos.github, technos.kotlin, technos.sql, technos.stripe]
+    },
     but_stage_s6: {
         title: `Plateforme de collectes de déchets`,
         category: categories.professional,
@@ -137,41 +145,48 @@ const projects = {
         },
         implementation: {
             title: `Contributions`,
-            section_1: `J'ai travaillé en suivant la méthodologie agile ${technos.scrum.name} pour m'adapter aux besoins évolutifs des clients. Le versioning et la collaboration ont été assurés via ${technos.gitlab.name}.\
-            Concernant le déploiement de l'application, celui-ci a été effectué avec l'aide de ${technos.docker.name}.`,
-            section_2: `<h5 style='color:black;'><strong>Carte de la page d'accueil</strong></h5>\
-            <ul>\
-            <li>Extraction des collectes validées via une requête ${technos.graphql.name} ;</li>\
-            <li>Affichage sur une carte mondiale grâce à leurs coordonnées <em>(react-map-gl)</em> ;</li>\
-            <li>Mise en place d’un système de clusterisation selon le niveau de zoom ;</li>\
-            <li>Ajout de popups interactives (<em>Material UI</em>) présentant les détails de chaque collecte (nom, localisation, date, photo).</li>\
-            </ul>`,
-            images_1: [
+            sections: [
                 {
-                    path: sae_s6_image1,
-                    legend: `Carte interractive`
+                    text: `J'ai travaillé en suivant la méthodologie agile ${technos.scrum.name} pour m'adapter aux besoins évolutifs des clients. Le versioning et la collaboration ont été assurés via ${technos.gitlab.name}.\
+                    Concernant le déploiement de l'application, celui-ci a été effectué avec l'aide de ${technos.docker.name}.`
+                }, {
+                    title: `Carte de la page d'accueil`,
+                    list: [
+                        `Extraction des collectes validées via une requête ${technos.graphql.name} ;`,
+                        `Affichage sur une carte mondiale grâce à leurs coordonnées <em>(react-map-gl)</em> ;`,
+                        `Mise en place d’un système de clusterisation selon le niveau de zoom ;`,
+                        `Ajout de popups interactives (<em>Material UI</em>) présentant les détails de chaque collecte (nom, localisation, date, photo).`,
+                    ],
+                    images: [
+                        {
+                            path: sae_s6_image1,
+                            legend: `Carte interractive`
+                        }
+                    ]
+                }, {
+                    title: `Filtres`,
+                    list: [
+                        `Ajout d’un bouton « Filtres » ouvrant une popup réutilisable (conçue avec <em>Material UI</em>) ;`,
+                        `Requêtes pour récupérer les options de filtrage depuis la base ;`,
+                        `Intégration des filtres à l’URL pour conserver l’état de recherche ;`,
+                        `Application des filtres côté client sur les données en mémoire, avec mise à jour dynamique des résultats affichés sur la carte.`,
+                    ]
+                }, {
+                    title: `Dashboard`,
+                    list: [
+                        `Écriture et test de requêtes ${technos.graphql.name} via ${technos.hasura.name} ;`,
+                        `Récupération des ramassages terminés, puis application des filtres définis dans l’URL côté frontend ;`,
+                        `Transmission des résultats filtrés au backend pour générer les statistiques ;`,
+                        `Intégration du dashboard avec <em>Material UI</em> et un template <em>Materio</em>, adapté pour afficher les données dynamiquement.`,
+                    ],
+                    images: [
+                        {
+                            path: sae_s6_image2,
+                            legend: `Dashboard`
+                        }
+                    ]
                 }
             ],
-            section_3: `<h5 style='color:black;'><strong>Filtres</strong></h5>\
-            <ul>\
-            <li>Ajout d’un bouton « Filtres » ouvrant une popup réutilisable (conçue avec <em>Material UI</em>) ;</li>\
-            <li>Requêtes pour récupérer les options de filtrage depuis la base ;</li>\
-            <li>Intégration des filtres à l’URL pour conserver l’état de recherche ;</li>\
-            <li>Application des filtres côté client sur les données en mémoire, avec mise à jour dynamique des résultats affichés sur la carte.</li>\
-            </ul>`,
-            section_4: `<h5 style='color:black;'><strong>Dashboard</strong></h5>\
-            <ul>\
-            <li>Écriture et test de requêtes ${technos.graphql.name} via ${technos.hasura.name} ;</li>\
-            <li>Récupération des ramassages terminés, puis application des filtres définis dans l’URL côté frontend ;</li>\
-            <li>Transmission des résultats filtrés au backend pour générer les statistiques ;</li>\
-            <li>Intégration du dashboard avec <em>Material UI</em> et un template <em>Materio</em>, adapté pour afficher les données dynamiquement.</li>\
-            </ul>`,
-            images_2: [
-                {
-                    path: sae_s6_image2,
-                    legend: `Dashboard`
-                }
-            ]
         },
         result: {
             title: `Résultat`,
@@ -189,17 +204,15 @@ const projects = {
         objectives: {
             title: `Objectif`,
             text: `Concevoir une application multi-architecture permettant à des scientifiques de réaliser des tests de réflexes.\n
-            L'architecture imposée reposait sur plusieurs composants complémentaires :\
-            <ul>\
-            <li>une <span style='color: #d4d6ff'><strong>application mobile</strong></span> pour capturer et transmettre des images ;</li>\
-            <li>un <span style='color: #e7dec7'><strong>serveur d'analyse</strong></span> pour traiter ces données ;</li>\
-            <li>\
-                un <span style='color: #c5dcf1'><strong>serveur de centralisation</strong></span> pour enregistrer les résultats du serveur d'analyse dans une <span style='color: #fce5cd'><strong>base de données</strong></span>\
-                et gérer les données issues des <span style='color: #fdd9ff'><strong>microcontrôleurs</strong></span> ;\
-            </li>\
-            <li>une interface <span style='color: #f8e0e0'><strong>frontend</strong></span> pour visualiser les résultats ;</li>\
-            <li>une <span style='color: #d9ead3'><strong>API</strong></span> pour assurer les échanges entre serveur, base de données et frontend.</li>
-            </ul>`,
+            L'architecture imposée reposait sur plusieurs composants complémentaires :`,
+            list: [
+                `une <span style='color: #d4d6ff'><strong>application mobile</strong></span> pour capturer et transmettre des images ;`,
+                `un <span style='color: #e7dec7'><strong>serveur d'analyse</strong></span> pour traiter ces données ;`,
+                `un <span style='color: #c5dcf1'><strong>serveur de centralisation</strong></span> pour enregistrer les résultats du serveur d'analyse dans une <span style='color: #fce5cd'><strong>base de données</strong></span>\
+                et gérer les données issues des <span style='color: #fdd9ff'><strong>microcontrôleurs</strong></span> ;`,
+                `une interface <span style='color: #f8e0e0'><strong>frontend</strong></span> pour visualiser les résultats ;`,
+                `une <span style='color: #d9ead3'><strong>API</strong></span> pour assurer les échanges entre serveur, base de données et frontend.`,
+            ],
             images: [
                 {
                     path: sae_s5_image1,
@@ -207,40 +220,53 @@ const projects = {
                 }
             ]
         },
-        organization_of_work: {
+        implementation: {
             title: `Contributions`,
-            section_1: `Nous avons travaillé avec ${technos.gitlab.name} et ${technos.trello.name} afin de faciliter le versioning et la planification des tâches.`,
-            section_2: `\n<h5 style='color:black;'><strong>API et frontend</strong></h5>\
-            <ul>\
-            <li>Développement d'une API avec "express" de ${technos.node_js.name} et connexion à une base de données ${technos.mongo.name} ;</li>\
-            <li>Mise en place de tests unitaires pour valider les méthodes de l'API ;</li>\
-            <li>Création d'un frontend connecté à l'API avec affichage de graphiques dynamiques réalisés grâce à la bibliothèque <em>Vue chartjs</em> ;</li>\
-            <li>Déploiement de l'API avec ${technos.docker.name}.</li>\
-            </ul>`,
-            images_1: [
+            sections: [
                 {
-                    path: sae_s5_image2,
-                    legend: `Exemple de graphiques du frontend (données de test)`
-                },
+                    text: `Nous avons travaillé avec ${technos.gitlab.name} et ${technos.trello.name} afin de faciliter le versioning et la planification des tâches.`
+                }, {
+                    title: `API et frontend`,
+                    list: [
+                        `Développement d'une API avec "express" de ${technos.node_js.name} et connexion à une base de données ${technos.mongo.name} ;`,
+                        `Mise en place de tests unitaires pour valider les méthodes de l'API ;`,
+                        `Création d'un frontend connecté à l'API avec affichage de graphiques dynamiques réalisés grâce à la bibliothèque <em>Vue chartjs</em> ;`,
+                        `Déploiement de l'API avec ${technos.docker.name}.`,
+                    ],
+                    images: [
+                        {
+                            path: sae_s5_image2,
+                            legend: `Exemple de graphiques du frontend (données de test)`
+                        }
+                    ]
+                }, {
+                    title: `Microcontrôleurs`,
+                    list: [
+                        `Rédaction du code Arduino pour faire fonctionner les microcontrôleurs ;`,
+                        `Réalisation de tests manuels ;`,
+                        `Envoie des résultats au serveur de centralisation.`,
+                    ],
+                    images: [
+                        {
+                            path: sae_s5_image3,
+                            legend: `Schématisation des microcontrôleurs`
+                        }
+                    ]
+                }, {
+                    title: `Serveur d'analyse`,
+                    list: [
+                        `Recherche d'une bibliothèque adaptée au traitement d'images ;`,
+                        `Refonte de l'application mobile pour s'adapter aux contraintes de la bibliothèque choisie ;`,
+                        `Développement et connexion du serveur d'analyse avec l'application mobile, accompagnés de tests unitaires.`,
+                    ],
+                    images: [
+                        {
+                            path: sae_s5_image3,
+                            legend: `Schématisation des microcontrôleurs`
+                        }
+                    ]
+                }
             ],
-            section_3: `\n<h5 style='color:black;'><strong>Microcontrôleurs</strong></h5>\
-            <ul>\
-            <li>Rédaction du code Arduino pour faire fonctionner les microcontrôleurs ;</li>\
-            <li>Réalisation de tests manuels ;</li>\
-            <li>Envoie des résultats au serveur de centralisation.</li>\
-            </ul>`,
-            images_2: [
-                {
-                    path: sae_s5_image3,
-                    legend: `Schématisation des microcontrôleurs`
-                },
-            ],
-            section_4: `\n<h5 style='color:black;'><strong>Serveur d'analyse</strong></h5>\
-            <ul>\
-            <li>Recherche d'une bibliothèque adaptée au traitement d'images ;</li>\
-            <li>Refonte de l'application mobile pour s'adapter aux contraintes de la bibliothèque choisie ;</li>\
-            <li>Développement et connexion du serveur d'analyse avec l'application mobile, accompagnés de tests unitaires.</li>\
-            </ul>`
         },
         result: {
             title: `Résultat`,
@@ -258,27 +284,32 @@ const projects = {
         implementation: {
             title: `Mise en œuvre`,
             text: `J'ai travaillé en suivant la méthodologie agile ${technos.scrum.name} pour m'adapter aux besoins évolutifs des clients. Le versioning et la collaboration ont été assurés via ${technos.gitlab.name}.`,
-            section_1: `<h5 style='color:black;'><strong>Base de données</strong></h5>\
-            <ul>\
-                <li>Création du MCD ;</li>\
-                <li>Utilisation du SGBD ${technos.postgresql.name} ;</li>\
-                <li>Intégration de l'ORM ${technos.sequelize.name} pour simplifier l'interaction avec la base ;</li>\
-                <li>Connexion de la base avec l'API et adaptation du code de l'application ;</li>\
-                <li>Développement d'une fonction d'import de données dans la base depuis un fichier JSON.</li>\
-            </ul>`,
-            images: [
+            sections: [
                 {
-                    path: sae_s4_mcd,
-                    legend: `MCD de l'application`
+                    title: `Base de données`,
+                    list: [
+                        `Création du MCD ;`,
+                        `Utilisation du SGBD ${technos.postgresql.name} ;`,
+                        `Intégration de l'ORM ${technos.sequelize.name} pour simplifier l'interaction avec la base ;`,
+                        `Connexion de la base avec l'API et adaptation du code de l'application ;`,
+                        `Développement d'une fonction d'import de données dans la base depuis un fichier JSON.`,
+                    ],
+                    images: [
+                        {
+                            path: sae_s4_mcd,
+                            legend: `MCD de l'application`
+                        }
+                    ]
+                }, {
+                    title: `Génération de documents`,
+                    list: [
+                        `Interrogation de l'API externe <strong>Zendesk</strong> ;`,
+                        `Tri et formatage des données récupérées ;`,
+                        `Développement de la génération et du téléchargement automatique de fichiers ;`,
+                        `Création d'un modèle Word pour structurer et organiser le contenu des rapports.`,
+                    ]
                 }
-            ],
-            section_2: `<h5 style='color:black;'><strong>Génération de documents</strong></h5>\
-            <ul>\
-                <li>Interrogation de l'API externe <strong>Zendesk</strong> ;</li>\
-                <li>Tri et formatage des données récupérées ;</li>\
-                <li>Développement de la génération et du téléchargement automatique de fichiers ;</li>\
-                <li>Création d'un modèle Word pour structurer et organiser le contenu des rapports.</li>\
-            </ul>`
+            ]
         },
         result: {
             title: `Résultat`,
@@ -297,13 +328,11 @@ const projects = {
         },
         implementation: {
             title: `Tâches réalisées`,
-            text: `\
-            <ul>\
-                <li>Conception et affichage du plateau de jeu dans le terminal ;</li>\
-                <li>Développement de la logique pour une partie entre deux joueurs ;</li>\
-                <li>Création des algorithmes des deux IA : une stratégie aléatoire et une stratégie avancée privilégiant certaines positions clés ;</li>\
-                <li>Séparation du code stable et des versions de test.</li>\
-            </ul>`
+            list: [`Conception et affichage du plateau de jeu dans le terminal ;`,
+                `Développement de la logique pour une partie entre deux joueurs ;`,
+                `Création des algorithmes des deux IA : une stratégie aléatoire et une stratégie avancée privilégiant certaines positions clés ;`,
+                `Séparation du code stable et des versions de test.`
+            ]
         },
         result: {
             title: `Résultat`,
