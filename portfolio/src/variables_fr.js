@@ -128,15 +128,59 @@ const technos = {
 };
 
 const projects = {
-    utbm_sy43: {
+    UTBM_SY43: {
         title: `Application e-commerce`,
         category: categories.academic,
         introduction: {
-            text: ``
+            text: `Ce projet universitaire, réalisé en première année de cycle ingénieur en collaboration avec trois autres étudiants, consistait à réaliser une application e-commerce pour Androïd.`
+        },
+        implementation: {
+            title: `Contributions`,
+            sections: [
+                {
+                    title: `Authentification ${technos.firebase.name}`,
+                    list: [
+                        `Configuration d’un projet ${technos.firebase.name} dédié ;`,
+                        `Intégration de la bibliothèque ${technos.firebase.name} et connexion de l’application au projet ;`,
+                        `Implémentation du système d’authentification ;`,
+                        `Ajout de la fonctionnalité de création de compte ;`,
+                        `Mise en place de la réinitialisation du mot de passe.`
+                    ],
+                    images: [
+                        // TODO
+                    ]
+                }, {
+                    title: `Dashboard`,
+                    list: [
+                        `Définition des données clés à représenter et du mode de visualisation ;`,
+                        `Écriture de requêtes pour interroger la base de données ;`,
+                        `Visualisation des résultats sous forme de texte et de graphiques avec <em>MPAndroidChart</em> ;`,
+                        `Ajout d’une option pour filtrer l’affichage par année.`,
+                    ],
+                    images: [
+                        // TODO
+                    ]
+                }, {
+                    title: `Système de paiement`,
+                    list: [
+                        `Implémentation d'un serveur ${technos.stripe.name} et connexion de l'application à celui-ci ;`,
+                        `Transmission du prix à payer au serveur ${technos.stripe.name} ;`,
+                        `Hébergement du serveur ${technos.stripe.name} via ${technos.firebase.name}`,
+                    ],
+                    images: [
+                        // TODO
+                    ]
+                }
+            ],
+        },
+        result: {
+            title: `Résultat`,
+            text: `Le projet a abouti à une application e-commerce fonctionnelle, permettant aux utilisateurs de consulter des produits, de les ajouter au panier et de finaliser leurs achats. Un Dashboard clair et intuitif présente également des statistiques de vente aux administrateurs. Cette expérience m’a permis de consolider mes compétences en développement Android, en travail collaboratif et en gestion de projet.\n
+            Vous pouvez consulter notre soutenance <a href='https://docs.google.com/presentation/d/1ciTwJQT0wF97OlqsJSNzQmrdxO6tPPnuQ1vWaAyG5aA/edit#slide=id.g230ccc5832e_0_0' target='_blank'>ici</a> et notre dépôt Git <a href='https://github.com/giuliana-fabrizio/Imperial-Roar' target='_blank'>ici</a>.`
         },
         technologies: [technos.firebase, technos.github, technos.kotlin, technos.sql, technos.stripe]
     },
-    but_stage_s6: {
+    BUT_S6: {
         title: `Plateforme de collectes de déchets`,
         category: categories.professional,
         introduction: {
@@ -195,7 +239,7 @@ const projects = {
         },
         technologies: [technos.graphql, technos.hasura, technos.jira, technos.minio, technos.next_js, technos.react_js, technos.scrum, technos.ts]
     },
-    but_sae_s5: {
+    BUT_S5: {
         title: `Application de tests de réflexes`,
         category: categories.academic,
         introduction: {
@@ -275,7 +319,7 @@ const projects = {
         },
         technologies: [technos.arduino, technos.docker, technos.gitlab, technos.java, technos.js, technos.node_js, technos.kotlin, technos.mongo, technos.vue_js]
     },
-    but_stage_s4: {
+    BUT_S4: {
         title: `Outil de facturation`,
         category: categories.professional,
         introduction: {
@@ -319,7 +363,7 @@ const projects = {
         },
         technologies: [technos.gitlab, technos.js, technos.node_js, technos.postgresql, technos.react_js, technos.sequelize, technos.scrum]
     },
-    but_sae_101_102: {
+    BUT_S1: {
         title: `Jeu du jeton manquant`,
         category: categories.academic,
         introduction: {
@@ -327,8 +371,9 @@ const projects = {
             Pour gagner, chaque joueur doit placer ses 10 jetons numérotés de 1 à 10 afin de minimiser la somme des numéros autour de la case vide à la fin de la partie.`
         },
         implementation: {
-            title: `Tâches réalisées`,
-            list: [`Conception et affichage du plateau de jeu dans le terminal ;`,
+            title: `Contributions`,
+            list: [
+                `Conception et affichage du plateau de jeu dans le terminal ;`,
                 `Développement de la logique pour une partie entre deux joueurs ;`,
                 `Création des algorithmes des deux IA : une stratégie aléatoire et une stratégie avancée privilégiant certaines positions clés ;`,
                 `Séparation du code stable et des versions de test.`
