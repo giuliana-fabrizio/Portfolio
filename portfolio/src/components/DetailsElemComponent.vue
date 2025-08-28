@@ -1,20 +1,20 @@
 <template>
-    <div>
-        <h3 v-if="elem.title && type === 'h3'" class="text-dark mt-5 mb-3">{{ elem.title }}</h3>
-        <h5 v-if="elem.title && type === 'h5'" class="fw-bold text-dark mt-2 mb-2">{{ elem.title }}</h5>
+    <div class="row">
+        <div :class="[elem.images ? 'col-md-6' : 'col-12']">
+            <h5 v-if="display_subtitle" class="fw-bold text-dark text-start mt-2 mb-2">{{ elem.title
+            }}</h5>
 
-        <p v-if="elem.text" v-html="formattedText(String(elem.text))" class="text-start text-secondary mb-4"></p>
+            <ul v-if="elem.list">
+                <li v-for="(item, item_key) in elem.list" :key="item_key" class="text-secondary text-start"
+                    v-html="formattedText(String(item))">
+                </li>
+            </ul>
+        </div>
 
-        <ul v-if="elem.list">
-            <li v-for="(item, item_key) in elem.list" :key="item_key" class="text-secondary text-start"
-                v-html="formattedText(String(item))">
-            </li>
-        </ul>
-
-        <div v-for="(image, image_key) in elem.images" :key="image_key" class="row justify-content-center">
-            <div class="col-12 col-md-9">
-                <img :src="image.path" :alt="image.alt" class="img-fluid img-page-details mt-5">
-                <p class="text-muted text-center mt-2 fst-italic">{{ image.legend }}</p>
+        <div :class="[elem.list ? 'col-md-6' : 'col-12']">
+            <div v-for="(image, image_key) in elem.images" :key="image_key">
+                <img :src="image.path" :alt="image.alt" class="img-fluid img-page-details">
+                <p class="m-0 mt-1 text-muted text-center fst-italic">{{ image.legend }}</p>
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@ export default {
 
     props: {
         elem: undefined,
-        type: String
+        display_subtitle: Boolean
     },
 
     methods: {
