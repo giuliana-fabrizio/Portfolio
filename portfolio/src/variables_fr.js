@@ -133,7 +133,13 @@ const projects = {
                     images: [
                         {
                             path: "images/projects/UTBM_SY43/login.jpg",
-                            legend: `Authentification - Réinitialisation de mot de passe - Création de compte`
+                            style: `max-height: 300px;`
+                        }, {
+                            path: "images/projects/UTBM_SY43/forgot-password.jpg",
+                        style: `max-height: 300px;`
+                        }, {
+                            path: "images/projects/UTBM_SY43/create-account.jpg",
+                            style: `max-height: 300px;`
                         }
                     ]
                 }, {
@@ -147,7 +153,10 @@ const projects = {
                     images: [
                         {
                             path: "images/projects/UTBM_SY43/dashboard.jpg",
-                            legend: `Dashboard`
+                            style: `max-height: 300px;`
+                        }, {
+                            path: "images/projects/UTBM_SY43/dashboard_2.jpg",
+                            style: `max-height: 300px;`
                         }
                     ]
                 }, {
@@ -160,7 +169,7 @@ const projects = {
                     images: [
                         {
                             path: "images/projects/UTBM_SY43/stripe.jpg",
-                            legend: `Système de paiement`
+                            style: `max-height: 300px;`
                         }
                     ]
                 }
@@ -196,7 +205,7 @@ const projects = {
                     images: [
                         {
                             path: "images/projects/BUT_S6/map.png",
-                            legend: `Carte interractive`
+                            style: `max-height: 265px;`
                         }
                     ]
                 }, {
@@ -218,7 +227,7 @@ const projects = {
                     images: [
                         {
                             path: "images/projects/BUT_S6/dashboard.png",
-                            legend: `Dashboard`
+                            style: `max-height: 265px;`
                         }
                     ]
                 }
@@ -235,12 +244,11 @@ const projects = {
         title: `Application de tests de réflexes`,
         category: categories.academic,
         introduction: {
-            text: `Projet réalisé en troisième année de BUT Informatique, en collaboration avec quatre autres étudiants.`
+            text: `Ce projet, réalisé en troisième année de BUT Informatique, en collaboration avec quatre autres étudiants, consistait à concevoir une application multi-architecture permettant à des scientifiques de réaliser des tests de réflexes.`
         },
-        objectives: {
-            title: `Objectif`,
-            text: `Concevoir une application multi-architecture permettant à des scientifiques de réaliser des tests de réflexes.\n
-            L'architecture repose sur plusieurs composants complémentaires :`,
+        context: {
+            title: `Contexte`,
+            text: `L'architecture repose sur plusieurs composants complémentaires :`,
             list: [
                 `une <span style='color: #d4d6ff'><strong>application mobile</strong></span> pour capturer et transmettre des images ;`,
                 `un <span style='color: #e7dec7'><strong>serveur d'analyse</strong></span> pour traiter ces images ;`,
@@ -252,7 +260,8 @@ const projects = {
             images: [
                 {
                     path: "images/projects/BUT_S5/structure.png",
-                    legend: `Architecture globale du projet`
+                    legend: `Architecture globale du projet`,
+                    style: 'max-height: 250px;'
                 }
             ]
         },
@@ -264,14 +273,14 @@ const projects = {
                     title: `API et frontend`,
                     list: [
                         `Développement d'une API avec "express" de ${technos.node_js.name} et connexion à une base de données ${technos.mongo.name} ;`,
-                        `Mise en place de tests unitaires pour valider les méthodes de l'API ;`,
+                        `Mise en place de la Swagger Documentation et de tests unitaires pour valider les méthodes de l'API ;`,
                         `Création d'un frontend connecté à l'API avec affichage de graphiques dynamiques réalisés grâce à la bibliothèque <em>Vue chartjs</em> ;`,
                         `Déploiement de l'API avec ${technos.docker.name}.`,
                     ],
                     images: [
                         {
                             path: "images/projects/BUT_S5/frontend.png",
-                            legend: `Exemple de graphiques du frontend (données de test)`
+                            style: `max-height: 300px;`
                         }
                     ]
                 }, {
@@ -284,6 +293,7 @@ const projects = {
                 }, {
                     title: `Microcontrôleurs`,
                     list: [
+                        `Configuration de la carte Arduino à partir du matériel fourni ;`,
                         `Rédaction du code Arduino pour faire fonctionner les microcontrôleurs ;`,
                         `Réalisation de tests manuels ;`,
                         `Envoie des résultats au serveur de centralisation.`,
@@ -291,7 +301,8 @@ const projects = {
                     images: [
                         {
                             path: "images/projects/BUT_S5/microcontrollers.png",
-                            legend: `Schématisation des microcontrôleurs`
+                            legend: `Schématisation des microcontrôleurs`,
+                            style: `max-height: 200px;`
                         }
                     ]
                 }
@@ -326,7 +337,8 @@ const projects = {
                     images: [
                         {
                             path: "images/projects/BUT_S4/mcd.png",
-                            legend: `MCD de l'application`
+                            legend: `MCD de l'application`,
+                            style: `max-height: 275px;`
                         }
                     ]
                 }, {
@@ -370,7 +382,8 @@ const projects = {
             images: [
                 {
                     path: "images/projects/BUT_S1/game.png",
-                    legend: `Simulation d'une partie entre les deux IA : victoire de la stratégie avancée`
+                    legend: `Simulation d'une partie entre les deux IA : victoire de la stratégie avancée`,
+                    style: `max-height: 400px; margin-top: 15px;`
                 }
             ],
         },
