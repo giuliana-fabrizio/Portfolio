@@ -5,11 +5,10 @@
             <section v-for="(elem, elem_key) in project" :key="elem_key">
 
                 <h3 v-if="elem.title" class="fw-bold text-dark mt-5 mb-3">{{ elem.title }}</h3>
-                <p v-if="elem.text" v-html="formattedText(String(elem.text))" class="m-0 text-start text-secondary"></p>
 
                 <DetailsElemComponent :elem="elem" :subpart="false" />
 
-                <div v-for="(section, section_key) in elem.sections" :key="section_key" class="card mt-3 p-3">
+                <div v-for="(section, section_key) in elem.sections" :key="section_key" class="card rounded mt-3 p-3">
                     <DetailsElemComponent :elem="section" :display_subtitle="true" />
                 </div>
             </section>
