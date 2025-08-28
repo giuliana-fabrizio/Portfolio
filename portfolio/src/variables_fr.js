@@ -1,19 +1,3 @@
-const sae_101_102_image = require("../public/images/projects/sae_101_102/partie_de_jeu.png");
-const sae_s4_mcd = require("../public/images/projects/sae_stage_s4/MCD.png");
-const sae_s5_image1 = require("../public/images/projects/sae_s5/archi_sae.png");
-const sae_s5_image2 = require("../public/images/projects/sae_s5/graphs_frontend.png");
-const sae_s5_image3 = require("../public/images/projects/sae_s5/microcontroleurs.png")
-const sae_s6_image1 = require("../public/images/projects/sae_stage_s6/map.png");
-const sae_s6_image2 = require("../public/images/projects/sae_stage_s6/dashboard.png");
-
-const engineer_logo = require("../public/images/degrees/engineer.png");
-const but_logo = require("../public/images/degrees/but.png");
-const bac_logo = require("../public/images/degrees/bac.png");
-const mooc_gdp_logo = require("../public/images/degrees/mooc_gdp.png");
-
-const natural_solutions_logo = require("../public/images/experiences/natural_solutions.png");
-const u_express_logo = require("../public/images/experiences/u_express.png");
-
 const carousel_1 = require("../public/images/interests/carousel-1.jpg");
 const carousel_2 = require("../public/images/interests/carousel-2.png");
 const carousel_3 = require("../public/images/interests/carousel-3.jpg");
@@ -147,7 +131,10 @@ const projects = {
                         `Mise en place de la réinitialisation du mot de passe.`
                     ],
                     images: [
-                        // TODO
+                        {
+                            path: "images/projects/UTBM_SY43/login.jpg",
+                            legend: `Authentification - Réinitialisation de mot de passe - Création de compte`
+                        }
                     ]
                 }, {
                     title: `Dashboard`,
@@ -158,7 +145,10 @@ const projects = {
                         `Ajout d’une option pour filtrer l’affichage par année.`,
                     ],
                     images: [
-                        // TODO
+                        {
+                            path: "images/projects/UTBM_SY43/dashboard.jpg",
+                            legend: `Dashboard`
+                        }
                     ]
                 }, {
                     title: `Système de paiement`,
@@ -168,7 +158,10 @@ const projects = {
                         `Hébergement du serveur ${technos.stripe.name} via ${technos.firebase.name}`,
                     ],
                     images: [
-                        // TODO
+                        {
+                            path: "images/projects/UTBM_SY43/stripe.jpg",
+                            legend: `Système de paiement`
+                        }
                     ]
                 }
             ],
@@ -176,7 +169,7 @@ const projects = {
         result: {
             title: `Résultat`,
             text: `Le projet a abouti à une application e-commerce fonctionnelle, permettant aux utilisateurs de consulter des produits, de les ajouter au panier et de finaliser leurs achats. Un Dashboard clair et intuitif présente également des statistiques de vente aux administrateurs. Cette expérience m’a permis de consolider mes compétences en développement Android, en travail collaboratif et en gestion de projet.\n
-            Vous pouvez consulter notre soutenance <a href='https://docs.google.com/presentation/d/1ciTwJQT0wF97OlqsJSNzQmrdxO6tPPnuQ1vWaAyG5aA/edit#slide=id.g230ccc5832e_0_0' target='_blank'>ici</a> et notre dépôt Git <a href='https://github.com/giuliana-fabrizio/Imperial-Roar' target='_blank'>ici</a>.`
+            Vous pouvez consulter notre soutenance <a href='#' target='_blank'>ici</a> et notre dépôt Git <a href='https://github.com/giuliana-fabrizio/Imperial-Roar' target='_blank'>ici</a>.`
         },
         technologies: [technos.firebase, technos.github, technos.kotlin, technos.sql, technos.stripe]
     },
@@ -189,11 +182,10 @@ const projects = {
         },
         implementation: {
             title: `Contributions`,
+            text: `J'ai travaillé en suivant la méthodologie agile ${technos.scrum.name} pour m'adapter aux besoins évolutifs des clients. Le versioning et la collaboration ont été assurés via ${technos.gitlab.name}.\
+            Concernant le déploiement de l'application, celui-ci a été effectué avec l'aide de ${technos.docker.name}.`,
             sections: [
                 {
-                    text: `J'ai travaillé en suivant la méthodologie agile ${technos.scrum.name} pour m'adapter aux besoins évolutifs des clients. Le versioning et la collaboration ont été assurés via ${technos.gitlab.name}.\
-                    Concernant le déploiement de l'application, celui-ci a été effectué avec l'aide de ${technos.docker.name}.`
-                }, {
                     title: `Carte de la page d'accueil`,
                     list: [
                         `Extraction des collectes validées via une requête ${technos.graphql.name} ;`,
@@ -203,7 +195,7 @@ const projects = {
                     ],
                     images: [
                         {
-                            path: sae_s6_image1,
+                            path: "images/projects/BUT_S6/map.png",
                             legend: `Carte interractive`
                         }
                     ]
@@ -225,7 +217,7 @@ const projects = {
                     ],
                     images: [
                         {
-                            path: sae_s6_image2,
+                            path: "images/projects/BUT_S6/dashboard.png",
                             legend: `Dashboard`
                         }
                     ]
@@ -248,28 +240,27 @@ const projects = {
         objectives: {
             title: `Objectif`,
             text: `Concevoir une application multi-architecture permettant à des scientifiques de réaliser des tests de réflexes.\n
-            L'architecture imposée reposait sur plusieurs composants complémentaires :`,
+            L'architecture repose sur plusieurs composants complémentaires :`,
             list: [
                 `une <span style='color: #d4d6ff'><strong>application mobile</strong></span> pour capturer et transmettre des images ;`,
-                `un <span style='color: #e7dec7'><strong>serveur d'analyse</strong></span> pour traiter ces données ;`,
-                `un <span style='color: #c5dcf1'><strong>serveur de centralisation</strong></span> pour enregistrer les résultats du serveur d'analyse dans une <span style='color: #fce5cd'><strong>base de données</strong></span>\
-                et gérer les données issues des <span style='color: #fdd9ff'><strong>microcontrôleurs</strong></span> ;`,
-                `une interface <span style='color: #f8e0e0'><strong>frontend</strong></span> pour visualiser les résultats ;`,
+                `un <span style='color: #e7dec7'><strong>serveur d'analyse</strong></span> pour traiter ces images ;`,
+                `un <span style='color: #c5dcf1'><strong>serveur de centralisation</strong></span> pour enregistrer les données issues du serveur d'analyse et des <span style='color: #fdd9ff'><strong>microcontrôleurs</strong></span>\
+                 dans une <span style='color: #fce5cd'><strong>base de données</strong></span> ;`,
+                `un <span style='color: #f8e0e0'><strong>frontend</strong></span> pour visualiser les résultats ;`,
                 `une <span style='color: #d9ead3'><strong>API</strong></span> pour assurer les échanges entre serveur, base de données et frontend.`,
             ],
             images: [
                 {
-                    path: sae_s5_image1,
+                    path: "images/projects/BUT_S5/structure.png",
                     legend: `Architecture globale du projet`
                 }
             ]
         },
         implementation: {
             title: `Contributions`,
+            text: `Nous avons travaillé avec ${technos.gitlab.name} et ${technos.trello.name} afin de faciliter le versioning et la planification des tâches.`,
             sections: [
                 {
-                    text: `Nous avons travaillé avec ${technos.gitlab.name} et ${technos.trello.name} afin de faciliter le versioning et la planification des tâches.`
-                }, {
                     title: `API et frontend`,
                     list: [
                         `Développement d'une API avec "express" de ${technos.node_js.name} et connexion à une base de données ${technos.mongo.name} ;`,
@@ -279,9 +270,16 @@ const projects = {
                     ],
                     images: [
                         {
-                            path: sae_s5_image2,
+                            path: "images/projects/BUT_S5/frontend.png",
                             legend: `Exemple de graphiques du frontend (données de test)`
                         }
+                    ]
+                }, {
+                    title: `Serveur d'analyse`,
+                    list: [
+                        `Recherche d'une bibliothèque adaptée au traitement d'images ;`,
+                        `Refonte de l'application mobile pour s'adapter aux contraintes de la bibliothèque choisie ;`,
+                        `Développement et connexion du serveur d'analyse avec l'application mobile, accompagnés de tests unitaires.`,
                     ]
                 }, {
                     title: `Microcontrôleurs`,
@@ -292,20 +290,7 @@ const projects = {
                     ],
                     images: [
                         {
-                            path: sae_s5_image3,
-                            legend: `Schématisation des microcontrôleurs`
-                        }
-                    ]
-                }, {
-                    title: `Serveur d'analyse`,
-                    list: [
-                        `Recherche d'une bibliothèque adaptée au traitement d'images ;`,
-                        `Refonte de l'application mobile pour s'adapter aux contraintes de la bibliothèque choisie ;`,
-                        `Développement et connexion du serveur d'analyse avec l'application mobile, accompagnés de tests unitaires.`,
-                    ],
-                    images: [
-                        {
-                            path: sae_s5_image3,
+                            path: "images/projects/BUT_S5/microcontrollers.png",
                             legend: `Schématisation des microcontrôleurs`
                         }
                     ]
@@ -340,7 +325,7 @@ const projects = {
                     ],
                     images: [
                         {
-                            path: sae_s4_mcd,
+                            path: "images/projects/BUT_S4/mcd.png",
                             legend: `MCD de l'application`
                         }
                     ]
@@ -384,7 +369,7 @@ const projects = {
             text: `Vous pouvez consulter le dépôt GitHub en cliquant <a href="https://github.com/giuliana-fabrizio/SAE-Jeu-du-jeton-manquant" target="_blank">ici</a>.`,
             images: [
                 {
-                    path: sae_101_102_image,
+                    path: "images/projects/BUT_S1/game.png",
                     legend: `Simulation d'une partie entre les deux IA : victoire de la stratégie avancée`
                 }
             ],
@@ -409,14 +394,14 @@ const degrees_title = `Mes diplômes`;
 const degrees = {
     engineer: {
         title: `Cycle ingénieur`,
-        logo: engineer_logo,
+        logo: "images/degrees/engineer.png",
         school: `Université de technologie de Belfort-Montbéliard`,
         place: `Belfort, France`,
         date: `Depuis février 2025`,
     },
     but: {
         title: `BUT Informatique`,
-        logo: but_logo,
+        logo: "images/degrees/but.png",
         speciality: `Spécialité : réalisation d'applications : conception, développement, validation`,
         mention: `Major de promotion`,
         school: `IUT de Belfort-Montbéliard`,
@@ -425,7 +410,7 @@ const degrees = {
     },
     bac: {
         title: `Baccalauréat général`,
-        logo: bac_logo,
+        logo: "images/degrees/bac.png",
         speciality: `Spécialité : scientifique`,
         school: `Lycée Périer`,
         place: `Marseille, France`,
@@ -438,7 +423,7 @@ const certifications_title = `Mes certifications`;
 const certifications = {
     mooc_management: {
         title: `Gestion de Projet`,
-        logo: mooc_gdp_logo,
+        logo: "images/degrees/mooc_gdp.png",
         speciality: `Spécialités :
         <ul class='text-start'>
             <li>Tronc commun</li>
@@ -472,7 +457,7 @@ const experiences = {
         <ul><li>insertion de données Excel dans une base de données PostgreSQL ;</li><li>réalisation du tableau de bord principal (ou Dashboard) ;</li><li>utilisation d'Hasura pour la gestion des permissions utilisateurs.</li></ul>`,
         label_redirection: `Plus de détails`,
         redirection: projects.but_stage_s6,
-        logo: natural_solutions_logo,
+        logo: "images/experiences/natural_solutions.png",
         type: `Type : stage`,
         date: `Janvier - Avril 2024`,
         company: `Natural Solutions`,
@@ -484,7 +469,7 @@ const experiences = {
         <ul><li>ajout d'une base de données PostgreSQL et utilisation de l'ORM Sequelize ;</li><li>correction d'erreurs de calcul existantes ;</li><li>modification de l'interface utilisateur : manipulation de ReactJs et interrogation d'une API externe ;</li><li>réalisation de tests unitaires en JavaScript.</li></ul>`,
         label_redirection: `Plus de détails`,
         redirection: projects.but_stage_s4,
-        logo: natural_solutions_logo,
+        logo: "images/experiences/natural_solutions.png",
         type: `Type : stage`,
         date: `Avril - Juin 2023`,
         company: `Natural Solutions`,
@@ -493,7 +478,7 @@ const experiences = {
     cdd_2022: {
         title: `Employée de supérette`,
         description: `Principales tâches réalisées :<ul><li>encaissement des clients ;</li><li>rangement des rayons et réception des marchandises ;</li><li>formation des nouveaux salariés à la caisse ;</li><li>cuisson du pain.</li></ul>`,
-        logo: u_express_logo,
+        logo: "images/experiences/u_express.png",
         type: `Type : CDD`,
         date: `Juillet - Août 2022`,
         company: `U Express`,
