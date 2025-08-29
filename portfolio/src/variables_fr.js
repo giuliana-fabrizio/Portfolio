@@ -186,7 +186,7 @@ const projects = {
         title: `Plateforme de collectes de déchets`,
         category: categories.professional,
         introduction: {
-            text: `Ce stage de trois mois (janvier - avril 2024), réalisé chez <a href="https://www.natural-solutions.eu/" target="_blank">Natural Solutions</a>, consistait à contribuer au développement de <strong>DepollutionMap</strong>,\
+            text: `Ce stage de trois mois (janvier - mars 2024), réalisé chez <a href="https://www.natural-solutions.eu/" target="_blank">Natural Solutions</a>, consistait à contribuer au développement de <strong>DepollutionMap</strong>,\
             une application de gestion des collectes de déchets réalisées par l'association <a href="https://www.wingsoftheocean.com/" target="blank">Wings of Ocean</a>.`
         },
         implementation: {
