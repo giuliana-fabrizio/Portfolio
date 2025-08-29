@@ -516,7 +516,7 @@ const experiences = {
         description: `Principales tâches réalisées :
         <ul><li>insertion de données Excel dans une base de données PostgreSQL ;</li><li>réalisation du tableau de bord principal (ou Dashboard) ;</li><li>utilisation d'Hasura pour la gestion des permissions utilisateurs.</li></ul>`,
         label_redirection: `Plus de détails`,
-        redirection: projects.but_stage_s6,
+        redirection: projects.BUT_S6,
         logo: "images/experiences/natural_solutions.png",
         type: `Type : stage`,
         date: `Janvier - Avril 2024`,
@@ -528,7 +528,7 @@ const experiences = {
         description: `Principales tâches réalisées :
         <ul><li>ajout d'une base de données PostgreSQL et utilisation de l'ORM Sequelize ;</li><li>correction d'erreurs de calcul existantes ;</li><li>modification de l'interface utilisateur : manipulation de ReactJs et interrogation d'une API externe ;</li><li>réalisation de tests unitaires en JavaScript.</li></ul>`,
         label_redirection: `Plus de détails`,
-        redirection: projects.but_stage_s4,
+        redirection: projects.BUT_S4,
         logo: "images/experiences/natural_solutions.png",
         type: `Type : stage`,
         date: `Avril - Juin 2023`,
