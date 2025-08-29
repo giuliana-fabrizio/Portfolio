@@ -210,6 +210,11 @@ footer {
     box-shadow: 0 9px 15px rgba(0, 0, 0, 0.2);
 }
 
+.text-intro a {
+    color: #6c757d!important;
+    text-decoration: none;
+}
+
 .div-img-technos {
     width: 30px;
 }

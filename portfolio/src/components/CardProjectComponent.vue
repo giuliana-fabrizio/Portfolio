@@ -9,7 +9,7 @@
             </div>
 
             <p
-                class="text-secondary mb-3 d-xl-block"
+                class="text-secondary mb-3 d-xl-block text-intro"
                 v-html="formattedText(truncatedIntroduction(project.introduction.text))">
             </p>
         </div>

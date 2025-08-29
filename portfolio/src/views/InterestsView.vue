@@ -45,9 +45,7 @@
                             windowWidth >= 576 ? 270 : windowWidth
                         "
                     />
-                    <p class="fst-italic mt-3 text-secondary">
-                        Figure {{ key }} : {{ interest.legend }}
-                    </p>
+                    <p class="fst-italic mt-3 text-secondary">{{ interest.legend }}</p>
                 </div>
 
                 <div v-if="key % 2 == 0" class="col-12 col-md-6 d-none d-md-block ">
