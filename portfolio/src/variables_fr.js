@@ -105,6 +105,7 @@ const technos = {
     arduino: { name: "Arduino", logo: "images/technologies/arduino.png" },
     java: { name: "Java", logo: "images/technologies/java.png" },
     js: { name: "JavaScript", logo: "images/technologies/js.png" },
+    php: { name: "Php", logo: "images/technologies/php.png" },
     python: { name: "Python", logo: "images/technologies/python.png" },
     ts: { name: "TypeScript", logo: "images/technologies/ts.png" },
     kotlin: { name: "Kotlin", logo: "images/technologies/kotlin.png" },
@@ -112,6 +113,51 @@ const technos = {
 };
 
 const projects = {
+    UTBM_WE4A: {
+        title: `Moodle`,
+        category: categories.academic,
+        introduction: {
+            text: `Ce projet universitaire, réalisé en première année de cycle ingénieur en collaboration avec trois autres étudiants, consistait à reproduire une partie des fonctionnalités de l'application éducative Moodle.`
+        },
+        implementation: {
+            title: `Contributions`,
+            text: ``,
+            sections: [
+                {
+                    title: `Base de données`,
+                    list: [
+                        `Conception du Modèle Conceptuel de Données (MCD) ;`,
+                        `Rédaction du script de création des tables ;`,
+                        `Création de fixtures Symfony pour insérer des données de test dans la base de données.`,
+                    ],
+                    // images: [
+                    //     // TODO
+                    // ]
+                }, {
+                    title: `Sécurité`,
+                    list: [
+                        `Implémentation du système de connection et de déconnection ;`,
+                        `Gestion des accès et permissions selon les rôles utilisateurs.`,
+                    ]
+                }, {
+                    title: `Autres fonctionnalités`,
+                    list: [
+                        `Écriture de requêtes Ajax pour dynamiser l'application ;`,
+                        'Ajout de la possibilité d’uploader et de télécharger des fichiers ;',
+                        `Implémentation de plusieurs interfaces utilisateur avec opérations CRUD.`
+                    ],
+                    // images: [
+                    //     // TODO
+                    // ]
+                }
+            ]
+        },
+        result: {
+            title: `Résultat`,
+            text: `Le projet a abouti à une application pleinement fonctionnelle, permettant à chaque utilisateur d’effectuer des actions spécifiques selon son rôle (par exemple, un professeur peut déposer des fichiers). Cette expérience m’a permis de consolider mes bases en développement Web et de renforcer mes compétences techniques.`
+        },
+        technologies: [technos.github, technos.php, technos.postgresql, technos.sql]
+    },
     UTBM_SY43: {
         title: `Application e-commerce`,
         category: categories.academic,
@@ -136,7 +182,7 @@ const projects = {
                             style: `max-height: 300px;`
                         }, {
                             path: "images/projects/UTBM_SY43/forgot-password.jpg",
-                        style: `max-height: 300px;`
+                            style: `max-height: 300px;`
                         }, {
                             path: "images/projects/UTBM_SY43/create-account.jpg",
                             style: `max-height: 300px;`
@@ -186,8 +232,8 @@ const projects = {
         title: `Plateforme de collectes de déchets`,
         category: categories.professional,
         introduction: {
-            text: `Ce stage de trois mois (janvier - mars 2024), réalisé chez <a href="https://www.natural-solutions.eu/" target="_blank">Natural Solutions</a>, consistait à contribuer au développement de <strong>DepollutionMap</strong>,\
-            une application de gestion des collectes de déchets réalisées par l'association <a href="https://www.wingsoftheocean.com/" target="blank">Wings of Ocean</a>.`
+            text: `Ce stage de trois mois (janvier - mars 2024), réalisé chez Natural Solutions, consistait à contribuer au développement de <strong>DepollutionMap</strong>,\
+            une application de gestion des collectes de déchets réalisées par l'association Wings of Ocean.`
         },
         implementation: {
             title: `Contributions`,
@@ -319,7 +365,7 @@ const projects = {
         title: `Outil de facturation`,
         category: categories.professional,
         introduction: {
-            text: `Ce stage de trois mois (avril - juin 2023), réalisé chez <a href="https://www.natural-solutions.eu/" target="_blank">Natural Solutions</a>, consistait à reprendre leur outil de facturation pour corriger les problèmes existants, améliorer les fonctionnalités existantes et en développer de nouvelles.`
+            text: `Ce stage de trois mois (avril - juin 2023), réalisé chez Natural Solutions, consistait à reprendre leur outil de facturation pour corriger les problèmes existants, améliorer les fonctionnalités existantes et en développer de nouvelles.`
         },
         implementation: {
             title: `Mise en œuvre`,
@@ -328,7 +374,7 @@ const projects = {
                 {
                     title: `Base de données`,
                     list: [
-                        `Création du MCD ;`,
+                        `Création du Modèle Conceptuel de Données (MCD) ;`,
                         `Utilisation du SGBD ${technos.postgresql.name} ;`,
                         `Intégration de l'ORM ${technos.sequelize.name} pour simplifier l'interaction avec la base ;`,
                         `Connexion de la base avec l'API et adaptation du code de l'application ;`,
@@ -508,27 +554,27 @@ const interests = {
     1: {
         title: `Activité sportive & voyages`,
         description: `Depuis 2010, je pratique la natation. D'abord membre d'un club durant mon enfance, je continue aujourd'hui à nager de manière occasionnelle. Par ailleurs, j'aime explorer de nouveaux lieux et admirer leurs paysages. Bonne marcheuse, je fais régulièrement des randonnées, une activité qui me permet de relever de nouveaux défis tout en faisant de belles découvertes.`,
-        legend: 'images prises lors de mes randonnées et/ou voyages',
+        legend: 'Images prises lors de mes randonnées et/ou voyages',
         images: [carousel_1, carousel_2, carousel_3],
         support: `carousel`
     },
     2: {
         title: `Jeux vidéo`,
         description: `C'est durant mon BUT Informatique à Belfort que des amis m'ont initiée aux jeux vidéo. Cependant, n'étant pas une grande joueuse, je me consacre principalement à Minecraft. Ce que j'apprécie particulièrement dans ce jeu, c'est la diversité des mods disponibles, qui permettent de renouveler l'expérience en introduisant de nouveaux mondes, personnages, créatures et matériaux.`,
-        legend: `modélisation 3D de mon skin Minecraft. Utilisez la souris (ou le tactile) pour faire pivoter le modèle.`,
+        legend: `Modélisation 3D de mon skin Minecraft. Utilisez la souris (ou le tactile) pour faire pivoter le modèle.`,
         support: `mc`
     },
     3: {
         title: `Couture`,
         description: `Dès mon plus jeune âge, j'ai découvert la couture grâce à ma grand-mère, ancienne couturière. J'ai commencé par confectionner des vêtements pour mes poupées avant de réaliser aujourd'hui des objets pratiques dans mon quotidien : housses de protection pour batterie, sac à main, trousses à stylos...`,
-        legend: `housse de protection pour batterie externe`,
+        legend: `Housse de protection pour batterie externe`,
         // image: image_sewing,
         support: `img`
     },
     4: {
         title: `Modélisation 3D`,
         description: `C'est en discutant avec ma mère d'un projet de réaménagement que j'ai décidé de me lancer dans la modélisation 3D. C'est ainsi que j'ai découvert le logiciel Sweet Home 3D. Avec cet outil, j'ai d'abord imaginé un nouvel agencement pour une pièce de la maison avant de reproduire un studio dans lequel j'ai vécu et que je trouvais particulièrement esthétique.`,
-        legend: `modélisation 3D d'un studio réalisée avec Sweet Home 3D. Utilisez la souris (ou le tactile) pour zoomer et faire pivoter le modèle.`,
+        legend: `Modélisation 3D d'un studio réalisée avec Sweet Home 3D. Utilisez la souris (ou le tactile) pour zoomer et faire pivoter le modèle.`,
         support: `modelling`
     }
 }
