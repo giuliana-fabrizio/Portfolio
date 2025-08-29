@@ -13,7 +13,7 @@
             </ul>
         </div>
 
-        <div :class="[elem.list ? 'col-lg-6' : 'col-12', 'd-flex', 'flex-wrap', 'justify-content-center', 'my-auto']">
+        <div :class="[elem.list ? 'col-lg-6' : 'col-12', 'd-flex', 'justify-content-center', 'my-auto']">
             <div v-for="(image, image_key) in elem.images" :key="image_key" class="mx-3 my-3 my-lg-0">
                 <img :src="image.path" :alt="image.alt" class="img-fluid rounded" :style="image.style">
                 <p class="m-0 mt-1 text-muted text-center fst-italic">{{ image.legend }}</p>

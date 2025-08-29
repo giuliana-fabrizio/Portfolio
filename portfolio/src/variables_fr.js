@@ -336,7 +336,7 @@ const projects = {
                     ],
                     images: [
                         {
-                            path: "images/projects/BUT_S4/mcd.png",
+                            path: "images/projects/BUT_S4/MCD.png",
                             legend: `MCD de l'application`,
                             style: `max-height: 275px;`
                         }
