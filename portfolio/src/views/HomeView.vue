@@ -3,7 +3,7 @@
         <header id="home_header" style="position: relative;">
             <AnimeBackgroundComponent />
             <section id="titre" class="container" style="position: relative; z-index: 1;">
-                <div class="mt-3">
+                <div class="mt-5">
                     <h1 class="mb-4 text-primary">{{ name }}</h1>
                     <h3 class="text-secondary">
                         <AnimeTitleComponent :text="status" :duration="2000" />
