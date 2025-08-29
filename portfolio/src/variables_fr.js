@@ -80,6 +80,7 @@ const technos = {
     flask: { name: "Flask", logo: "images/technologies/flask.png" },
     next_js: { name: "Next.js", logo: "images/technologies/next-js.png" },
     node_js: { name: "Node.js", logo: "images/technologies/node-js.png" },
+    symfony: { name: "Symfony", logo: "images/technologies/symfony.png"},
 
     // Collaboration Tools
     github: { name: "GitHub", logo: "images/technologies/github.png" },
@@ -156,7 +157,7 @@ const projects = {
             title: `Résultat`,
             text: `Le projet a abouti à une application pleinement fonctionnelle, permettant à chaque utilisateur d’effectuer des actions spécifiques selon son rôle (par exemple, un professeur peut déposer des fichiers). Cette expérience m’a permis de consolider mes bases en développement Web et de renforcer mes compétences techniques.`
         },
-        technologies: [technos.github, technos.php, technos.postgresql, technos.sql]
+        technologies: [technos.github, technos.php, technos.postgresql, technos.sql, technos.symfony]
     },
     UTBM_SY43: {
         title: `Application e-commerce`,
