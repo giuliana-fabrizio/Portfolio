@@ -11,7 +11,8 @@ export default {
     name: 'MinecraftComponent',
 
     data: () => ({
-        skinViewer: null
+        skinViewer: null,
+        windowWidth: window.innerWidth
     }),
 
     mounted() {
@@ -20,7 +21,7 @@ export default {
 
         this.skinViewer = new SkinViewer({
             canvas: document.createElement("canvas"),
-            width: 350,
+            width: this.windowWidth >= 576 ? 350 : 295,
             height: 320.8,
             skin: skin,
         });

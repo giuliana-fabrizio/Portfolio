@@ -9,7 +9,7 @@
                         <AnimeTitleComponent :text="status" :duration="2000" />
                     </h3>
                 </div>
-                <img src="images/developer.png" class="image_accueil">
+                <img src="images/developer.png" class="img-home">
             </section>
         </header>
 

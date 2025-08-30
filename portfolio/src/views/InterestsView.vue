@@ -6,7 +6,7 @@
             <div
                 v-for="(interest, key) in interests"
                 :key="key"
-                class="align-items-center gx-5 mb-5 p-1 row">
+                class="align-items-center gx-md-5 mb-5 row">
 
                 <div class="col-12 d-block d-md-none ">
                     <h5 class="subtitle mb-2 text-start"><strong>{{ interest.title }}</strong></h5>
@@ -45,7 +45,7 @@
                             windowWidth >= 576 ? 270 : windowWidth
                         "
                     />
-                    <p class="fst-italic mt-3 text-secondary">{{ interest.legend }}</p>
+                    <p class="fst-italic mt-3 text-secondary px-3">{{ interest.legend }}</p>
                 </div>
 
                 <div v-if="key % 2 == 0" class="col-12 col-md-6 d-none d-md-block ">

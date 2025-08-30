@@ -145,7 +145,7 @@ footer {
 /* ***************************************************************** home page ************************************************************* */
 
 #home_header {
-    /* background: url('images/image_accueil.webp'); */
+    /* background: url('images/img-home.webp'); */
     background-color: #fff;
     width: 100%;
 }
@@ -154,10 +154,16 @@ footer {
     border-top: 1px solid #e0e0e0;
 }
 
-.image_accueil {
+.img-home {
     width: 330px;
     height: auto;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 350px)  {
+    .img-home {
+        width: 250px;
+    }
 }
 
 
