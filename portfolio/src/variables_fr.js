@@ -457,7 +457,7 @@ const degrees = {
         logo: "images/degrees/engineer.png",
         school: `Université de technologie de Belfort-Montbéliard`,
         place: `Belfort, France`,
-        date: `Depuis février 2025`,
+        date: `Depuis septembre 2024`,
     },
     but: {
         title: `BUT Informatique`,
