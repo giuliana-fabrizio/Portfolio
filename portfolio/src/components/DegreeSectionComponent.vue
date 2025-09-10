@@ -20,10 +20,10 @@
                     <div :class="[flippedCards[key] ? 'd-block' : 'd-none', 'flip-back']">
                         <p><strong>{{ item.title }}</strong></p>
 
-                        <p v-html="item.speciality" class="mb-0"></p>
+                        <p v-html="item.specialization" class="mb-0"></p>
 
                         <div
-                            v-if="item.speciality"
+                            v-if="item.specialization"
                             class="border-2 border-top mb-2 mt-2 mx-auto pb-1 w-75">
                         </div>
 

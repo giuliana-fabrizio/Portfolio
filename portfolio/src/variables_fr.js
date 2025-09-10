@@ -28,7 +28,7 @@ const age = getAge();
 
 const home_btn = "Accueil";
 const academic_training_btn = "Formations";
-const experiences_btn = "Expériences";
+const experiences_btn = "Expérience";
 const projects_btn = "Projets";
 const interests_btn = "Intérêts";
 
@@ -439,7 +439,7 @@ const projects = {
 };
 
 
-// /* ***************************************************************** degrees page ***************************************************************** */
+/* ***************************************************************** degrees page ***************************************************************** */
 
 const degrees_page_title = "MES FORMATIONS";
 
@@ -462,7 +462,7 @@ const degrees = {
     but: {
         title: `BUT Informatique`,
         logo: "images/degrees/but.png",
-        speciality: `Spécialité : réalisation d'applications : conception, développement, validation`,
+        specialization: `Spécialité : réalisation d'applications : conception, développement, validation`,
         mention: `Major de promotion`,
         school: `IUT de Belfort-Montbéliard`,
         place: `Belfort, France`,
@@ -471,7 +471,7 @@ const degrees = {
     bac: {
         title: `Baccalauréat général`,
         logo: "images/degrees/bac.png",
-        speciality: `Spécialité : scientifique`,
+        specialization: `Spécialité : scientifique`,
         school: `Lycée Périer`,
         place: `Marseille, France`,
         date: `Juillet 2020`
@@ -484,7 +484,7 @@ const certifications = {
     mooc_management: {
         title: `Gestion de Projet`,
         logo: "images/degrees/mooc_gdp.png",
-        speciality: `Spécialités :
+        specialization: `Spécialités :
         <ul class='text-start'>
             <li>Tronc commun</li>
             <li>Analyse fonctionnelle externe</li>
