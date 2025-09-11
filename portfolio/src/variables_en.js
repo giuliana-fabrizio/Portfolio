@@ -150,26 +150,83 @@ const certifications = {
         title: `Project Management`,
         logo: "images/degrees/mooc_gdp.png",
         specialization: `Specializations :
-        <ul class='text-start'>
-            <li>Tronc commun</li>
-            <li>External functional analysis</li>
-            <li>Strategic project analysis</li>
-            <li>System performance diagnostic (technical)</li>
-            <li>Project impact assessment</li>
-            <li>Agile project management with Scrum</li>
-            <li>Creativity management and brainstorming</li>
-            <li>Project team management</li>
-            <li>Problem-solving tools and methodologies</li>
-            <li>Visual project management</li>
-            <li>OAW - Web tools and applications for project management</li>
-            <li>Advanced planning</li>
-            <li>From project to entrepreneurial action</li>
-            <li>Introduction to the main TRIZ tools</li>
+        <ul class='text-start'>\
+            <li>Tronc commun</li>\
+            <li>External functional analysis</li>\
+            <li>Strategic project analysis</li>\
+            <li>System performance diagnostic (technical)</li>\
+            <li>Project impact assessment</li>\
+            <li>Agile project management with Scrum</li>\
+            <li>Creativity management and brainstorming</li>\
+            <li>Project team management</li>\
+            <li>Problem-solving tools and methodologies</li>\
+            <li>Visual project management</li>\
+            <li>OAW - Web tools and applications for project management</li>\
+            <li>Advanced planning</li>\
+            <li>From project to entrepreneurial action</li>\
+            <li>Introduction to the main TRIZ tools</li>\
         </ul>`,
         school: `MOOC`,
         date: `November 2024`,
     }
 }
+
+
+/* ***************************************************************** experiences page ***************************************************************** */
+
+const experiences_page_title = "MY EXPERIENCES";
+const experiences = {
+    stage_2024: {
+        title: `Fullstack Developer II`,
+        description: `Main tasks carried out :
+        <ul>\
+        <li>inserted Excel data in a ${technos.postgresql.name} database ;</li>\
+        <li>developed the main dashboard ;</li>\
+        <li>use ${technos.hasura.name} to manage user permissions.</li>\
+        </ul>`,
+        label_redirection: `More details`,
+        redirection: projects.BUT_S6,
+        logo: "images/experiences/natural_solutions.png",
+        type: `Type : internship`,
+        date: `January - April 2024`,
+        company: `Natural Solutions`,
+        place: `Marseille, France`,
+    },
+    stage_2023: {
+        title: `Fullstack Developer I`,
+        description: `Main tasks carried out :
+        <ul>\
+        <li>added ${technos.postgresql.name} database and used the ${technos.sequelize.name} ORM ;</li>\
+        <li>fixed existing calculation errors ;</li>\
+        <li>update the user interface : worked with ${technos.react_js.name} and integrate an external API ;</li>\
+        <li>wrote unit tests in ${technos.js.name}.</li>\
+        </ul>`,
+        label_redirection: `More details`,
+        redirection: projects.BUT_S4,
+        logo: "images/experiences/natural_solutions.png",
+        type: `Type : internship`,
+        date: `April - June 2023`,
+        company: `Natural Solutions`,
+        place: `Marseille, France`,
+    },
+    cdd_2022: {
+        title: `Convenience store employee`,
+        description: `Main carried out :
+        <ul>\
+        <li>handled customer checkout ;</li>\
+        <li>stocked shelves and received deliveries ;</li>\
+        <li>trained new employees at the cash register ;</li>\
+        <li>baked bread.</li>\
+        </ul>`,
+        logo: "images/experiences/u_express.png",
+        type: `Type : fixed-term contract`,
+        date: `July - August 2022`,
+        company: `U Express`,
+        place: `Marseille, France`,
+    }
+}
+
+// TODO HOBBIES
 
 
 /* ***************************************************************** not found page ***************************************************************** */

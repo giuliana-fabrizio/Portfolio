@@ -485,21 +485,21 @@ const certifications = {
         title: `Gestion de Projet`,
         logo: "images/degrees/mooc_gdp.png",
         specialization: `Spécialités :
-        <ul class='text-start'>
-            <li>Tronc commun</li>
-            <li>Analyse fonctionnelle externe</li>
-            <li>Analyse stratégique dans les projets</li>
-            <li>Diagnostic de fonctionnement d'un système (technique)</li>
-            <li>Évaluation d'impact des projets</li>
-            <li>Gestion de projet agile avec Scrum</li>
-            <li>Management de la créativité et brainstorming</li>
-            <li>Management d'équipe projet</li>
-            <li>Outils et méthodologie de résolution de problème</li>
-            <li>Management visuel de projet</li>
-            <li>OAW - Outils et applications web pour la gestion de projet</li>
-            <li>Planification avancée</li>
-            <li>Du Projet à l'action entrepreneuriale</li>
-            <li>Introduction aux principaux outils de TRIZ</li>
+        <ul class='text-start'>\
+            <li>Tronc commun</li>\
+            <li>Analyse fonctionnelle externe</li>\
+            <li>Analyse stratégique dans les projets</li>\
+            <li>Diagnostic de fonctionnement d'un système (technique)</li>\
+            <li>Évaluation d'impact des projets</li>\
+            <li>Gestion de projet agile avec Scrum</li>\
+            <li>Management de la créativité et brainstorming</li>\
+            <li>Management d'équipe projet</li>\
+            <li>Outils et méthodologie de résolution de problème</li>\
+            <li>Management visuel de projet</li>\
+            <li>OAW - Outils et applications web pour la gestion de projet</li>\
+            <li>Planification avancée</li>\
+            <li>Du Projet à l'action entrepreneuriale</li>\
+            <li>Introduction aux principaux outils de TRIZ</li>\
         </ul>`,
         school: `MOOC`,
         date: `Novembre 2024`,
@@ -514,7 +514,11 @@ const experiences = {
     stage_2024: {
         title: `Développeuse Fullstack II`,
         description: `Principales tâches réalisées :
-        <ul><li>insertion de données Excel dans une base de données PostgreSQL ;</li><li>réalisation du tableau de bord principal (ou Dashboard) ;</li><li>utilisation d'Hasura pour la gestion des permissions utilisateurs.</li></ul>`,
+        <ul>\
+        <li>insertion de données Excel dans une base de données PostgreSQL ;</li>\
+        <li>réalisation du tableau de bord principal (ou Dashboard) ;</li>\
+        <li>utilisation d'Hasura pour la gestion des permissions utilisateurs.</li>\
+        </ul>`,
         label_redirection: `Plus de détails`,
         redirection: projects.BUT_S6,
         logo: "images/experiences/natural_solutions.png",
@@ -526,7 +530,12 @@ const experiences = {
     stage_2023: {
         title: `Développeuse Fullstack I`,
         description: `Principales tâches réalisées :
-        <ul><li>ajout d'une base de données PostgreSQL et utilisation de l'ORM Sequelize ;</li><li>correction d'erreurs de calcul existantes ;</li><li>modification de l'interface utilisateur : manipulation de ReactJs et interrogation d'une API externe ;</li><li>réalisation de tests unitaires en JavaScript.</li></ul>`,
+        <ul>\
+        <li>ajout d'une base de données PostgreSQL et utilisation de l'ORM Sequelize ;</li>\
+        <li>correction d'erreurs de calcul existantes ;</li>\
+        <li>modification de l'interface utilisateur : manipulation de ReactJs et interrogation d'une API externe ;</li>\
+        <li>réalisation de tests unitaires en JavaScript.</li>\
+        </ul>`,
         label_redirection: `Plus de détails`,
         redirection: projects.BUT_S4,
         logo: "images/experiences/natural_solutions.png",
@@ -537,7 +546,13 @@ const experiences = {
     },
     cdd_2022: {
         title: `Employée de supérette`,
-        description: `Principales tâches réalisées :<ul><li>encaissement des clients ;</li><li>rangement des rayons et réception des marchandises ;</li><li>formation des nouveaux salariés à la caisse ;</li><li>cuisson du pain.</li></ul>`,
+        description: `Principales tâches réalisées :
+        <ul>\
+        <li>encaissement des clients ;</li>\
+        <li>rangement des rayons et réception des marchandises ;</li>\
+        <li>formation des nouveaux salariés à la caisse ;</li>\
+        <li>cuisson du pain.</li>\
+        </ul>`,
         logo: "images/experiences/u_express.png",
         type: `Type : CDD`,
         date: `Juillet - Août 2022`,
