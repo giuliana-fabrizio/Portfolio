@@ -16,7 +16,7 @@
                         :src="experience.logo"
                         :alt="experience.company"
                         class="p-1"
-                        style="width: 40px">
+                        style="width: 45px">
                     <div class="vr"></div>
                 </div>
                 <CardExperienceComponent

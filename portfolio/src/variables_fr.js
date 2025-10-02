@@ -511,6 +511,20 @@ const certifications = {
 
 const experiences_page_title = "MES EXPÉRIENCES";
 const experiences = {
+    volunteer: {
+        title: `Bénévole aux Restos du Coeur`,
+        description: `Principales tâches réalisées :
+        <ul>\
+        <li>accueil et orientation des bénéficiaires ;</li>\
+        <li>distribution alimentaire adaptée aux besoins des familles ;</li>\
+        <li>participation au nettoyage des locaux.</li>\
+        </ul>`,
+        logo: "images/experiences/restos_du_coeur.png",
+        type: `Type : bénévolat`,
+        date: `Depuis Septembre 2025`,
+        company: `Les Restos du Coeur`,
+        place: `Belfort, France`,
+    },
     stage_2024: {
         title: `Développeuse Fullstack II`,
         description: `Principales tâches réalisées :
