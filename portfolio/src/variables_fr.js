@@ -80,7 +80,7 @@ const technos = {
     flask: { name: "Flask", logo: "images/technologies/flask.png" },
     next_js: { name: "Next.js", logo: "images/technologies/next-js.png" },
     node_js: { name: "Node.js", logo: "images/technologies/node-js.png" },
-    symfony: { name: "Symfony", logo: "images/technologies/symfony.png"},
+    symfony: { name: "Symfony", logo: "images/technologies/symfony.png" },
 
     // Collaboration Tools
     github: { name: "GitHub", logo: "images/technologies/github.png" },
@@ -104,6 +104,7 @@ const technos = {
 
     // Programming Languages
     arduino: { name: "Arduino", logo: "images/technologies/arduino.png" },
+    cpp: { name: "CPP", logo: "images/technologies/cpp.png" },
     java: { name: "Java", logo: "images/technologies/java.png" },
     js: { name: "JavaScript", logo: "images/technologies/js.png" },
     php: { name: "Php", logo: "images/technologies/php.png" },
@@ -114,6 +115,59 @@ const technos = {
 };
 
 const projects = {
+    UTBM_AP4A: {
+        title: `BadgeAccess`,
+        category: categories.academic,
+        introduction: {
+            text: `Ce projet universitaire, réalisé en solitaire en première année de cycle ingénieur, consistait à simuler un système de contrôle d'accès par badges et lecteurs.`
+        },
+        implementation: {
+            title: `Tâches réalisées`,
+            text: ``,
+            sections: [
+                {
+                    title: `Architecture du projet`,
+                    list: [
+                        `Diagramme UML pour modéliser classes et relations ;`,
+                        `Organisation en modules séparés (headers / sources).`,
+                    ],
+                    // images: [
+                    //     // TODO
+                    // ]
+                }, {
+                    title: `Programmation orientée objet (POO)`,
+                    text: `Ce projet m'a permis de mettre en pratique plusieurs concepts fondamentaux de la programmation orientée objet.`,
+                    list: [
+                        `L'application de la forme canonique de Coplien ;`,
+                        `L'héritage et l'implémentation de classes abstraites ;`,
+                        `Le polymorphisme (redéfinition et surcharge de méthodes) ;`,
+                        `La surcharge d'opérateurs (ex. opérateur d'affectation).`,
+                    ]
+                }, {
+                    title: `Fonctionnalités disponibles`,
+                    list: [
+                        `Gestion des règles d'accès selon le type de personne ;`,
+                        `Simulation d'accès avec badges valides ou expirés ;`,
+                        `Chargement de configuration initiale via un fichier CSV ;`,
+                        `Redirection de la sortie (console ou fichier de log) ;`,
+                        `Horodatage automatique des logs.`,
+                    ],
+                    images: [
+                        {
+                            path: "images/projects/UTBM_AP4A/csv-config.png",
+                            legend: `Exemple de configuration CSV`,
+                        }
+                    ]
+                },
+            ]
+        },
+        result: {
+            title: `Résultat`,
+            text: `Le projet a abouti à une application pleinement fonctionnelle, répondant aux exigences des professeurs. Le simulateur développé est capable de traiter des demandes d'accès en tenant\
+            compte de différents paramètres, tels que les droits associés au lecteur ou la validité des badges. Vous pouvez consulter mon dépôt Git <a href='https://github.com/giuliana-fabrizio/BadgeAccess' target='_blank'>ici</a>.`
+        },
+        technologies: [technos.cpp, technos.github]
+    },
     UTBM_WE4A: {
         title: `Moodle`,
         category: categories.academic,
@@ -129,11 +183,17 @@ const projects = {
                     list: [
                         `Conception du Modèle Conceptuel de Données (MCD) ;`,
                         `Rédaction du script de création des tables ;`,
-                        `Création de fixtures Symfony pour insérer des données de test dans la base de données.`,
+                        `Création de fixtures Symfony pour insérer des données de test dans la base de données ;`,
+                        `Connexion de la base de données à l’application Symfony.`,
+                        `Utilisation de l’ORM Doctrine pour la gestion des entités et des relations ;`,
                     ],
-                    // images: [
-                    //     // TODO
-                    // ]
+                    images: [
+                        {
+                            path: "images/projects/UTBM_WE4A/mcd.png",
+                            legend: `MCD de l'application`,
+                            style: `max-height: 225px;`
+                        }
+                    ]
                 }, {
                     title: `Sécurité`,
                     list: [
@@ -144,18 +204,22 @@ const projects = {
                     title: `Autres fonctionnalités`,
                     list: [
                         `Écriture de requêtes Ajax pour dynamiser l'application ;`,
-                        'Ajout de la possibilité d’uploader et de télécharger des fichiers ;',
-                        `Implémentation de plusieurs interfaces utilisateur avec opérations CRUD.`
+                        `Ajout de la possibilité d'uploader et de télécharger des fichiers ;`,
+                        `Implémentation de plusieurs interfaces utilisateur avec opérations CRUD ;`,
+                        `Redirection spécifique pour les erreurs de type 404 ou 403.`
                     ],
-                    // images: [
-                    //     // TODO
-                    // ]
+                    images: [
+                        {
+                            path: "images/projects/UTBM_WE4A/details-ue.png",
+                            style: `max-height: 250px;`
+                        }
+                    ]
                 }
             ]
         },
         result: {
             title: `Résultat`,
-            text: `Le projet a abouti à une application pleinement fonctionnelle, permettant à chaque utilisateur d’effectuer des actions spécifiques selon son rôle (par exemple, un professeur peut déposer des fichiers). Cette expérience m’a permis de consolider mes bases en développement Web et de renforcer mes compétences techniques.`
+            text: `Le projet a abouti à une application pleinement fonctionnelle, permettant à chaque utilisateur d'effectuer des actions spécifiques selon son rôle (par exemple, un professeur peut déposer des fichiers). Cette expérience m'a permis de consolider mes bases en développement Web et de renforcer mes compétences techniques.`
         },
         technologies: [technos.github, technos.php, technos.postgresql, technos.sql, technos.symfony]
     },
@@ -171,9 +235,9 @@ const projects = {
                 {
                     title: `Authentification ${technos.firebase.name}`,
                     list: [
-                        `Configuration d’un projet ${technos.firebase.name} dédié ;`,
-                        `Intégration de la bibliothèque ${technos.firebase.name} et connexion de l’application au projet ;`,
-                        `Implémentation du système d’authentification ;`,
+                        `Configuration d'un projet ${technos.firebase.name} dédié ;`,
+                        `Intégration de la bibliothèque ${technos.firebase.name} et connexion de l'application au projet ;`,
+                        `Implémentation du système d'authentification ;`,
                         `Ajout de la fonctionnalité de création de compte ;`,
                         `Mise en place de la réinitialisation du mot de passe.`
                     ],
@@ -195,7 +259,7 @@ const projects = {
                         `Définition des données clés à représenter et du mode de visualisation ;`,
                         `Écriture de requêtes pour interroger la base de données ;`,
                         `Visualisation des résultats sous forme de texte et de graphiques avec <em>MPAndroidChart</em> ;`,
-                        `Ajout d’une option pour filtrer l’affichage par année.`,
+                        `Ajout d'une option pour filtrer l'affichage par année.`,
                     ],
                     images: [
                         {
@@ -224,7 +288,7 @@ const projects = {
         },
         result: {
             title: `Résultat`,
-            text: `Le projet a abouti à une application e-commerce fonctionnelle, permettant aux utilisateurs de consulter des produits, de les ajouter au panier et de finaliser leurs achats. Un Dashboard clair et intuitif présente également des statistiques de vente aux administrateurs. Cette expérience m’a permis de consolider mes compétences en développement Android, en travail collaboratif et en gestion de projet.\n
+            text: `Le projet a abouti à une application e-commerce fonctionnelle, permettant aux utilisateurs de consulter des produits, de les ajouter au panier et de finaliser leurs achats. Un Dashboard clair et intuitif présente également des statistiques de vente aux administrateurs. Cette expérience m'a permis de consolider mes compétences en développement Android, en travail collaboratif et en gestion de projet.\n
             Vous pouvez consulter notre soutenance <a href='#' target='_blank'>ici</a> et notre dépôt Git <a href='https://github.com/giuliana-fabrizio/Imperial-Roar' target='_blank'>ici</a>.`
         },
         technologies: [technos.firebase, technos.github, technos.kotlin, technos.sql, technos.stripe]
@@ -246,7 +310,7 @@ const projects = {
                     list: [
                         `Extraction des collectes validées via une requête ${technos.graphql.name} ;`,
                         `Affichage sur une carte mondiale grâce à leurs coordonnées <em>(react-map-gl)</em> ;`,
-                        `Mise en place d’un système de clusterisation selon le niveau de zoom ;`,
+                        `Mise en place d'un système de clusterisation selon le niveau de zoom ;`,
                         `Ajout de popups interactives (<em>Material UI</em>) présentant les détails de chaque collecte (nom, localisation, date, photo).`,
                     ],
                     images: [
@@ -258,16 +322,16 @@ const projects = {
                 }, {
                     title: `Filtres`,
                     list: [
-                        `Ajout d’un bouton « Filtres » ouvrant une popup réutilisable (conçue avec <em>Material UI</em>) ;`,
+                        `Ajout d'un bouton « Filtres » ouvrant une popup réutilisable (conçue avec <em>Material UI</em>) ;`,
                         `Requêtes pour récupérer les options de filtrage depuis la base ;`,
-                        `Intégration des filtres à l’URL pour conserver l’état de recherche ;`,
+                        `Intégration des filtres à l'URL pour conserver l'état de recherche ;`,
                         `Application des filtres côté client sur les données en mémoire, avec mise à jour dynamique des résultats affichés sur la carte.`,
                     ]
                 }, {
                     title: `Dashboard`,
                     list: [
                         `Écriture et test de requêtes ${technos.graphql.name} via ${technos.hasura.name} ;`,
-                        `Récupération des ramassages terminés, puis application des filtres définis dans l’URL côté frontend ;`,
+                        `Récupération des ramassages terminés, puis application des filtres définis dans l'URL côté frontend ;`,
                         `Transmission des résultats filtrés au backend pour générer les statistiques ;`,
                         `Intégration du dashboard avec <em>Material UI</em> et un template <em>Materio</em>, adapté pour afficher les données dynamiquement.`,
                     ],
@@ -358,7 +422,7 @@ const projects = {
         result: {
             title: `Résultat`,
             text: `Le projet a permis de développer une application fonctionnelle, capable de collecter et d'analyser des données de tests de réflexes, puis de les présenter via une interface claire et interactive. Cette expérience m'a permis de renforcer mes compétences en développement fullstack, en travail d'équipe et en gestion de projet complexe.\n
-            Vous pouvez consulter notre soutenance <a href='https://docs.google.com/presentation/d/1ciTwJQT0wF97OlqsJSNzQmrdxO6tPPnuQ1vWaAyG5aA/edit#slide=id.g230ccc5832e_0_0' target='blank'>ici</a> et notre dépôt Git <a href='#'>ici</a>.`
+            Vous pouvez consulter notre soutenance <a href='https://docs.google.com/presentation/d/1ciTwJQT0wF97OlqsJSNzQmrdxO6tPPnuQ1vWaAyG5aA/edit#slide=id.g230ccc5832e_0_0' target='blank'>ici</a> et notre dépôt Git <a href='https://github.com/giuliana-fabrizio/TestsReflexes' target='blank'>ici</a>.`
         },
         technologies: [technos.arduino, technos.docker, technos.gitlab, technos.java, technos.js, technos.node_js, technos.kotlin, technos.mongo, technos.vue_js]
     },
