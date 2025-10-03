@@ -184,8 +184,8 @@ const projects = {
                         `Conception du Modèle Conceptuel de Données (MCD) ;`,
                         `Rédaction du script de création des tables ;`,
                         `Création de fixtures Symfony pour insérer des données de test dans la base de données ;`,
-                        `Connexion de la base de données à l’application Symfony.`,
-                        `Utilisation de l’ORM Doctrine pour la gestion des entités et des relations ;`,
+                        `Connexion de la base de données à l'application Symfony ;`,
+                        `Utilisation de l'ORM Doctrine pour la gestion des entités et des relations.`,
                     ],
                     images: [
                         {
