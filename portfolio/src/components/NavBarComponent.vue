@@ -4,21 +4,35 @@
             <img src="images/logo.png" style="width: 27px;">
         </router-link>
 
-        <div id="id_navbar" class="position-relative">
-            <div class="horizontal_selector position-absolute" ref="horizontal_selector">
-                <div class="left"></div>
-                <div class="right"></div>
+        <div class="d-flex align-items-center">
+            <div id="id_navbar" class="position-relative">
+                <div class="horizontal_selector position-absolute" ref="horizontal_selector">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <ul class="m-0">
+                    <li v-for="item in items" :key="item.to"
+                        :class="{ active: $route.path === item.to || item.to === '/all_projects' && path === '/details' }"
+                        ref="nav_items">
+                        <router-link :to="item.to"
+                            class="d-block d-flex text-decoration-none text-white position-relative">
+                            <i class="me-md-2" :class="item.icon"></i>
+                            <span class="d-none d-md-block">{{ item.label }}</span>
+                        </router-link>
+                    </li>
+                </ul>
             </div>
-            <ul class="m-0">
-                <li v-for="item in items" :key="item.to"
-                    :class="{ active: $route.path === item.to || item.to === '/all_projects' && path === '/details' }"
-                    ref="nav_items">
-                    <router-link :to="item.to" class="d-block d-flex text-decoration-none text-white position-relative">
-                        <i class="me-md-2" :class="item.icon"></i>
-                        <span class="d-none d-md-block">{{ item.label }}</span>
-                    </router-link>
-                </li>
-            </ul>
+            <div class="dropdown">
+                <button class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img :src="isFrench ? 'images/france.png' : 'images/english.png'" style="width: 27px;">
+                </button>
+                <ul class="dropdown-menu">
+                    <li @click="changeLanguage('french')" class="dropdown-item"><img src="images/france.png"
+                            style="width: 27px;"></li>
+                    <li @click="changeLanguage('english')" class="dropdown-item"><img src="images/english.png"
+                            style="width: 27px;"></li>
+                </ul>
+            </div>
         </div>
     </nav>
 </template>
@@ -32,12 +46,12 @@ export default {
 
     data() {
         return {
+            isFrench: null,
             home_btn: "",
             academic_training_btn: "",
             experiences_btn: "",
             projects_btn: "",
             interests_btn: "",
-            canChangeLanguage: true,
 
             items: []
         }
@@ -46,7 +60,6 @@ export default {
     created() {
         this.updateLanguage();
         this.updateItems();
-        this.canChangeLanguage = this.$route.path === '/';
     },
 
     computed: {
@@ -65,7 +78,6 @@ export default {
         },
 
         async path() {
-            this.canChangeLanguage = this.$route.path === '/';
             await this.$nextTick();
             this.moveSelector();
         }
@@ -114,12 +126,12 @@ export default {
         },
 
         updateLanguage() {
-            const isFrench = this.language === 'french';
-            this.home_btn = isFrench ? variables_fr.home_btn : variables_en.home_btn;
-            this.academic_training_btn = isFrench ? variables_fr.academic_training_btn : variables_en.academic_training_btn;
-            this.experiences_btn = isFrench ? variables_fr.experiences_btn : variables_en.experiences_btn;
-            this.projects_btn = isFrench ? variables_fr.projects_btn : variables_en.projects_btn;
-            this.interests_btn = isFrench ? variables_fr.interests_btn : variables_en.interests_btn;
+            this.isFrench = this.language === 'french';
+            this.home_btn = this.isFrench ? variables_fr.home_btn : variables_en.home_btn;
+            this.academic_training_btn = this.isFrench ? variables_fr.academic_training_btn : variables_en.academic_training_btn;
+            this.experiences_btn = this.isFrench ? variables_fr.experiences_btn : variables_en.experiences_btn;
+            this.projects_btn = this.isFrench ? variables_fr.projects_btn : variables_en.projects_btn;
+            this.interests_btn = this.isFrench ? variables_fr.interests_btn : variables_en.interests_btn;
         }
     }
 }
