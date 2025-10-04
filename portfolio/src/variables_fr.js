@@ -37,7 +37,7 @@ const interests_btn = "Intérêts";
 const status = "Étudiante en informatique";
 
 const about_me_title = "À propos de moi";
-const about_me = `Âgée de ${age} ans, je suis actuellement étudiante en première année du cycle ingénieur en informatique à l'<a href="https://www.utbm.fr/formations/ingenieur/informatique/" target="_blank">UTBM</a>. Passionnée par cette discipline, je cherche constamment à me perfectionner. Pour cela, je réalise régulièrement des projets personnels en imaginant moi-même un besoin, ce qui me permet d'expérimenter différentes approches et technologies.\n
+const about_me = `Âgée de ${age} ans, je suis actuellement étudiante en deuxième année du cycle ingénieur en informatique à l'<a href="https://www.utbm.fr/formations/ingenieur/informatique/" target="_blank">UTBM</a>. Passionnée par cette discipline, je cherche constamment à me perfectionner. Pour cela, je réalise régulièrement des projets personnels en imaginant moi-même un besoin, ce qui me permet d'expérimenter différentes approches et technologies.\n
 J'apprécie tout particulièrement concevoir et optimiser des solutions afin de proposer des outils performants et adaptés aux besoins des utilisateurs. Actuellement, j'ambitionne de me spécialiser dans le domaine du traitement des données massives et de l'intelligence artificielle.`;
 const download_cv = "Télécharger mon CV";
 
