@@ -68,12 +68,6 @@ export default {
     }),
 
     created() {
-        const language = this.$store.getters.getLanguage;
-        const isFrench = language === 'french';
-
-        this.title = isFrench ? variables_fr.projects_page_title : variables_en.projects_page_title;
-        this.introText = isFrench ? variables_fr.projects_page_presentation : variables_en.projects_page_presentation;
-
         this.categories = this.$route.query.categories ?
             JSON.parse(this.$route.query.categories) :
             [];
@@ -81,8 +75,7 @@ export default {
             JSON.parse(this.$route.query.technologies) :
             [];
 
-        this.allProjects = isFrench ? variables_fr.projects : variables_en.projects;
-        this.setProjects();
+        this.updateContent();
     },
 
     mounted() {
@@ -90,6 +83,18 @@ export default {
             const tooltip = new Tooltip(el);
             this.tooltips.push(tooltip);
         });
+    },
+
+    computed: {
+        language() {
+            return this.$store.getters.getLanguage;
+        }
+    },
+
+    watch: {
+        language() {
+            this.updateContent();
+        }
     },
 
     beforeRouteLeave(to, from, next) {
@@ -101,6 +106,16 @@ export default {
     },
 
     methods: {
+        updateContent() {
+            const isFrench = this.language === 'french';
+
+            this.title = isFrench ? variables_fr.projects_page_title : variables_en.projects_page_title;
+            this.introText = isFrench ? variables_fr.projects_page_presentation : variables_en.projects_page_presentation;
+
+            this.allProjects = isFrench ? variables_fr.projects : variables_en.projects;
+            this.setProjects();
+        },
+
         getClass(length) {
             if (length <= 1) {
                 return 'col-md-12';
