@@ -598,7 +598,7 @@ const experiences = {
         <li>utilisation d'Hasura pour la gestion des permissions utilisateurs.</li>\
         </ul>`,
         label_redirection: `Plus de détails`,
-        redirection: projects.BUT_S6,
+        redirection: "BUT_S6",
         logo: "images/experiences/natural_solutions.png",
         type: `Type : stage`,
         date: `Janvier - Avril 2024`,
@@ -615,7 +615,7 @@ const experiences = {
         <li>réalisation de tests unitaires en JavaScript.</li>\
         </ul>`,
         label_redirection: `Plus de détails`,
-        redirection: projects.BUT_S4,
+        redirection: "BUT_S4",
         logo: "images/experiences/natural_solutions.png",
         type: `Type : stage`,
         date: `Avril - Juin 2023`,

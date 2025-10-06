@@ -6,7 +6,7 @@ const carousel_3 = require("../public/images/interests/carousel-3.jpg");
 
 /* ***************************************************************** common ***************************************************************** */
 
-const birthday = new Date("11-27-2002");
+// const birthday = new Date("11-27-2002");
 
 const name = "Giuliana GODAIL-FABRIZIO";
 
@@ -102,7 +102,7 @@ const technos = {
 };
 
 // TODO PROJECTS
-
+const projects = {}
 
 /* ***************************************************************** degrees page ***************************************************************** */
 
@@ -176,6 +176,20 @@ const certifications = {
 
 const experiences_page_title = "MY EXPERIENCES";
 const experiences = {
+    volunteer: {
+        title: `Volunteer at Restos du Coeur`,
+        description: `Main responsibilities :
+        <ul>\
+        <li>welcoming and guiding beneficiaries ;</li>\
+        <li>distributing food according to each family's needs ;</li>\
+        <li>helping with the cleaning and maintenance of the premises.</li>\
+        </ul>`,
+        logo: "images/experiences/restos_du_coeur.png",
+        type: `Type : bénévolat`,
+        date: `Since September 2025`,
+        company: `Les Restos du Coeur`,
+        place: `Belfort, France`,
+    },
     stage_2024: {
         title: `Fullstack Developer II`,
         description: `Main tasks carried out :
@@ -185,7 +199,7 @@ const experiences = {
         <li>use ${technos.hasura.name} to manage user permissions.</li>\
         </ul>`,
         label_redirection: `More details`,
-        redirection: projects.BUT_S6,
+        redirection: "BUT_S6",
         logo: "images/experiences/natural_solutions.png",
         type: `Type : internship`,
         date: `January - April 2024`,
@@ -202,7 +216,7 @@ const experiences = {
         <li>wrote unit tests in ${technos.js.name}.</li>\
         </ul>`,
         label_redirection: `More details`,
-        redirection: projects.BUT_S4,
+        redirection: "BUT_S4",
         logo: "images/experiences/natural_solutions.png",
         type: `Type : internship`,
         date: `April - June 2023`,
@@ -226,7 +240,39 @@ const experiences = {
     }
 }
 
+/* ***************************************************************** hobbies page ***************************************************************** */
+
 // TODO HOBBIES
+const interests_page_title = "MY HOBBIES";
+
+const interests = {
+    1: {
+        title: `Activité sportive & voyages`,
+        description: `Depuis 2010, je pratique la natation. D'abord membre d'un club durant mon enfance, je continue aujourd'hui à nager de manière occasionnelle. Par ailleurs, j'aime explorer de nouveaux lieux et admirer leurs paysages. Bonne marcheuse, je fais régulièrement des randonnées, une activité qui me permet de relever de nouveaux défis tout en faisant de belles découvertes.`,
+        legend: 'Images prises lors de mes randonnées et/ou voyages',
+        images: [carousel_1, carousel_2, carousel_3],
+        support: `carousel`
+    },
+    2: {
+        title: `Jeux vidéo`,
+        description: `C'est durant mon BUT Informatique à Belfort que des amis m'ont initiée aux jeux vidéo. Cependant, n'étant pas une grande joueuse, je me consacre principalement à Minecraft. Ce que j'apprécie particulièrement dans ce jeu, c'est la diversité des mods disponibles, qui permettent de renouveler l'expérience en introduisant de nouveaux mondes, personnages, créatures et matériaux.`,
+        legend: `Modélisation 3D de mon skin Minecraft. Utilisez la souris (ou le tactile) pour faire pivoter le modèle.`,
+        support: `mc`
+    },
+    3: {
+        title: `Couture`,
+        description: `Dès mon plus jeune âge, j'ai découvert la couture grâce à ma grand-mère, ancienne couturière. J'ai commencé par confectionner des vêtements pour mes poupées avant de réaliser aujourd'hui des objets pratiques dans mon quotidien : housses de protection pour batterie, sac à main, trousses à stylos...`,
+        legend: `Housse de protection pour batterie externe`,
+        // image: image_sewing,
+        support: `img`
+    },
+    4: {
+        title: `Modélisation 3D`,
+        description: `C'est en discutant avec ma mère d'un projet de réaménagement que j'ai décidé de me lancer dans la modélisation 3D. C'est ainsi que j'ai découvert le logiciel Sweet Home 3D. Avec cet outil, j'ai d'abord imaginé un nouvel agencement pour une pièce de la maison avant de reproduire un studio dans lequel j'ai vécu et que je trouvais particulièrement esthétique.`,
+        legend: `Modélisation 3D d'un studio réalisée avec Sweet Home 3D. Utilisez la souris (ou le tactile) pour zoomer et faire pivoter le modèle.`,
+        support: `modelling`
+    }
+}
 
 
 /* ***************************************************************** not found page ***************************************************************** */
