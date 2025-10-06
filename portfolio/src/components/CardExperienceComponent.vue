@@ -15,7 +15,7 @@
                 class="d-flex justify-content-end">
                 <button
                     class="btn btn-primary btn-sm mb-3 me-3"
-                    @click="setProject(experience.redirection)">
+                    @click="setIdProject()">
                     <span class="me-1">{{ experience.label_redirection }}</span>
                     <i class="bi bi-zoom-in"></i>
                 </button>
@@ -98,14 +98,16 @@ export default {
         displayMore() {
             this.displayAlert = !this.displayAlert;
         },
+
         formattedText(text) {
             if (!text) return '';
             return text
                 .replace(/\n/g, '<br>')
                 .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
         },
-        setProject(project) {
-            this.$store.commit('setProject', project);
+
+        setIdProject() {
+            this.$store.commit('setIdProject', this.experience.redirection);
         }
     }
 };

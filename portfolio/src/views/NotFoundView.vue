@@ -341,10 +341,19 @@ export default {
     }),
 
     created() {
-        const language = this.$store.getters.getLanguage;
-        const isFrench = language === 'french';
+        this.updateContent();
+    },
 
-        this.not_found_title = isFrench ? variables_fr.not_found_title : variables_en.not_found_title;
+    computed: {
+        language() {
+            return this.$store.getters.getLanguage;
+        }
+    },
+
+    watch: {
+        language() {
+            this.updateContent();
+        }
     },
 
     mounted() {
@@ -377,7 +386,13 @@ export default {
                 delay: 1000
             },
         });
+    },
 
+    methods: {
+        updateContent() {
+            const isFrench = this.language === 'french';
+            this.not_found_title = isFrench ? variables_fr.not_found_title : variables_en.not_found_title;
+        }
     }
 }
 </script>

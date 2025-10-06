@@ -50,16 +50,30 @@ export default {
     }),
 
     created() {
-        const language = this.$store.getters.getLanguage;
-        const isFrench = language === 'french';
-
-        this.experiences_page_title = isFrench ? variables_fr.experiences_page_title : variables_en.experiences_page_title;
-        this.experiences = isFrench ? variables_fr.experiences : variables_en.experiences;
-
+        this.updateContent();
         window.addEventListener('resize', this.updateWindowWidth);
     },
 
+    computed: {
+        language() {
+            return this.$store.getters.getLanguage;
+        }
+    },
+
+    watch: {
+        language() {
+            this.updateContent();
+        }
+    },
+
     methods: {
+        updateContent() {
+            const isFrench = this.language === 'french';
+
+            this.experiences_page_title = isFrench ? variables_fr.experiences_page_title : variables_en.experiences_page_title;
+            this.experiences = isFrench ? variables_fr.experiences : variables_en.experiences;
+        },
+
         updateWindowWidth() {
             this.windowWidth = window.innerWidth;
         },

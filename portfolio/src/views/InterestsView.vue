@@ -83,11 +83,19 @@ export default {
     }),
 
     created() {
-        const language = this.$store.getters.getLanguage;
-        const isFrench = language === 'french';
+        this.updateContent();
+    },
 
-        this.title = isFrench ? variables_fr.interests_page_title : variables_en.interests_page_title;
-        this.interests = isFrench ? variables_fr.interests : variables_en.interests;
+    computed: {
+        language() {
+            return this.$store.getters.getLanguage;
+        }
+    },
+
+    watch: {
+        language() {
+            this.updateContent();
+        }
     },
 
     mounted() {
@@ -99,6 +107,13 @@ export default {
     },
 
     methods: {
+        updateContent() {
+            const isFrench = this.language === 'french';
+
+            this.title = isFrench ? variables_fr.interests_page_title : variables_en.interests_page_title;
+            this.interests = isFrench ? variables_fr.interests : variables_en.interests;
+        },
+
         onResize() {
             this.windowWidth = window.innerWidth
         }

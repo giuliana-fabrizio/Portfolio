@@ -58,24 +58,40 @@ export default {
     }),
 
     created() {
-        const language = this.$store.getters.getLanguage;
-        const isFrench = language === 'french';
+        this.updateContent();
+    },
 
-        this.title = isFrench ? variables_fr.degrees_page_title : variables_en.degrees_page_title;
-        this.school_career = isFrench ? variables_fr.school_career : variables_en.school_career;
-        this.degrees_title = isFrench ? variables_fr.degrees_title : variables_en.degrees_tile;
-        this.degrees = isFrench ? variables_fr.degrees : variables_en.degrees;
-        this.certifications_title = isFrench ? variables_fr.certifications_title : variables_en.certifications_title;
-        this.certifications = isFrench ? variables_fr.certifications : variables_en.certifications;
+    computed: {
+        language() {
+            return this.$store.getters.getLanguage;
+        }
+    },
+
+    watch: {
+        language() {
+            this.updateContent();
+        }
     },
 
     methods: {
+        updateContent() {
+            const isFrench = this.language === 'french';
+
+            this.title = isFrench ? variables_fr.degrees_page_title : variables_en.degrees_page_title;
+            this.school_career = isFrench ? variables_fr.school_career : variables_en.school_career;
+            this.degrees_title = isFrench ? variables_fr.degrees_title : variables_en.degrees_title;
+            this.degrees = isFrench ? variables_fr.degrees : variables_en.degrees;
+            this.certifications_title = isFrench ? variables_fr.certifications_title : variables_en.certifications_title;
+            this.certifications = isFrench ? variables_fr.certifications : variables_en.certifications;
+        },
+
         formattedText(text) {
             if (!text) return '';
             return text
                 .replace(/\n/g, '<br>')
                 .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
         },
+
         setExpand() {
             this.expand = !this.expand;
         }

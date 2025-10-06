@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <TitleComponent :title="title" />
-        <p class="text-secondary">{{introText}}</p>
+        <p class="text-secondary">{{ introText }}</p>
 
         <main class="pb-5">
             <FilterProjectsComponent
@@ -25,7 +25,8 @@
                         v-if="(categories.length === 0 || categories.includes(project.category.name)) &&
                             (technos.length === 0 || project.technologies.filter(techno => technos.includes(techno.name)).length > 0)"
                         class="text-decoration-none">
-                        <CardProjectComponent :project="project" :projects_len="Object.keys(projects).length" />
+                        <CardProjectComponent :id_project="key" :project="project"
+                            :projects_len="Object.keys(projects).length" />
                     </router-link>
                 </div>
             </div>
@@ -80,7 +81,7 @@ export default {
             JSON.parse(this.$route.query.technologies) :
             [];
 
-        this.allProjects = Object.values(isFrench ? variables_fr.projects : variables_en.projects);
+        this.allProjects = isFrench ? variables_fr.projects : variables_en.projects;
         this.setProjects();
     },
 
@@ -109,16 +110,23 @@ export default {
             }
             return 'col-12 col-md-6 col-lg-4 col-xl-4';
         },
+
         setProjects() {
-            this.projects = this.allProjects.filter(project =>
-                (this.categories.length === 0 || this.categories.includes(project.category.name)) &&
-                (this.technos.length === 0 || project.technologies.some(techno => this.technos.includes(techno.name)))
-            );
+            this.projects = {};
+            for (const id in this.allProjects) {
+                const project = this.allProjects[id];
+                if ((this.categories.length === 0 || this.categories.includes(project.category.name)) &&
+                    (this.technos.length === 0 || project.technologies.some(techno => this.technos.includes(techno.name)))) {
+                    this.projects[id] = project;
+                }
+            }
         },
+
         updateCategories(categories) {
             this.categories = categories;
             this.setProjects();
         },
+
         updateTechnos(technos) {
             this.technos = technos;
             this.setProjects();

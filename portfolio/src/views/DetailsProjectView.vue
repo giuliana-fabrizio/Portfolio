@@ -18,6 +18,9 @@
 </template>
 
 <script>
+import variables_fr from '../variables_fr.js';
+import variables_en from '../variables_en.js';
+
 import DetailsElemComponent from '@/components/DetailsElemComponent.vue';
 import TitleComponent from '../components/TitleComponent.vue';
 import TopButtonComponent from '../components/TopButtonComponent.vue';
@@ -32,12 +35,35 @@ export default {
     },
 
     data() {
-        return { project: null };
+        return {
+            id_project: null,
+            project: null
+        };
     },
 
-    created() { this.project = this.$store.getters.getProject; },
+    created() {
+        this.id_project = this.$store.getters.getIdProject;
+        this.updateContent();
+    },
+
+    computed: {
+        language() {
+            return this.$store.getters.getLanguage;
+        }
+    },
+
+    watch: {
+        language() {
+            this.updateContent();
+        }
+    },
 
     methods: {
+        updateContent() {
+            const isFrench = this.language === 'french';
+            this.project = isFrench ? variables_fr.projects[this.id_project] : variables_en.projects[this.id_project];
+        },
+
         formattedText(text) {
             if (!text) return '';
             return text

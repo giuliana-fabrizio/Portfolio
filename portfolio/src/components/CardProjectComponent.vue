@@ -1,7 +1,7 @@
 <template>
     <div
         class="card card_projects bg-light h-100 border-0 rounded"
-        @click="setProject(project)">
+        @click="setIdProject()">
         <div class="card-body mb-0 m-2 pb-0">
             <div class="d-flex justify-content-between align-items-center mb-3 flex-column flex-lg-row text-center text-md-start">
                 <h5 class="subtitle"><strong>{{ project.title }}</strong></h5>
@@ -37,6 +37,10 @@ export default {
     name: 'CardProjectComponent',
 
     props: {
+        id_project: {
+            type: String,
+            required: true
+        },
         project: {
             type: Object,
             required: true,
@@ -58,8 +62,8 @@ export default {
                 .replace(/\n/g, '<br>')
                 .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
         },
-        setProject(project) {
-            this.$store.commit('setProject', project);
+        setIdProject() {
+            this.$store.commit('setIdProject', this.id_project);
         },
     }
 };
