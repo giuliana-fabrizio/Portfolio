@@ -1,0 +1,322 @@
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    line-height: 1.8;
+    color: #333;
+}
+
+.subtitle {
+    color: #555;
+}
+
+.card-degrees-experiences {
+    background: linear-gradient(45deg, #cbe0fe, #f0f6fe);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+}
+
+/* ***************************************************************** navbar ************************************************************* */
+
+.bg-navbar {
+    background-color: #00244C;
+}
+
+#id_navbar {
+    overflow: hidden;
+}
+
+#id_navbar li {
+    list-style-type: none;
+    float: left;
+}
+
+#id_navbar ul li a {
+    font-size: 15px;
+    padding: 20px 20px;
+    transition-duration: 0.6s;
+}
+
+#id_navbar>ul>li.active>a {
+    color: #00244C !important;
+    background-color: transparent;
+    transition: all 0.7s;
+}
+
+.horizontal_selector {
+    top: 18px;
+    left: 0px;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-top: 12px;
+}
+
+.horizontal_selector .right,
+.horizontal_selector .left {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    bottom: 10px;
+}
+
+.horizontal_selector .right {
+    right: -25px;
+}
+
+.horizontal_selector .left {
+    left: -25px;
+}
+
+.horizontal_selector .right:before,
+.horizontal_selector .left:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00244C;
+}
+
+.horizontal_selector .right:before {
+    bottom: 0;
+    right: -25px;
+}
+
+.horizontal_selector .left:before {
+    bottom: 0;
+    left: -25px;
+}
+
+.dropdown-menu {
+    padding: 0 !important;
+    left: -20% !important;
+    min-width: 0rem !important;
+}
+
+
+/* ***************************************************************** btn go up ************************************************************* */
+
+.scroll-to-top-button {
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #007BFF;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* ***************************************************************** footer ************************************************************* */
+
+footer {
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    width: 100%;
+    z-index: 100;
+}
+
+#contact {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.social {
+    text-align: center;
+}
+
+.social a {
+    padding-right: 12px;
+}
+
+.copyright {
+    color: #74808a;
+    margin: 0;
+    text-align: center;
+}
+
+
+/* ***************************************************************** home page ************************************************************* */
+
+#home_header {
+    /* background: url('images/img-home.webp'); */
+    background-color: #fff;
+    width: 100%;
+}
+
+#home_main {
+    border-top: 1px solid #e0e0e0;
+}
+
+.img-home {
+    width: 330px;
+    height: auto;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 350px)  {
+    .img-home {
+        width: 250px;
+    }
+}
+
+
+/* ***************************************************************** modal component ************************************************************* */
+
+.vm-title {
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+}
+
+.vm-btn-close {
+    color: #0D6EFD !important;
+}
+
+.vm {
+    background-color: #f8f9fa !important;
+    color: #2c3e50;
+    top: 35% !important;
+}
+
+.vm-content {
+    padding: 10px 15px 0px !important;
+}
+
+
+/* ***************************************************************** filter component ************************************************************* */
+
+.multiselect__tag {
+    background: #0D6EFD !important;
+}
+
+.multiselect__tag-icon {
+    background: #0D6EFD !important;
+}
+
+.multiselect__option--highlight {
+    background: #0D6EFD !important;
+}
+
+
+/* ***************************************************************** all projects page ************************************************************* */
+
+.card_projects {
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card_projects:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 15px rgba(0, 0, 0, 0.2);
+}
+
+.text-intro a {
+    color: #6c757d!important;
+    text-decoration: none;
+}
+
+.div-img-technos {
+    width: 30px;
+}
+
+.img-technos {
+    max-height: 20px;
+    max-width: 30px;
+}
+
+
+/* ***************************************************************** degrees page ************************************************************* */
+
+@keyframes display_career {
+    from {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.display-career {
+    display: block !important;
+    animation: display_career 1s ease-out forwards;
+}
+
+
+.flip-inner {
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    backface-visibility: hidden;
+}
+
+.flip-back {
+    max-height: 160px;
+    overflow: auto;
+    transform: rotateY(180deg);
+}
+
+.icon-degree-details {
+    right: 0;
+}
+
+
+/* ***************************************************************** experiences page ************************************************************* */
+
+.vr {
+    border-left: 5px solid #bdd7fe;
+    height: 100%;
+}
+
+@keyframes slideToLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card-enter-right {
+    animation: slideToLeft 1.2s ease-out;
+}
+
+@keyframes slideToRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card-enter-left {
+    animation: slideToRight 1.2s ease-out;
+}
