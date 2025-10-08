@@ -75,6 +75,8 @@ export default {
     watch: {
         language() {
             this.updateLanguage();
+            this.updateItems();
+            setTimeout(() => { this.moveSelector(); }, 300);
         },
 
         async path() {
