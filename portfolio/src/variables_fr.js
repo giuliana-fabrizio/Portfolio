@@ -38,7 +38,7 @@ const status = "Étudiante en informatique";
 
 const about_me_title = "À propos de moi";
 const about_me = `Âgée de ${age} ans, je suis actuellement étudiante en deuxième année du cycle ingénieur en informatique à l'<a href="https://www.utbm.fr/formations/ingenieur/informatique/" target="_blank">UTBM</a>. Passionnée par cette discipline, je cherche constamment à me perfectionner. Pour cela, je réalise régulièrement des projets personnels en imaginant moi-même un besoin, ce qui me permet d'expérimenter différentes approches et technologies.\n
-J'apprécie tout particulièrement concevoir et optimiser des solutions afin de proposer des outils performants et adaptés aux besoins des utilisateurs. Actuellement, j'ambitionne de me spécialiser dans le domaine du traitement des données massives et de l'intelligence artificielle.`;
+J'apprécie tout particulièrement de concevoir et optimiser des solutions afin de proposer des outils performants et adaptés aux besoins des utilisateurs. Actuellement, j'ambitionne de me spécialiser dans le domaine du traitement des données massives et de l'intelligence artificielle.`;
 const download_cv = "Télécharger mon CV";
 
 
@@ -197,7 +197,7 @@ const projects = {
                 }, {
                     title: `Sécurité`,
                     list: [
-                        `Implémentation du système de connection et de déconnection ;`,
+                        `Implémentation du système de connexion et de déconnexion ;`,
                         `Gestion des accès et permissions selon les rôles utilisateurs.`,
                     ]
                 }, {
@@ -404,10 +404,10 @@ const projects = {
                 }, {
                     title: `Microcontrôleurs`,
                     list: [
-                        `Configuration de la carte Arduino à partir du matériel fourni ;`,
+                        `Configuration de la carte Arduino à partir des microcontrôleurs fournis ;`,
                         `Rédaction du code Arduino pour faire fonctionner les microcontrôleurs ;`,
                         `Réalisation de tests manuels ;`,
-                        `Envoie des résultats au serveur de centralisation.`,
+                        `Envoi des résultats au serveur de centralisation.`,
                     ],
                     images: [
                         {
@@ -430,7 +430,7 @@ const projects = {
         title: `Outil de facturation`,
         category: categories.professional,
         introduction: {
-            text: `Ce stage de trois mois (avril - juin 2023), réalisé chez Natural Solutions, consistait à reprendre leur outil de facturation pour corriger les problèmes existants, améliorer les fonctionnalités existantes et en développer de nouvelles.`
+            text: `Ce stage de trois mois (avril - juin 2023), réalisé chez Natural Solutions, consistait à reprendre leur outil de facturation pour corriger les problèmes, améliorer les fonctionnalités existantes et en développer de nouvelles.`
         },
         implementation: {
             title: `Mise en œuvre`,
@@ -510,7 +510,7 @@ const degrees_page_title = "MES FORMATIONS";
 const school_career = {
     title: `Mon parcours`,
     content: `Après l'obtention de mon baccalauréat scientifique en 2020, j'ai décidé de prendre une année de césure pour réfléchir à mon avenir professionnel. Durant cette année, je me suis beaucoup documentée et j'ai consulté plusieurs conseillers d'orientation.\n
-    C'est un peu par hasard que j'ai découvert l'informatique. Son caractère en constante évolution et l'opportunité de contribuer à des avancées technologiques majeures m'ont motivée à intégrer un BUT Informatique en 2021. Cette discipline rapidement passionnée, me donnant envie d'approfondir mes connaissances et de me perfectionner davantage. C'est pourquoi j'ai choisi de poursuivre mes études en école d'ingénieurs.`
+    C'est un peu par hasard que j'ai découvert l'informatique. Son caractère en constante évolution et l'opportunité de contribuer à des avancées technologiques majeures m'ont motivée à intégrer un BUT Informatique en 2021. Cette discipline m'a rapidement passionnée, me donnant envie d'approfondir mes connaissances et de me perfectionner davantage. C'est pourquoi j'ai choisi de poursuivre mes études en école d'ingénieurs.`
 }
 
 const degrees_title = `Mes diplômes`;
