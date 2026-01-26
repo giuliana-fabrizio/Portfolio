@@ -77,7 +77,6 @@ const technos = {
     react_js: { name: "React.js", logo: "images/technologies/react-js.png" },
 
     // Backend Web Development
-    flask: { name: "Flask", logo: "images/technologies/flask.png" },
     next_js: { name: "Next.js", logo: "images/technologies/next-js.png" },
     node_js: { name: "Node.js", logo: "images/technologies/node-js.png" },
     symfony: { name: "Symfony", logo: "images/technologies/symfony.png" },
@@ -91,7 +90,6 @@ const technos = {
 
     // Containerization & Virtualization
     docker: { name: "Docker", logo: "images/technologies/docker.png" },
-    virtualbox: { name: "VirtualBox", logo: "images/technologies/virtualbox.png" },
 
     // Database & Query Languages
     sql: { name: "SQL", logo: "images/technologies/sql.png" },
@@ -111,10 +109,102 @@ const technos = {
     python: { name: "Python", logo: "images/technologies/python.png" },
     ts: { name: "TypeScript", logo: "images/technologies/ts.png" },
     kotlin: { name: "Kotlin", logo: "images/technologies/kotlin.png" },
-    swift: { name: "Swift", logo: "images/technologies/swift.png" },
+    // TODO application iOS swift: { name: "Swift", logo: "images/technologies/swift.png" },
 };
 
 const projects = {
+    UTBM_IA41: {
+        title: `Rasende Roboter`,
+        category: categories.academic,
+        introduction: {
+            text: `Ce projet universitaire, réalisé en première année de cycle ingénieur en collaboration avec un autre étudiant, visait à développer le jeu du Rasende Roboter, plus connu sous le nom Ricochet Robots. Nous devions également faire une intelligence artificielle capable d'affronter un joueur humain selon plusieurs niveaux de difficulté.`
+        },
+        implementation: {
+            title: `Tâches réalisées`,
+            text: ``,
+            sections: [
+                {
+                    title: `Logique du jeu`,
+                    list: [
+                        `Configuration paramétrable d'une partie : assemblage du plateau de jeu, nombre de manches, difficulté de l'IA ;`,
+                        `Implémentation des règles de déplacement des robots (glissement continu jusqu'à obstacle) ;`,
+                        `Gestion des collisions entre robots et des limites du plateau ;`,
+                        `Validation des coups et vérification de l'atteinte de l'objectif.`
+                    ]
+                }, {
+                    title: `Intelligence artificielle`,
+                    list: [
+                        `Comparaison de plusieurs algorithmes (A*, Breath-First-Search, Dijkstra) ;`,
+                        `Implémentation de l'algorithme A* ;`,
+                        `Modélisation d'un état (position des robots) ;`,
+                        `Génération des états successeurs à partir d'un état précis et des mouvements possibles qui en découlent ;`,
+                        `Création de deux niveaux de difficulté (simple et avancé) via la complexité de l'heuristique ;`,
+                        `Reconstruction et affichage du chemin optimal trouvé par l'IA.`
+                    ],
+                    img_style: `col-lg-6`,
+                    images: [
+                        {
+                            path: "images/projects/UTBM_IA41/gameboard.png",
+                            legend: `Situation complexe et chemin trouvé par l'IA`,
+                            style: `max-height: 270px;`
+                        }
+                    ]
+                },
+            ]
+        },
+        result: {
+            title: `Résultat`,
+            text: `Le projet a abouti à un jeu pleinement fonctionnel, permettant à l'utilisateur de jouer contre notre IA. Vous pouvez consulter notre soutenance <a href='https://docs.google.com/presentation/d/1E3sWxrTmw9e1jOlK5u4ZRtSWdAdViirMot2iRPzkQI8/edit?usp=sharing' target='_blank'>ici</a> notre dépôt Git <a href='https://github.com/giuliana-fabrizio/RasendeRoboter' target='_blank'>ici</a>.`,
+        },
+        technologies: [technos.github, technos.python]
+    },
+    UTBM_AP4B: {
+        title: `Jeu du Trio`,
+        category: categories.academic,
+        introduction: {
+            text: `Ce projet universitaire, réalisé en première année de cycle ingénieur en collaboration avec deux autres étudiants, visait à reproduire le mode individuel simple du jeu de cartes Trio.`
+        },
+        implementation: {
+            title: `Tâches réalisées`,
+            text: ``,
+            sections: [
+                {
+                    title: `Mécaniques du jeu`,
+                    list: [
+                        `Initialisation paramétrable d'une partie : nombre de joueurs, saisie et contrôle des noms ;`,
+                        `Vérification des cartes retournées, détection des trios, gestion des scénarios de victoire (points ou Trio Doré).`
+                    ]
+                }, {
+                    title: `Conception des interfaces`,
+                    list: [
+                        `Écran de paramétrage d'une partie ;`,
+                        `Interface principale : affichage des joueurs et des cartes interactives ;`,
+                        `Gestion des événements : retournement des cartes, affichage des règles ;`,
+                        `Synchronisation de l'état du jeu entre le modèle logique et l'interface principale.`
+                    ],
+                    img_style: `col-lg-6`,
+                    images: [
+                        {
+                            path: "images/projects/UTBM_AP4B/gameboard.png",
+                            style: `max-height: 280px;`
+                        }
+                    ]
+                }, {
+                    title: `Architecture et concepts avancés utilisés`,
+                    list: [
+                        `Programmation orientée objet ;`,
+                        `Utilisation d'énumérations pour la modélisation des cartes ;`,
+                        `Organisation du code selon le pattern MVC (Modèle-Vue-Contrôleur).`,
+                    ],
+                },
+            ]
+        },
+        result: {
+            title: `Résultat`,
+            text: `Le projet a abouti à un jeu pleinement fonctionnel, répondant aux exigences des professeurs. Vous pouvez consulter notre dépôt Git <a href='https://github.com/giuliana-fabrizio/TrioGame' target='_blank'>ici</a>.`,
+        },
+        technologies: [technos.github, technos.java]
+    },
     UTBM_AP4A: {
         title: `BadgeAccess`,
         category: categories.academic,
@@ -131,9 +221,13 @@ const projects = {
                         `Diagramme UML pour modéliser classes et relations ;`,
                         `Organisation en modules séparés (headers / sources).`,
                     ],
-                    // images: [
-                    //     // TODO
-                    // ]
+                    img_style: `col-12`,
+                    images: [
+                        {
+                            path: "images/projects/UTBM_AP4A/class-diagram.png",
+                            style: `max-height: 360px;`,    
+                        }
+                    ]
                 }, {
                     title: `Programmation orientée objet (POO)`,
                     text: `Ce projet m'a permis de mettre en pratique plusieurs concepts fondamentaux de la programmation orientée objet.`,
@@ -152,6 +246,7 @@ const projects = {
                         `Redirection de la sortie (console ou fichier de log) ;`,
                         `Horodatage automatique des logs.`,
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_AP4A/csv-config.png",
@@ -187,6 +282,7 @@ const projects = {
                         `Connexion de la base de données à l'application Symfony ;`,
                         `Utilisation de l'ORM Doctrine pour la gestion des entités et des relations.`,
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_WE4A/mcd.png",
@@ -208,6 +304,7 @@ const projects = {
                         `Implémentation de plusieurs interfaces utilisateur avec opérations CRUD ;`,
                         `Redirection spécifique pour les erreurs de type 404 ou 403.`
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_WE4A/details-ue.png",
@@ -241,6 +338,7 @@ const projects = {
                         `Ajout de la fonctionnalité de création de compte ;`,
                         `Mise en place de la réinitialisation du mot de passe.`
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_SY43/login.jpg",
@@ -261,6 +359,7 @@ const projects = {
                         `Visualisation des résultats sous forme de texte et de graphiques avec <em>MPAndroidChart</em> ;`,
                         `Ajout d'une option pour filtrer l'affichage par année.`,
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_SY43/dashboard.jpg",
@@ -277,6 +376,7 @@ const projects = {
                         `Transmission du prix à payer au serveur ${technos.stripe.name} ;`,
                         `Hébergement du serveur ${technos.stripe.name} via ${technos.firebase.name}`,
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_SY43/stripe.jpg",
@@ -313,6 +413,7 @@ const projects = {
                         `Mise en place d'un système de clusterisation selon le niveau de zoom ;`,
                         `Ajout de popups interactives (<em>Material UI</em>) présentant les détails de chaque collecte (nom, localisation, date, photo).`,
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S6/map.png",
@@ -335,6 +436,7 @@ const projects = {
                         `Transmission des résultats filtrés au backend pour générer les statistiques ;`,
                         `Intégration du dashboard avec <em>Material UI</em> et un template <em>Materio</em>, adapté pour afficher les données dynamiquement.`,
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S6/dashboard.png",
@@ -368,6 +470,7 @@ const projects = {
                 `un <span style='color: #f8e0e0'><strong>frontend</strong></span> pour visualiser les résultats ;`,
                 `une <span style='color: #d9ead3'><strong>API</strong></span> pour assurer les échanges entre serveur, base de données et frontend.`,
             ],
+            img_style: `col-lg-6`,
             images: [
                 {
                     path: "images/projects/BUT_S5/structure.png",
@@ -388,6 +491,7 @@ const projects = {
                         `Création d'un frontend connecté à l'API avec affichage de graphiques dynamiques réalisés grâce à la bibliothèque <em>Vue chartjs</em> ;`,
                         `Déploiement de l'API avec ${technos.docker.name}.`,
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S5/frontend.png",
@@ -409,6 +513,7 @@ const projects = {
                         `Réalisation de tests manuels ;`,
                         `Envoi des résultats au serveur de centralisation.`,
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S5/microcontrollers.png",
@@ -445,6 +550,7 @@ const projects = {
                         `Connexion de la base avec l'API et adaptation du code de l'application ;`,
                         `Développement d'une fonction d'import de données dans la base depuis un fichier JSON.`,
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S4/MCD.png",
@@ -470,35 +576,6 @@ const projects = {
             Vous pouvez consulter le diaporama de ma soutenance <a href='https://docs.google.com/presentation/d/1uueQqS5IAyxeuxPOwv-2YE4rRnxuOs72wY5auPL-VPI/edit?usp=sharing' target='_blank'>ici</a>.`,
         },
         technologies: [technos.gitlab, technos.js, technos.node_js, technos.postgresql, technos.react_js, technos.sequelize, technos.scrum]
-    },
-    BUT_S1: {
-        title: `Jeu du jeton manquant`,
-        category: categories.academic,
-        introduction: {
-            text: `Ce projet universitaire consistait à développer un mini-jeu en Java sur un plateau triangulaire de 21 cases avec la possibilité de jouer contre deux intelligences artificielles.\
-            Pour gagner, chaque joueur doit placer ses 10 jetons numérotés de 1 à 10 afin de minimiser la somme des numéros autour de la case vide à la fin de la partie.`
-        },
-        implementation: {
-            title: `Contributions`,
-            list: [
-                `Conception et affichage du plateau de jeu dans le terminal ;`,
-                `Développement de la logique pour une partie entre deux joueurs ;`,
-                `Création des algorithmes des deux IA : une stratégie aléatoire et une stratégie avancée privilégiant certaines positions clés ;`,
-                `Séparation du code stable et des versions de test.`
-            ]
-        },
-        result: {
-            title: `Résultat`,
-            text: `Vous pouvez consulter le dépôt GitHub en cliquant <a href="https://github.com/giuliana-fabrizio/SAE-Jeu-du-jeton-manquant" target="_blank">ici</a>.`,
-            images: [
-                {
-                    path: "images/projects/BUT_S1/game.png",
-                    legend: `Simulation d'une partie entre les deux IA : victoire de la stratégie avancée`,
-                    style: `max-height: 400px; margin-top: 15px;`
-                }
-            ],
-        },
-        technologies: [technos.github, technos.java]
     }
 };
 
