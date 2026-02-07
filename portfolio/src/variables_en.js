@@ -6,26 +6,40 @@ const carousel_3 = require("../public/images/interests/carousel-3.jpg");
 
 /* ***************************************************************** common ***************************************************************** */
 
+// const birthday = new Date("11-27-2002");
+
+// function getAge() {
+//     const currentDate = new Date();
+//     var age = currentDate.getFullYear() - birthday.getFullYear();
+//     if (currentDate.getMonth() < birthday.getMonth()) {
+//         age -= 1;
+//     } else if (currentDate.getMonth() == birthday.getMonth() &&
+//         currentDate.getUTCDate() < birthday.getUTCDate()) {
+//         age -= 1;
+//     }
+//     return age;
+// }
+
 const name = "Giuliana GODAIL-FABRIZIO";
+// const age = getAge();
 
 
 /* ***************************************************************** nav bar ***************************************************************** */
 
 const home_btn = "Home";
 const academic_training_btn = "School training";
-const experiences_btn = "Experience";
+const experiences_btn = "Professional experiences";
 const projects_btn = "Projects";
 const interests_btn = "Hobbies";
-
 
 /* ***************************************************************** home page ***************************************************************** */
 
 const status = "Computer science student";
 
 const about_me_title = "About me";
-const about_me = `I am currently a computer science engineering student at the <a href="https://www.utbm.fr/formations/ingenieur/informatique/" target="_blank">UTBM</a>. I really like this field, that is why I am constantly seeking to improve my skills. To achieve this, I regularly work on personal projects : I sometimes image a problem to solve which allows me to experiment with different approaches and technologies.\n
-I particularly enjoy designing and optimizing solutions to create efficient tools adapted to user needs. I now aspire to specialize in big data processing and artificial intelligence.`;
-const download_cv = "Download my CV";
+const about_me = `I am currently a computer science engineering student at the <a href="https://www.utbm.fr/formations/ingenieur/informatique/" target="_blank">UTBM</a>. I am found of this field that is why I am constantly seeking to improve my skills. To achieve this, I often work on personal projects : I sometimes image a problem to solve which allows me to experiment with different approchoaches and technologies.\n
+I particularly enjoy designing and optimizing solutions to create efficient tools adapted to user needs. Now, I wish to specialize in big data and artificial intelligence.`;
+const download_cv = "Download my resume";
 
 
 /* ***************************************************************** footer ***************************************************************** */
@@ -39,13 +53,13 @@ const linkedin = "https://www.linkedin.com/in/giuliana-godail-fabrizio-20639525b
 /* ***************************************************************** projects page ***************************************************************** */
 
 const projects_page_title = "MY PROJECTS";
-const projects_page_presentation = "On this page, you will find all the projects I have worked on.";
+const projects_page_presentation = "On this page, you will discover all the projects I have worked on.";
 
 const filterLabel = "Filter";
-const categoriesLabel = "Type of project";
+const categoriesLabel = "Projet type";
 const technosLabel = "Technologies";
 const confirmFilters = "Confirm";
-const resetFilters = "Cancel";
+const resetFilters = "Reset";
 
 const categories = {
     personal: { name: "Personal", style: "background-color: #b6d3fe" },
@@ -63,7 +77,6 @@ const technos = {
     react_js: { name: "React.js", logo: "images/technologies/react-js.png" },
 
     // Backend Web Development
-    flask: { name: "Flask", logo: "images/technologies/flask.png" },
     next_js: { name: "Next.js", logo: "images/technologies/next-js.png" },
     node_js: { name: "Node.js", logo: "images/technologies/node-js.png" },
     symfony: { name: "Symfony", logo: "images/technologies/symfony.png" },
@@ -77,7 +90,6 @@ const technos = {
 
     // Containerization & Virtualization
     docker: { name: "Docker", logo: "images/technologies/docker.png" },
-    virtualbox: { name: "VirtualBox", logo: "images/technologies/virtualbox.png" },
 
     // Database & Query Languages
     sql: { name: "SQL", logo: "images/technologies/sql.png" },
@@ -97,16 +109,107 @@ const technos = {
     python: { name: "Python", logo: "images/technologies/python.png" },
     ts: { name: "TypeScript", logo: "images/technologies/ts.png" },
     kotlin: { name: "Kotlin", logo: "images/technologies/kotlin.png" },
-    swift: { name: "Swift", logo: "images/technologies/swift.png" },
+    // TODO application iOS swift: { name: "Swift", logo: "images/technologies/swift.png" },
 };
 
-// TODO PROJECTS
 const projects = {
+    UTBM_IA41: {
+        title: `Rasende Roboter`,
+        category: categories.academic,
+        introduction: {
+            text: `This academic project, carried out in the first year of engeneering studies in collaboration with another student, aimed to develop the game Rasende Roboter, better known as Ricochet Robot. We also had to devise an artificial intelligence able of competing againt a human player at several difficulty levels.`
+        },
+        implementation: {
+            title: `Tasks completed`,
+            text: ``,
+            sections: [
+                {
+                    title: `Game logic`,
+                    list: [
+                        `Configurable game settings : game board layout, number of rounds, AI difficulty ;`,
+                        `Implementation of robot movement rules (continuous sliding until an obstacle is reached) ;`,
+                        `Collision management between robots and board boundaries ;`,
+                        `Move validation and objective completion verification.`
+                    ]
+                }, {
+                    title: `Artificial intelligence`,
+                    list: [
+                        `Comparison of several algorithms (A*, Breath-First-Search, Dijkstra) ;`,
+                        `Implementation of the A* algorithm ;`,
+                        `State modeling (robot position) ;`,
+                        `Generation of successor states from a specific state and the resulting possible movements ;`,
+                        `Creation of two difficulty levels (simple et advanced) via heuristic complexity ;`,
+                        `Reconstruction and display of the optimal path found by AI.`
+                    ],
+                    img_style: `col-lg-6`,
+                    images: [
+                        {
+                            path: "images/projects/UTBM_IA41/gameboard.png",
+                            legend: `Complex situation and path found by AI`,
+                            style: `max-height: 270px;`
+                        }
+                    ]
+                },
+            ]
+        },
+        result: {
+            title: `Result`,
+            text: `The project gave a fully functionnal game, allowing the user to play against our AI. You can consult our presentation <a href='https://docs.google.com/presentation/d/1E3sWxrTmw9e1jOlK5u4ZRtSWdAdViirMot2iRPzkQI8/edit?usp=sharing' target='_blank'>here</a> and our ${technos.github.name} repository <a href='https://github.com/giuliana-fabrizio/RasendeRoboter' target='_blank'>here</a>.`,
+        },
+        technologies: [technos.github, technos.python]
+    },
+    UTBM_AP4B: {
+        title: `Trio game`,
+        category: categories.academic,
+        introduction: {
+            text: `This academic project, carried out in the first year of engeneering studies in collaboration with two other students, aimed to reproduce the simple individual mode of the Trio card game.`
+        },
+        implementation: {
+            title: `Tasks completed`,
+            text: ``,
+            sections: [
+                {
+                    title: `Game logic`,
+                    list: [
+                        `Configurable game settings : number of players, name entry and verification ;`,
+                        `Verification of returned cards, detection of trios, management of victory scenarios (points or Golden Trio).`
+                    ]
+                }, {
+                    title: `Interface design`,
+                    list: [
+                        `Game setting screen ;`,
+                        `Main interface : display players and interactive cards ;`,
+                        `Event management : card turnover, display of rules ;`,
+                        `Synchronization of the game state between the logic model and the main interface.`
+                    ],
+                    img_style: `col-lg-6`,
+                    images: [
+                        {
+                            path: "images/projects/UTBM_AP4B/gameboard.png",
+                            style: `max-height: 280px;`
+                        }
+                    ]
+                }, {
+                    title: `Architecture and advanced concepts used`,
+                    list: [
+                        `Object oriented programming ;`,
+                        `Use of enumerations for cards modeling ;`,
+                        `Code organization according to the MVC (Modèle-Vue-Contrôleur) pattern.`,
+                    ],
+                },
+            ]
+        },
+        result: {
+            title: `Result`,
+            text: `The project gave a fully functional game, according to the teacher's requirements. You can consult our ${technos.github.name} repository <a href='https://github.com/giuliana-fabrizio/TrioGame' target='_blank'>here</a>.`,
+        },
+        technologies: [technos.github, technos.java]
+    },
     UTBM_AP4A: {
         title: `BadgeAccess`,
         category: categories.academic,
         introduction: {
-            text: `This university project was done alone during my first year in the engineering cycle at UTBM. The goal was to simulate an access control system using badges and badge readers.`
+            text: `This academic project, carried out in the first year of engeneering studies, aimed to simulate an access control system using badges and readers.`
         },
         implementation: {
             title: `Tasks completed`,
@@ -116,13 +219,17 @@ const projects = {
                     title: `Project architecture`,
                     list: [
                         `UML diagram to model classes and relations ;`,
-                        `Project organized in separate modules (headers / sources).`,
+                        `Organization in separate modules (headers / sources).`,
                     ],
-                    // images: [
-                    //     // TODO
-                    // ]
+                    img_style: `col-12`,
+                    images: [
+                        {
+                            path: "images/projects/UTBM_AP4A/class-diagram.png",
+                            style: `max-height: 360px;`,    
+                        }
+                    ]
                 }, {
-                    title: `Object-Oriented Programming (OOP)`,
+                    title: `Object-oriented programming`,
                     text: `This project helped me practice several basic concepts of object-oriented programming.`,
                     list: [
                         `Use of the Coplien canonical form ;`,
@@ -139,6 +246,7 @@ const projects = {
                         `Output redirection (console or log file) ;`,
                         `Automatic log timestamping.`,
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_AP4A/csv-config.png",
@@ -150,314 +258,326 @@ const projects = {
         },
         result: {
             title: `Result`,
-            text: `The project ended with a fully working application that met the teachers's requirements.\
-            The simulator can process access requests while checking different parameters, such as the reader's rights or the badge validity. You can see my GitHub repository <a href='https://github.com/giuliana-fabrizio/BadgeAccess' target='_blank'>here</a>.`
+            text: `The project gave a fully functionnal application, according to the teacher's requirements. The simulator can process access requests while checking different parameters such as the reader's rights or the badge validity.\
+            You can consult my ${technos.github.name} repository <a href='https://github.com/giuliana-fabrizio/BadgeAccess' target='_blank'>here</a>.`
         },
         technologies: [technos.cpp, technos.github]
     },
     UTBM_WE4A: {
-        title: "Moodle",
+        title: `Moodle`,
         category: categories.academic,
         introduction: {
-            text: "This university project, done during my first year in the engineering cycle with three other students, was about recreating some features of the educational platform Moodle."
+            text: `Ce projet universitaire, réalisé en première année de cycle ingénieur en collaboration avec trois autres étudiants, consistait à reproduire une partie des fonctionnalités de l'application éducative Moodle.`
         },
         implementation: {
-            title: "Contributions",
-            text: "",
+            title: `Contributions`,
+            text: ``,
             sections: [
                 {
-                    title: "Database",
+                    title: `Base de données`,
                     list: [
-                        "Design of the Conceptual Data Model (CDM);",
-                        "Writing the script to create the tables;",
-                        "Creating Symfony fixtures to insert test data into the database;",
-                        "Connecting the database to the Symfony application;",
-                        "Using Doctrine ORM to manage entities and relationships."
+                        `Conception du Modèle Conceptuel de Données (MCD) ;`,
+                        `Rédaction du script de création des tables ;`,
+                        `Création de fixtures Symfony pour insérer des données de test dans la base de données ;`,
+                        `Connexion de la base de données à l'application Symfony ;`,
+                        `Utilisation de l'ORM Doctrine pour la gestion des entités et des relations.`,
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_WE4A/mcd.png",
-                            legend: "Application CDM",
-                            style: "max-height: 225px;"
+                            legend: `MCD de l'application`,
+                            style: `max-height: 225px;`
                         }
                     ]
-                },
-                {
-                    title: "Security",
+                }, {
+                    title: `Sécurité`,
                     list: [
-                        "Implementation of the login and logout system;",
-                        "Management of access and permissions depending on user roles."
+                        `Implémentation du système de connexion et de déconnexion ;`,
+                        `Gestion des accès et permissions selon les rôles utilisateurs.`,
                     ]
-                },
-                {
-                    title: "Other features",
+                }, {
+                    title: `Autres fonctionnalités`,
                     list: [
-                        "Writing Ajax requests to make the app more dynamic;",
-                        "Adding the ability to upload and download files;",
-                        "Implementation of several user interfaces with CRUD operations;",
-                        "Specific redirection for 404 and 403 error pages."
+                        `Écriture de requêtes Ajax pour dynamiser l'application ;`,
+                        `Ajout de la possibilité d'uploader et de télécharger des fichiers ;`,
+                        `Implémentation de plusieurs interfaces utilisateur avec opérations CRUD ;`,
+                        `Redirection spécifique pour les erreurs de type 404 ou 403.`
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_WE4A/details-ue.png",
-                            style: "max-height: 250px;"
+                            style: `max-height: 250px;`
                         }
                     ]
                 }
             ]
         },
         result: {
-            title: "Result",
-            text: "The project ended with a fully functional application, allowing each user to perform specific actions depending on their role (for example, a teacher can upload files). This experience helped me strengthen my web development skills and improve my technical knowledge."
+            title: `Résultat`,
+            text: `Le projet a abouti à une application pleinement fonctionnelle, permettant à chaque utilisateur d'effectuer des actions spécifiques selon son rôle (par exemple, un professeur peut déposer des fichiers). Cette expérience m'a permis de consolider mes bases en développement Web et de renforcer mes compétences techniques.`
         },
         technologies: [technos.github, technos.php, technos.postgresql, technos.sql, technos.symfony]
     },
     UTBM_SY43: {
-        title: "E-commerce application",
+        title: `Application e-commerce`,
         category: categories.academic,
         introduction: {
-            text: "This university project, done during my first year in the engineering cycle with three other students, was about creating an e-commerce Android app."
+            text: `Ce projet universitaire, réalisé en première année de cycle ingénieur en collaboration avec trois autres étudiants, consistait à réaliser une application e-commerce pour Androïd.`
         },
         implementation: {
-            title: "Contributions",
+            title: `Contributions`,
             sections: [
                 {
-                    title: `Authentication with ${technos.firebase.name}`,
+                    title: `Authentification ${technos.firebase.name}`,
                     list: [
-                        `Setup of a dedicated ${technos.firebase.name} project;`,
-                        `Integration of the ${technos.firebase.name} library and connection of the app to the project;`,
-                        `Implementation of the authentication system;`,
-                        `Added account creation feature;`,
-                        `Implemented password reset system.`
+                        `Configuration d'un projet ${technos.firebase.name} dédié ;`,
+                        `Intégration de la bibliothèque ${technos.firebase.name} et connexion de l'application au projet ;`,
+                        `Implémentation du système d'authentification ;`,
+                        `Ajout de la fonctionnalité de création de compte ;`,
+                        `Mise en place de la réinitialisation du mot de passe.`
                     ],
+                    img_style: `col-lg-6`,
                     images: [
-                        { path: "images/projects/UTBM_SY43/login.jpg", style: "max-height: 300px;" },
-                        { path: "images/projects/UTBM_SY43/forgot-password.jpg", style: "max-height: 300px;" },
-                        { path: "images/projects/UTBM_SY43/create-account.jpg", style: "max-height: 300px;" }
+                        {
+                            path: "images/projects/UTBM_SY43/login.jpg",
+                            style: `max-height: 300px;`
+                        }, {
+                            path: "images/projects/UTBM_SY43/forgot-password.jpg",
+                            style: `max-height: 300px;`
+                        }, {
+                            path: "images/projects/UTBM_SY43/create-account.jpg",
+                            style: `max-height: 300px;`
+                        }
                     ]
-                },
-                {
-                    title: "Dashboard",
+                }, {
+                    title: `Dashboard`,
                     list: [
-                        "Definition of key data to show and how to visualize it;",
-                        "Writing queries to get data from the database;",
-                        "Display of results as text and charts using MPAndroidChart;",
-                        "Added a filter option by year."
+                        `Définition des données clés à représenter et du mode de visualisation ;`,
+                        `Écriture de requêtes pour interroger la base de données ;`,
+                        `Visualisation des résultats sous forme de texte et de graphiques avec <em>MPAndroidChart</em> ;`,
+                        `Ajout d'une option pour filtrer l'affichage par année.`,
                     ],
+                    img_style: `col-lg-6`,
                     images: [
-                        { path: "images/projects/UTBM_SY43/dashboard.jpg", style: "max-height: 300px;" },
-                        { path: "images/projects/UTBM_SY43/dashboard_2.jpg", style: "max-height: 300px;" }
+                        {
+                            path: "images/projects/UTBM_SY43/dashboard.jpg",
+                            style: `max-height: 300px;`
+                        }, {
+                            path: "images/projects/UTBM_SY43/dashboard_2.jpg",
+                            style: `max-height: 300px;`
+                        }
                     ]
-                },
-                {
-                    title: `Payment System`,
+                }, {
+                    title: `Système de paiement`,
                     list: [
-                        `Setup of a ${technos.stripe.name} server and connection to the app;`,
-                        `Sending the price to pay to the ${technos.stripe.name} server;`,
-                        `Hosting the ${technos.stripe.name} server via ${technos.firebase.name}.`
+                        `Implémentation d'un serveur ${technos.stripe.name} et connexion de l'application à celui-ci ;`,
+                        `Transmission du prix à payer au serveur ${technos.stripe.name} ;`,
+                        `Hébergement du serveur ${technos.stripe.name} via ${technos.firebase.name}`,
                     ],
+                    img_style: `col-lg-6`,
                     images: [
-                        { path: "images/projects/UTBM_SY43/stripe.jpg", style: "max-height: 300px;" }
+                        {
+                            path: "images/projects/UTBM_SY43/stripe.jpg",
+                            style: `max-height: 300px;`
+                        }
                     ]
                 }
-            ]
+            ],
         },
         result: {
-            title: "Result",
-            text: "The project ended with a functional e-commerce app that allows users to view products, add them to the cart, and complete their purchases. A clear and simple dashboard also shows sales statistics to administrators. This experience helped me improve my Android development, teamwork, and project management skills.\nYou can see our presentation <a href='#' target='_blank'>here</a> and our Git repository <a href='https://github.com/giuliana-fabrizio/Imperial-Roar' target='_blank'>here</a>."
+            title: `Résultat`,
+            text: `Le projet a abouti à une application e-commerce fonctionnelle, permettant aux utilisateurs de consulter des produits, de les ajouter au panier et de finaliser leurs achats. Un Dashboard clair et intuitif présente également des statistiques de vente aux administrateurs. Cette expérience m'a permis de consolider mes compétences en développement Android, en travail collaboratif et en gestion de projet.\n
+            Vous pouvez consulter notre soutenance <a href='#' target='_blank'>ici</a> et notre dépôt Git <a href='https://github.com/giuliana-fabrizio/Imperial-Roar' target='_blank'>ici</a>.`
         },
         technologies: [technos.firebase, technos.github, technos.kotlin, technos.sql, technos.stripe]
     },
     BUT_S6: {
-        title: "Waste collection platform",
+        title: `Plateforme de collectes de déchets`,
         category: categories.professional,
         introduction: {
-            text: "This three-month internship (January - March 2024) at Natural Solutions was about contributing to the development of <strong>DepollutionMap</strong>, an app to manage waste collections done by the association Wings of Ocean."
+            text: `Ce stage de trois mois (janvier - mars 2024), réalisé chez Natural Solutions, consistait à contribuer au développement de <strong>DepollutionMap</strong>,\
+            une application de gestion des collectes de déchets réalisées par l'association Wings of Ocean.`
         },
         implementation: {
-            title: "Contributions",
-            text: `I worked with the agile method ${technos.scrum.name} to adapt to changing client needs. Versioning and teamwork were managed with ${technos.gitlab.name}. The deployment of the app was done using ${technos.docker.name}.`,
+            title: `Contributions`,
+            text: `J'ai travaillé en suivant la méthodologie agile ${technos.scrum.name} pour m'adapter aux besoins évolutifs des clients. Le versioning et la collaboration ont été assurés via ${technos.gitlab.name}.\
+            Concernant le déploiement de l'application, celui-ci a été effectué avec l'aide de ${technos.docker.name}.`,
             sections: [
                 {
-                    title: "Homepage Map",
+                    title: `Carte de la page d'accueil`,
                     list: [
-                        `Fetch of validated collections using a ${technos.graphql.name} query;`,
-                        `Display on a world map using their coordinates (react-map-gl);`,
-                        `Added clustering system depending on zoom level;`,
-                        `Added interactive popups (Material UI) showing details of each collection (name, location, date, photo).`
+                        `Extraction des collectes validées via une requête ${technos.graphql.name} ;`,
+                        `Affichage sur une carte mondiale grâce à leurs coordonnées <em>(react-map-gl)</em> ;`,
+                        `Mise en place d'un système de clusterisation selon le niveau de zoom ;`,
+                        `Ajout de popups interactives (<em>Material UI</em>) présentant les détails de chaque collecte (nom, localisation, date, photo).`,
                     ],
-                    images: [{ path: "images/projects/BUT_S6/map.png", style: "max-height: 265px;" }]
-                },
-                {
-                    title: "Filters",
-                    list: [
-                        `Added a “Filters” button opening a reusable popup (made with Material UI);`,
-                        `Queries to get filter options from the database;`,
-                        `Integrated filters into the URL to keep search state;`,
-                        `Applied filters on client side with dynamic map updates.`
+                    img_style: `col-lg-6`,
+                    images: [
+                        {
+                            path: "images/projects/BUT_S6/map.png",
+                            style: `max-height: 265px;`
+                        }
                     ]
-                },
-                {
-                    title: "Dashboard",
+                }, {
+                    title: `Filtres`,
                     list: [
-                        `Writing and testing ${technos.graphql.name} queries using ${technos.hasura.name};`,
-                        `Getting completed collections and applying URL filters on frontend;`,
-                        `Sending filtered data to backend to generate stats;`,
-                        `Integration of the dashboard using Material UI and a Materio template to show data dynamically.`
+                        `Ajout d'un bouton « Filtres » ouvrant une popup réutilisable (conçue avec <em>Material UI</em>) ;`,
+                        `Requêtes pour récupérer les options de filtrage depuis la base ;`,
+                        `Intégration des filtres à l'URL pour conserver l'état de recherche ;`,
+                        `Application des filtres côté client sur les données en mémoire, avec mise à jour dynamique des résultats affichés sur la carte.`,
+                    ]
+                }, {
+                    title: `Dashboard`,
+                    list: [
+                        `Écriture et test de requêtes ${technos.graphql.name} via ${technos.hasura.name} ;`,
+                        `Récupération des ramassages terminés, puis application des filtres définis dans l'URL côté frontend ;`,
+                        `Transmission des résultats filtrés au backend pour générer les statistiques ;`,
+                        `Intégration du dashboard avec <em>Material UI</em> et un template <em>Materio</em>, adapté pour afficher les données dynamiquement.`,
                     ],
-                    images: [{ path: "images/projects/BUT_S6/dashboard.png", style: "max-height: 265px;" }]
+                    img_style: `col-lg-6`,
+                    images: [
+                        {
+                            path: "images/projects/BUT_S6/dashboard.png",
+                            style: `max-height: 265px;`
+                        }
+                    ]
                 }
-            ]
+            ],
         },
         result: {
-            title: "Result",
-            text: "I really enjoyed this internship, mainly thanks to my coworkers who were helpful and patient whenever I needed support.\nYou can see my final presentation <a href='https://docs.google.com/presentation/d/1LiP-nK3gmnG1EadbeIMfyvVh-VUsXMA4EwR9I6H2e2o/edit?usp=sharing' target='_blank'>here</a>."
+            title: `Résultat`,
+            text: `J'ai beaucoup apprécié ce stage, en grande partie grâce à mes collègues qui se sont montrés disponibles et pédagogues chaque fois que j'en ai eu besoin.\n
+            Vous pouvez consulter le diaporama de ma soutenance <a href='https://docs.google.com/presentation/d/1LiP-nK3gmnG1EadbeIMfyvVh-VUsXMA4EwR9I6H2e2o/edit?usp=sharing' target='_blank'>ici</a>.`,
         },
         technologies: [technos.graphql, technos.hasura, technos.jira, technos.minio, technos.next_js, technos.react_js, technos.scrum, technos.ts]
     },
     BUT_S5: {
-        title: "Reflex test application",
+        title: `Application de tests de réflexes`,
         category: categories.academic,
         introduction: {
-            text: "This project, done in the third year of my Computer Science degree with four other students, was about creating a multi-architecture app to help scientists run reflex tests."
+            text: `Ce projet, réalisé en troisième année de BUT Informatique, en collaboration avec quatre autres étudiants, consistait à concevoir une application multi-architecture permettant à des scientifiques de réaliser des tests de réflexes.`
         },
         context: {
-            title: "Context",
-            text: "The architecture is based on several connected components:",
+            title: `Contexte`,
+            text: `L'architecture repose sur plusieurs composants complémentaires :`,
             list: [
-                "A <strong>mobile app</strong> to capture and send images;",
-                "An <strong>analysis server</strong> to process these images;",
-                "A <strong>central server</strong> to store data from the analysis server and the <strong>microcontrollers</strong> in a <strong>database</strong>;",
-                "A <strong>frontend</strong> to display results;",
-                "An <strong>API</strong> to handle communication between the server, database, and frontend."
+                `une <span style='color: #d4d6ff'><strong>application mobile</strong></span> pour capturer et transmettre des images ;`,
+                `un <span style='color: #e7dec7'><strong>serveur d'analyse</strong></span> pour traiter ces images ;`,
+                `un <span style='color: #c5dcf1'><strong>serveur de centralisation</strong></span> pour enregistrer les données issues du serveur d'analyse et des <span style='color: #fdd9ff'><strong>microcontrôleurs</strong></span>\
+                 dans une <span style='color: #fce5cd'><strong>base de données</strong></span> ;`,
+                `un <span style='color: #f8e0e0'><strong>frontend</strong></span> pour visualiser les résultats ;`,
+                `une <span style='color: #d9ead3'><strong>API</strong></span> pour assurer les échanges entre serveur, base de données et frontend.`,
             ],
+            img_style: `col-lg-6`,
             images: [
                 {
                     path: "images/projects/BUT_S5/structure.png",
-                    legend: "Global project architecture",
-                    style: "max-height: 250px;"
+                    legend: `Architecture globale du projet`,
+                    style: 'max-height: 250px;'
                 }
             ]
         },
         implementation: {
-            title: "Contributions",
-            text: `We used ${technos.gitlab.name} and ${technos.trello.name} to manage versioning and plan tasks.`,
+            title: `Contributions`,
+            text: `Nous avons travaillé avec ${technos.gitlab.name} et ${technos.trello.name} afin de faciliter le versioning et la planification des tâches.`,
             sections: [
                 {
-                    title: "API and Frontend",
+                    title: `API et frontend`,
                     list: [
-                        `Development of an API using "express" from ${technos.node_js.name} and connection to a ${technos.mongo.name} database;`,
-                        `Setup of Swagger documentation and unit tests for API methods;`,
-                        `Creation of a frontend connected to the API with dynamic charts using Vue chartjs;`,
-                        `Deployment of the API with ${technos.docker.name}.`
+                        `Développement d'une API avec "express" de ${technos.node_js.name} et connexion à une base de données ${technos.mongo.name} ;`,
+                        `Mise en place de la Swagger Documentation et de tests unitaires pour valider les méthodes de l'API ;`,
+                        `Création d'un frontend connecté à l'API avec affichage de graphiques dynamiques réalisés grâce à la bibliothèque <em>Vue chartjs</em> ;`,
+                        `Déploiement de l'API avec ${technos.docker.name}.`,
                     ],
-                    images: [{ path: "images/projects/BUT_S5/frontend.png", style: "max-height: 300px;" }]
-                },
-                {
-                    title: "Analysis Server",
-                    list: [
-                        "Research of a library for image processing;",
-                        "Redesign of the mobile app to match the chosen library;",
-                        "Development and connection of the analysis server with the mobile app, including unit tests."
+                    img_style: `col-lg-6`,
+                    images: [
+                        {
+                            path: "images/projects/BUT_S5/frontend.png",
+                            style: `max-height: 300px;`
+                        }
                     ]
-                },
-                {
-                    title: "Microcontrollers",
+                }, {
+                    title: `Serveur d'analyse`,
                     list: [
-                        "Configuration of the Arduino board with provided hardware;",
-                        "Writing Arduino code for microcontroller behavior;",
-                        "Manual testing;",
-                        "Sending results to the central server."
+                        `Recherche d'une bibliothèque adaptée au traitement d'images ;`,
+                        `Refonte de l'application mobile pour s'adapter aux contraintes de la bibliothèque choisie ;`,
+                        `Développement et connexion du serveur d'analyse avec l'application mobile, accompagnés de tests unitaires.`,
+                    ]
+                }, {
+                    title: `Microcontrôleurs`,
+                    list: [
+                        `Configuration de la carte Arduino à partir des microcontrôleurs fournis ;`,
+                        `Rédaction du code Arduino pour faire fonctionner les microcontrôleurs ;`,
+                        `Réalisation de tests manuels ;`,
+                        `Envoi des résultats au serveur de centralisation.`,
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S5/microcontrollers.png",
-                            legend: "Microcontroller diagram",
-                            style: "max-height: 200px;"
+                            legend: `Schématisation des microcontrôleurs`,
+                            style: `max-height: 200px;`
                         }
                     ]
                 }
-            ]
+            ],
         },
         result: {
-            title: "Result",
-            text: "The project led to a working app that can collect and analyze reflex test data and show results in a clear, interactive interface. This experience helped me improve my full-stack development, teamwork, and project management skills.\nYou can see our presentation <a href='https://docs.google.com/presentation/d/1ciTwJQT0wF97OlqsJSNzQmrdxO6tPPnuQ1vWaAyG5aA/edit#slide=id.g230ccc5832e_0_0' target='blank'>here</a> and our Git repository <a href='https://github.com/giuliana-fabrizio/TestsReflexes' target='blank'>here</a>."
+            title: `Résultat`,
+            text: `Le projet a permis de développer une application fonctionnelle, capable de collecter et d'analyser des données de tests de réflexes, puis de les présenter via une interface claire et interactive. Cette expérience m'a permis de renforcer mes compétences en développement fullstack, en travail d'équipe et en gestion de projet complexe.\n
+            Vous pouvez consulter notre soutenance <a href='https://docs.google.com/presentation/d/1ciTwJQT0wF97OlqsJSNzQmrdxO6tPPnuQ1vWaAyG5aA/edit#slide=id.g230ccc5832e_0_0' target='blank'>ici</a> et notre dépôt Git <a href='https://github.com/giuliana-fabrizio/TestsReflexes' target='blank'>ici</a>.`
         },
         technologies: [technos.arduino, technos.docker, technos.gitlab, technos.java, technos.js, technos.node_js, technos.kotlin, technos.mongo, technos.vue_js]
     },
     BUT_S4: {
-        title: "Facturation tool",
+        title: `Outil de facturation`,
         category: categories.professional,
         introduction: {
-            text: "This three-month internship (April - June 2023) at Natural Solutions was about improving their billing tool: fixing bugs, improving existing features, and developing new ones."
+            text: `Ce stage de trois mois (avril - juin 2023), réalisé chez Natural Solutions, consistait à reprendre leur outil de facturation pour corriger les problèmes, améliorer les fonctionnalités existantes et en développer de nouvelles.`
         },
         implementation: {
-            title: "Implementation",
-            text: `I worked using the agile method ${technos.scrum.name} to follow client needs. Versioning and collaboration were done with ${technos.gitlab.name}.`,
+            title: `Mise en œuvre`,
+            text: `J'ai travaillé en suivant la méthodologie agile ${technos.scrum.name} pour m'adapter aux besoins évolutifs des clients. Le versioning et la collaboration ont été assurés via ${technos.gitlab.name}.`,
             sections: [
                 {
-                    title: "Database",
+                    title: `Base de données`,
                     list: [
-                        "Creation of the Conceptual Data Model (CDM);",
-                        `Use of the ${technos.postgresql.name} DBMS;`,
-                        `Integration of ${technos.sequelize.name} ORM to simplify database interactions;`,
-                        "Connection of the database with the API and app code updates;",
-                        "Development of a function to import data from a JSON file."
+                        `Création du Modèle Conceptuel de Données (MCD) ;`,
+                        `Utilisation du SGBD ${technos.postgresql.name} ;`,
+                        `Intégration de l'ORM ${technos.sequelize.name} pour simplifier l'interaction avec la base ;`,
+                        `Connexion de la base avec l'API et adaptation du code de l'application ;`,
+                        `Développement d'une fonction d'import de données dans la base depuis un fichier JSON.`,
                     ],
+                    img_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S4/MCD.png",
-                            legend: "Application CDM",
-                            style: "max-height: 275px;"
+                            legend: `MCD de l'application`,
+                            style: `max-height: 275px;`
                         }
                     ]
-                },
-                {
-                    title: "Document Generation",
+                }, {
+                    title: `Génération de documents`,
                     list: [
-                        "Requests to external API <strong>Zendesk</strong>;",
-                        "Sorting and formatting of fetched data;",
-                        "Automatic generation and download of files;",
-                        "Creation of a Word template to structure report content."
+                        `Interrogation de l'API externe <strong>Zendesk</strong> ;`,
+                        `Tri et formatage des données récupérées ;`,
+                        `Développement de la génération et du téléchargement automatique de fichiers ;`,
+                        `Création d'un modèle Word pour structurer et organiser le contenu des rapports.`,
                     ]
                 }
             ]
         },
         result: {
-            title: "Result",
-            text: `Thanks to my kind and helpful colleagues, I learned a lot during this internship. I improved my project management skills with ${technos.scrum.name} and my ability to research and solve problems independently.\nYou can see my presentation <a href='https://docs.google.com/presentation/d/1uueQqS5IAyxeuxPOwv-2YE4rRnxuOs72wY5auPL-VPI/edit?usp=sharing' target='_blank'>here</a>.`
+            title: `Résultat`,
+            text: `Grâce à mes collègues, très attentifs et disponibles, cette expérience professionnelle m'a beaucoup appris.\
+            J'ai renforcé mes compétences en gestion de projet grâce à l'utilisation quotidienne de ${technos.scrum.name}, ainsi que ma capacité à me documenter et à chercher des solutions de manière autonome.\n
+            Vous pouvez consulter le diaporama de ma soutenance <a href='https://docs.google.com/presentation/d/1uueQqS5IAyxeuxPOwv-2YE4rRnxuOs72wY5auPL-VPI/edit?usp=sharing' target='_blank'>ici</a>.`,
         },
         technologies: [technos.gitlab, technos.js, technos.node_js, technos.postgresql, technos.react_js, technos.sequelize, technos.scrum]
-    },
-    BUT_S1: {
-        title: "Missing token game",
-        category: categories.academic,
-        introduction: {
-            text: "This university project was about developing a small Java game on a triangular board with 21 squares, where players can compete against two AIs. To win, each player must place their 10 numbered tokens (1 to 10) to minimize the sum around the empty square at the end of the game."
-        },
-        implementation: {
-            title: "Contributions",
-            list: [
-                "Design and display of the game board in the terminal;",
-                "Development of the logic for a two-player match;",
-                "Creation of two AI algorithms: a random one and an advanced one with key position strategy;",
-                "Separation between stable code and test versions."
-            ]
-        },
-        result: {
-            title: "Result",
-            text: "You can see the GitHub repository <a href='https://github.com/giuliana-fabrizio/SAE-Jeu-du-jeton-manquant' target='_blank'>here</a>.",
-            images: [
-                {
-                    path: "images/projects/BUT_S1/game.png",
-                    legend: "Simulation of a match between two AIs: victory of the advanced strategy",
-                    style: "max-height: 400px; margin-top: 15px;"
-                }
-            ]
-        },
-        technologies: [technos.github, technos.java]
     }
-}
+};
 
 
 /* ***************************************************************** degrees page ***************************************************************** */
@@ -466,8 +586,8 @@ const degrees_page_title = "MY ACADEMIC TRAINING";
 
 const school_career = {
     title: `My background`,
-    content: `After obtaining my scientific baccalaureate in 2020, I decided to take a gap year to reflect on my professional future. During this time, I did many researches.\n
-    I have been very lucky to discover computer science. Its constantly evolving nature and the opportunity to contribute to major technological advances motivated me to enroll in a Computer Science Bachelor's program (BUT) in 2021. I quickly became passionate about this fiel, which gave me the desire to deepen my knowledge and further improve my skills. That is why I chose to continue my studies in an engineering scholl.`
+    content: `After graduating with a scientific baccalaureate in 2020, I decided to take a gap year to reflect on my professional future. During this time, I did many researches.\n
+    I have been very lucky to discover computer science. Its constant evolution and the opportunity to contribute to major technological advancements motivated me to enroll in a Computer Science Bachelor's degree program in 2021. I quickly became passionate about this field, which gave me the desire to deepen my knowledge and improve my skills. That is why I have chosen to pursue my studies at an engineering scholl.`
 }
 
 const degrees_title = `My degrees`;
@@ -476,16 +596,16 @@ const degrees = {
     engineer: {
         title: `Engineering cycle`,
         logo: "images/degrees/engineer.png",
-        school: `Belfort-Montbéliard University of Technology (UTBM)`,
+        school: `University of Technology of Belfort-Montbéliard (UTBM)`,
         place: `Belfort, France`,
         date: `Since September 2024`,
     },
     but: {
-        title: `Bachelor of Technology in Computer Science (BUT)`,
+        title: `Bachelor of Technology in Computer Science`,
         logo: "images/degrees/but.png",
         specialization: `Specialization : application development : design, development, validation`,
-        mention: `Major de promotion`,
-        school: `IUT de Belfort-Montbéliard`,
+        mention: `Valedictorian`,
+        school: `Belfort-Montbéliard IUT`,
         place: `Belfort, France`,
         date: `June 2024`,
     },
@@ -507,7 +627,6 @@ const certifications = {
         logo: "images/degrees/mooc_gdp.png",
         specialization: `Specializations :
         <ul class='text-start'>\
-            <li>Tronc commun</li>\
             <li>External functional analysis</li>\
             <li>Strategic project analysis</li>\
             <li>System performance diagnostic (technical)</li>\
@@ -530,67 +649,67 @@ const certifications = {
 
 /* ***************************************************************** experiences page ***************************************************************** */
 
-const experiences_page_title = "MY EXPERIENCES";
+const experiences_page_title = "MES EXPÉRIENCES";
 const experiences = {
     volunteer: {
-        title: `Volunteer at Restos du Coeur`,
-        description: `Main responsibilities :
+        title: `Bénévole aux Restos du Coeur`,
+        description: `Principales tâches réalisées :
         <ul>\
-        <li>welcoming and guiding beneficiaries ;</li>\
-        <li>distributing food according to each family's needs ;</li>\
-        <li>helping with the cleaning and maintenance of the premises.</li>\
+        <li>accueil et orientation des bénéficiaires ;</li>\
+        <li>distribution alimentaire adaptée aux besoins des familles ;</li>\
+        <li>participation au nettoyage des locaux.</li>\
         </ul>`,
         logo: "images/experiences/restos_du_coeur.png",
-        type: `Volunteering`,
-        date: `Since September 2025`,
+        type: `Type : bénévolat`,
+        date: `Depuis Septembre 2025`,
         company: `Les Restos du Coeur`,
         place: `Belfort, France`,
     },
     stage_2024: {
-        title: `Fullstack Developer II`,
-        description: `Main tasks carried out :
+        title: `Développeuse Fullstack II`,
+        description: `Principales tâches réalisées :
         <ul>\
-        <li>inserted Excel data in a ${technos.postgresql.name} database ;</li>\
-        <li>developed the main dashboard ;</li>\
-        <li>use ${technos.hasura.name} to manage user permissions.</li>\
+        <li>insertion de données Excel dans une base de données PostgreSQL ;</li>\
+        <li>réalisation du tableau de bord principal (ou Dashboard) ;</li>\
+        <li>utilisation d'Hasura pour la gestion des permissions utilisateurs.</li>\
         </ul>`,
-        label_redirection: `More details`,
+        label_redirection: `Plus de détails`,
         redirection: "BUT_S6",
         logo: "images/experiences/natural_solutions.png",
-        type: `Internship`,
-        date: `January - April 2024`,
+        type: `Type : stage`,
+        date: `Janvier - Avril 2024`,
         company: `Natural Solutions`,
         place: `Marseille, France`,
     },
     stage_2023: {
-        title: `Fullstack Developer I`,
-        description: `Main tasks carried out :
+        title: `Développeuse Fullstack I`,
+        description: `Principales tâches réalisées :
         <ul>\
-        <li>added ${technos.postgresql.name} database and used the ${technos.sequelize.name} ORM ;</li>\
-        <li>fixed existing calculation errors ;</li>\
-        <li>update the user interface : worked with ${technos.react_js.name} and integrate an external API ;</li>\
-        <li>wrote unit tests in ${technos.js.name}.</li>\
+        <li>ajout d'une base de données PostgreSQL et utilisation de l'ORM Sequelize ;</li>\
+        <li>correction d'erreurs de calcul existantes ;</li>\
+        <li>modification de l'interface utilisateur : manipulation de ReactJs et interrogation d'une API externe ;</li>\
+        <li>réalisation de tests unitaires en JavaScript.</li>\
         </ul>`,
-        label_redirection: `More details`,
+        label_redirection: `Plus de détails`,
         redirection: "BUT_S4",
         logo: "images/experiences/natural_solutions.png",
-        type: `Internship`,
-        date: `April - June 2023`,
+        type: `Type : stage`,
+        date: `Avril - Juin 2023`,
         company: `Natural Solutions`,
         place: `Marseille, France`,
     },
     cdd_2022: {
-        title: `Convenience store employee`,
-        description: `Main tasks carried out :
+        title: `Employée de supérette`,
+        description: `Principales tâches réalisées :
         <ul>\
-        <li>handled customer checkout ;</li>\
-        <li>stocked shelves and received deliveries ;</li>\
-        <li>trained new employees at the cash register ;</li>\
-        <li>baked bread.</li>\
+        <li>encaissement des clients ;</li>\
+        <li>rangement des rayons et réception des marchandises ;</li>\
+        <li>formation des nouveaux salariés à la caisse ;</li>\
+        <li>cuisson du pain.</li>\
         </ul>`,
         logo: "images/experiences/u_express.png",
-        type: `Fixed-term contract`,
-        date: `July - August 2022`,
+        type: `Type : CDD`,
+        date: `Juillet - Août 2022`,
         company: `U Express`,
         place: `Marseille, France`,
     }
@@ -604,30 +723,30 @@ const interests_page_title = "MY HOBBIES";
 
 const interests = {
     1: {
-        title: "Sports & Travel",
-        description: "Since 2010, I have been practicing swimming. I first joined a club when I was a child, and now I swim occasionally. I also love exploring new places and enjoying their landscapes. I like hiking, which allows me to take on new challenges while discovering beautiful scenery.",
-        legend: "Pictures taken during my hikes and/or trips",
+        title: `Sporting activity & travels`,
+        description: `Since 2010, I have been practicing swimming. I was registered in a club when I was a child, but now I swim occasionally. I also love exploring new places and admire their landscapes. I regularly go hiking that allows me to take on new challenges while making beautiful discoveries.`,
+        legend: 'Pictures taken during my trips',
         images: [carousel_1, carousel_2, carousel_3],
-        support: "carousel"
+        support: `carousel`
     },
     2: {
-        title: "Video games",
-        description: "During my computer science degree in Belfort, some friends introduced me to video games. I am not a big gamer, but I mostly play Minecraft. What I like most about this game is the variety of mods, which make the experience new again by adding new worlds, characters, creatures, and materials.",
-        legend: "3D model of my Minecraft skin. Use the mouse (or touch) to rotate the model.",
-        support: "mc"
+        title: `Video games`,
+        description: `During my computer science bachelor's degree some friends introduced me to video games. However I am not a big gamer so I mostly play Minecraft. What I appreciate most is the variety of mods that constantly renew the experience by adding new worlds, characters, creatures and materials.`,
+        legend: `3D modeling of my Minecraft skin. Use the mouse (or touch) to zoom and rotate the model.`,
+        support: `mc`
     },
     3: {
-        title: "Sewing",
-        description: "I discovered sewing at a young age thanks to my grandmother, who was a seamstress. I started by making clothes for my dolls and now I create useful everyday objects like protective covers for batteries, handbags, and pencil cases.",
-        legend: "Protective cover for an external battery",
+        title: `Sewing`,
+        description: `I discovered sewing thanks to my grandmother, who was a seamstress. I started by creating clothes for my dolls and now I make useful everyday items such as battery protective covers, handbags and pencil cases.`,
+        legend: `External battery protective cover`,
         // image: image_sewing,
-        support: "img"
+        support: `img`
     },
     4: {
-        title: "3D Modeling",
-        description: "After talking with my mother about a home renovation project, I decided to try 3D modeling. That’s how I discovered the software Sweet Home 3D. With this tool, I first redesigned a room in our house, then recreated a studio where I once lived because I found it very aesthetic.",
-        legend: "3D model of a studio made with Sweet Home 3D. Use the mouse (or touch) to zoom and rotate the model.",
-        support: "modelling"
+        title: `3D modeling`,
+        description: `After discussing a renovation project with my mother, I decided to try 3D modeling. That's how I discovered Sweet Home 3D software. Using this tool, I first redesigned a room in our house, then I reproduced a studio where I lived which I found very aesthetically pleasing.`,
+        legend: `3D model of a studio made with Sweet Home 3D. Use the mouse (or touch) to zoom and rotate the model.`,
+        support: `modeling`
     }
 }
 
