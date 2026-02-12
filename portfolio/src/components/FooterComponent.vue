@@ -24,7 +24,7 @@
 
         <div class="text-center mt-1">
             <p class="copyright">
-                &copy; 2024 - {{ name }}
+                &copy; 2024 - {{ name }}. {{ rights }}.
             </p>
         </div>
     </section>
@@ -32,6 +32,7 @@
 
 <script>
 import variables from '../variables_fr.js';
+import variables_en from '../variables_en.js';
 
 export default {
     name: "FooterComponent",
@@ -41,6 +42,7 @@ export default {
         mail: "",
         github: "",
         linkedin: "",
+        rights: "",
     }),
 
     created() {
@@ -48,6 +50,26 @@ export default {
         this.mail = variables.mail;
         this.github = variables.github;
         this.linkedin = variables.linkedin;
+        this.updateContent();
+    },
+
+    computed: {
+        language() {
+            return this.$store.getters.getLanguage;
+        }
+    },
+
+    watch: {
+        language() {
+            this.updateContent();
+        }
+    },
+
+    methods: {
+        updateContent() {
+            const isFrench = this.language === 'french';
+            this.rights = isFrench ? variables.rights : variables_en.rights;
+        }
     }
 }
 </script>

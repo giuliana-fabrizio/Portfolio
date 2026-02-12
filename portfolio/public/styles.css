@@ -16,7 +16,7 @@ body {
 }
 
 .subtitle {
-    color: #555;
+    color: #00244C;
 }
 
 .card-degrees-experiences {
@@ -166,7 +166,7 @@ footer {
     margin-top: 20px;
 }
 
-@media screen and (max-width: 350px)  {
+@media screen and (max-width: 350px) {
     .img-home {
         width: 250px;
     }
@@ -223,7 +223,7 @@ footer {
 }
 
 .text-intro a {
-    color: #6c757d!important;
+    color: #6c757d !important;
     text-decoration: none;
 }
 
@@ -284,11 +284,51 @@ footer {
 
 /* ***************************************************************** experiences page ************************************************************* */
 
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .vr {
-    border-left: 5px solid #bdd7fe;
+    border-left: 4px solid #324f6f;
     height: 100%;
 }
 
+/* ------------------------------------ Company logo */
+.img-experience {
+    animation: rotateIcon 1.2s linear 1;
+    width: 45px;
+}
+
+/* ------------------------------------ More details button */
+@keyframes pushIcon {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(3px, -3px);
+    }
+}
+
+.btn-more-details {
+    color: #324f6f;
+}
+
+.btn-more-details:hover {
+    color: #324f6f;
+}
+
+.btn-more-details:hover i {
+    animation: pushIcon 1.2s ease forwards;
+}
+
+/* ------------------------------------ Card */
 @keyframes slideToLeft {
     from {
         transform: translateX(100%);

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'AnimeBackground',
+    name: 'AnimeHomeBackground',
 
     mounted() {
         window.requestAnimationFrame = (function () {

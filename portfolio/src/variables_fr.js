@@ -48,6 +48,7 @@ const link_cv = "https://github.com/giuliana-fabrizio/Portfolio/raw/refs/heads/m
 const mail = "mailto:godailfabriziogiuliana@gmail.com";
 const github = "https://github.com/giuliana-fabrizio";
 const linkedin = "https://www.linkedin.com/in/giuliana-godail-fabrizio-20639525b/";
+const rights = "Tous droits réservés";
 
 
 /* ***************************************************************** projects page ***************************************************************** */
@@ -586,8 +587,9 @@ const degrees_page_title = "MES FORMATIONS";
 
 const school_career = {
     title: `Mon parcours`,
-    content: `Après l'obtention de mon baccalauréat scientifique en 2020, j'ai décidé de prendre une année de césure pour réfléchir à mon avenir professionnel. Durant cette année, je me suis beaucoup documentée et j'ai consulté plusieurs conseillers d'orientation.\n
-    C'est un peu par hasard que j'ai découvert l'informatique. Son caractère en constante évolution et l'opportunité de contribuer à des avancées technologiques majeures m'ont motivée à intégrer un BUT Informatique en 2021. Cette discipline m'a rapidement passionnée, me donnant envie d'approfondir mes connaissances et de me perfectionner davantage. C'est pourquoi j'ai choisi de poursuivre mes études en école d'ingénieurs.`
+    content: `Après un baccalauréat scientifique, j'ai pris une année de césure afin de réfléchir à mon avenir professionnel.\
+    C'est durant cette période que j'ai découvert l'informatique, dont le caractère en constante évolution et la diversité m'ont motivée à m'orienter dans ce domaine.\n
+    Aujourd'hui, je m'intéresse particulièrement à l'intelligence artificielle et au traitement de données massives, et je cherche à appliquer mes connaissances à des projets concrets.`
 }
 
 const degrees_title = `Mes diplômes`;
@@ -654,62 +656,39 @@ const experiences_page_title = "MES EXPÉRIENCES";
 const experiences = {
     volunteer: {
         title: `Bénévole aux Restos du Coeur`,
-        description: `Principales tâches réalisées :
-        <ul>\
-        <li>accueil et orientation des bénéficiaires ;</li>\
-        <li>distribution alimentaire adaptée aux besoins des familles ;</li>\
-        <li>participation au nettoyage des locaux.</li>\
-        </ul>`,
+        description: `Accueil et orientation des bénéficiaires,\
+        distribution alimentaire adaptée aux besoins des familles,\
+        participation au nettoyage des locaux.`,
         logo: "images/experiences/restos_du_coeur.png",
-        type: `Type : bénévolat`,
         date: `Depuis Septembre 2025`,
         company: `Les Restos du Coeur`,
         place: `Belfort, France`,
     },
     stage_2024: {
-        title: `Développeuse Fullstack II`,
-        description: `Principales tâches réalisées :
-        <ul>\
-        <li>insertion de données Excel dans une base de données PostgreSQL ;</li>\
-        <li>réalisation du tableau de bord principal (ou Dashboard) ;</li>\
-        <li>utilisation d'Hasura pour la gestion des permissions utilisateurs.</li>\
-        </ul>`,
-        label_redirection: `Plus de détails`,
+        title: `Stagiaire développeuse fullstack II`,
+        label_redirection: "Plus de détails",
         redirection: "BUT_S6",
         logo: "images/experiences/natural_solutions.png",
-        type: `Type : stage`,
         date: `Janvier - Avril 2024`,
         company: `Natural Solutions`,
         place: `Marseille, France`,
     },
     stage_2023: {
-        title: `Développeuse Fullstack I`,
-        description: `Principales tâches réalisées :
-        <ul>\
-        <li>ajout d'une base de données PostgreSQL et utilisation de l'ORM Sequelize ;</li>\
-        <li>correction d'erreurs de calcul existantes ;</li>\
-        <li>modification de l'interface utilisateur : manipulation de ReactJs et interrogation d'une API externe ;</li>\
-        <li>réalisation de tests unitaires en JavaScript.</li>\
-        </ul>`,
-        label_redirection: `Plus de détails`,
+        title: `Stagiaire développeuse fullstack I`,
+        label_redirection: "Plus de détails",
         redirection: "BUT_S4",
         logo: "images/experiences/natural_solutions.png",
-        type: `Type : stage`,
         date: `Avril - Juin 2023`,
         company: `Natural Solutions`,
         place: `Marseille, France`,
     },
     cdd_2022: {
         title: `Employée de supérette`,
-        description: `Principales tâches réalisées :
-        <ul>\
-        <li>encaissement des clients ;</li>\
-        <li>rangement des rayons et réception des marchandises ;</li>\
-        <li>formation des nouveaux salariés à la caisse ;</li>\
-        <li>cuisson du pain.</li>\
-        </ul>`,
+        description: `Encaissement des clients,\
+        rangement des rayons et réception des marchandises,\
+        formation des nouveaux salariés à la caisse,\
+        cuisson du pain.`,
         logo: "images/experiences/u_express.png",
-        type: `Type : CDD`,
         date: `Juillet - Août 2022`,
         company: `U Express`,
         place: `Marseille, France`,
@@ -771,6 +750,7 @@ module.exports = {
     mail: mail,
     github: github,
     linkedin: linkedin,
+    rights: rights,
     experiences_page_title: experiences_page_title,
     experiences: experiences,
     projects_page_title: projects_page_title,
