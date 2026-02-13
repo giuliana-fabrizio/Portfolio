@@ -2,32 +2,33 @@
     <div class="container">
         <TitleComponent :title="title" />
 
-        <main class="pb-5 pt-2">
-            <div class="align-items-center gx-md-5 p-1 row">
-                <div class="card-degrees-experiences card col-12 col-md-6 col-xl-5 col-xxl-4">
-                    <div class="align-items-center d-flex justify-content-between justify-content-md-center mb-3 mt-3">
-                        <h5 class="subtitle m-0"><strong>{{ school_career.title }}</strong></h5>
-                        <button @click="setExpand()" class="btn d-md-none">
-                            <i v-if="!expand" class="bi bi-chevron-compact-down"></i>
-                            <i v-else class="bi bi-chevron-compact-up"></i>
-                        </button>
-                    </div>
-                    <p
-                        v-html="formattedText(school_career.content)"
-                        :class="[expand ? 'display-career' : 'd-none', 'd-md-block', 'text-start']">
-                    </p>
-                </div>
+        <div>
+            <p class="text-center text-secondary">
+                {{ school_career }}
+            </p>
+        </div>
 
-                <div class="col-12 col-md-6 col-xl-7 col-xxl-8">
-                    <DegreeSectionComponent
-                        :title="degrees_title"
-                        :items="degrees" />
-                    <DegreeSectionComponent
-                        :title="certifications_title"
-                        :margin="true"
-                        :items="certifications" />
+
+        <main class="pb-5 pt-2">
+            <section>
+                <h5><strong class="subtitle">{{ degrees_title }}</strong></h5>
+
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div v-for="(item, key) in degrees" :key="key">
+                        <DegreeCircleComponent :item="item" />
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <section class="mt-5">
+                <h5><strong class="subtitle">{{ certifications_title }}</strong></h5>
+
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div v-for="(item, key) in certifications" :key="key">
+                        <CertificationCardComponent :item="item" />
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
 </template>
@@ -36,14 +37,16 @@
 import variables_fr from '../variables_fr.js';
 import variables_en from '../variables_en.js';
 
-import DegreeSectionComponent from '@/components/DegreeSectionComponent.vue';
+import CertificationCardComponent from '@/components/CertificationCardComponent.vue';
+import DegreeCircleComponent from '@/components/DegreeCircleComponent.vue';
 import TitleComponent from '../components/TitleComponent.vue';
 
 export default {
     name: 'DegreesView',
 
     components: {
-        DegreeSectionComponent,
+        CertificationCardComponent,
+        DegreeCircleComponent,
         TitleComponent
     },
 

@@ -19,10 +19,6 @@ body {
     color: #00244C;
 }
 
-.card-degrees-experiences {
-    background: linear-gradient(45deg, #cbe0fe, #f0f6fe);
-    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
-}
 
 /* ***************************************************************** navbar ************************************************************* */
 
@@ -239,50 +235,82 @@ footer {
 
 /* ***************************************************************** degrees page ************************************************************* */
 
-@keyframes display_career {
-    from {
-        opacity: 0;
-        transform: translateY(0px);
-    }
+.badge-degree {
+    background-color: #00244C;
+    /* border: 2px solid #f0f6fe; */
+    border-radius: 30px;
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    color: white;
+    font-weight: bold;
+    font-size: small;
+    padding: 0px 12px;
 }
 
-.display-career {
-    display: block !important;
-    animation: display_career 1s ease-out forwards;
+.circle-degree {
+    aspect-ratio: 1/1;
+    background-color: #cbe0fe;
+    border: 3px solid #cbe0fe;
+    color: black;
+    position: relative;
+    width: 400px;
 }
 
+/* .circle-degree .subtitle {
+    color: white;
+} */
 
-.flip-inner {
-    transition: transform 0.9s;
-    transform-style: preserve-3d;
+.circle-degree-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30%;
+    width: 100%;
+    overflow: hidden;
 }
 
-.flipped {
-    transform: rotateY(180deg);
+.circle-degree-img img {
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
 }
 
-.flip-front,
-.flip-back {
-    backface-visibility: hidden;
+.circle-degree-description {
+    padding-left: 15px;
 }
 
-.flip-back {
-    max-height: 160px;
-    overflow: auto;
-    transform: rotateY(180deg);
+.circle-degree-footer {
+    padding: 0px 50px;
 }
 
-.icon-degree-details {
-    right: 0;
+.place-degree {
+    color: #cbe0fe;
+}
+
+.card-certification {
+    background: linear-gradient(45deg, #cbe0fe, #f0f6fe);
+    border: 3px solid #00244C;
+    border-radius: 50px 0px;
+    /* color: white; */
+}
+
+.card-certification .subtitle {
+    /* color: white; */
+}
+
+.logo-certification {
+    border-radius: 30px;
+    height: 70px;
+    width: 70px;
 }
 
 
 /* ***************************************************************** experiences page ************************************************************* */
+
+.card-experience {
+    background: linear-gradient(45deg, #cbe0fe, #f0f6fe);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+}
 
 @keyframes rotateIcon {
     from {

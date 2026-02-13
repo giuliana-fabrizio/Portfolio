@@ -226,7 +226,7 @@ const projects = {
                     images: [
                         {
                             path: "images/projects/UTBM_AP4A/class-diagram.png",
-                            style: `max-height: 360px;`,    
+                            style: `max-height: 360px;`,
                         }
                     ]
                 }, {
@@ -585,40 +585,38 @@ const projects = {
 
 const degrees_page_title = "MY ACADEMIC TRAINING";
 
-const school_career = {
-    title: `My background`,
-    content: `After graduating with a scientific baccalaureate, I took a gap year to reflect on my professional future.\
-    It was during this time that I discovered computer sciencewhose constantly evolving nature and diversity motivated me to pursue in this field.\n
-    Today I am particularly interested in artificial intelligence and big data processing, and I am looking to apply my knowledges to concrete projects.`
-}
+const school_career = `After obtaining a scientific high school diploma, I took a gap year which I discovered computer science whose constantly evolving nature and diversity motivated me to pursue in this field.`;
 
 const degrees_title = `My degrees`;
 
 const degrees = {
     engineer: {
-        title: `Engineering cycle`,
-        logo: "images/degrees/engineer.png",
-        school: `University of Technology of Belfort-Montbéliard (UTBM)`,
+        title: `Computer engineering`,
+        img: "images/degrees/bac+5.png",
+        description: `Specialization in AI and Big Data`,
+        school: `UTBM - University of Technology of Belfort-Montbéliard (UTBM)`,
         place: `Belfort, France`,
-        date: `Since September 2024`,
+        date: `Current`,
+        style: `padding-top: 14%;`
     },
     but: {
         title: `Bachelor of Technology in Computer Science`,
-        logo: "images/degrees/but.png",
-        specialization: `Specialization : application development : design, development, validation`,
-        mention: `Valedictorian`,
+        img: "images/degrees/bac+3.png",
+        description: `Specialization in full stack developement ~ valedictorian`,
         school: `Belfort-Montbéliard IUT`,
         place: `Belfort, France`,
-        date: `June 2024`,
+        date: `2024`,
+        style: `padding-top: 20%;`
     },
     bac: {
-        title: `General baccalaureate`,
-        logo: "images/degrees/bac.png",
-        specialization: `Specialization : science`,
+        title: `High School Diploma`,
+        img: "images/degrees/bac.png",
+        description: `Focused on the main scientific subjects (mathematics, physics, life and earth sciences)`,
         school: `Lycée Périer`,
         place: `Marseille, France`,
-        date: `July 2020`
-    }
+        date: `2020`,
+        style: `padding-top: 21%;`
+    },
 }
 
 const certifications_title = `My certifications`;
@@ -644,7 +642,7 @@ const certifications = {
             <li>Introduction to the main TRIZ tools</li>\
         </ul>`,
         school: `MOOC`,
-        date: `November 2024`,
+        date: `2024`,
     }
 }
 

@@ -226,7 +226,7 @@ const projects = {
                     images: [
                         {
                             path: "images/projects/UTBM_AP4A/class-diagram.png",
-                            style: `max-height: 360px;`,    
+                            style: `max-height: 360px;`,
                         }
                     ]
                 }, {
@@ -585,39 +585,40 @@ const projects = {
 
 const degrees_page_title = "MES FORMATIONS";
 
-const school_career = {
-    title: `Mon parcours`,
-    content: `Après un baccalauréat scientifique, j'ai pris une année de césure afin de réfléchir à mon avenir professionnel.\
-    C'est durant cette période que j'ai découvert l'informatique, dont le caractère en constante évolution et la diversité m'ont motivée à m'orienter dans ce domaine.\n
-    Aujourd'hui, je m'intéresse particulièrement à l'intelligence artificielle et au traitement de données massives, et je cherche à appliquer mes connaissances à des projets concrets.`
-}
+const school_career = `Après un baccalauréat scientifique, j'ai pris une année de césure durant laquelle j'ai découvert l'informatique dont le caractère en constante évolution et la diversité m'ont motivée à m'orienter dans ce domaine.`;
 
 const degrees_title = `Mes diplômes`;
 
 const degrees = {
     engineer: {
-        title: `Cycle ingénieur`,
-        logo: "images/degrees/engineer.png",
-        school: `Université de technologie de Belfort-Montbéliard`,
+        title: `Ingénierie informatique`,
+        // logo: "images/degrees/utbm.png",
+        img: "images/degrees/bac+5.png",
+        description: `Spécialisation en intelligence artificielle et big data`,
+        school: `UTBM - Université de Technologie de Belfort-Montbéliard`,
         place: `Belfort, France`,
-        date: `Depuis septembre 2024`,
+        date: `En cours`,
+        style: `padding-top: 20%;`
     },
     but: {
-        title: `BUT Informatique`,
-        logo: "images/degrees/but.png",
-        specialization: `Spécialité : réalisation d'applications : conception, développement, validation`,
-        mention: `Major de promotion`,
+        title: `BUT informatique`,
+        // logo: "images/degrees/but.png",
+        img: "images/degrees/bac+3.png",
+        description: `Axé sur le développement full stack ~ majore de promotion`,
         school: `IUT de Belfort-Montbéliard`,
         place: `Belfort, France`,
-        date: `Juin 2024`,
+        date: `2024`,
+        style: `padding-top: 12%;`
     },
     bac: {
         title: `Baccalauréat général`,
-        logo: "images/degrees/bac.png",
-        specialization: `Spécialité : scientifique`,
+        // logo: "images/degrees/bac.png",
+        img: "images/degrees/bac.png",
+        description: `Axé sur les matières scientifiques principales`,
         school: `Lycée Périer`,
         place: `Marseille, France`,
-        date: `Juillet 2020`
+        date: `2020`,
+        style: `padding-top: 12%;`
     }
 }
 
@@ -627,6 +628,7 @@ const certifications = {
     mooc_management: {
         title: `Gestion de Projet`,
         logo: "images/degrees/mooc_gdp.png",
+        description: `14 certifications obtenues`,
         specialization: `Spécialités :
         <ul class='text-start'>\
             <li>Tronc commun</li>\
@@ -645,7 +647,7 @@ const certifications = {
             <li>Introduction aux principaux outils de TRIZ</li>\
         </ul>`,
         school: `MOOC`,
-        date: `Novembre 2024`,
+        date: `2024`,
     }
 }
 

@@ -1,7 +1,7 @@
 <template>
     <div class="border-0 col-12 col-md-5 m-5 mt-2" :style="hidden ? 'visibility: hidden' : ''">
 
-        <div class="card-degrees-experiences p-3 rounded">
+        <div class="card-experience p-3 rounded">
             <h5 class="fw-bold subtitle">{{ experience.title }}</h5>
 
             <p class="m-0 p-0 fw-bold text-primary text-start">{{ experience.company }}</p>
