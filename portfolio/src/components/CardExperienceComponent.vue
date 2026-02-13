@@ -19,7 +19,7 @@
 
             <router-link v-if="experience.redirection" :to="{ name: 'details' }" class="text-decoration-none">
                 <button
-                    @click="experience.redirection"
+                    @click="setIdProject()"
                     class="btn btn-more-details d-flex fw-bold justify-content-between p-0">
                     <span class="me-3 p-0">{{ experience.label_redirection }}</span>
                     <i class="bi bi-arrow-up-right-circle"></i>
