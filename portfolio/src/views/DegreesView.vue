@@ -9,7 +9,7 @@
         </div>
 
 
-        <main class="pb-5 pt-2">
+        <div class="pb-5 pt-2">
             <section>
                 <h5><strong class="subtitle">{{ degrees_title }}</strong></h5>
 
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </section>
-        </main>
+        </div>
     </div>
 </template>
 

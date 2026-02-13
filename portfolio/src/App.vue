@@ -1,15 +1,15 @@
 <template>
-<div id="app" class="font-monospace">
-    <div>
+    <div id="app" class="font-monospace">
         <NavBarComponent />
-    </div>
 
-    <router-view />
+        <div class="flex-container">
+            <main>
+            <router-view />
+        </main>
 
-    <footer class="mt-auto">
         <FooterComponent />
-    </footer>
-</div>
+        </div>
+    </div>
 </template>
 
 <script>

@@ -2,7 +2,7 @@
     <div class="container">
         <TitleComponent :title="title" />
 
-        <main class="pb-5 pt-2">
+        <div class="pb-5 pt-2">
             <div
                 v-for="(interest, key) in interests"
                 :key="key"
@@ -53,7 +53,7 @@
                     <p class="text-start">{{ interest.description }}</p>
                 </div>
             </div>
-        </main>
+        </div>
     </div>
 </template>
 

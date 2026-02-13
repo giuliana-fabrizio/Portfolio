@@ -2,7 +2,7 @@
     <div>
         <TitleComponent :title="not_found_title" />
 
-        <main class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center">
             <div class="col-sm-12 col-md-12 mb-5">
                 <svg width="69%" height="auto" viewBox="0 0 636 324" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="OBJECTS">
@@ -317,7 +317,7 @@
                     </defs>
                 </svg>
             </div>
-        </main>
+        </div>
     </div>
 </template>
 

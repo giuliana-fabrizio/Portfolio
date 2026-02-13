@@ -1,9 +1,7 @@
 <template>
-    <header>
-        <section id="titre" class="mb-3 mt-5 w-100">
-            <h1 class="text-primary">{{ title }}</h1>
-        </section>
-    </header>
+    <section id="titre" class="mb-3 mt-5 w-100">
+        <h1 class="text-primary">{{ title }}</h1>
+    </section>
 </template>
 
 <script>

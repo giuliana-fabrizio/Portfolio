@@ -1,7 +1,7 @@
 <template>
     <div class="container pe-5 ps-5">
         <TitleComponent :title="project?.title" />
-        <main class="pb-5 pt-2">
+        <div class="pb-5 pt-2">
             <section v-for="(elem, elem_key) in project" :key="elem_key">
 
                 <h3 v-if="elem.title" class="fw-bold text-dark mt-5 mb-3">{{ elem.title }}</h3>
@@ -12,7 +12,7 @@
                     <DetailsElemComponent :elem="section" :display_subtitle="true" />
                 </div>
             </section>
-        </main>
+        </div>
         <TopButtonComponent />
     </div>
 </template>

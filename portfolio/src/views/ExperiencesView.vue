@@ -2,7 +2,7 @@
     <div class="container">
         <TitleComponent :title="experiences_page_title" />
 
-        <main class="pb-5 pt-2">
+        <div class="pb-5 pt-2">
             <div
                 v-for="(experience, key, pos) in experiences"
                 :key="key"
@@ -23,7 +23,7 @@
                     :hidden="pos % 2 == 0 && windowWidth >= 768"
                     class="card-enter-right"/>
             </div>
-        </main>
+        </div>
     </div>
 </template>
 

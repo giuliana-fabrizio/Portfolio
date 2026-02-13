@@ -3,7 +3,7 @@
         <TitleComponent :title="title" />
         <p class="text-secondary">{{ introText }}</p>
 
-        <main class="pb-5">
+        <div class="pb-5">
             <FilterProjectsComponent
                 :categories_props="categories"
                 :technos_props="technos"
@@ -30,7 +30,7 @@
                     </router-link>
                 </div>
             </div>
-        </main>
+        </div>
         <TopButtonComponent />
     </div>
 </template>
