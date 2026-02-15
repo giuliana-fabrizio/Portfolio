@@ -1,7 +1,4 @@
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
 }
@@ -11,8 +8,9 @@ html {
 }
 
 body {
-    line-height: 1.8;
+    /* background: #f7f8f9; */
     color: #333;
+    line-height: 1.8;
 }
 
 .flex-container {
@@ -131,7 +129,7 @@ footer {
 }
 
 .social {
-    padding: 30px 0;
+    padding: 15px 0px 10px 0px;
     text-align: center;
 }
 
@@ -148,26 +146,49 @@ footer {
 
 /* ***************************************************************** home page ************************************************************* */
 
-#home_header {
-    /* background: url('images/img-home.webp'); */
-    background-color: #fff;
-    width: 100%;
+.home-card {
+    background-color: #e5effe;
+    border-radius: 50px;
+    box-shadow: 0 3px 12px rgba(162, 179, 203, 1);
+    position: relative;
 }
 
-#home_main {
-    border-top: 1px solid #e0e0e0;
+.home-situation {
+    background: #cbe0fe;
+    border: 3px solid #0a58ca;
+    border-radius: 10px;
+    color: #0a58ca;
+    max-width: max-content;
+    padding: 5px 50px;
 }
 
-.img-home {
-    width: 330px;
-    height: auto;
-    margin-top: 20px;
+.download-container {
+    background: linear-gradient(45deg, #3acfd5, #3a4ed5);
+    border-radius: 10px;
+    height: 45px;
+    width: 200px;
+    position: relative;
 }
 
-@media screen and (max-width: 350px) {
-    .img-home {
-        width: 250px;
-    }
+.btn-download {
+    background-color: #e5effe;
+    border-radius: 7px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    height: max-content;
+    width: max-content;
+    padding: 5px;
+}
+
+/* .download-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 15px rgba(0, 0, 0, 0.2);
+} */
+
+.download-container:hover .btn-download {
+    background: linear-gradient(45deg, #3acfd5, #3a4ed5);
+    color: white;
 }
 
 
@@ -293,10 +314,6 @@ footer {
     background: linear-gradient(45deg, #cbe0fe, #f0f6fe);
     border: 3px solid #00244C;
     border-radius: 50px 0px;
-    /* color: white; */
-}
-
-.card-certification .subtitle {
     /* color: white; */
 }
 

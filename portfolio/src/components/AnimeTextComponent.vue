@@ -8,7 +8,7 @@
 import anime from 'animejs/lib/anime.es.js';
 
 export default {
-    name: 'AnimeTitleComponent',
+    name: 'AnimeTextComponent',
 
     props: {
         text: String,

@@ -6,39 +6,23 @@ const carousel_3 = require("../public/images/interests/carousel-3.jpg");
 
 /* ***************************************************************** common ***************************************************************** */
 
-const birthday = new Date("11-27-2002");
-
-function getAge() {
-    const currentDate = new Date();
-    var age = currentDate.getFullYear() - birthday.getFullYear();
-    if (currentDate.getMonth() < birthday.getMonth()) {
-        age -= 1;
-    } else if (currentDate.getMonth() == birthday.getMonth() &&
-        currentDate.getUTCDate() < birthday.getUTCDate()) {
-        age -= 1;
-    }
-    return age;
-}
-
 const name = "Giuliana GODAIL-FABRIZIO";
-const age = getAge();
 
 
 /* ***************************************************************** nav bar ***************************************************************** */
 
 const home_btn = "Accueil";
 const academic_training_btn = "Formations";
-const experiences_btn = "Expérience";
+const experiences_btn = "Expériences";
 const projects_btn = "Projets";
 const interests_btn = "Intérêts";
+
 
 /* ***************************************************************** home page ***************************************************************** */
 
 const status = "Étudiante en informatique";
-
-const about_me_title = "À propos de moi";
-const about_me = `Âgée de ${age} ans, je suis actuellement étudiante en deuxième année du cycle ingénieur en informatique à l'<a href="https://www.utbm.fr/formations/ingenieur/informatique/" target="_blank">UTBM</a>. Passionnée par cette discipline, je cherche constamment à me perfectionner. Pour cela, je réalise régulièrement des projets personnels en imaginant moi-même un besoin, ce qui me permet d'expérimenter différentes approches et technologies.\n
-J'apprécie tout particulièrement de concevoir et optimiser des solutions afin de proposer des outils performants et adaptés aux besoins des utilisateurs. Actuellement, j'ambitionne de me spécialiser dans le domaine du traitement des données massives et de l'intelligence artificielle.`;
+const current_situation = "Recherche un stage de 6 mois";
+const presentation = "IA 🤖 | Développement full stack ✨ | Désireuse de contribuer au futur 🚀";
 const download_cv = "Télécharger mon CV";
 
 
@@ -626,7 +610,7 @@ const certifications_title = `Mes certifications`;
 
 const certifications = {
     mooc_management: {
-        title: `Gestion de Projet`,
+        title: `Gestion de projet`,
         logo: "images/degrees/mooc_gdp.png",
         description: `14 certifications obtenues`,
         specialization: `Spécialités :
@@ -745,8 +729,8 @@ module.exports = {
     projects_btn: projects_btn,
     interests_btn: interests_btn,
     status: status,
-    about_me_title: about_me_title,
-    about_me: about_me,
+    current_situation: current_situation,
+    presentation: presentation,
     download_cv: download_cv,
     link_cv: link_cv,
     mail: mail,

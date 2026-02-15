@@ -1,30 +1,38 @@
 <template>
-    <div>
-        <header id="home_header" style="position: relative;">
-            <AnimeHomeBackgroundComponent />
-            <section id="titre" class="container" style="position: relative; z-index: 1;">
-                <div class="pt-5">
-                    <h1 class="mb-4 text-primary">{{ name }}</h1>
-                    <h3 class="text-secondary">
-                        <AnimeTitleComponent :text="status" :duration="2000" />
-                    </h3>
+    <div style="position: relative;">
+        <AnimeBackgroundComponent />
+
+        <div class="container mt-5 pt-5">
+            <div class="align-items-center row mx-auto">
+                <div class="col-12 col-lg-5 mb-3 mb-lg-0">
+                    <div class="home-card mx-auto p-5 text-start">
+                        <h3 class="mb-3 text-primary">{{ status }}</h3>
+
+                        <h5 class="text-secondary mb-4">{{ name }}</h5>
+
+                        <div>
+
+                            <div class="home-situation mb-4">
+                                <AnimeTextComponent :text="current_situation" :duration="2000" />
+                            </div>
+                            <p class="mb-4">{{ presentation }}</p>
+
+                            <div class="download-container">
+                                <a :href="link_cv" class="btn-download text-decoration-none">
+                                    {{ download_cv }}
+                                    <icon class="bi bi-download"></icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <img src="images/developer.png" class="img-home">
-            </section>
-        </header>
 
-        <main class="d-flex justify-content-center bg-light p-3 pb-5 pt-5">
-            <div class="col-md-7">
-                <section id="formation" class="mb-5 text-center">
-                    <h5 class="mb-3"><strong>{{ about_me_title }}</strong></h5>
-                    <p class="mb-4" v-html="formattedText(about_me)"></p>
-                </section>
-
-                <div class="text-center">
-                    <AnimeButtonComponent :text="download_cv" :icon="'bi-download'" :href="link_cv" />
+                <div class="col-12 col-lg-7 p-0">
+                    <TechSphereComponent />
                 </div>
             </div>
-        </main>
+        </div>
+
         <TopButtonComponent />
     </div>
 </template>
@@ -33,26 +41,26 @@
 import variables_fr from '../variables_fr.js';
 import variables_en from '../variables_en.js';
 
-import AnimeHomeBackgroundComponent from '../components/AnimeHomeBackgroundComponent.vue';
-import AnimeButtonComponent from '@/components/AnimeButtonComponent.vue';
-import AnimeTitleComponent from '../components/AnimeTitleComponent.vue';
-import TopButtonComponent from '../components/TopButtonComponent.vue';
+import AnimeBackgroundComponent from '@/components/AnimeBackgroundComponent.vue';
+import AnimeTextComponent from '@/components/AnimeTextComponent.vue';
+import TopButtonComponent from '@/components/TopButtonComponent.vue';
+import TechSphereComponent from '@/components/TechSphereComponent.vue';
 
 export default {
     name: 'HomeView',
 
     components: {
-        AnimeHomeBackgroundComponent,
-        AnimeButtonComponent,
-        AnimeTitleComponent,
+        AnimeBackgroundComponent,
+        AnimeTextComponent,
+        TechSphereComponent,
         TopButtonComponent
     },
 
     data: () => ({
         name: "",
         status: "",
-        about_me_title: "",
-        about_me: "",
+        current_situation: "",
+        presentation: "",
         download_cv: "",
         link_cv: ""
     }),
@@ -80,8 +88,8 @@ export default {
             this.name = isFrench ? variables_fr.name : variables_en.name;
             this.status = isFrench ? variables_fr.status : variables_en.status;
 
-            this.about_me_title = isFrench ? variables_fr.about_me_title : variables_en.about_me_title;
-            this.about_me = isFrench ? variables_fr.about_me : variables_en.about_me;
+            this.current_situation = isFrench ? variables_fr.current_situation : variables_en.current_situation;
+            this.presentation = isFrench ? variables_fr.presentation : variables_en.presentation;
 
             this.link_cv = isFrench ? variables_fr.link_cv : variables_en.link_cv;
             this.download_cv = isFrench ? variables_fr.download_cv : variables_en.download_cv;
