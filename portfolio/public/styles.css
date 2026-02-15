@@ -11,11 +11,18 @@ body {
     /* background: #f7f8f9; */
     color: #333;
     line-height: 1.8;
+    position: relative;
+}
+
+.bg-white {
+    background: white;
+    max-width: max-content;
+    position: relative;
 }
 
 .flex-container {
     display: flex;
-    min-height: 90vh;
+    min-height: 100vh;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -26,6 +33,10 @@ body {
 
 
 /* ***************************************************************** navbar ************************************************************* */
+
+.navbar {
+    z-index: 1;
+}
 
 .bg-navbar {
     background-color: #00244C;
@@ -126,6 +137,7 @@ footer {
     background-color: #fff;
     border-top: 1px solid #e0e0e0;
     width: 100%;
+    z-index: 1;
 }
 
 .social {
@@ -258,6 +270,25 @@ footer {
 
 /* ***************************************************************** degrees page ************************************************************* */
 
+@media screen and (max-width: 450px) {
+    .circle-degree {
+        width: 325px;
+    }
+
+    .circle-degree-description {
+        display: none;
+    }
+
+    .circle-degree-footer {
+        flex-direction: column;
+        padding: 0px 0px !important;
+    }
+
+    .badge-degree {
+        margin-top: 10px !important;
+    }
+}
+
 .badge-degree {
     background-color: #00244C;
     /* border: 2px solid #f0f6fe; */
@@ -277,10 +308,6 @@ footer {
     position: relative;
     width: 400px;
 }
-
-/* .circle-degree .subtitle {
-    color: white;
-} */
 
 .circle-degree-img {
     position: absolute;
@@ -349,6 +376,7 @@ footer {
 /* ------------------------------------ Company logo */
 .img-experience {
     animation: rotateIcon 1.2s linear 1;
+    border-radius: 50%;
     width: 45px;
 }
 

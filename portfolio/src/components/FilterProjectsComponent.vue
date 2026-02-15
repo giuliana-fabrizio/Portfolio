@@ -1,5 +1,5 @@
 <template>
-        <div id="filter_projects_main" class="container">
+        <div class="container">
             <div class="position-absolute" style="top: 7.5em; z-index: 1050;">
                 <button class="btn btn-primary btn_filter d-flex d-none d-md-block" @click="wantFilter = true">
                     <span class="me-1">{{ filterLabel }}</span>

@@ -1,27 +1,21 @@
 <template>
-    <div class="container">
-        <TitleComponent :title="experiences_page_title" />
+    <div>
+        <AnimeBackgroundComponent />
 
-        <div class="pb-5 pt-2">
-            <div
-                v-for="(experience, key, pos) in experiences"
-                :key="key"
-                class="d-flex justify-content-center">
-                <CardExperienceComponent
-                    :experience="experience"
-                    :hidden="pos % 2 != 0"
-                    class="d-none d-md-block card-enter-left *"/>
-                <div class="d-flex flex-column align-items-center col-2" style="width: 1px;">
-                    <img
-                        :src="experience.logo"
-                        :alt="experience.company"
-                        class="p-1 img-experience">
-                    <div class="vr"></div>
+        <div class="container">
+            <TitleComponent :title="experiences_page_title" />
+
+            <div class="pt-2">
+                <div v-for="(experience, key, pos) in experiences" :key="key" class="d-flex justify-content-center">
+                    <CardExperienceComponent :experience="experience" :hidden="pos % 2 != 0"
+                        class="d-none d-md-block card-enter-left *" style="position: relative" />
+                    <div class="d-flex flex-column align-items-center col-2" style="width: 1px;">
+                        <img :src="experience.logo" :alt="experience.company" class="bg-white p-1 img-experience">
+                        <div class="vr"></div>
+                    </div>
+                    <CardExperienceComponent :experience="experience" :hidden="pos % 2 == 0 && windowWidth >= 768"
+                        class="card-enter-right" style="position: relative" />
                 </div>
-                <CardExperienceComponent
-                    :experience="experience"
-                    :hidden="pos % 2 == 0 && windowWidth >= 768"
-                    class="card-enter-right"/>
             </div>
         </div>
     </div>
@@ -31,6 +25,7 @@
 import variables_fr from '../variables_fr.js';
 import variables_en from '../variables_en.js';
 
+import AnimeBackgroundComponent from '@/components/AnimeBackgroundComponent.vue';
 import CardExperienceComponent from '../components/CardExperienceComponent.vue';
 import TitleComponent from '../components/TitleComponent.vue';
 
@@ -38,8 +33,9 @@ export default {
     name: 'ExperiencesView',
 
     components: {
+        AnimeBackgroundComponent,
         CardExperienceComponent,
-        TitleComponent
+        TitleComponent,
     },
 
     data: () => ({

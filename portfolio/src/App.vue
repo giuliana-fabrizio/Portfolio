@@ -4,10 +4,10 @@
 
         <div class="flex-container">
             <main>
-            <router-view />
-        </main>
+                <router-view />
+            </main>
 
-        <FooterComponent />
+            <FooterComponent />
         </div>
     </div>
 </template>

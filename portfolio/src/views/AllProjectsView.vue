@@ -1,37 +1,36 @@
 <template>
-    <div class="container">
-        <TitleComponent :title="title" />
-        <p class="text-secondary">{{ introText }}</p>
+    <div>
+        <AnimeBackgroundComponent />
 
-        <div class="pb-5">
-            <FilterProjectsComponent
-                :categories_props="categories"
-                :technos_props="technos"
-                @categories_props="updateCategories"
-                @technos_props="updateTechnos" />
+        <div class="container">
+            <TitleComponent :title="title" />
+            <p class="bg-white mx-auto text-secondary">{{ introText }}</p>
 
-            <div class="row">
-                <div v-if="projects.length === 0">
-                    <p><strong>Aucun résultat</strong></p>
-                    <p>Modifier ou supprimer certains de vos filtres</p>
-                </div>
+            <div>
+                <FilterProjectsComponent :categories_props="categories" :technos_props="technos"
+                    @categories_props="updateCategories" @technos_props="updateTechnos" />
 
-                <div
-                    v-for="(project, key) in projects"
-                    :key="key"
-                    :class="[getClass(Object.keys(projects).length), 'mb-4']">
-                    <router-link
-                        :to="{ name: 'details' }"
-                        v-if="(categories.length === 0 || categories.includes(project.category.name)) &&
-                            (technos.length === 0 || project.technologies.filter(techno => technos.includes(techno.name)).length > 0)"
-                        class="text-decoration-none">
-                        <CardProjectComponent :id_project="key" :project="project"
-                            :projects_len="Object.keys(projects).length" />
-                    </router-link>
+
+                <div class="row">
+                    <div v-if="Object.values(projects).length === 0">
+                        <p class="bg-white mb-0 mx-auto"><strong>Aucun résultat</strong></p>
+                        <p class="bg-white mx-auto">Modifier ou supprimer certains de vos filtres</p>
+                    </div>
+
+                    <div v-else v-for="(project, key) in projects" :key="key"
+                        :class="[getClass(Object.keys(projects).length), 'mb-4']">
+                        <router-link :to="{ name: 'details' }"
+                            v-if="(categories.length === 0 || categories.includes(project.category.name)) &&
+                                (technos.length === 0 || project.technologies.filter(techno => technos.includes(techno.name)).length > 0)"
+                            class="text-decoration-none">
+                            <CardProjectComponent :id_project="key" :project="project"
+                                :projects_len="Object.keys(projects).length" />
+                        </router-link>
+                    </div>
                 </div>
             </div>
+            <TopButtonComponent />
         </div>
-        <TopButtonComponent />
     </div>
 </template>
 
@@ -40,6 +39,7 @@ import { Tooltip } from 'bootstrap';
 import variables_fr from '../variables_fr.js';
 import variables_en from '../variables_en.js';
 
+import AnimeBackgroundComponent from '@/components/AnimeBackgroundComponent.vue';
 import CardProjectComponent from '@/components/CardProjectComponent.vue';
 import FilterProjectsComponent from '@/components/FilterProjectsComponent.vue';
 import TitleComponent from '../components/TitleComponent.vue';
@@ -49,6 +49,7 @@ export default {
     name: 'AllProjectsView',
 
     components: {
+        AnimeBackgroundComponent,
         CardProjectComponent,
         FilterProjectsComponent,
         TopButtonComponent,

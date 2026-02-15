@@ -1,10 +1,10 @@
 <template>
-    <div style="position: relative;">
+    <div>
         <AnimeBackgroundComponent />
 
         <div class="container mt-5 pt-5">
             <div class="align-items-center row mx-auto">
-                <div class="col-12 col-lg-5 mb-3 mb-lg-0">
+                <div class="col-12 col-lg-6 mb-3 mb-lg-0">
                     <div class="home-card mx-auto p-5 text-start">
                         <h3 class="mb-3 text-primary">{{ status }}</h3>
 
@@ -27,13 +27,11 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-7 p-0">
+                <div class="col-12 col-lg-6 p-0">
                     <TechSphereComponent />
                 </div>
             </div>
         </div>
-
-        <TopButtonComponent />
     </div>
 </template>
 
@@ -43,7 +41,6 @@ import variables_en from '../variables_en.js';
 
 import AnimeBackgroundComponent from '@/components/AnimeBackgroundComponent.vue';
 import AnimeTextComponent from '@/components/AnimeTextComponent.vue';
-import TopButtonComponent from '@/components/TopButtonComponent.vue';
 import TechSphereComponent from '@/components/TechSphereComponent.vue';
 
 export default {
@@ -53,7 +50,6 @@ export default {
         AnimeBackgroundComponent,
         AnimeTextComponent,
         TechSphereComponent,
-        TopButtonComponent
     },
 
     data: () => ({

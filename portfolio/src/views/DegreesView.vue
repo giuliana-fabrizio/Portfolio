@@ -1,34 +1,37 @@
 <template>
-    <div class="container">
-        <TitleComponent :title="title" />
+    <div>
+        <AnimeBackgroundComponent />
 
-        <div>
-            <p class="text-center text-secondary">
-                {{ school_career }}
-            </p>
-        </div>
+        <div class="container">
+            <TitleComponent :title="title" />
 
+            <div>
+                <p class="bg-white text-center text-secondary">
+                    {{ school_career }}
+                </p>
+            </div>
 
-        <div class="pb-5 pt-2">
-            <section>
-                <h5><strong class="subtitle">{{ degrees_title }}</strong></h5>
+            <div class="pt-2">
+                <section>
+                    <h5><strong class="bg-white subtitle">{{ degrees_title }}</strong></h5>
 
-                <div class="d-flex flex-wrap justify-content-center">
-                    <div v-for="(item, key) in degrees" :key="key">
-                        <DegreeCircleComponent :item="item" />
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <div v-for="(item, key) in degrees" :key="key">
+                            <DegreeCircleComponent :item="item" />
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="mt-5">
-                <h5><strong class="subtitle">{{ certifications_title }}</strong></h5>
+                <section class="mt-5">
+                    <h5><strong class="bg-white subtitle">{{ certifications_title }}</strong></h5>
 
-                <div class="d-flex flex-wrap justify-content-center">
-                    <div v-for="(item, key) in certifications" :key="key">
-                        <CertificationCardComponent :item="item" />
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <div v-for="(item, key) in certifications" :key="key">
+                            <CertificationCardComponent :item="item" />
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
     </div>
 </template>
@@ -37,6 +40,7 @@
 import variables_fr from '../variables_fr.js';
 import variables_en from '../variables_en.js';
 
+import AnimeBackgroundComponent from '@/components/AnimeBackgroundComponent.vue';
 import CertificationCardComponent from '@/components/CertificationCardComponent.vue';
 import DegreeCircleComponent from '@/components/DegreeCircleComponent.vue';
 import TitleComponent from '../components/TitleComponent.vue';
@@ -45,9 +49,10 @@ export default {
     name: 'DegreesView',
 
     components: {
+        AnimeBackgroundComponent,
         CertificationCardComponent,
         DegreeCircleComponent,
-        TitleComponent
+        TitleComponent,
     },
 
     data: () => ({
