@@ -35,10 +35,8 @@ const interests_btn = "Hobbies";
 /* ***************************************************************** home page ***************************************************************** */
 
 const status = "Computer science student";
-
-const about_me_title = "About me";
-const about_me = `I am currently a computer science engineering student at the <a href="https://www.utbm.fr/formations/ingenieur/informatique/" target="_blank">UTBM</a>. I am found of this field that is why I am constantly seeking to improve my skills. To achieve this, I often work on personal projects : I sometimes image a problem to solve which allows me to experiment with different approchoaches and technologies.\n
-I particularly enjoy designing and optimizing solutions to create efficient tools adapted to user needs. Now, I wish to specialize in big data and artificial intelligence.`;
+const current_situation = "Looking for a six-month internship";
+const presentation = "AI 🤖 | Full-stack development ✨ | Eager to contribute to the future 🚀";
 const download_cv = "Download my resume";
 
 
@@ -741,8 +739,8 @@ module.exports = {
     projects_btn: projects_btn,
     interests_btn: interests_btn,
     status: status,
-    about_me_title: about_me_title,
-    about_me: about_me,
+    current_situation: current_situation,
+    presentation: presentation,
     download_cv: download_cv,
     link_cv: link_cv,
     mail: mail,
