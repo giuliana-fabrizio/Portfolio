@@ -49,3 +49,18 @@ export default {
     }
 };
 </script>
+
+<style scoped>
+.card-certification {
+    background: linear-gradient(45deg, #cbe0fe, #f0f6fe);
+    border: 3px solid #00244C;
+    border-radius: 50px 0px;
+    /* color: white; */
+}
+
+.logo-certification {
+    border-radius: 30px;
+    height: 70px;
+    width: 70px;
+}
+</style>

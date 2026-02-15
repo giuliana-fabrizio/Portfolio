@@ -46,3 +46,72 @@ export default {
     }
 };
 </script>
+
+<style scoped>
+@media screen and (max-width: 450px) {
+    .circle-degree {
+        width: 325px;
+    }
+
+    .circle-degree-description {
+        display: none;
+    }
+
+    .circle-degree-footer {
+        flex-direction: column;
+        padding: 0px 0px !important;
+    }
+
+    .badge-degree {
+        margin-top: 10px !important;
+    }
+}
+
+.badge-degree {
+    background-color: #00244C;
+    /* border: 2px solid #f0f6fe; */
+    border-radius: 30px;
+
+    color: white;
+    font-weight: bold;
+    font-size: small;
+    padding: 0px 12px;
+}
+
+.circle-degree {
+    aspect-ratio: 1/1;
+    background-color: #cbe0fe;
+    border: 3px solid #cbe0fe;
+    color: black;
+    position: relative;
+    width: 400px;
+}
+
+.circle-degree-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.circle-degree-img img {
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.circle-degree-description {
+    padding-left: 15px;
+}
+
+.circle-degree-footer {
+    padding: 0px 50px;
+}
+
+.place-degree {
+    color: #cbe0fe;
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
-    <div id="background">
-        <canvas id="canva"></canvas>
+    <div id="background" class="d-none d-md-block">
+        <canvas id="canvas-background"></canvas>
     </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
     }),
 
     mounted() {
-        this.canvas = document.getElementById("canva");
+        this.canvas = document.getElementById("canvas-background");
         this.ctx = this.canvas.getContext("2d");
 
         this.init();
@@ -109,12 +109,7 @@ export default {
 </script>
 
 <style scoped>
-#background {
-    margin: 0;
-    overflow: hidden;
-}
-
-canvas {
+#canvas-background {
     background: transparent;
     height: 100%;
     min-height: 65vh;

@@ -1,45 +1,33 @@
 <template>
-        <div class="container">
-            <div class="position-absolute" style="top: 7.5em; z-index: 1050;">
-                <button class="btn btn-primary btn_filter d-flex d-none d-md-block" @click="wantFilter = true">
-                    <span class="me-1">{{ filterLabel }}</span>
-                    <i :class="['bi', 'bi-filter']"></i>
+    <div class="container">
+        <div class="btn-filter position-absolute">
+            <button class="btn btn-primary d-flex d-none d-md-block" @click="wantFilter = true">
+                <span class="me-1">{{ filterLabel }}</span>
+                <i :class="['bi', 'bi-filter']"></i>
+            </button>
+        </div>
+
+        <Modal v-model="wantFilter" :title="filterLabel" :modalStyle="modalStyle" class="p-3">
+            <Multiselect v-model="categories_values"
+                :options="Object.values(categories).map(categorie => categorie.name)" :multiple="true" :max-height="280"
+                selectLabel="" :placeholder="categoriesLabel" open-direction="bottom" class="mb-3" />
+
+            <Multiselect v-model="technos_values" :options="Object.values(technos).map(techno => techno.name)"
+                :multiple="true" :max-height="280" selectLabel="" :placeholder="technosLabel" open-direction="bottom"
+                class="mb-3" />
+
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-success me-1" @click="applyFilters()">
+                    {{ confirmFilters }}
+                    <i :class="['bi', 'bi-check2-circle']"></i>
+                </button>
+                <button class="btn btn-danger ms-1" @click="cancelFilters()">
+                    {{ resetFilters }}
+                    <i :class="['bi', 'bi-x-circle']"></i>
                 </button>
             </div>
-
-            <Modal v-model="wantFilter" :title="filterLabel" :modalStyle="modalStyle" class="p-3">
-                <Multiselect
-                    v-model="categories_values"
-                    :options="Object.values(categories).map(categorie => categorie.name)"
-                    :multiple="true"
-                    :max-height="280"
-                    selectLabel=""
-                    :placeholder="categoriesLabel"
-                    open-direction="bottom"
-                    class="mb-3" />
-
-                <Multiselect
-                    v-model="technos_values"
-                    :options="Object.values(technos).map(techno => techno.name)"
-                    :multiple="true"
-                    :max-height="280"
-                    selectLabel=""
-                    :placeholder="technosLabel"
-                    open-direction="bottom"
-                    class="mb-3" />
-
-                <div class="d-flex justify-content-end">
-                    <button class="btn btn-success me-1" @click="applyFilters()">
-                        {{ confirmFilters }}
-                        <i :class="['bi', 'bi-check2-circle']"></i>
-                    </button>
-                    <button class="btn btn-danger ms-1" @click="cancelFilters()">
-                        {{ resetFilters }}
-                        <i :class="['bi', 'bi-x-circle']"></i>
-                    </button>
-                </div>
-            </Modal>
-        </div>
+        </Modal>
+    </div>
 </template>
 
 <script>
@@ -66,7 +54,7 @@ export default {
         categoriesLabel: "",
         technosLabel: "",
         confirmFilters: "",
-        resetFilters : "",
+        resetFilters: "",
 
         categories: {},
         categories_values: [],
@@ -132,3 +120,22 @@ export default {
 </script>
 
 <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
+
+<style scoped>
+.btn-filter {
+    top: 7.5em;
+    z-index: 1050;
+}
+
+.multiselect__tag {
+    background: #0D6EFD !important;
+}
+
+.multiselect__tag-icon {
+    background: #0D6EFD !important;
+}
+
+.multiselect__option--highlight {
+    background: #0D6EFD !important;
+}
+</style>

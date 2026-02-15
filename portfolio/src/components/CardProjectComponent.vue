@@ -68,3 +68,29 @@ export default {
     }
 };
 </script>
+
+<style scoped>
+.card_projects {
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card_projects:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 15px rgba(0, 0, 0, 0.2);
+}
+
+.text-intro a {
+    color: #6c757d !important;
+    text-decoration: none;
+}
+
+.div-img-technos {
+    width: 30px;
+}
+
+.img-technos {
+    max-height: 20px;
+    max-width: 30px;
+}
+</style>

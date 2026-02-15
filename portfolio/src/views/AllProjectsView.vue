@@ -150,3 +150,26 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+/* ------------------------------------ Modal */
+
+.vm-title {
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+}
+
+.vm-btn-close {
+    color: #0D6EFD !important;
+}
+
+.vm {
+    background-color: #f8f9fa !important;
+    color: #2c3e50;
+    top: 35% !important;
+}
+
+.vm-content {
+    padding: 10px 15px 0px !important;
+}
+</style>

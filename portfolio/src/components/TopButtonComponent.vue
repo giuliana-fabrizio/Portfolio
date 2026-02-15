@@ -33,3 +33,15 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+.scroll-to-top-button {
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #007BFF;
+    border: none;
+    border-radius: 5px;
+}
+</style>

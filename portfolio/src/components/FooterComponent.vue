@@ -75,3 +75,27 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+footer {
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    width: 100%;
+    z-index: 1;
+}
+
+.social {
+    padding: 15px 0px 10px 0px;
+    text-align: center;
+}
+
+.social a {
+    padding-right: 12px;
+}
+
+.copyright {
+    color: #74808a;
+    margin: 0;
+    text-align: center;
+}
+</style>

@@ -65,3 +65,35 @@ export default {
     }
 };
 </script>
+
+<style scoped>
+.card-experience {
+    background: linear-gradient(45deg, #cbe0fe, #f0f6fe);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ------------------------------------ More details button */
+
+@keyframes pushIcon {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(3px, -3px);
+    }
+}
+
+.btn-more-details {
+    color: #324f6f;
+}
+
+.btn-more-details:hover {
+    color: #324f6f;
+}
+
+.btn-more-details:hover i {
+    animation: pushIcon 1.2s ease forwards;
+}
+</style>

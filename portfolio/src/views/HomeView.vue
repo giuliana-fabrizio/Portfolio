@@ -100,3 +100,50 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.home-card {
+    background-color: #e5effe;
+    border-radius: 50px;
+    box-shadow: 0 3px 12px rgba(162, 179, 203, 1);
+    position: relative;
+}
+
+.home-situation {
+    background: #cbe0fe;
+    border: 3px solid #0a58ca;
+    border-radius: 10px;
+    color: #0a58ca;
+    max-width: max-content;
+    padding: 5px 50px;
+}
+
+.download-container {
+    background: linear-gradient(45deg, #3acfd5, #3a4ed5);
+    border-radius: 10px;
+    height: 45px;
+    width: 200px;
+    position: relative;
+}
+
+.btn-download {
+    background-color: #e5effe;
+    border-radius: 7px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    height: max-content;
+    width: max-content;
+    padding: 5px;
+}
+
+/* .download-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 15px rgba(0, 0, 0, 0.2);
+} */
+
+.download-container:hover .btn-download {
+    background: linear-gradient(45deg, #3acfd5, #3a4ed5);
+    color: white;
+}
+</style>
