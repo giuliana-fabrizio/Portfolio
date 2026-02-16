@@ -49,6 +49,14 @@ body {
     color: var(--dark-blue);
 }
 
+.text-blue {
+    color: var(--blue-6);
+}
+
+.text-gray {
+    color: var(--gray-1);
+}
+
 
 /* ------------------------------------ Filter */
 

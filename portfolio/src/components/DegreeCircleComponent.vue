@@ -7,11 +7,11 @@
         <div id="degree-content" class="d-flex flex-column justify-content-center h-100" :style="item.style">
             <h5 class="fw-bold m-0 mb-3 p-0 subtitle text-center">{{ item.title }}</h5>
 
-            <p class="text-primary mb-1">{{ item.school }}</p>
+            <p class="text-blue mb-1">{{ item.school }}</p>
             <p class="circle-degree-description fst-italic">{{ item.description }}</p>
 
             <div class="circle-degree-footer d-flex justify-content-between align-items-center">
-                <div class="d-flex m-0 p-0 text-secondary">
+                <div class="d-flex m-0 p-0 text-gray">
                     <i class="bi bi-pin-angle"></i>
                     <span class="ms-2">{{ item.place }}</span>
                 </div>

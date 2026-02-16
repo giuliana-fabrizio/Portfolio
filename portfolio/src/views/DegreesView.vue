@@ -6,7 +6,7 @@
             <TitleComponent :title="title" />
 
             <div>
-                <p class="bg-white text-center text-secondary">
+                <p class="bg-white text-center text-gray">
                     {{ school_career }}
                 </p>
             </div>

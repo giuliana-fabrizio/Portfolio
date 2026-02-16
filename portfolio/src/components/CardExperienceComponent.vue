@@ -4,9 +4,9 @@
         <div class="card-experience p-3 rounded">
             <h5 class="fw-bold subtitle">{{ experience.title }}</h5>
 
-            <p class="m-0 p-0 fw-bold text-primary text-start">{{ experience.company }}</p>
+            <p class="m-0 p-0 fw-bold text-blue text-start">{{ experience.company }}</p>
 
-            <div class="row m-0 p-0 text-secondary">
+            <div class="row m-0 p-0 text-gray">
                 <div class="col-12 col-lg-6 m-0 p-0 text-start">
                     <i class="bi bi-calendar2-week"></i>
                     <span class="ms-2">{{ experience.date }}</span>

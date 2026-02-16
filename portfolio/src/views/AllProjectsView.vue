@@ -4,7 +4,7 @@
 
         <div class="container">
             <TitleComponent :title="title" />
-            <p class="bg-white mx-auto text-secondary">{{ introText }}</p>
+            <p class="bg-white mx-auto text-gray">{{ introText }}</p>
 
             <div>
                 <FilterProjectsComponent :categories_props="categories" :technos_props="technos"

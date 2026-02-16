@@ -6,9 +6,9 @@
             <div class="align-items-center row mx-auto">
                 <div class="col-12 col-lg-6 mb-3 mb-lg-0">
                     <div class="home-card mx-auto p-5 text-start">
-                        <h3 class="mb-3 text-primary">{{ status }}</h3>
+                        <h3 class="mb-3 text-blue">{{ status }}</h3>
 
-                        <h5 class="text-secondary mb-4">{{ name }}</h5>
+                        <h5 class="text-gray mb-4">{{ name }}</h5>
 
                         <div>
 

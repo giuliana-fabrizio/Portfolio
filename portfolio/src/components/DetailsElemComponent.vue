@@ -4,10 +4,10 @@
             <h5 v-if="display_subtitle" class="fw-bold text-dark text-start mt-2 mb-2">{{ elem.title
             }}</h5>
 
-            <p v-if="elem.text" v-html="formattedText(String(elem.text))" class="m-0 text-start text-secondary"></p>
+            <p v-if="elem.text" v-html="formattedText(String(elem.text))" class="m-0 text-start text-gray"></p>
 
             <ul v-if="elem.list">
-                <li v-for="(item, item_key) in elem.list" :key="item_key" class="text-secondary text-start"
+                <li v-for="(item, item_key) in elem.list" :key="item_key" class="text-gray text-start"
                     v-html="formattedText(String(item))">
                 </li>
             </ul>

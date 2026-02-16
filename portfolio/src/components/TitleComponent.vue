@@ -1,6 +1,6 @@
 <template>
     <section id="titre" class="mb-3 mt-5 w-100">
-        <h1 class="bg-white mx-auto text-primary">{{ title }}</h1>
+        <h1 class="bg-white mx-auto text-blue">{{ title }}</h1>
     </section>
 </template>
 
