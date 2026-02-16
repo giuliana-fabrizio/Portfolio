@@ -149,7 +149,7 @@ export default {
 }
 
 .bg-navbar {
-    background-color: #00244C;
+    background-color: var(--dark-blue);
 }
 
 #id_navbar {
@@ -168,7 +168,7 @@ export default {
 }
 
 #id_navbar>ul>li.active>a {
-    color: #00244C !important;
+    color: var(--dark-blue) !important;
     background-color: transparent;
     transition: all 0.7s;
 }
@@ -178,7 +178,7 @@ export default {
     left: 0px;
     transition-duration: 0.6s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    background-color: white;
+    background-color: var(--white);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     margin-top: 12px;
@@ -189,7 +189,7 @@ export default {
     position: absolute;
     width: 25px;
     height: 25px;
-    background-color: #fff;
+    background-color: var(--white);
     bottom: 10px;
 }
 
@@ -208,7 +208,7 @@ export default {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #00244C;
+    background-color: var(--dark-blue);
 }
 
 .horizontal_selector .right:before {

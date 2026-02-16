@@ -1,6 +1,20 @@
-#app {
-    text-align: center;
-    color: #2c3e50;
+:root {
+    --blue-0: #b6d3fe;
+    --blue-1: #cbe0fe;
+    --blue-2: #86b6fe;
+    --blue-3: #5599fd;
+    --blue-4: #324f6f;
+    --blue-5: #6c757d;
+    --blue-6: #0D6EFD;
+    --blue-7: #e5effe;
+    --blue-8: #0a58ca;
+    --blue-9: #007BFF;
+    --dark-blue: #00244C;
+    --gray-1: #74808a;
+    --black: #2c3e50;
+    --text-color: #333;
+    --white: #fff;
+    --white-1: #f8f9fa;
 }
 
 html {
@@ -8,10 +22,10 @@ html {
 }
 
 body {
-    /* background: #f7f8f9; */
-    color: #333;
+    color: var(--text-color);
     line-height: 1.8;
     position: relative;
+    text-align: center;
 }
 
 .bg-white {
@@ -32,5 +46,44 @@ body {
 }
 
 .subtitle {
-    color: #00244C;
+    color: var(--dark-blue);
+}
+
+
+/* ------------------------------------ Filter */
+
+.btn-filter {
+    top: 7.5em;
+    z-index: 1050;
+}
+
+.multiselect__tag {
+    background: var(--blue-6) !important;
+}
+
+.multiselect__tag-icon {
+    background: var(--blue-6) !important;
+}
+
+.multiselect__option--highlight {
+    background: var(--blue-6) !important;
+}
+
+.vm-title {
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+}
+
+.vm-btn-close {
+    color: var(--blue-6) !important;
+}
+
+.vm {
+    background-color: var(--white-1) !important;
+    color: var(--black);
+    top: 35% !important;
+}
+
+.vm-content {
+    padding: 10px 15px 0px !important;
 }

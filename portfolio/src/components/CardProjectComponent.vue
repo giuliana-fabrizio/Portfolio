@@ -81,7 +81,7 @@ export default {
 }
 
 .text-intro a {
-    color: #6c757d !important;
+    color: var(--blue-5) !important;
     text-decoration: none;
 }
 

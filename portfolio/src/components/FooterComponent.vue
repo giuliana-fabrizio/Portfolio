@@ -78,7 +78,7 @@ export default {
 
 <style scoped>
 footer {
-    background-color: #fff;
+    background-color: var(--white);
     border-top: 1px solid #e0e0e0;
     width: 100%;
     z-index: 1;
@@ -94,7 +94,7 @@ footer {
 }
 
 .copyright {
-    color: #74808a;
+    color: var(--gray-1);
     margin: 0;
     text-align: center;
 }

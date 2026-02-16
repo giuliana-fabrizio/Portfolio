@@ -120,22 +120,3 @@ export default {
 </script>
 
 <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
-
-<style scoped>
-.btn-filter {
-    top: 7.5em;
-    z-index: 1050;
-}
-
-.multiselect__tag {
-    background: #0D6EFD !important;
-}
-
-.multiselect__tag-icon {
-    background: #0D6EFD !important;
-}
-
-.multiselect__option--highlight {
-    background: #0D6EFD !important;
-}
-</style>

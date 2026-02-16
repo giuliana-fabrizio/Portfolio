@@ -52,10 +52,10 @@ export default {
 
 <style scoped>
 .card-certification {
-    background: linear-gradient(45deg, #cbe0fe, #f0f6fe);
-    border: 3px solid #00244C;
+    background: linear-gradient(45deg, var(--blue-1), #f0f6fe);
+    border: 3px solid var(--dark-blue);
     border-radius: 50px 0px;
-    /* color: white; */
+    /* color: var(--white); */
 }
 
 .logo-certification {

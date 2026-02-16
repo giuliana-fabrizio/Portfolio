@@ -123,7 +123,7 @@ export default {
 
 <style scoped>
 .sphere-container {
-    background-color: white;
+    background-color: var(--white);
     border-radius: 50%;
     position: relative;
     height: 50vh;

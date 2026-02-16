@@ -68,7 +68,7 @@ export default {
 
 <style scoped>
 .card-experience {
-    background: linear-gradient(45deg, #cbe0fe, #f0f6fe);
+    background: linear-gradient(45deg, var(--blue-1), #f0f6fe);
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
 }
 
@@ -86,11 +86,11 @@ export default {
 }
 
 .btn-more-details {
-    color: #324f6f;
+    color: var(--blue-4);
 }
 
 .btn-more-details:hover {
-    color: #324f6f;
+    color: var(--blue-4);
 }
 
 .btn-more-details:hover i {

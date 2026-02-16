@@ -61,9 +61,9 @@ const confirmFilters = "Confirm";
 const resetFilters = "Reset";
 
 const categories = {
-    personal: { name: "Personal", style: "background-color: #b6d3fe" },
-    professional: { name: "Professional", style: "background-color: #86b6fe" },
-    academic: { name: "Academic", style: "background-color: #5599fd" },
+    personal: { name: "Personal", style: "background-color: var(--blue-0)" },
+    professional: { name: "Professional", style: "background-color: var(--blue-2)" },
+    academic: { name: "Academic", style: "background-color: var(--blue-3)" },
 };
 
 const technos = {

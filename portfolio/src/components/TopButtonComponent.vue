@@ -40,7 +40,7 @@ export default {
     bottom: 60px;
     right: 30px;
     background-color: rgba(0, 0, 0, 0);
-    color: #007BFF;
+    color: var(--blue-9);
     border: none;
     border-radius: 5px;
 }

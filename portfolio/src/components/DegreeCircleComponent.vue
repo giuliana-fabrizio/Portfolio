@@ -68,11 +68,11 @@ export default {
 }
 
 .badge-degree {
-    background-color: #00244C;
+    background-color: var(--dark-blue);
     /* border: 2px solid #f0f6fe; */
     border-radius: 30px;
 
-    color: white;
+    color: var(--white);
     font-weight: bold;
     font-size: small;
     padding: 0px 12px;
@@ -80,8 +80,8 @@ export default {
 
 .circle-degree {
     aspect-ratio: 1/1;
-    background-color: #cbe0fe;
-    border: 3px solid #cbe0fe;
+    background-color: var(--blue-1);
+    border: 3px solid var(--blue-1);
     color: black;
     position: relative;
     width: 400px;
@@ -112,6 +112,6 @@ export default {
 }
 
 .place-degree {
-    color: #cbe0fe;
+    color: var(--blue-1);
 }
 </style>

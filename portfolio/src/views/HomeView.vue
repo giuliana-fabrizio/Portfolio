@@ -103,17 +103,17 @@ export default {
 
 <style scoped>
 .home-card {
-    background-color: #e5effe;
+    background-color: var(--blue-7);
     border-radius: 50px;
     box-shadow: 0 3px 12px rgba(162, 179, 203, 1);
     position: relative;
 }
 
 .home-situation {
-    background: #cbe0fe;
-    border: 3px solid #0a58ca;
+    background: var(--blue-1);
+    border: 3px solid var(--blue-8);
     border-radius: 10px;
-    color: #0a58ca;
+    color: var(--blue-8);
     max-width: max-content;
     padding: 5px 50px;
 }
@@ -127,7 +127,7 @@ export default {
 }
 
 .btn-download {
-    background-color: #e5effe;
+    background-color: var(--blue-7);
     border-radius: 7px;
     position: absolute;
     right: 3px;
@@ -144,6 +144,6 @@ export default {
 
 .download-container:hover .btn-download {
     background: linear-gradient(45deg, #3acfd5, #3a4ed5);
-    color: white;
+    color: var(--white);
 }
 </style>
