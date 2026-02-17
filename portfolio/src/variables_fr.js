@@ -101,32 +101,29 @@ const projects = {
     UTBM_IA41: {
         title: `Rasende Roboter`,
         category: categories.academic,
-        introduction: {
-            text: `Ce projet universitaire, réalisé en première année de cycle ingénieur en collaboration avec un autre étudiant, visait à développer le jeu du Rasende Roboter, plus connu sous le nom Ricochet Robots. Nous devions également faire une intelligence artificielle capable d'affronter un joueur humain selon plusieurs niveaux de difficulté.`
-        },
+        image_bg: "images/projects/UTBM_IA41/card-background.png",
+        introduction: `Développement du jeu Rasende Roboter (Ricochet Robots) intégrant deux niveaux d’intelligence artificielle permettant d’affronter un joueur humain.`,
         implementation: {
             title: `Tâches réalisées`,
-            text: ``,
             sections: [
                 {
                     title: `Logique du jeu`,
                     list: [
                         `Configuration paramétrable d'une partie : assemblage du plateau de jeu, nombre de manches, difficulté de l'IA ;`,
-                        `Implémentation des règles de déplacement des robots (glissement continu jusqu'à obstacle) ;`,
-                        `Gestion des collisions entre robots et des limites du plateau ;`,
-                        `Validation des coups et vérification de l'atteinte de l'objectif.`
+                        `Implémentation des règles de déplacement des robots (glissement continu jusqu'à rencontrer un obstacle) ;`,
+                        `Vérification de l'atteinte de l'objectif.`
                     ]
                 }, {
                     title: `Intelligence artificielle`,
                     list: [
-                        `Comparaison de plusieurs algorithmes (A*, Breath-First-Search, Dijkstra) ;`,
+                        // `Comparaison de plusieurs algorithmes (A*, Breath-First-Search, Dijkstra) ;`,
                         `Implémentation de l'algorithme A* ;`,
-                        `Modélisation d'un état (position des robots) ;`,
+                        // `Modélisation d'un état (position des robots) ;`,
                         `Génération des états successeurs à partir d'un état précis et des mouvements possibles qui en découlent ;`,
                         `Création de deux niveaux de difficulté (simple et avancé) via la complexité de l'heuristique ;`,
                         `Reconstruction et affichage du chemin optimal trouvé par l'IA.`
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_IA41/gameboard.png",
@@ -137,24 +134,27 @@ const projects = {
                 },
             ]
         },
-        result: {
-            title: `Résultat`,
-            text: `Le projet a abouti à un jeu pleinement fonctionnel, permettant à l'utilisateur de jouer contre notre IA. Vous pouvez consulter notre soutenance <a href='https://docs.google.com/presentation/d/1E3sWxrTmw9e1jOlK5u4ZRtSWdAdViirMot2iRPzkQI8/edit?usp=sharing' target='_blank'>ici</a> notre dépôt Git <a href='https://github.com/giuliana-fabrizio/RasendeRoboter' target='_blank'>ici</a>.`,
+        git: {
+            link: `https://github.com/giuliana-fabrizio/RasendeRoboter`,
+            label: `Github`
+        },
+        slides: {
+            link: `https://docs.google.com/presentation/d/1E3sWxrTmw9e1jOlK5u4ZRtSWdAdViirMot2iRPzkQI8/edit?usp=sharing`,
+            label: `Soutenance`
         },
         technologies: [technos.github, technos.python]
     },
     UTBM_AP4B: {
         title: `Jeu du Trio`,
         category: categories.academic,
-        introduction: {
-            text: `Ce projet universitaire, réalisé en première année de cycle ingénieur en collaboration avec deux autres étudiants, visait à reproduire le mode individuel simple du jeu de cartes Trio.`
-        },
+        image_bg: "images/projects/UTBM_IA41/card-background.png",
+        introduction: `Reproduction du jeu de cartes Trio en mode individuel simple.`,
         implementation: {
             title: `Tâches réalisées`,
             text: ``,
             sections: [
                 {
-                    title: `Mécaniques du jeu`,
+                    title: `Mécanique du jeu`,
                     list: [
                         `Initialisation paramétrable d'une partie : nombre de joueurs, saisie et contrôle des noms ;`,
                         `Vérification des cartes retournées, détection des trios, gestion des scénarios de victoire (points ou Trio Doré).`
@@ -164,13 +164,14 @@ const projects = {
                     list: [
                         `Écran de paramétrage d'une partie ;`,
                         `Interface principale : affichage des joueurs et des cartes interactives ;`,
-                        `Gestion des événements : retournement des cartes, affichage des règles ;`,
+                        `Gestion des événements : retournement des cartes ;`,
                         `Synchronisation de l'état du jeu entre le modèle logique et l'interface principale.`
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_AP4B/gameboard.png",
+                            legend: `Plateau de jeu`,
                             style: `max-height: 280px;`
                         }
                     ]
@@ -184,90 +185,88 @@ const projects = {
                 },
             ]
         },
-        result: {
-            title: `Résultat`,
-            text: `Le projet a abouti à un jeu pleinement fonctionnel, répondant aux exigences des professeurs. Vous pouvez consulter notre dépôt Git <a href='https://github.com/giuliana-fabrizio/TrioGame' target='_blank'>ici</a>.`,
+        git: {
+            link: `https://github.com/giuliana-fabrizio/TrioGame`,
+            label: `Github`
         },
         technologies: [technos.github, technos.java]
     },
-    UTBM_AP4A: {
-        title: `BadgeAccess`,
+    // UTBM_AP4A: {
+    //     title: `Badge Access`,
+    //     category: categories.academic,
+    // image_bg: "images/projects/UTBM_IA41/card-background.png",
+    //     introduction: {
+    //         text: `Simulation d'un système de contrôle d'accès par badges et lecteurs d'authentification.`
+    //     },
+    //     implementation: {
+    //         title: `Tâches réalisées`,
+    //         text: ``,
+    //         sections: [
+    //             {
+    //                 title: `Architecture du projet`,
+    //                 list: [
+    //                     `Diagramme UML pour modéliser classes et relations ;`,
+    //                     `Organisation en modules séparés (headers / sources).`,
+    //                 ],
+    //                 images_style: `col-12`,
+    //                 images: [
+    //                     {
+    //                         path: "images/projects/UTBM_AP4A/class-diagram.png",
+    //                         style: `max-height: 360px;`,
+    //                     }
+    //                 ]
+    //             }, {
+    //                 title: `Programmation orientée objet (POO)`,
+    //                 list: [
+    //                     `Application de la forme canonique de Coplien ;`,
+    //                     `Héritage et implémentation de classes abstraites ;`,
+    //                     `Polymorphisme (redéfinition et surcharge de méthodes) ;`,
+    //                     `Surcharge d'opérateurs.`,
+    //                 ]
+    //             }, {
+    //                 title: `Fonctionnalités disponibles`,
+    //                 list: [
+    //                     `Gestion des règles d'accès selon le type de personne ;`,
+    //                     `Simulation d'accès avec badges valides ou expirés ;`,
+    //                     `Chargement de configuration initiale via un fichier CSV ;`,
+    //                     `Redirection de l'affichage (console ou fichier de log) ;`,
+    //                     `Horodatage automatique des logs.`,
+    //                 ],
+    //                 images_style: `col-lg-6`,
+    //                 images: [
+    //                     {
+    //                         path: "images/projects/UTBM_AP4A/csv-config.png",
+    //                         legend: `Exemple de configuration CSV`,
+    //                     }
+    //                 ]
+    //             },
+    //         ]
+    //     },
+    //     result: {
+    //         title: `Résultat`,
+    //         text: `Le projet a abouti à une application pleinement fonctionnelle, répondant aux exigences des professeurs. Le simulateur développé est capable de traiter des demandes d'accès en tenant\
+    //         compte de différents paramètres, tels que les droits associés au lecteur ou la validité des badges. Vous pouvez consulter mon dépôt Git <a href='https://github.com/giuliana-fabrizio/BadgeAccess' target='_blank'>ici</a>.`
+    //     },
+    //     technologies: [technos.cpp, technos.github]
+    // },
+    UTBM_WE4A: {
+        title: `Moodle`,
         category: categories.academic,
-        introduction: {
-            text: `Ce projet universitaire, réalisé en solitaire en première année de cycle ingénieur, consistait à simuler un système de contrôle d'accès par badges et lecteurs.`
-        },
+        image_bg: "images/projects/UTBM_WE4A/card-background.png",
+        introduction: `Développement de la plateforme éducative Moodle avec authentification et téléchargements de fichiers.`,
         implementation: {
             title: `Tâches réalisées`,
             text: ``,
             sections: [
                 {
-                    title: `Architecture du projet`,
-                    list: [
-                        `Diagramme UML pour modéliser classes et relations ;`,
-                        `Organisation en modules séparés (headers / sources).`,
-                    ],
-                    img_style: `col-12`,
-                    images: [
-                        {
-                            path: "images/projects/UTBM_AP4A/class-diagram.png",
-                            style: `max-height: 360px;`,
-                        }
-                    ]
-                }, {
-                    title: `Programmation orientée objet (POO)`,
-                    text: `Ce projet m'a permis de mettre en pratique plusieurs concepts fondamentaux de la programmation orientée objet.`,
-                    list: [
-                        `L'application de la forme canonique de Coplien ;`,
-                        `L'héritage et l'implémentation de classes abstraites ;`,
-                        `Le polymorphisme (redéfinition et surcharge de méthodes) ;`,
-                        `La surcharge d'opérateurs (ex. opérateur d'affectation).`,
-                    ]
-                }, {
-                    title: `Fonctionnalités disponibles`,
-                    list: [
-                        `Gestion des règles d'accès selon le type de personne ;`,
-                        `Simulation d'accès avec badges valides ou expirés ;`,
-                        `Chargement de configuration initiale via un fichier CSV ;`,
-                        `Redirection de la sortie (console ou fichier de log) ;`,
-                        `Horodatage automatique des logs.`,
-                    ],
-                    img_style: `col-lg-6`,
-                    images: [
-                        {
-                            path: "images/projects/UTBM_AP4A/csv-config.png",
-                            legend: `Exemple de configuration CSV`,
-                        }
-                    ]
-                },
-            ]
-        },
-        result: {
-            title: `Résultat`,
-            text: `Le projet a abouti à une application pleinement fonctionnelle, répondant aux exigences des professeurs. Le simulateur développé est capable de traiter des demandes d'accès en tenant\
-            compte de différents paramètres, tels que les droits associés au lecteur ou la validité des badges. Vous pouvez consulter mon dépôt Git <a href='https://github.com/giuliana-fabrizio/BadgeAccess' target='_blank'>ici</a>.`
-        },
-        technologies: [technos.cpp, technos.github]
-    },
-    UTBM_WE4A: {
-        title: `Moodle`,
-        category: categories.academic,
-        introduction: {
-            text: `Ce projet universitaire, réalisé en première année de cycle ingénieur en collaboration avec trois autres étudiants, consistait à reproduire une partie des fonctionnalités de l'application éducative Moodle.`
-        },
-        implementation: {
-            title: `Contributions`,
-            text: ``,
-            sections: [
-                {
                     title: `Base de données`,
                     list: [
-                        `Conception du Modèle Conceptuel de Données (MCD) ;`,
-                        `Rédaction du script de création des tables ;`,
-                        `Création de fixtures Symfony pour insérer des données de test dans la base de données ;`,
+                        `Conception du MCD (Modèle Conceptuel de Données) ;`,
+                        `Création de fixtures Symfony pour créer les entités et y insérer des données de test ;`,
                         `Connexion de la base de données à l'application Symfony ;`,
                         `Utilisation de l'ORM Doctrine pour la gestion des entités et des relations.`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_WE4A/mcd.png",
@@ -286,33 +285,28 @@ const projects = {
                     list: [
                         `Écriture de requêtes Ajax pour dynamiser l'application ;`,
                         `Ajout de la possibilité d'uploader et de télécharger des fichiers ;`,
-                        `Implémentation de plusieurs interfaces utilisateur avec opérations CRUD ;`,
-                        `Redirection spécifique pour les erreurs de type 404 ou 403.`
+                        `Implémentation de plusieurs interfaces utilisateur avec opérations CRUD (Create, Read, Update, Delete).`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_WE4A/details-ue.png",
+                            legend: `Détails d'une unité d'enseignement`,
                             style: `max-height: 250px;`
                         }
                     ]
                 }
             ]
         },
-        result: {
-            title: `Résultat`,
-            text: `Le projet a abouti à une application pleinement fonctionnelle, permettant à chaque utilisateur d'effectuer des actions spécifiques selon son rôle (par exemple, un professeur peut déposer des fichiers). Cette expérience m'a permis de consolider mes bases en développement Web et de renforcer mes compétences techniques.`
-        },
         technologies: [technos.github, technos.php, technos.postgresql, technos.sql, technos.symfony]
     },
     UTBM_SY43: {
-        title: `Application e-commerce`,
+        title: `Imperial Roar`,
         category: categories.academic,
-        introduction: {
-            text: `Ce projet universitaire, réalisé en première année de cycle ingénieur en collaboration avec trois autres étudiants, consistait à réaliser une application e-commerce pour Androïd.`
-        },
+        image_bg: "images/projects/UTBM_SY43/tata.png",
+        introduction: `Application mobile e-commerce de parfums avec authentification ${technos.firebase.name}, paiement ${technos.stripe.name} et dashboard admnistrateur.`,
         implementation: {
-            title: `Contributions`,
+            title: `Tâches réalisées`,
             sections: [
                 {
                     title: `Authentification ${technos.firebase.name}`,
@@ -323,92 +317,87 @@ const projects = {
                         `Ajout de la fonctionnalité de création de compte ;`,
                         `Mise en place de la réinitialisation du mot de passe.`
                     ],
-                    img_style: `col-lg-6`,
-                    images: [
-                        {
-                            path: "images/projects/UTBM_SY43/login.jpg",
-                            style: `max-height: 300px;`
-                        }, {
-                            path: "images/projects/UTBM_SY43/forgot-password.jpg",
-                            style: `max-height: 300px;`
-                        }, {
-                            path: "images/projects/UTBM_SY43/create-account.jpg",
-                            style: `max-height: 300px;`
-                        }
-                    ]
+                    images_style: `col-lg-6`,
+                    // images: [
+                    //     {
+                    //         path: "images/projects/UTBM_SY43/login.jpg",
+                    //         style: `max-height: 300px;`
+                    //     }, {
+                    //         path: "images/projects/UTBM_SY43/forgot-password.jpg",
+                    //         style: `max-height: 300px;`
+                    //     }, {
+                    //         path: "images/projects/UTBM_SY43/create-account.jpg",
+                    //         style: `max-height: 300px;`
+                    //     }
+                    // ]
                 }, {
                     title: `Dashboard`,
                     list: [
                         `Définition des données clés à représenter et du mode de visualisation ;`,
-                        `Écriture de requêtes pour interroger la base de données ;`,
-                        `Visualisation des résultats sous forme de texte et de graphiques avec <em>MPAndroidChart</em> ;`,
+                        `Écriture de requêtes pour interroger la base de données et visualisation sous forme de graphiques ;`,
                         `Ajout d'une option pour filtrer l'affichage par année.`,
                     ],
-                    img_style: `col-lg-6`,
-                    images: [
-                        {
-                            path: "images/projects/UTBM_SY43/dashboard.jpg",
-                            style: `max-height: 300px;`
-                        }, {
-                            path: "images/projects/UTBM_SY43/dashboard_2.jpg",
-                            style: `max-height: 300px;`
-                        }
-                    ]
+                    images_style: `col-lg-6`,
+                    // images: [
+                    //     {
+                    //         path: "images/projects/UTBM_SY43/dashboard.jpg",
+                    //         style: `max-height: 300px;`
+                    //     }, {
+                    //         path: "images/projects/UTBM_SY43/dashboard_2.jpg",
+                    //         style: `max-height: 300px;`
+                    //     }
+                    // ]
                 }, {
                     title: `Système de paiement`,
                     list: [
-                        `Implémentation d'un serveur ${technos.stripe.name} et connexion de l'application à celui-ci ;`,
-                        `Transmission du prix à payer au serveur ${technos.stripe.name} ;`,
-                        `Hébergement du serveur ${technos.stripe.name} via ${technos.firebase.name}`,
+                        `Implémentation d'un serveur ${technos.stripe.name} ;`,
+                        `Transmission du prix à payer au serveur ;`,
+                        `Hébergement du serveur via ${technos.firebase.name}.`,
                     ],
-                    img_style: `col-lg-6`,
-                    images: [
-                        {
-                            path: "images/projects/UTBM_SY43/stripe.jpg",
-                            style: `max-height: 300px;`
-                        }
-                    ]
+                    images_style: `col-lg-6`,
+                    // images: [
+                    //     {
+                    //         path: "images/projects/UTBM_SY43/stripe.jpg",
+                    //         style: `max-height: 300px;`
+                    //     }
+                    // ]
                 }
             ],
         },
-        result: {
-            title: `Résultat`,
-            text: `Le projet a abouti à une application e-commerce fonctionnelle, permettant aux utilisateurs de consulter des produits, de les ajouter au panier et de finaliser leurs achats. Un Dashboard clair et intuitif présente également des statistiques de vente aux administrateurs. Cette expérience m'a permis de consolider mes compétences en développement Android, en travail collaboratif et en gestion de projet.\n
-            Vous pouvez consulter notre soutenance <a href='#' target='_blank'>ici</a> et notre dépôt Git <a href='https://github.com/giuliana-fabrizio/Imperial-Roar' target='_blank'>ici</a>.`
+        git: {
+            link: `https://github.com/giuliana-fabrizio/Imperial-Roar`,
+            label: `Github`
         },
         technologies: [technos.firebase, technos.github, technos.kotlin, technos.sql, technos.stripe]
     },
     BUT_S6: {
-        title: `Plateforme de collectes de déchets`,
+        title: `Depollution Map`,
         category: categories.professional,
-        introduction: {
-            text: `Ce stage de trois mois (janvier - mars 2024), réalisé chez Natural Solutions, consistait à contribuer au développement de <strong>DepollutionMap</strong>,\
-            une application de gestion des collectes de déchets réalisées par l'association Wings of Ocean.`
-        },
+        image_bg: "images/projects/BUT_S6/card-background.png",
+        introduction: `Plateforme de collectes de déchets développée dans le cadre d'un stage de trois mois (janvier - mars 2024), réalisé chez Natural Solutions.`,
         implementation: {
-            title: `Contributions`,
-            text: `J'ai travaillé en suivant la méthodologie agile ${technos.scrum.name} pour m'adapter aux besoins évolutifs des clients. Le versioning et la collaboration ont été assurés via ${technos.gitlab.name}.\
-            Concernant le déploiement de l'application, celui-ci a été effectué avec l'aide de ${technos.docker.name}.`,
+            title: `Tâches réalisées`,
+            text: `Utilisation de la méthodologie agile ${technos.scrum.name} pour répondre aux besoins évolutifs des clients. Déploiement de l'application effectué à l'aide de ${technos.docker.name}.`,
             sections: [
                 {
                     title: `Carte de la page d'accueil`,
                     list: [
                         `Extraction des collectes validées via une requête ${technos.graphql.name} ;`,
-                        `Affichage sur une carte mondiale grâce à leurs coordonnées <em>(react-map-gl)</em> ;`,
+                        `Affichage sur une carte mondiale grâce à leurs coordonnées ;`,
                         `Mise en place d'un système de clusterisation selon le niveau de zoom ;`,
-                        `Ajout de popups interactives (<em>Material UI</em>) présentant les détails de chaque collecte (nom, localisation, date, photo).`,
+                        `Ajout de popups interactives présentant les détails de chaque collecte.`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S6/map.png",
+                            legend: `Carte du monde avec localisation des ramassages`,
                             style: `max-height: 265px;`
                         }
                     ]
                 }, {
                     title: `Filtres`,
                     list: [
-                        `Ajout d'un bouton « Filtres » ouvrant une popup réutilisable (conçue avec <em>Material UI</em>) ;`,
                         `Requêtes pour récupérer les options de filtrage depuis la base ;`,
                         `Intégration des filtres à l'URL pour conserver l'état de recherche ;`,
                         `Application des filtres côté client sur les données en mémoire, avec mise à jour dynamique des résultats affichés sur la carte.`,
@@ -416,34 +405,33 @@ const projects = {
                 }, {
                     title: `Dashboard`,
                     list: [
-                        `Écriture et test de requêtes ${technos.graphql.name} via ${technos.hasura.name} ;`,
-                        `Récupération des ramassages terminés, puis application des filtres définis dans l'URL côté frontend ;`,
-                        `Transmission des résultats filtrés au backend pour générer les statistiques ;`,
-                        `Intégration du dashboard avec <em>Material UI</em> et un template <em>Materio</em>, adapté pour afficher les données dynamiquement.`,
+                        `Rédaction et test de requêtes ${technos.graphql.name} via ${technos.hasura.name} ;`,
+                        `Récupération des ramassages terminés avec application filtres définis dans l'URL ;`,
+                        `Génération des statistiques à partir des données filtrées ;`,
+                        `Intégration du dashboard avec affichage dynamique des données.`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S6/dashboard.png",
+                            legend: `Statistiques générées pour les ramassages terminés`,
                             style: `max-height: 265px;`
                         }
                     ]
                 }
             ],
         },
-        result: {
-            title: `Résultat`,
-            text: `J'ai beaucoup apprécié ce stage, en grande partie grâce à mes collègues qui se sont montrés disponibles et pédagogues chaque fois que j'en ai eu besoin.\n
-            Vous pouvez consulter le diaporama de ma soutenance <a href='https://docs.google.com/presentation/d/1LiP-nK3gmnG1EadbeIMfyvVh-VUsXMA4EwR9I6H2e2o/edit?usp=sharing' target='_blank'>ici</a>.`,
+        slides: {
+            link: `https://docs.google.com/presentation/d/1LiP-nK3gmnG1EadbeIMfyvVh-VUsXMA4EwR9I6H2e2o/edit?usp=sharing`,
+            label: `Soutenance`
         },
         technologies: [technos.graphql, technos.hasura, technos.jira, technos.minio, technos.next_js, technos.react_js, technos.scrum, technos.ts]
     },
     BUT_S5: {
-        title: `Application de tests de réflexes`,
+        title: `Tests de réflexes`,
         category: categories.academic,
-        introduction: {
-            text: `Ce projet, réalisé en troisième année de BUT Informatique, en collaboration avec quatre autres étudiants, consistait à concevoir une application multi-architecture permettant à des scientifiques de réaliser des tests de réflexes.`
-        },
+        image_bg: "images/projects/BUT_S5/card-background.png",
+        introduction: `Application multi-architecture évaluant le temps de réaction au travers de divers tests.`,
         context: {
             title: `Contexte`,
             text: `L'architecture repose sur plusieurs composants complémentaires :`,
@@ -455,7 +443,7 @@ const projects = {
                 `un <span style='color: #f8e0e0'><strong>frontend</strong></span> pour visualiser les résultats ;`,
                 `une <span style='color: #d9ead3'><strong>API</strong></span> pour assurer les échanges entre serveur, base de données et frontend.`,
             ],
-            img_style: `col-lg-6`,
+            images_style: `col-lg-6`,
             images: [
                 {
                     path: "images/projects/BUT_S5/structure.png",
@@ -465,21 +453,22 @@ const projects = {
             ]
         },
         implementation: {
-            title: `Contributions`,
-            text: `Nous avons travaillé avec ${technos.gitlab.name} et ${technos.trello.name} afin de faciliter le versioning et la planification des tâches.`,
+            title: `Tâches réalisées`,
+            text: `Planification des tâches assurée via ${technos.trello.name}.`,
             sections: [
                 {
                     title: `API et frontend`,
                     list: [
-                        `Développement d'une API avec "express" de ${technos.node_js.name} et connexion à une base de données ${technos.mongo.name} ;`,
+                        `Développement d'une API via ${technos.node_js.name} et connexion à une base de données ${technos.mongo.name} ;`,
                         `Mise en place de la Swagger Documentation et de tests unitaires pour valider les méthodes de l'API ;`,
-                        `Création d'un frontend connecté à l'API avec affichage de graphiques dynamiques réalisés grâce à la bibliothèque <em>Vue chartjs</em> ;`,
+                        `Création d'un frontend connecté à l'API avec affichage de statistiques ;`,
                         `Déploiement de l'API avec ${technos.docker.name}.`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S5/frontend.png",
+                            legend: `Affichage des statistiques sous forme de dashboard`,
                             style: `max-height: 300px;`
                         }
                     ]
@@ -488,7 +477,7 @@ const projects = {
                     list: [
                         `Recherche d'une bibliothèque adaptée au traitement d'images ;`,
                         `Refonte de l'application mobile pour s'adapter aux contraintes de la bibliothèque choisie ;`,
-                        `Développement et connexion du serveur d'analyse avec l'application mobile, accompagnés de tests unitaires.`,
+                        `Développement et connexion du serveur d'analyse à l'application mobile accompagnés de tests unitaires.`,
                     ]
                 }, {
                     title: `Microcontrôleurs`,
@@ -498,7 +487,7 @@ const projects = {
                         `Réalisation de tests manuels ;`,
                         `Envoi des résultats au serveur de centralisation.`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S5/microcontrollers.png",
@@ -509,33 +498,34 @@ const projects = {
                 }
             ],
         },
-        result: {
-            title: `Résultat`,
-            text: `Le projet a permis de développer une application fonctionnelle, capable de collecter et d'analyser des données de tests de réflexes, puis de les présenter via une interface claire et interactive. Cette expérience m'a permis de renforcer mes compétences en développement fullstack, en travail d'équipe et en gestion de projet complexe.\n
-            Vous pouvez consulter notre soutenance <a href='https://docs.google.com/presentation/d/1ciTwJQT0wF97OlqsJSNzQmrdxO6tPPnuQ1vWaAyG5aA/edit#slide=id.g230ccc5832e_0_0' target='blank'>ici</a> et notre dépôt Git <a href='https://github.com/giuliana-fabrizio/TestsReflexes' target='blank'>ici</a>.`
+        git: {
+            link: `https://github.com/giuliana-fabrizio/TestsReflexes`,
+            label: `Github`
+        },
+        slides: {
+            link: `https://docs.google.com/presentation/d/1ciTwJQT0wF97OlqsJSNzQmrdxO6tPPnuQ1vWaAyG5aA/edit#slide=id.g230ccc5832e_0_0`,
+            label: `Soutenance`
         },
         technologies: [technos.arduino, technos.docker, technos.gitlab, technos.java, technos.js, technos.node_js, technos.kotlin, technos.mongo, technos.vue_js]
     },
     BUT_S4: {
         title: `Outil de facturation`,
         category: categories.professional,
-        introduction: {
-            text: `Ce stage de trois mois (avril - juin 2023), réalisé chez Natural Solutions, consistait à reprendre leur outil de facturation pour corriger les problèmes, améliorer les fonctionnalités existantes et en développer de nouvelles.`
-        },
+        image_bg: "images/projects/BUT_S4/card-background.png",
+        introduction:  `Reprise d'un outil de facturation dans le cadre d'un stage de trois mois (avril - juin 2023), réalisé chez Natural Solutions.`,
         implementation: {
             title: `Mise en œuvre`,
-            text: `J'ai travaillé en suivant la méthodologie agile ${technos.scrum.name} pour m'adapter aux besoins évolutifs des clients. Le versioning et la collaboration ont été assurés via ${technos.gitlab.name}.`,
             sections: [
                 {
-                    title: `Base de données`,
+                    title: `Base de données (BDD)`,
+                    text: `Les données, initialement stockées dans un fichier JSON, ont été migrées vers une base ${technos.postgresql.name}.`,
                     list: [
-                        `Création du Modèle Conceptuel de Données (MCD) ;`,
-                        `Utilisation du SGBD ${technos.postgresql.name} ;`,
-                        `Intégration de l'ORM ${technos.sequelize.name} pour simplifier l'interaction avec la base ;`,
-                        `Connexion de la base avec l'API et adaptation du code de l'application ;`,
-                        `Développement d'une fonction d'import de données dans la base depuis un fichier JSON.`,
+                        `Conception du MCD (Modèle Conceptuel de Données) ;`,
+                        `Refonte de l'application pour y intégrer la BDD ;`,
+                        `Utilisation de l'ORM ${technos.sequelize.name} pour simplifier les interactions avec la BDD ;`,
+                        `Développement d'un script d'import des données JSON vers la base.`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S4/MCD.png",
@@ -554,13 +544,11 @@ const projects = {
                 }
             ]
         },
-        result: {
-            title: `Résultat`,
-            text: `Grâce à mes collègues, très attentifs et disponibles, cette expérience professionnelle m'a beaucoup appris.\
-            J'ai renforcé mes compétences en gestion de projet grâce à l'utilisation quotidienne de ${technos.scrum.name}, ainsi que ma capacité à me documenter et à chercher des solutions de manière autonome.\n
-            Vous pouvez consulter le diaporama de ma soutenance <a href='https://docs.google.com/presentation/d/1uueQqS5IAyxeuxPOwv-2YE4rRnxuOs72wY5auPL-VPI/edit?usp=sharing' target='_blank'>ici</a>.`,
+        slides: {
+            link: `https://docs.google.com/presentation/d/1uueQqS5IAyxeuxPOwv-2YE4rRnxuOs72wY5auPL-VPI/edit?usp=sharing`,
+            label: `Soutenance`
         },
-        technologies: [technos.gitlab, technos.js, technos.node_js, technos.postgresql, technos.react_js, technos.sequelize, technos.scrum]
+        technologies: [technos.gitlab, technos.js, technos.node_js, technos.postgresql, technos.react_js, technos.sequelize]
     }
 };
 

@@ -140,7 +140,7 @@ const projects = {
                         `Creation of two difficulty levels (simple et advanced) via heuristic complexity ;`,
                         `Reconstruction and display of the optimal path found by AI.`
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_IA41/gameboard.png",
@@ -181,7 +181,7 @@ const projects = {
                         `Event management : card turnover, display of rules ;`,
                         `Synchronization of the game state between the logic model and the main interface.`
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_AP4B/gameboard.png",
@@ -220,7 +220,7 @@ const projects = {
                         `UML diagram to model classes and relations ;`,
                         `Organization in separate modules (headers / sources).`,
                     ],
-                    img_style: `col-12`,
+                    images_style: `col-12`,
                     images: [
                         {
                             path: "images/projects/UTBM_AP4A/class-diagram.png",
@@ -245,7 +245,7 @@ const projects = {
                         `Output redirection (console or log file) ;`,
                         `Automatic log timestamping.`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_AP4A/csv-config.png",
@@ -281,7 +281,7 @@ const projects = {
                         `Connexion de la base de données à l'application Symfony ;`,
                         `Utilisation de l'ORM Doctrine pour la gestion des entités et des relations.`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_WE4A/mcd.png",
@@ -303,7 +303,7 @@ const projects = {
                         `Implémentation de plusieurs interfaces utilisateur avec opérations CRUD ;`,
                         `Redirection spécifique pour les erreurs de type 404 ou 403.`
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_WE4A/details-ue.png",
@@ -337,7 +337,7 @@ const projects = {
                         `Ajout de la fonctionnalité de création de compte ;`,
                         `Mise en place de la réinitialisation du mot de passe.`
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_SY43/login.jpg",
@@ -358,7 +358,7 @@ const projects = {
                         `Visualisation des résultats sous forme de texte et de graphiques avec <em>MPAndroidChart</em> ;`,
                         `Ajout d'une option pour filtrer l'affichage par année.`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_SY43/dashboard.jpg",
@@ -375,7 +375,7 @@ const projects = {
                         `Transmission du prix à payer au serveur ${technos.stripe.name} ;`,
                         `Hébergement du serveur ${technos.stripe.name} via ${technos.firebase.name}`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/UTBM_SY43/stripe.jpg",
@@ -412,7 +412,7 @@ const projects = {
                         `Mise en place d'un système de clusterisation selon le niveau de zoom ;`,
                         `Ajout de popups interactives (<em>Material UI</em>) présentant les détails de chaque collecte (nom, localisation, date, photo).`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S6/map.png",
@@ -435,7 +435,7 @@ const projects = {
                         `Transmission des résultats filtrés au backend pour générer les statistiques ;`,
                         `Intégration du dashboard avec <em>Material UI</em> et un template <em>Materio</em>, adapté pour afficher les données dynamiquement.`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S6/dashboard.png",
@@ -469,7 +469,7 @@ const projects = {
                 `un <span style='color: #f8e0e0'><strong>frontend</strong></span> pour visualiser les résultats ;`,
                 `une <span style='color: #d9ead3'><strong>API</strong></span> pour assurer les échanges entre serveur, base de données et frontend.`,
             ],
-            img_style: `col-lg-6`,
+            images_style: `col-lg-6`,
             images: [
                 {
                     path: "images/projects/BUT_S5/structure.png",
@@ -490,7 +490,7 @@ const projects = {
                         `Création d'un frontend connecté à l'API avec affichage de graphiques dynamiques réalisés grâce à la bibliothèque <em>Vue chartjs</em> ;`,
                         `Déploiement de l'API avec ${technos.docker.name}.`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S5/frontend.png",
@@ -512,7 +512,7 @@ const projects = {
                         `Réalisation de tests manuels ;`,
                         `Envoi des résultats au serveur de centralisation.`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S5/microcontrollers.png",
@@ -549,7 +549,7 @@ const projects = {
                         `Connexion de la base avec l'API et adaptation du code de l'application ;`,
                         `Développement d'une fonction d'import de données dans la base depuis un fichier JSON.`,
                     ],
-                    img_style: `col-lg-6`,
+                    images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S4/MCD.png",
@@ -623,6 +623,7 @@ const certifications = {
     mooc_management: {
         title: `Project Management`,
         logo: "images/degrees/mooc_gdp.png",
+        description: `14 certifications obtained`,
         specialization: `Specializations :
         <ul class='text-start'>\
             <li>External functional analysis</li>\
@@ -647,44 +648,44 @@ const certifications = {
 
 /* ***************************************************************** experiences page ***************************************************************** */
 
-const experiences_page_title = "MES EXPÉRIENCES";
+const experiences_page_title = "MY EXPERIENCES";
 const experiences = {
     volunteer: {
-        title: `Bénévole aux Restos du Coeur`,
-        description: `Accueil et orientation des bénéficiaires,\
-        distribution alimentaire adaptée aux besoins des familles,\
-        participation au nettoyage des locaux.`,
+        title: `Volunteer at Restos du Coeur`,
+        description: `Welcoming and orientation of beneficiaries,\
+        food distribution adapted to the needs of families,\
+        participation in cleaning the premises.`,
         logo: "images/experiences/restos_du_coeur.png",
-        date: `Depuis Septembre 2025`,
+        date: `Since September 2025`,
         company: `Les Restos du Coeur`,
         place: `Belfort, France`,
     },
     stage_2024: {
-        title: `Stagiaire développeuse fullstack II`,
-        label_redirection: "Voir le sujet",
+        title: `Full-stack developer intern II`,
+        label_redirection: "See the topic",
         redirection: "BUT_S6",
         logo: "images/experiences/natural_solutions.png",
-        date: `Janvier - Avril 2024`,
+        date: `January - April 2024`,
         company: `Natural Solutions`,
         place: `Marseille, France`,
     },
     stage_2023: {
-        title: `Stagiaire développeuse fullstack I`,
-        label_redirection: "Voir le sujet",
+        title: `Full-stack developer intern I`,
+        label_redirection: "See the topic",
         redirection: "BUT_S4",
         logo: "images/experiences/natural_solutions.png",
-        date: `Avril - Juin 2023`,
+        date: `April - June 2023`,
         company: `Natural Solutions`,
         place: `Marseille, France`,
     },
     cdd_2022: {
-        title: `Employée de supérette`,
-        description: `Encaissement des clients,\
-        rangement des rayons et réception des marchandises,\
-        formation des nouveaux salariés à la caisse,\
-        cuisson du pain.`,
+        title: `Supermarket employee`,
+        description: `Collecting customer payments,\
+        stocking shelves and receiving goods,\
+        training of new cashiers,\
+        baking bread.`,
         logo: "images/experiences/u_express.png",
-        date: `Juillet - Août 2022`,
+        date: `July - August 2022`,
         company: `U Express`,
         place: `Marseille, France`,
     }
