@@ -6,13 +6,12 @@
         </div>
 
         <div class="card-body mb-0 pb-0">
-            <div
-                class="d-flex justify-content-between align-items-center mb-3 text-center text-md-start">
+            <div class="d-flex justify-content-between align-items-center mb-3 text-center text-md-start">
                 <h5 class="subtitle"><strong>{{ project.title }}</strong></h5>
                 <p class="badge mt-1 text-wrap" :style=project.category.style>{{ project.category.name }}</p>
             </div>
 
-            <p class="text-gray d-xl-block text-intro" v-html="truncatedIntroduction(project.introduction)"></p>
+            <p class="d-xl-block text-gray text-intro" v-html="truncatedIntroduction(project.introduction)"></p>
         </div>
 
         <div class="card-footer border-0">

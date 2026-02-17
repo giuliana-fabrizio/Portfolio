@@ -147,7 +147,7 @@ const projects = {
     UTBM_AP4B: {
         title: `Jeu du Trio`,
         category: categories.academic,
-        image_bg: "images/projects/UTBM_IA41/card-background.png",
+        image_bg: "images/projects/UTBM_AP4B/card-background.png",
         introduction: `Reproduction du jeu de cartes Trio en mode individuel simple.`,
         implementation: {
             title: `Tâches réalisées`,
