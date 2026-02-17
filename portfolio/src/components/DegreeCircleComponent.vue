@@ -1,5 +1,5 @@
 <template>
-    <div class="circle-degree m-3 p-3 rounded-circle text-start">
+    <div class="circle-degree m-3 p-3 rounded-circle">
         <div v-if="item.img" class="circle-degree-img">
             <img :src="item.img" alt="Image">
         </div>

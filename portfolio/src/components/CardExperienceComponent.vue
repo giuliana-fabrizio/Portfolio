@@ -4,14 +4,14 @@
         <div class="card-experience p-3 rounded">
             <h5 class="fw-bold subtitle">{{ experience.title }}</h5>
 
-            <p class="m-0 p-0 fw-bold text-blue text-start">{{ experience.company }}</p>
+            <p class="m-0 p-0 fw-bold text-blue">{{ experience.company }}</p>
 
             <div class="row m-0 p-0 text-gray">
-                <div class="col-12 col-lg-6 m-0 p-0 text-start">
+                <div class="col-12 col-lg-6 m-0 p-0">
                     <i class="bi bi-calendar2-week"></i>
                     <span class="ms-2">{{ experience.date }}</span>
                 </div>
-                <div class="col-12 col-lg-6 m-0 p-0 text-start">
+                <div class="col-12 col-lg-6 m-0 p-0">
                     <i class="bi bi-pin-angle"></i>
                     <span class="ms-2">{{ experience.place }}</span>
                 </div>
@@ -25,7 +25,7 @@
                     <i class="bi bi-arrow-up-right-circle"></i>
                 </button>
             </router-link>
-            <p v-else class="mt-3 text-start">{{ experience.description }}</p>
+            <p v-else class="mt-3">{{ experience.description }}</p>
         </div>
     </div>
 </template>

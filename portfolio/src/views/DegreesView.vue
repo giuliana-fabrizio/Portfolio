@@ -13,7 +13,7 @@
 
             <div class="pt-2">
                 <section>
-                    <h5><strong class="bg-white subtitle">{{ degrees_title }}</strong></h5>
+                    <h5 class="text-center"><strong class="bg-white subtitle">{{ degrees_title }}</strong></h5>
 
                     <div class="d-flex flex-wrap justify-content-center">
                         <div v-for="(item, key) in degrees" :key="key">
@@ -23,7 +23,7 @@
                 </section>
 
                 <section class="mt-5">
-                    <h5><strong class="bg-white subtitle">{{ certifications_title }}</strong></h5>
+                    <h5 class="text-center"><strong class="bg-white subtitle">{{ certifications_title }}</strong></h5>
 
                     <div class="d-flex flex-wrap justify-content-center">
                         <div v-for="(item, key) in certifications" :key="key">

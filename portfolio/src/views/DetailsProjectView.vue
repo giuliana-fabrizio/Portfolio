@@ -1,19 +1,54 @@
 <template>
-    <div class="container pe-5 ps-5">
-        <TitleComponent :title="project?.title" />
-        <div class="pt-2">
-            <section v-for="(elem, elem_key) in project" :key="elem_key">
+    <div>
+        <AnimeBackgroundComponent />
+        <div class="container mb-5">
+            <TitleComponent :title="project?.title" />
 
-                <h3 v-if="elem.title" class="fw-bold text-dark mt-5 mb-3">{{ elem.title }}</h3>
+            <div class="row align-items-center">
+                <div class="col-12 col-md-8">
+                    <p v-html="formattedText(String(project.introduction))" class="bg-white mb-2 text-gray"></p>
 
-                <DetailsElemComponent :elem="elem" :subpart="false" />
-
-                <div v-for="(section, section_key) in elem.sections" :key="section_key" class="card rounded mt-3 p-3">
-                    <DetailsElemComponent :elem="section" :display_subtitle="true" />
+                    <div class="d-flex flex-wrap">
+                        <div v-for="(technologie, index) in project.technologies" :key="index" class="foreground me-3">
+                            <p class="badge bg-primary">{{ technologie.name }}</p>
+                        </div>
+                    </div>
                 </div>
-            </section>
+
+                <div class="col-12 col-md-4">
+                    <div class="d-flex justify-content-between">
+                        <div v-if="project.git" class="link-container github-container">
+                            <a class="btn btn-link mx-auto text-decoration-none" :href="project.git.link"
+                                target="_blank">
+                                {{ project.git.label }}
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
+                        <div v-if="project.slides" class="link-container slides-container">
+                            <a class="btn btn-link mx-auto text-decoration-none" :href="project.slides.link"
+                                target="_blank">
+                                {{ project.slides.label }}
+                                <i class="bi bi-images"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <section v-for="(elem, keye) in project" :key="keye">
+                    <div class="row align-items-center">
+                        <DetailsElemComponent :elem="elem" :isSection="false" />
+
+                        <div v-for="(section, keys) in elem.sections" :key="keys">
+                            <DetailsElemComponent :elem="section" :isSection="true" />
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <TopButtonComponent />
         </div>
-        <TopButtonComponent />
     </div>
 </template>
 
@@ -21,14 +56,16 @@
 import variables_fr from '../variables_fr.js';
 import variables_en from '../variables_en.js';
 
+import AnimeBackgroundComponent from '@/components/AnimeBackgroundComponent.vue';
+import TitleComponent from '@/components/TitleComponent.vue';
+import TopButtonComponent from '@/components/TopButtonComponent.vue';
 import DetailsElemComponent from '@/components/DetailsElemComponent.vue';
-import TitleComponent from '../components/TitleComponent.vue';
-import TopButtonComponent from '../components/TopButtonComponent.vue';
 
 export default {
     name: 'DetailsProjectView',
 
     components: {
+        AnimeBackgroundComponent,
         DetailsElemComponent,
         TitleComponent,
         TopButtonComponent
@@ -73,3 +110,38 @@ export default {
     }
 };
 </script>
+
+<style scoped>
+.link-container {
+    background: linear-gradient(45deg, #3acfd5, #3a4ed5);
+    border-radius: 10px;
+    height: 44px;
+    position: relative;
+}
+
+.github-container {
+    width: 88px;
+}
+
+.slides-container {
+    width: 123px;
+}
+
+.btn-link {
+    background-color: var(--bg);
+    border-radius: 7px;
+    color: var(--text-color);
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    height: max-content;
+    width: max-content;
+    padding: 5px;
+}
+
+.link-container:hover .btn-link {
+    background: linear-gradient(45deg, #3acfd5, #3a4ed5);
+    border: none;
+    color: var(--white);
+}
+</style>

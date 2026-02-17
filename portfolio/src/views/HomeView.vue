@@ -5,13 +5,12 @@
         <div class="container mt-5 pt-5">
             <div class="align-items-center row mx-auto">
                 <div class="col-12 col-lg-6 mb-3 mb-lg-0">
-                    <div class="home-card mx-auto p-5 text-start">
+                    <div class="home-card mx-auto p-5">
                         <h3 class="mb-3 text-blue">{{ status }}</h3>
 
                         <h5 class="text-gray mb-4">{{ name }}</h5>
 
                         <div>
-
                             <div class="home-situation mb-4">
                                 <AnimeTextComponent :text="current_situation" :duration="2000" />
                             </div>
@@ -122,7 +121,7 @@ export default {
     background: linear-gradient(45deg, #3acfd5, #3a4ed5);
     border-radius: 10px;
     height: 45px;
-    width: 200px;
+    width: 178px;
     position: relative;
 }
 

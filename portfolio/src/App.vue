@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="font-monospace">
+    <div id="app">
         <NavBarComponent />
 
         <div class="flex-container">
