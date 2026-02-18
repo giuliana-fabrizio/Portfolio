@@ -1,5 +1,5 @@
 <template>
-    <div v-if="elem.title">
+    <div v-if="elem.title" class="mt-3">
         <h3 v-if="!isSection" class="bg-white fw-bold text-dark mt-5">{{ elem.title }}</h3>
 
         <div class="row align-items-center">

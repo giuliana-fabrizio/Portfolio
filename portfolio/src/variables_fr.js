@@ -102,7 +102,7 @@ const projects = {
         title: `Rasende Roboter`,
         category: categories.academic,
         image_bg: "images/projects/UTBM_IA41/card-background.png",
-        introduction: `Développement du jeu Rasende Roboter (Ricochet Robots) intégrant deux niveaux d’intelligence artificielle permettant d’affronter un joueur humain.`,
+        introduction: `Développement du jeu Rasende Roboter (Ricochet Robots) intégrant deux niveaux d'intelligence artificielle permettant d'affronter un joueur humain.`,
         implementation: {
             title: `Tâches réalisées`,
             sections: [
@@ -151,7 +151,6 @@ const projects = {
         introduction: `Reproduction du jeu de cartes Trio en mode individuel simple.`,
         implementation: {
             title: `Tâches réalisées`,
-            text: ``,
             sections: [
                 {
                     title: `Mécanique du jeu`,
@@ -164,7 +163,7 @@ const projects = {
                     list: [
                         `Écran de paramétrage d'une partie ;`,
                         `Interface principale : affichage des joueurs et des cartes interactives ;`,
-                        `Gestion des événements : retournement des cartes ;`,
+                        `Gestion des événements : retournement des cartes, affichage des règles ;`,
                         `Synchronisation de l'état du jeu entre le modèle logique et l'interface principale.`
                     ],
                     images_style: `col-lg-6`,
@@ -303,7 +302,7 @@ const projects = {
     UTBM_SY43: {
         title: `Imperial Roar`,
         category: categories.academic,
-        image_bg: "images/projects/UTBM_SY43/tata.png",
+        image_bg: "images/projects/UTBM_SY43/card-background.png",
         introduction: `Application mobile e-commerce de parfums avec authentification ${technos.firebase.name}, paiement ${technos.stripe.name} et dashboard admnistrateur.`,
         implementation: {
             title: `Tâches réalisées`,
