@@ -6,22 +6,7 @@ const carousel_3 = require("../public/images/interests/carousel-3.jpg");
 
 /* ***************************************************************** common ***************************************************************** */
 
-// const birthday = new Date("11-27-2002");
-
-// function getAge() {
-//     const currentDate = new Date();
-//     var age = currentDate.getFullYear() - birthday.getFullYear();
-//     if (currentDate.getMonth() < birthday.getMonth()) {
-//         age -= 1;
-//     } else if (currentDate.getMonth() == birthday.getMonth() &&
-//         currentDate.getUTCDate() < birthday.getUTCDate()) {
-//         age -= 1;
-//     }
-//     return age;
-// }
-
 const name = "Giuliana GODAIL-FABRIZIO";
-// const age = getAge();
 
 
 /* ***************************************************************** nav bar ***************************************************************** */
@@ -31,6 +16,7 @@ const academic_training_btn = "School training";
 const experiences_btn = "Professional experiences";
 const projects_btn = "Projects";
 const interests_btn = "Hobbies";
+
 
 /* ***************************************************************** home page ***************************************************************** */
 
@@ -154,7 +140,7 @@ const projects = {
         },
         slides: {
             link: `https://docs.google.com/presentation/d/1E3sWxrTmw9e1jOlK5u4ZRtSWdAdViirMot2iRPzkQI8/edit?usp=sharing`,
-            label: `Soutenance`
+            label: `Internship defense`
         },
         technologies: [technos.github, technos.python]
     },
@@ -436,106 +422,106 @@ const projects = {
         },
         slides: {
             link: `https://docs.google.com/presentation/d/1LiP-nK3gmnG1EadbeIMfyvVh-VUsXMA4EwR9I6H2e2o/edit?usp=sharing`,
-            label: `Soutenance`
+            label: `Internship defense`
         },
         technologies: [technos.graphql, technos.hasura, technos.jira, technos.minio, technos.next_js, technos.react_js, technos.scrum, technos.ts]
     },
     BUT_S5: {
-        title: `Application de tests de réflexes`,
+        title: `Reflex tests`,
         category: categories.academic,
-        introduction: {
-            text: `Ce projet, réalisé en troisième année de BUT Informatique, en collaboration avec quatre autres étudiants, consistait à concevoir une application multi-architecture permettant à des scientifiques de réaliser des tests de réflexes.`
-        },
+        image_bg: "images/projects/BUT_S5/card-background.png",
+        introduction: `Multi-architecture application evaluating reaction time through various tests.`,
         context: {
             title: `Contexte`,
-            text: `L'architecture repose sur plusieurs composants complémentaires :`,
+            text: `The acrhitecture is based on several complementary components :`,
             list: [
-                `une <span style='color: #d4d6ff'><strong>application mobile</strong></span> pour capturer et transmettre des images ;`,
-                `un <span style='color: #e7dec7'><strong>serveur d'analyse</strong></span> pour traiter ces images ;`,
-                `un <span style='color: #c5dcf1'><strong>serveur de centralisation</strong></span> pour enregistrer les données issues du serveur d'analyse et des <span style='color: #fdd9ff'><strong>microcontrôleurs</strong></span>\
-                 dans une <span style='color: #fce5cd'><strong>base de données</strong></span> ;`,
-                `un <span style='color: #f8e0e0'><strong>frontend</strong></span> pour visualiser les résultats ;`,
-                `une <span style='color: #d9ead3'><strong>API</strong></span> pour assurer les échanges entre serveur, base de données et frontend.`,
+                `a <span style='color: #d4d6ff'><strong>mobile application</strong></span> to take and send images ;`,
+                `a <span style='color: #e7dec7'><strong>analysis server</strong></span> to process these images ;`,
+                `a <span style='color: #c5dcf1'><strong>central server</strong></span> to store data from the analysis server\
+                and <span style='color: #fdd9ff'><strong>microcontrollers</strong></span> in a <span style='color: #fce5cd'><strong>database</strong></span> ;`,
+                `a <span style='color: #f8e0e0'><strong>frontend</strong></span> to visualize the results ;`,
+                `an <span style='color: #d9ead3'><strong>API</strong></span> to ensure communication between server, database and frontend.`,
             ],
             images_style: `col-lg-6`,
             images: [
                 {
                     path: "images/projects/BUT_S5/structure.png",
-                    legend: `Architecture globale du projet`,
+                    legend: `Overall project architecture`,
                     style: 'max-height: 250px;'
                 }
             ]
         },
         implementation: {
-            title: `Contributions`,
-            text: `Nous avons travaillé avec ${technos.gitlab.name} et ${technos.trello.name} afin de faciliter le versioning et la planification des tâches.`,
+            title: `Tasks completed`,
+            text: `Tasks planning ensured via ${technos.trello.name}.`,
             sections: [
                 {
-                    title: `API et frontend`,
+                    title: `API and frontend`,
                     list: [
-                        `Développement d'une API avec "express" de ${technos.node_js.name} et connexion à une base de données ${technos.mongo.name} ;`,
-                        `Mise en place de la Swagger Documentation et de tests unitaires pour valider les méthodes de l'API ;`,
-                        `Création d'un frontend connecté à l'API avec affichage de graphiques dynamiques réalisés grâce à la bibliothèque <em>Vue chartjs</em> ;`,
-                        `Déploiement de l'API avec ${technos.docker.name}.`,
+                        `Developing an API using ${technos.node_js.name} and connecting to a database ${technos.mongo.name} ;`,
+                        `Implementation of Swagger Documentation and unit tests to validate the API methods ;`,
+                        `Creation of a frontend connected to the API with display of statistics ;`,
+                        `API deployement with ${technos.docker.name}.`,
                     ],
                     images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S5/frontend.png",
+                            legend: `Displaying statistics in dashboard format`,
                             style: `max-height: 300px;`
                         }
                     ]
                 }, {
-                    title: `Serveur d'analyse`,
+                    title: `Analysis server`,
                     list: [
-                        `Recherche d'une bibliothèque adaptée au traitement d'images ;`,
-                        `Refonte de l'application mobile pour s'adapter aux contraintes de la bibliothèque choisie ;`,
-                        `Développement et connexion du serveur d'analyse avec l'application mobile, accompagnés de tests unitaires.`,
+                        `Looking for a suitable image processing library ;`,
+                        `Redesign of the mobile application to adapt to the constraints of the chosen library ;`,
+                        `Development and connection of the analysis server with mobile application, accompanied by unit tests.`,
                     ]
                 }, {
-                    title: `Microcontrôleurs`,
+                    title: `Microcontrollers`,
                     list: [
-                        `Configuration de la carte Arduino à partir des microcontrôleurs fournis ;`,
-                        `Rédaction du code Arduino pour faire fonctionner les microcontrôleurs ;`,
-                        `Réalisation de tests manuels ;`,
-                        `Envoi des résultats au serveur de centralisation.`,
+                        `Configuring the ${technos.arduino.name} board using the provided microcontrollers ;`,
+                        `Writing the code ${technos.arduino.name} to make the microcontrollers work ;`,
+                        `Performing manual tests ;`,
+                        `Sending the results to the central server.`,
                     ],
                     images_style: `col-lg-6`,
                     images: [
                         {
                             path: "images/projects/BUT_S5/microcontrollers.png",
-                            legend: `Schématisation des microcontrôleurs`,
+                            legend: `Diagram of microcontrollers`,
                             style: `max-height: 200px;`
                         }
                     ]
                 }
             ],
         },
-        result: {
-            title: `Résultat`,
-            text: `Le projet a permis de développer une application fonctionnelle, capable de collecter et d'analyser des données de tests de réflexes, puis de les présenter via une interface claire et interactive. Cette expérience m'a permis de renforcer mes compétences en développement fullstack, en travail d'équipe et en gestion de projet complexe.\n
-            Vous pouvez consulter notre soutenance <a href='https://docs.google.com/presentation/d/1ciTwJQT0wF97OlqsJSNzQmrdxO6tPPnuQ1vWaAyG5aA/edit#slide=id.g230ccc5832e_0_0' target='blank'>ici</a> et notre dépôt Git <a href='https://github.com/giuliana-fabrizio/TestsReflexes' target='blank'>ici</a>.`
+        git: {
+            link: `https://github.com/giuliana-fabrizio/TestsReflexes`,
+            label: `Github`
+        },
+        slides: {
+            link: `https://docs.google.com/presentation/d/1ciTwJQT0wF97OlqsJSNzQmrdxO6tPPnuQ1vWaAyG5aA/edit#slide=id.g230ccc5832e_0_0`,
+            label: `Internship defense`
         },
         technologies: [technos.arduino, technos.docker, technos.gitlab, technos.java, technos.js, technos.node_js, technos.kotlin, technos.mongo, technos.vue_js]
     },
     BUT_S4: {
-        title: `Outil de facturation`,
+        title: `Billing tool`,
         category: categories.professional,
-        introduction: {
-            text: `Ce stage de trois mois (avril - juin 2023), réalisé chez Natural Solutions, consistait à reprendre leur outil de facturation pour corriger les problèmes, améliorer les fonctionnalités existantes et en développer de nouvelles.`
-        },
+        image_bg: "images/projects/BUT_S4/card-background.png",
+        introduction:  `Redesign a billing tool as part of a three-month internship (April - June 2023), carried out at Natural Solutions.`,
         implementation: {
-            title: `Mise en œuvre`,
-            text: `J'ai travaillé en suivant la méthodologie agile ${technos.scrum.name} pour m'adapter aux besoins évolutifs des clients. Le versioning et la collaboration ont été assurés via ${technos.gitlab.name}.`,
+            title: `Tasks completed`,
             sections: [
                 {
-                    title: `Base de données`,
+                    title: `Database`,
                     list: [
-                        `Création du Modèle Conceptuel de Données (MCD) ;`,
-                        `Utilisation du SGBD ${technos.postgresql.name} ;`,
-                        `Intégration de l'ORM ${technos.sequelize.name} pour simplifier l'interaction avec la base ;`,
-                        `Connexion de la base avec l'API et adaptation du code de l'application ;`,
-                        `Développement d'une fonction d'import de données dans la base depuis un fichier JSON.`,
+                        `Design of the CDM (Conceptual Data Model) ;`,
+                        `Redesign of the application to integrate the database ;`,
+                        `Using ${technos.sequelize.name} ORM to simplify interactions with database ;`,
+                        `Development of a script to import JSON data into the database.`,
                     ],
                     images_style: `col-lg-6`,
                     images: [
@@ -546,21 +532,19 @@ const projects = {
                         }
                     ]
                 }, {
-                    title: `Génération de documents`,
+                    title: `Document generation`,
                     list: [
-                        `Interrogation de l'API externe <strong>Zendesk</strong> ;`,
-                        `Tri et formatage des données récupérées ;`,
-                        `Développement de la génération et du téléchargement automatique de fichiers ;`,
-                        `Création d'un modèle Word pour structurer et organiser le contenu des rapports.`,
+                        `Interrogation of the external <strong>Zenddesk</strong> API ;`,
+                        `Sorting and formatting the retrieved data ;`,
+                        `Development of automatic file generation and downloading ;`,
+                        `Creating a Word template to structure and organize report content.`,
                     ]
                 }
             ]
         },
-        result: {
-            title: `Résultat`,
-            text: `Grâce à mes collègues, très attentifs et disponibles, cette expérience professionnelle m'a beaucoup appris.\
-            J'ai renforcé mes compétences en gestion de projet grâce à l'utilisation quotidienne de ${technos.scrum.name}, ainsi que ma capacité à me documenter et à chercher des solutions de manière autonome.\n
-            Vous pouvez consulter le diaporama de ma soutenance <a href='https://docs.google.com/presentation/d/1uueQqS5IAyxeuxPOwv-2YE4rRnxuOs72wY5auPL-VPI/edit?usp=sharing' target='_blank'>ici</a>.`,
+        slides: {
+            link: `https://docs.google.com/presentation/d/1uueQqS5IAyxeuxPOwv-2YE4rRnxuOs72wY5auPL-VPI/edit?usp=sharing`,
+            label: `Internship defense`
         },
         technologies: [technos.gitlab, technos.js, technos.node_js, technos.postgresql, technos.react_js, technos.sequelize, technos.scrum]
     }

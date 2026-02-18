@@ -476,13 +476,13 @@ const projects = {
                     list: [
                         `Recherche d'une bibliothèque adaptée au traitement d'images ;`,
                         `Refonte de l'application mobile pour s'adapter aux contraintes de la bibliothèque choisie ;`,
-                        `Développement et connexion du serveur d'analyse à l'application mobile accompagnés de tests unitaires.`,
+                        `Développement et connexion du serveur d'analyse à l'application mobile, accompagnés de tests unitaires.`,
                     ]
                 }, {
                     title: `Microcontrôleurs`,
                     list: [
-                        `Configuration de la carte Arduino à partir des microcontrôleurs fournis ;`,
-                        `Rédaction du code Arduino pour faire fonctionner les microcontrôleurs ;`,
+                        `Configuration de la carte ${technos.arduino.name} à partir des microcontrôleurs fournis ;`,
+                        `Rédaction du code ${technos.arduino.name} pour faire fonctionner les microcontrôleurs ;`,
                         `Réalisation de tests manuels ;`,
                         `Envoi des résultats au serveur de centralisation.`,
                     ],
@@ -513,7 +513,7 @@ const projects = {
         image_bg: "images/projects/BUT_S4/card-background.png",
         introduction:  `Reprise d'un outil de facturation dans le cadre d'un stage de trois mois (avril - juin 2023), réalisé chez Natural Solutions.`,
         implementation: {
-            title: `Mise en œuvre`,
+            title: `Tâches réalisées`,
             sections: [
                 {
                     title: `Base de données (BDD)`,
