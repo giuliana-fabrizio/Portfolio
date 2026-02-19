@@ -511,7 +511,7 @@ const projects = {
         title: `Outil de facturation`,
         category: categories.professional,
         image_bg: "images/projects/BUT_S4/card-background.png",
-        introduction:  `Reprise d'un outil de facturation dans le cadre d'un stage de trois mois (avril - juin 2023), réalisé chez Natural Solutions.`,
+        introduction: `Reprise d'un outil de facturation dans le cadre d'un stage de trois mois (avril - juin 2023), réalisé chez Natural Solutions.`,
         implementation: {
             title: `Tâches réalisées`,
             sections: [
@@ -676,28 +676,32 @@ const interests_page_title = "MES CENTRES D'INTÉRÊT";
 const interests = {
     1: {
         title: `Activité sportive & voyages`,
-        description: `Depuis 2010, je pratique la natation. D'abord membre d'un club durant mon enfance, je continue aujourd'hui à nager de manière occasionnelle. Par ailleurs, j'aime explorer de nouveaux lieux et admirer leurs paysages. Bonne marcheuse, je fais régulièrement des randonnées, une activité qui me permet de relever de nouveaux défis tout en faisant de belles découvertes.`,
+        description: `Je pratique la natation depuis 2010 (ancienne membre de club).\
+        J'aime également découvrir de nouveaux endroits et paysages c'est pourquoi je fais régulièrement des randonnées et des voyages.`,
         legend: 'Images prises lors de mes randonnées et/ou voyages',
         images: [carousel_1, carousel_2, carousel_3],
         support: `carousel`
     },
     2: {
         title: `Jeux vidéo`,
-        description: `C'est durant mon BUT Informatique à Belfort que des amis m'ont initiée aux jeux vidéo. Cependant, n'étant pas une grande joueuse, je me consacre principalement à Minecraft. Ce que j'apprécie particulièrement dans ce jeu, c'est la diversité des mods disponibles, qui permettent de renouveler l'expérience en introduisant de nouveaux mondes, personnages, créatures et matériaux.`,
+        description: `Découverte des jeux vidéo durant mon BUT Informatique à Belfort. Je joue principalement à Minecraft, un univers que\
+        j'apprécie pour la diversité de ses mods, qui permettent d'explorer de nouveaux mondes et de renouveler l'expérience.`,
         legend: `Modélisation 3D de mon skin Minecraft. Utilisez la souris (ou le tactile) pour faire pivoter le modèle.`,
         support: `mc`
     },
     3: {
         title: `Couture`,
-        description: `Dès mon plus jeune âge, j'ai découvert la couture grâce à ma grand-mère, ancienne couturière. J'ai commencé par confectionner des vêtements pour mes poupées avant de réaliser aujourd'hui des objets pratiques dans mon quotidien : housses de protection pour batterie, sac à main, trousses à stylos...`,
+        description: `Initiée à la couture dès l'enfance par ma grand-mère, ancienne couturière, j'ai développé créativité et minutie à travers\
+        des projets personnels. Aujourd'hui, je conçois des objets utiles du quotidien (housses de protection, sacs, trousses).`,
         legend: `Housse de protection pour batterie externe`,
         // image: image_sewing,
         support: `img`
     },
     4: {
         title: `Modélisation 3D`,
-        description: `C'est en discutant avec ma mère d'un projet de réaménagement que j'ai décidé de me lancer dans la modélisation 3D. C'est ainsi que j'ai découvert le logiciel Sweet Home 3D. Avec cet outil, j'ai d'abord imaginé un nouvel agencement pour une pièce de la maison avant de reproduire un studio dans lequel j'ai vécu et que je trouvais particulièrement esthétique.`,
-        legend: `Modélisation 3D d'un studio réalisée avec Sweet Home 3D. Utilisez la souris (ou le tactile) pour zoomer et faire pivoter le modèle.`,
+        description: `Motivée par un projet de réaménagement, je me suis initiée à la modélisation 3D avec Sweet Home 3D. J'ai conçu différents\
+        aménagements intérieurs, notamment la reconfiguration d'une pièce ainsi que la reproduction d'un studio, alliant précision technique et sens esthétique.`,
+        legend: `Modélisation 3D d'un studio réalisée avec Sweet Home 3D. Utilisez la souris (ou le tactile) pour zoomer et faire pivoter le modèle`,
         support: `modelling`
     }
 }

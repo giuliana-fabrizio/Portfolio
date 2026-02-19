@@ -48,25 +48,6 @@ export default {
 </script>
 
 <style scoped>
-@media screen and (max-width: 450px) {
-    .circle-degree {
-        width: 325px;
-    }
-
-    .circle-degree-description {
-        display: none;
-    }
-
-    .circle-degree-footer {
-        flex-direction: column;
-        padding: 0px 0px !important;
-    }
-
-    .badge-degree {
-        margin-top: 10px !important;
-    }
-}
-
 .badge-degree {
     background-color: var(--dark-blue);
     /* border: 2px solid #f0f6fe; */
@@ -113,5 +94,24 @@ export default {
 
 .place-degree {
     color: var(--blue-1);
+}
+
+@media screen and (max-width: 450px) {
+    .circle-degree {
+        width: 300px;
+    }
+
+    .circle-degree-description {
+        display: none;
+    }
+
+    .circle-degree-footer {
+        flex-direction: column;
+        padding: 0px 0px !important;
+    }
+
+    .badge-degree {
+        margin-top: 10px !important;
+    }
 }
 </style>

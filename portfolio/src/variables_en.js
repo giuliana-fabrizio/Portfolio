@@ -511,7 +511,7 @@ const projects = {
         title: `Billing tool`,
         category: categories.professional,
         image_bg: "images/projects/BUT_S4/card-background.png",
-        introduction:  `Redesign a billing tool as part of a three-month internship (April - June 2023), carried out at Natural Solutions.`,
+        introduction: `Redesign a billing tool as part of a three-month internship (April - June 2023), carried out at Natural Solutions.`,
         implementation: {
             title: `Tasks completed`,
             sections: [
@@ -593,7 +593,7 @@ const certifications_title = `My certifications`;
 
 const certifications = {
     mooc_management: {
-        title: `Project Management`,
+        title: `Project management`,
         logo: "images/degrees/mooc_gdp.png",
         description: `14 certifications obtained`,
         specialization: `Specializations :
@@ -671,30 +671,34 @@ const interests_page_title = "MY HOBBIES";
 
 const interests = {
     1: {
-        title: `Sporting activity & travels`,
-        description: `Since 2010, I have been practicing swimming. I was registered in a club when I was a child, but now I swim occasionally. I also love exploring new places and admire their landscapes. I regularly go hiking that allows me to take on new challenges while making beautiful discoveries.`,
-        legend: 'Pictures taken during my trips',
+        title: `Sports activities & travels`,
+        description: `I have been swimming since 2010 (former club member).\
+        I also enjoy discovering new places and landscapes, which is why I regularly go hiking and travelling.`,
+        legend: 'Images taken during my hikes and/or trips',
         images: [carousel_1, carousel_2, carousel_3],
         support: `carousel`
     },
     2: {
         title: `Video games`,
-        description: `During my computer science bachelor's degree some friends introduced me to video games. However I am not a big gamer so I mostly play Minecraft. What I appreciate most is the variety of mods that constantly renew the experience by adding new worlds, characters, creatures and materials.`,
-        legend: `3D modeling of my Minecraft skin. Use the mouse (or touch) to zoom and rotate the model.`,
+        description: `I discovered video games during my Computer Science degree in Belfort. I often play Menicraft, a universe that\
+        I appreciate for the diversity of its mods, which allow you to explore new worlds and renew the experience.`,
+        legend: `Modélisation 3D de mon skin Minecraft. Utilisez la souris (ou le tactile) pour faire pivoter le modèle.`,
         support: `mc`
     },
     3: {
         title: `Sewing`,
-        description: `I discovered sewing thanks to my grandmother, who was a seamstress. I started by creating clothes for my dolls and now I make useful everyday items such as battery protective covers, handbags and pencil cases.`,
-        legend: `External battery protective cover`,
+        description: `Introduced to sewing in my childhood by my gandmother, a former seamstress, I developed creativity and meticulousness\
+        through personal projects. Today, I design useful everyday items (bags, pouches, protective covers)`,
+        legend: `Protective cover for external battery`,
         // image: image_sewing,
         support: `img`
     },
     4: {
         title: `3D modeling`,
-        description: `After discussing a renovation project with my mother, I decided to try 3D modeling. That's how I discovered Sweet Home 3D software. Using this tool, I first redesigned a room in our house, then I reproduced a studio where I lived which I found very aesthetically pleasing.`,
-        legend: `3D model of a studio made with Sweet Home 3D. Use the mouse (or touch) to zoom and rotate the model.`,
-        support: `modeling`
+        description: `Motivated by a renovation project, I learned 3D modeling with Sweet Home 3D. I designed various interior layouts,\
+        including the reconfiguration of a room and the reproduction of a studio, combining technical precision and aesthetic sense.`,
+        legend: `3D model of a studio apartment created with Sweet Home 3D. Use your mouse (or touchscreen) to zoom and rotate the model`,
+        support: `modelling`
     }
 }
 

@@ -1,7 +1,5 @@
 <template>
-    <div class="container">
-        <div id="skin_container"></div>
-    </div>
+    <div id="skin_container" class="mx-auto"></div>
 </template>
 
 <script>
@@ -17,7 +15,7 @@ export default {
 
     mounted() {
         const uuid = "836575ac-d101-4f4c-8ad4-ea7dc22bbfa8";
-        const skin = `https://crafatar.com/skins/${uuid}`;
+        const skin = `https://api.mineatar.io/skin/${uuid}`;
 
         this.skinViewer = new SkinViewer({
             canvas: document.createElement("canvas"),
@@ -34,3 +32,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+#skin_container {
+    max-width: min-content;
+}
+</style>
