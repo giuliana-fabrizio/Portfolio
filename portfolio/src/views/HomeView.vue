@@ -127,6 +127,7 @@ export default {
 
 .btn-download {
     background-color: var(--blue-7);
+    border: none;
     border-radius: 7px;
     position: absolute;
     right: 3px;

@@ -98,7 +98,7 @@ export default {
 
 @media screen and (max-width: 450px) {
     .circle-degree {
-        width: 300px;
+        width: 350px;
     }
 
     .circle-degree-description {

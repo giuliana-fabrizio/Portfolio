@@ -1,6 +1,7 @@
 <template>
     <div>
         <AnimeBackgroundComponent />
+
         <div class="container mb-5">
             <TitleComponent :title="project?.title" />
 
@@ -16,7 +17,7 @@
                 </div>
 
                 <div class="col-12 col-md-4">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-wrap justify-content-between">
                         <div v-if="project.git" class="link-container github-container">
                             <a class="btn btn-link mx-auto text-decoration-none" :href="project.git.link"
                                 target="_blank">
@@ -129,14 +130,18 @@ export default {
 
 .btn-link {
     background-color: var(--bg);
+    border: none;
     border-radius: 7px;
     color: var(--text-color);
     position: absolute;
     right: 4px;
     top: 4px;
-    height: max-content;
-    width: max-content;
+    height: 36px;
     padding: 5px;
+}
+
+.github-container .btn-link {
+    width: 80px;
 }
 
 .slides-container .btn-link {
@@ -145,7 +150,6 @@ export default {
 
 .link-container:hover .btn-link {
     background: linear-gradient(45deg, var(--blue-2), var(--blue-8));
-    border: none;
     color: var(--white);
 }
 </style>

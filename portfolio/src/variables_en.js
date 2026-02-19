@@ -585,7 +585,7 @@ const degrees = {
         school: `Lycée Périer`,
         place: `Marseille, France`,
         date: `2020`,
-        style: `padding-top: 21%;`
+        style: `padding-top: 14%;`
     },
 }
 

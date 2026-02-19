@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar bg-navbar m-0 p-0">
         <router-link to="/" class="fw-bold text-white text-decoration-none ms-3">
-            <img src="images/logo.png" class="img-navbar">
+            <img id="logo" src="images/logo.png" class="img-navbar">
         </router-link>
 
         <div class="d-flex align-items-center">
@@ -17,7 +17,7 @@
                         <router-link :to="item.to"
                             class="d-block d-flex text-decoration-none text-white position-relative">
                             <i class="me-md-2" :class="item.icon"></i>
-                            <span class="d-none d-md-block">{{ item.label }}</span>
+                            <span class="page-name">{{ item.label }}</span>
                         </router-link>
                     </li>
                 </ul>
@@ -221,9 +221,35 @@ export default {
     left: -25px;
 }
 
+.page-name {
+    display: none;
+}
+
 .dropdown-menu {
     padding: 0 !important;
     left: -20% !important;
     min-width: 0rem !important;
+}
+
+@media screen and (min-width: 825px) {
+    #logo {
+        display: none;
+    }
+
+    .page-name {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #logo {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 870px) {
+    #logo {
+        display: block;
+    }
 }
 </style>
