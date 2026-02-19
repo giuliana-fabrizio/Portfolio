@@ -96,7 +96,6 @@ export default {
                 this.ctx.arc(n.x, n.y, n.size, 0, Math.PI * 2);
                 this.ctx.fillStyle = "rgba(123, 124, 124, 0.9)";
                 this.ctx.shadowBlur = 12;
-                this.ctx.shadowColor = "#00ffff";
                 this.ctx.fill();
                 this.ctx.shadowBlur = 0;
             });

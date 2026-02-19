@@ -113,18 +113,18 @@ export default {
 
 <style scoped>
 .link-container {
-    background: linear-gradient(45deg, #3acfd5, #3a4ed5);
+    background: linear-gradient(45deg, var(--blue-2), var(--blue-8));
     border-radius: 10px;
     height: 44px;
     position: relative;
 }
 
 .github-container {
-    width: 88px;
+    width: 87px;
 }
 
 .slides-container {
-    width: 123px;
+    width: 178px;
 }
 
 .btn-link {
@@ -139,8 +139,12 @@ export default {
     padding: 5px;
 }
 
+.slides-container .btn-link {
+    width: 170px;
+}
+
 .link-container:hover .btn-link {
-    background: linear-gradient(45deg, #3acfd5, #3a4ed5);
+    background: linear-gradient(45deg, var(--blue-2), var(--blue-8));
     border: none;
     color: var(--white);
 }

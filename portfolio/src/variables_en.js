@@ -23,7 +23,7 @@ const interests_btn = "Hobbies";
 const status = "Computer science student";
 const current_situation = "Looking for a six-month internship";
 const presentation = "AI 🤖 | Full-stack development ✨ | Eager to contribute to the future 🚀";
-const download_cv = "Download my resume";
+const download_cv = "Get my resume";
 
 
 /* ***************************************************************** footer ***************************************************************** */

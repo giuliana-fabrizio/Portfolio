@@ -17,7 +17,7 @@
                             <p class="mb-4">{{ presentation }}</p>
 
                             <div class="download-container">
-                                <a :href="link_cv" class="btn-download text-decoration-none">
+                                <a :href="link_cv" class="btn-download text-center text-decoration-none">
                                     {{ download_cv }}
                                     <icon class="bi bi-download"></icon>
                                 </a>
@@ -118,10 +118,10 @@ export default {
 }
 
 .download-container {
-    background: linear-gradient(45deg, #3acfd5, #3a4ed5);
+    background: linear-gradient(45deg, var(--blue-2), var(--blue-8));
     border-radius: 10px;
     height: 45px;
-    width: 178px;
+    width: 200px;
     position: relative;
 }
 
@@ -131,18 +131,13 @@ export default {
     position: absolute;
     right: 3px;
     top: 3px;
-    height: max-content;
-    width: max-content;
+    height: 39px;
+    width: 194px;
     padding: 5px;
 }
 
-/* .download-container:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 9px 15px rgba(0, 0, 0, 0.2);
-} */
-
 .download-container:hover .btn-download {
-    background: linear-gradient(45deg, #3acfd5, #3a4ed5);
+    background: linear-gradient(45deg, var(--blue-2), var(--blue-8));
     color: var(--white);
 }
 </style>
