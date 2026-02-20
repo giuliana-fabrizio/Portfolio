@@ -689,7 +689,7 @@ const interests = {
         title: `Sewing`,
         description: `Introduced to sewing in my childhood by my gandmother, a former seamstress, I developed creativity and meticulousness\
         through personal projects. Today, I design useful everyday items (bags, pouches, protective covers)`,
-        legend: `Protective cover for external battery`,
+        legend: `Sewn objects`,
         image: image_sewing,
         support: `img`
     },

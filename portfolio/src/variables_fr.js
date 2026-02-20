@@ -693,7 +693,7 @@ const interests = {
         title: `Couture`,
         description: `Initiée à la couture dès l'enfance par ma grand-mère, ancienne couturière, j'ai développé créativité et minutie à travers\
         des projets personnels. Aujourd'hui, je conçois des objets utiles du quotidien (housses de protection, sacs, trousses).`,
-        legend: `Housse de protection pour batterie externe`,
+        legend: `Objets réalisés`,
         image: image_sewing,
         support: `img`
     },
