@@ -5,7 +5,7 @@
         <div class="container">
             <TitleComponent :title="title" />
 
-            <div v-for="(interest, key) in interests" :key="key" class="align-items-center gx-md-5 mb-5 row">
+            <div v-for="(interest, key) in interests" :key="key" class="align-items-center gx-md-5 row">
 
                 <div class="col-12 d-block d-md-none foreground">
                     <CardInterestComponent :item="interest" card_style="card-interest-left" />
@@ -117,6 +117,8 @@ export default {
 
 <style scoped>
 .img-interest {
-    max-height: 350px;
+    display: block;
+    margin: 0 auto;
+    max-height: 300px;
 }
 </style>

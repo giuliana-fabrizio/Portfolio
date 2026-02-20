@@ -1,7 +1,7 @@
 const carousel_1 = require("../public/images/interests/carousel-1.jpg");
 const carousel_2 = require("../public/images/interests/carousel-2.png");
 const carousel_3 = require("../public/images/interests/carousel-3.jpg");
-// const image_sewing = require("../public/images/interests/sewing.png");
+const image_sewing = require("../public/images/interests/sewing.png");
 
 
 /* ***************************************************************** common ***************************************************************** */
@@ -694,7 +694,7 @@ const interests = {
         description: `Initiée à la couture dès l'enfance par ma grand-mère, ancienne couturière, j'ai développé créativité et minutie à travers\
         des projets personnels. Aujourd'hui, je conçois des objets utiles du quotidien (housses de protection, sacs, trousses).`,
         legend: `Housse de protection pour batterie externe`,
-        // image: image_sewing,
+        image: image_sewing,
         support: `img`
     },
     4: {

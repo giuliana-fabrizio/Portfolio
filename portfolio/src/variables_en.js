@@ -1,7 +1,7 @@
 const carousel_1 = require("../public/images/interests/carousel-1.jpg");
 const carousel_2 = require("../public/images/interests/carousel-2.png");
 const carousel_3 = require("../public/images/interests/carousel-3.jpg");
-// const image_sewing = require("../public/images/interests/sewing.png");
+const image_sewing = require("../public/images/interests/sewing.png");
 
 
 /* ***************************************************************** common ***************************************************************** */
@@ -690,7 +690,7 @@ const interests = {
         description: `Introduced to sewing in my childhood by my gandmother, a former seamstress, I developed creativity and meticulousness\
         through personal projects. Today, I design useful everyday items (bags, pouches, protective covers)`,
         legend: `Protective cover for external battery`,
-        // image: image_sewing,
+        image: image_sewing,
         support: `img`
     },
     4: {
