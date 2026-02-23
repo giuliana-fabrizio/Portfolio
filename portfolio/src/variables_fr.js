@@ -303,7 +303,7 @@ const projects = {
         title: `Imperial Roar`,
         category: categories.academic,
         image_bg: "images/projects/UTBM_SY43/card-background.png",
-        introduction: `Application mobile e-commerce de parfums avec authentification ${technos.firebase.name}, paiement ${technos.stripe.name} et dashboard admnistrateur.`,
+        introduction: `Application mobile e-commerce de parfums avec authentification ${technos.firebase.name}, paiement ${technos.stripe.name} et dashboard administrateur.`,
         implementation: {
             title: `Tâches réalisées`,
             sections: [
@@ -405,7 +405,7 @@ const projects = {
                     title: `Dashboard`,
                     list: [
                         `Rédaction et test de requêtes ${technos.graphql.name} via ${technos.hasura.name} ;`,
-                        `Récupération des ramassages terminés avec application filtres définis dans l'URL ;`,
+                        `Récupération des ramassages terminés avec application des filtres définis dans l'URL ;`,
                         `Génération des statistiques à partir des données filtrées ;`,
                         `Intégration du dashboard avec affichage dynamique des données.`,
                     ],
