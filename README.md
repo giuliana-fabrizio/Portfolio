@@ -3,7 +3,7 @@
 Ce dépôt contient le code source de mon portfolio en ligne. Il présente mes projets académiques, personnels et professionnels, avec une mise en avant de mes compétences en développement web et logiciel.
 
 ### **🚀 Démonstration**
-[Voir le portfolio](https://giuliana-fabrizio.github.io/)
+[Voir le portfolio](https://giuliana-fabrizio.github.io/Portfolio/#/)
 
 ### **🗃️ Installation**
 
