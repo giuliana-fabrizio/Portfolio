@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="btn-filter position-absolute">
-            <button class="btn btn-primary d-flex d-none d-md-block" @click="wantFilter = true">
+            <button class="btn btn-primary d-flex d-none d-md-block text-white" @click="wantFilter = true">
                 <span class="me-1">{{ filterLabel }}</span>
                 <i :class="['bi', 'bi-filter']"></i>
             </button>

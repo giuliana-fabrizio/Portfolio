@@ -614,6 +614,13 @@ const certifications = {
         </ul>`,
         school: `MOOC`,
         date: `2024`,
+    },
+    linguaskill: {
+        title: `Linguaskill Business`,
+        logo: "images/degrees/linguaskill.png",
+        description: `Obtaining the B2 level`,
+        school: `Cambridge`,
+        date: `2026`,
     }
 }
 

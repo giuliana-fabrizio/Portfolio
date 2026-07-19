@@ -53,8 +53,9 @@ export default {
 <style scoped>
 .card-certification {
     background: linear-gradient(45deg, var(--blue-1), #f0f6fe);
-    border: 3px solid var(--dark-blue);
     border-radius: 50px 0px;
+    height: 150px;
+    width: 330px;
     /* color: var(--white); */
 }
 
