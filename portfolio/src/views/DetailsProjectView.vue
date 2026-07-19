@@ -121,7 +121,7 @@ export default {
 }
 
 .github-container {
-    width: 87px;
+    width: 98px;
 }
 
 .slides-container {
@@ -141,7 +141,7 @@ export default {
 }
 
 .github-container .btn-link {
-    width: 80px;
+    width: 90px;
 }
 
 .slides-container .btn-link {

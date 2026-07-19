@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="view-wrapper">
         <AnimeBackgroundComponent />
 
         <div class="container">
@@ -85,6 +85,12 @@ export default {
     to {
         transform: rotate(360deg);
     }
+}
+
+.view-wrapper {
+    overflow-x: hidden; /* Empêche le scroll horizontal des animations */
+    width: 100%;        /* S'assure que la boîte fait exactement la taille de l'écran */
+    position: relative; 
 }
 
 .vr {

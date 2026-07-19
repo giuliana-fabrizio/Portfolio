@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar bg-navbar m-0 p-0">
+    <nav v-show="can_appear" class="navbar bg-navbar m-0 p-0">
         <router-link to="/" class="fw-bold text-white text-decoration-none ms-3">
             <img id="logo" src="images/logo.png" class="img-navbar">
         </router-link>
@@ -46,6 +46,7 @@ export default {
 
     data() {
         return {
+            can_appear: true,
             isFrench: null,
             home_btn: "",
             academic_training_btn: "",
@@ -80,8 +81,9 @@ export default {
         },
 
         async path() {
-            await this.$nextTick();
-            this.moveSelector();
+            this.updateItems();
+            await this.$nextTick(); 
+            await this.moveSelector();
         }
     },
 
@@ -98,12 +100,18 @@ export default {
             this.$store.commit('setLanguage', lang);
         },
 
-        moveSelector() {
+        async moveSelector() {
+            const activeIndex = this.items.findIndex(item => item.to === this.$route.path || item.to === '/all_projects' && this.$route.path === '/details');
+            if (activeIndex === -1) {
+                this.can_appear = false;
+                return;
+            }
+
+            this.can_appear = true;
+
+            await this.$nextTick();
+
             const nav_items = this.$refs.nav_items;
-
-            let activeIndex = this.items.findIndex(item => item.to === this.$route.path || item.to === '/all_projects' && this.$route.path === '/details');
-            if (activeIndex === -1) { activeIndex = 0; }
-
             const elem_active = nav_items[activeIndex];
 
             if (elem_active) {
